@@ -1,0 +1,36 @@
+{
+	"swaggerVersion": "1.0",
+	"basePath": "/v2",
+	"apiVersion": "2.0",
+    "resourcePath": "/share",
+	"apis": 
+    [
+    	{
+    		"path": "/message/index/token/{token}/timestamp/{timestamp}",
+   			"description": "获取消息列表",
+   			"operations": [
+   				{
+   					"nickname": "message",
+   					"summary": "获取消息列表",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户的token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "timestamp",
+                    		"description": "时间戳,如果为空,则获取全部消息,否则获取大于该时间戳的消息",
+                    		"required": false,
+                    		"paramType": "path",
+                    		"type": "integer"
+                    	}
+                    ]
+               }
+            ]
+    	}
+    ]
+ }

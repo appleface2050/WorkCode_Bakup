@@ -1,0 +1,335 @@
+{
+    "swaggerVersion": "1.0",
+    "basePath": "http://api.sangebaba.com/v1",
+    "apiVersion": "1.0",
+    "resourcePath": "/cleaner",
+	 "apis": 
+    [
+    	{
+    		"path": "/cleaner/index/token/{token}",
+   			"description": "返回全部净化器",
+   			"operations": [
+   				{
+   					"nickname": "cleanerIndex",
+   					"summary": "返回全部净化器",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	 {
+    		"path": "/cleaner/create",
+   			"description": "添加净化器",
+   			"operations": [
+   				{
+   					"nickname": "cleanerCreate",
+   					"summary": "添加净化器",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器id",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "qrcode",
+                    		"description": "二维码上的序列号",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "wifi_name",
+                    		"description": "wifi用户名",
+                    		"required": false,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "wifi_pwd",
+                    		"description": "wifi密码",
+                    		"required": false,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "name",
+                    		"description": "用户命名的净化器名称",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "point_x",
+                    		"description": "接入所在地经度",
+                    		"required": false,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "point_y",
+                    		"description": "接入所在地纬度",
+                    		"required": false,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/cleaner/view/token/{token}/id/{id}",
+   			"description": "查看净化器详细信息",
+   			"operations": [
+   				{
+   					"nickname": "cleanerView",
+   					"summary": "查看净化器详细信息",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器序列号",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/cleaner/delete",
+   			"description": "删除净化器",
+   			"operations": [
+   				{
+   					"nickname": "cleanerView",
+   					"summary": "删除净化器",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器序列号",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/cleaner/update",
+   			"description": "重命名净化器",
+   			"operations": [
+   				{
+   					"nickname": "cleanerUpdate",
+   					"summary": "重命名净化器",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器序列号",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "name",
+                    		"description": "用户定义的净化器名称",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/cleaner/parameter/token/{token}/id/{id}",
+   			"description": "查看净化器运行参数",
+   			"operations": [
+   				{
+   					"nickname": "cleanerView",
+   					"summary": "查看净化器运行参数",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器序列号",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/cleaner/check/token/{token}/qrcode/{qrcode}",
+   			"description": "检测净化器是否需要简化添加流程",
+   			"operations": [
+   				{
+   					"nickname": "cleanerCheck",
+   					"summary": "检测净化器是否需要简化添加流程需要 simple=1 else simple=0",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "qrcode",
+                    		"description": "净化器二维码序列号",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/cleaner/simple",
+   			"description": "净化器添加简化版",
+   			"operations": [
+   				{
+   					"nickname": "cleanerSimple",
+   					"summary": "净化器添加简化版",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "qrcode",
+                    		"description": "净化器序列号(二维码)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "name",
+                    		"description": "用户定义的净化器名称",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/cleaner/upgradeStatus",
+   			"description": "升级状态",
+   			"operations": [
+   				{
+   					"nickname": "cleanerUpgradeStatus",
+   					"summary": "净化器固件升级状态",
+                    "method": "POST",
+                    "responseClass": "Return",
+                    "notes": "<p>调用请求升级的接口后, 每隔3-5秒,轮询下该接口,查看是否更新完成, 更新完成后, 不再轮询</p>",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器id",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	}
+    ],
+    "models": {
+    	"Return": {
+    		"id" : "Return",
+    		"properties": {
+    			"status": {
+    				"type": "integer",
+    				"description": "成功失败标识,如果成功则为1,失败则为0",
+    				"default": "1",
+    				"required": true
+    			},
+    			"msg": {
+    				"type": "string",
+    				"description": "提示信息,如果成功则为空字符串,失败则为失败的提示信息",
+    				"required": true
+    			},
+    			"data": {
+    				"$ref": "Finish"
+    			}
+    		}
+    	},
+    	"Finish": {
+    		"id" : "Finish",
+    		"properties": {
+    			"finish": {
+    				"type": "integer",
+    				"description": "是否完成更新 1完成 0未完成",
+    				"default": 1,
+    				"required": true
+    			}
+    		}
+    	}
+    }
+}

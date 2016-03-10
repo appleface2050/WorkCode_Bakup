@@ -1,0 +1,201 @@
+{
+    "swaggerVersion": "1.0",
+    "basePath": "/v2",
+    "apiVersion": "2.0",
+    "resourcePath": "/task",
+	 "apis": 
+    [
+
+		{
+		  "path": "/task/getFilterInfo/token/{token}/cleaner_id/{cleaner_id}",
+		  "description": "获取净化器滤芯信息",
+		  "operations": [
+			{
+			  "nickname": "getFilterInfo",
+			  "summary": "获取净化器滤芯信息",
+			  "method": "GET",
+              "responseClass": "getFilterInfo",
+			  "notes": "",
+			  "parameters": [
+				{
+				  "name": "token",
+				  "description": "用户token",
+				  "required": true,
+				  "paramType": "path",
+				  "type": "string"
+				},
+				{
+				  "name": "cleaner_id",
+				  "description": "净化器id",
+				  "required": true,
+				  "paramType": "path",
+				  "type": "string"
+				}
+			  ]
+			}
+		  ]
+		},
+	  	{
+    		"path": "/task/ShareSuccess",
+   			"description": "分享成功回调",
+   			"operations": [
+   				{
+   					"nickname": "index",
+   					"summary": "分享成功回调",
+                    "method": "POST",
+                    "notes": "",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+						{
+						  "name": "cleaner_id",
+						  "description": "净化器id",
+						  "required": true,
+						  "paramType": "form",
+						  "type": "string"
+						},
+						{
+						  "name": "filter_id",
+						  "description": "滤芯id",
+						  "required": true,
+						  "paramType": "form",
+						  "type": "string"
+						}
+                    ]
+   				}
+   			]
+    	},
+    	 {
+    		"path": "/task/exchange",
+   			"description": "兑换接口",
+   			"operations": [
+   				{
+   					"nickname": "exchange",
+   					"summary": "兑换接口",
+                    "method": "POST",
+                    "parameters": [
+					  {
+						"name": "token",
+						"description": "用户token",
+						"required": true,
+						"paramType": "form",
+						"type": "string"
+					  },
+					  {
+						"name": "cleaner_id",
+						"description": "净化器id",
+						"required": true,
+						"paramType": "form",
+						"type": "string"
+					  },
+					  {
+						"name": "filter_id",
+						"description": "滤芯id",
+						"required": true,
+						"paramType": "form",
+						"type": "string"
+					  },
+                      {
+                        "name": "name",
+                        "description": "姓名",
+                        "required": true,
+                        "paramType": "form",
+                        "type": "string"
+                      },
+                      {
+                        "name": "mobile",
+                        "description": "手机号码",
+                        "required": true,
+                        "paramType": "form",
+                        "type": "string"
+                      },
+                      {
+                        "name": "address",
+                        "description": "地址",
+                        "required": true,
+                        "paramType": "form",
+                        "type": "string"
+                      }
+                    ]
+   				}
+   			]
+    	}
+    ],
+    "models": {
+    	"getFilterInfo": {
+    		"id" : "filterData",
+    		"properties": {
+    			"id": {
+    				"type": "integer",
+    				"description": "滤芯id",
+    				"required": true
+    			},
+    			"name": {
+    				"type": "string",
+    				"description": "滤芯名称",
+    				"required": true
+    			},
+    			"life_value": {
+    				"type": "integer",
+    				"description": "滤芯寿命",
+    				"required": true
+    			},
+    			"opened_days": {
+    				"type": "integer",
+    				"description": "开机天数",
+    				"required": true
+    			},
+    			"can_exchange": {
+    				"type": "boolean",
+    				"description": "是否可以兑换 true 是 false 否",
+    				"required": true
+    			},
+				"exchange_total": {
+				  "type": "integer",
+				  "description": "兑换总数",
+				  "required": true
+				},
+				"share_total": {
+				  "type": "integer",
+				  "description": "分享总数",
+				  "required": true
+				},
+                "filter_condition": {
+                  "type": "array",
+                  "description": "兑换条件： surplus_life 需要最低滤芯寿命，opened_days 需要开机天数,share_total 需要分享次数",
+                  "required": true
+                }
+    		}
+    	},
+		"open": {
+		  "id" : "value",
+		  "properties": {
+			"encrypt_code": {
+			  "type": "string",
+			  "description": "加密code",
+			  "required": true
+			}
+		  }
+		},
+		"getSupportUser": {
+		  "id" : "users",
+		  "properties": {
+			"nickanme": {
+			  "type": "string",
+			  "description": "微信昵称",
+			  "required": true
+			},
+			"create_time": {
+			  "type": "string",
+			  "description": "点赞时间",
+			  "required": true
+			}
+		  }
+		}
+    }
+}

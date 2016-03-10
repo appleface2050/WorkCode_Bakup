@@ -1,0 +1,248 @@
+﻿{
+	"swaggerVersion": "1.0",
+	"basePath": "/v2",
+	"apiVersion": "2.0",
+    "resourcePath": "/login",
+	 "apis": 
+    [
+    	{
+    		"path": "/login/sendVerifyCode",
+   			"description": "发送验证码",
+   			"operations": [
+   				{
+   					"nickname": "sendVerifyCode",
+   					"summary": "发送验证码",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "mobile",
+                    		"description": "手机号(获取邮箱)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "action",
+                    		"description": "操作,可以不传递(如果是注册时,可以传递'register'判断手机号是否注册)",
+                    		"required": false,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "sign",
+                    		"description": "签名字符串(mobile,client_id字母表顺序签名字符串,不包含action)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/login/checkVerifyCode",
+   			"description": "检测验证码",
+   			"operations": [
+   				{
+   					"nickname": "checkVerifyCode",
+   					"summary": "检测验证码",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "mobile",
+                    		"description": "手机号(或邮箱)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "code",
+                    		"description": "验证码",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "integer"
+                    	},
+                    	{
+                    		"name": "sign",
+                    		"description": "签名字符串(mobile,code,client_id字母表顺序签名字符串)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/login/checkMobileExist",
+   			"description": "检测手机号是否存在",
+   			"operations": [
+   				{
+   					"nickname": "checkMobileExist",
+   					"summary": "检测手机号是否存在",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "mobile",
+                    		"description": "手机号(或邮箱)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "sign",
+                    		"description": "签名字符串(mobile,client_id签名字符串)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/login/login",
+   			"description": "手机号和密码登录",
+   			"operations": [
+   				{
+   					"nickname": "login",
+   					"summary": "手机号和密码登录",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "mobile",
+                    		"description": "手机号(或邮箱)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "password",
+                    		"description": "密码",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "platform",
+                    		"description": "平台系统",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/login/register",
+   			"description": "注册",
+   			"operations": [
+   				{
+   					"nickname": "register",
+   					"summary": "注册",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "mobile",
+                    		"description": "手机号(或邮箱)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "password",
+                    		"description": "密码",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "nickname",
+                    		"description": "昵称",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "app_version",
+                    		"description": "用户所使用的app版本号",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "platform",
+                    		"description": "平台系统",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "sign",
+                    		"description": "签名字符串(mobile,password,nickname,app_version,platform,client_id字母表顺序签名字符串)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/login/reset",
+   			"description": "重置密码(更改密码OR忘记密码)",
+   			"operations": [
+   				{
+   					"nickname": "reset",
+   					"summary": "重置密码(更改密码OR忘记密码)",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "mobile",
+                    		"description": "手机号(或邮箱)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "password",
+                    		"description": "密码",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+		{
+    		"path": "/login/resetToken/token/{token}/sign/{sign}",
+   			"description": "重置token",
+   			"operations": [
+   				{
+   					"nickname": "reset",
+   					"summary": "重新获取token",
+                    "method": "GET",
+					"notes": "<p>token失效后重新获取token, 返回的value字段结构为：value.token, value.lifetime(有效时间, 值为600, 即10分钟)</p>",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "原tokne",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "sign",
+                    		"description": "签名字符串, token,client_id按字母表顺序, ps: 参照之前的签名算法)",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	}
+    ]
+}

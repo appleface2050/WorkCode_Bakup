@@ -1,0 +1,70 @@
+{
+    "swaggerVersion": "1.0",
+    "basePath": "http://api.release.sangebaba.com/v1",
+    "apiVersion": "1.0",
+    "resourcePath": "/share",
+	"apis": 
+    [
+    	{
+    		"path": "/push/param/token/{token}/device_token/{device_token}",
+   			"description": "IOS 的device_token变更及初始化时调用",
+   			"operations": [
+   				{
+   					"nickname": "pushParam",
+   					"summary": "IOS推送的参数(device_token)",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户的token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "device_token",
+                    		"description": "device_token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "integer"
+                    	}
+                    ]
+               }
+            ]
+    	},
+    	{
+    		"path": "/push/param/token/{token}/user_id/{user_id}/channel_id/{channel_id}",
+   			"description": "Android 的channel_id 和 user_id变更及初始化时调用",
+   			"operations": [
+   				{
+   					"nickname": "pushParam",
+   					"summary": "Android推送的参数(channel_id和user_id)",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户的token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "channel_id",
+                    		"description": "百度SDK里的channel_id",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "integer"
+                    	},
+                    	{
+                    		"name": "user_id",
+                    		"description": "百度SDK里的user_id",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "integer"
+                    	}
+                    ]
+               }
+            ]
+    	}
+    ]
+ }

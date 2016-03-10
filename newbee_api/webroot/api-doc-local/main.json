@@ -1,0 +1,59 @@
+{
+	"apiVersion": "1.0",
+	"swaggerVersion": "1.2",
+	"basePath": "http://www.cleaner.com/api-doc-local",
+	"apis": [
+		{
+			"path": "/login.{format}",
+	 		"description": "登录注册"
+		},
+		{
+			"path": "/feedback.{format}",
+	 		"description": "故障报告"
+		},
+		{
+			"path": "/cleaner.{format}",
+	 		"description": "净化器管理"
+		},
+		{
+			"path": "/control.{format}",
+	 	"description": "净化器控制"
+		},
+		{
+			"path": "/share.{format}",
+	 		"description": "分享"
+		},
+		{
+			"path": "/profile.{format}",
+	 		"description": "个人设置"
+		},
+		{
+			"path": "/message.{format}",
+	 		"description": "消息"
+		},
+		{
+			"path": "/version.{format}",
+	 		"description": "版本检测"
+		},
+		{
+			"path": "/push.{format}",
+	 		"description": "推送参数"
+		},
+        {
+          "path": "/other.{format}",
+          "description": "其他"
+        },
+		{
+          "path": "/apply.{format}",
+          "description": "申请及审核"
+        },
+		{
+		  "path": "/exchange.{format}",
+		  "description": "积分/兑换相关"
+		},
+		{
+		  "path": "/task.{format}",
+		  "description": "5年免费更换滤芯活动相关"
+		}
+	]
+}

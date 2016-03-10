@@ -1,0 +1,389 @@
+{
+    "swaggerVersion": "1.0",
+    "basePath": "/v2",
+    "apiVersion": "2.0",
+    "resourcePath": "/control",
+	 "apis": 
+    [
+    	{
+    		"path": "/control/childlock/token/{token}/id/{id}/childlock/{childlock}",
+   			"description": "净化器控制",
+   			"operations": [
+   				{
+   					"nickname": "controlChildlock",
+   					"summary": "儿童锁",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器序列号",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "childlock",
+                    		"description": "儿童锁,1开启,0关闭",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "integer",
+                    		"enum":[
+                    			1,
+                    			0
+                    		]
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/control/automatic/token/{token}/id/{id}/automatic/{automatic}",
+   			"description": "自定净化",
+   			"operations": [
+   				{
+   					"nickname": "controlAutomatic",
+   					"summary": "自定净化",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器序列号",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "automatic",
+                    		"description": "自动净化,1开启,0关闭",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "integer",
+                    		"enum":[
+                    			1,
+                    			0
+                    		]
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/control/level/token/{token}/id/{id}/level/{level}",
+   			"description": "运行档位",
+   			"operations": [
+   				{
+   					"nickname": "controlLevel",
+   					"summary": "运行档位",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器序列号",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "level",
+                    		"description": "运行档位(0休眠1静音, 1-4档对应的值是2-5)",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "integer",
+                    		"enum":[
+                    			0,
+                    			1,
+                    			2,
+                    			3,
+                    			4,
+                    			5
+                    		]
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/control/close/token/{token}/id/{id}/",
+   			"description": "关闭净化器",
+   			"operations": [
+   				{
+   					"nickname": "controlClose",
+   					"summary": "关闭净化器",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器序列号",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/control/open/token/{token}/id/{id}/",
+   			"description": "开启净化器",
+   			"operations": [
+   				{
+   					"nickname": "controlOpen",
+   					"summary": "开启净化器",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器序列号",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/control/timeSet/",
+   			"description": "净化器净化时间设置",
+   			"operations": [
+   				{
+   					"nickname": "controlTimeset",
+   					"summary": "净化器净化时间设置",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器序列号",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "timeSet",
+                    		"description": "多少时间设置的json对象,每个对象包含的key为day(哪一天,多个天用英文逗号分隔),start_time(净化开始时间),end_time(净化结束时间),open(是否开启1开启0关闭)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/control/silenceOn/token/{token}",
+   			"description": "开启静音时间",
+   			"operations": [
+   				{
+   					"nickname": "silenceOn",
+   					"summary": "开启静音时间",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/control/silenceOff/token/{token}",
+   			"description": "关闭静音时间",
+   			"operations": [
+   				{
+   					"nickname": "silenceOff",
+   					"summary": "关闭静音时间",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/control/silenceSet",
+   			"description": "设置静音起止时间",
+   			"operations": [
+   				{
+   					"nickname": "silenceOff",
+   					"summary": "设置静音起止时间",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "start_time",
+                    		"description": "静音开始时间,24小时制,如： 22:00",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "end_time",
+                    		"description": "静音结束时间,如：09:00",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/control/reset/token/{token}/id/{id}/filter_id/{filter_id}",
+   			"description": "滤芯寿命重置",
+   			"operations": [
+   				{
+   					"nickname": "reset",
+   					"summary": "滤芯寿命重置",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器id",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "filter_id",
+                    		"description": "滤芯id,取值1,2,3",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "integer",
+                    		"enum": [1,2,3]
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/control/upgrade/token/{token}/id/{id}",
+   			"description": "固件升级",
+   			"operations": [
+   				{
+   					"nickname": "upgrade",
+   					"summary": "固件程序升级",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "id",
+                    		"description": "净化器id",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+	  {
+		"path": "/control/led/token/{token}/id/{id}/action/{action}",
+		"description": "控制LED灯光开启/关闭(仅适用于伊娃)",
+		"operations": [
+		  {
+			"nickname": "led",
+			"summary": "控制LED灯光开启/关闭(仅适用于伊娃)",
+			"method": "GET",
+			"parameters": [
+			  {
+				"name": "token",
+				"description": "用户token",
+				"required": true,
+				"paramType": "path",
+				"type": "string"
+			  },
+			  {
+				"name": "id",
+				"description": "净化器id",
+				"required": true,
+				"paramType": "path",
+				"type": "string"
+			  },
+			  {
+				"name": "action",
+				"description": "状态 on:开  off:关",
+				"required": true,
+				"paramType": "path",
+				"type": "string",
+				"enum":[
+				  "off",
+				  "on"
+				]
+			  }
+			]
+		  }
+		]
+	  }
+    ]
+}

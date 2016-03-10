@@ -1,0 +1,67 @@
+{
+    "swaggerVersion": "1.0",
+    "basePath": "http://api.sangebaba.com/v1",
+    "apiVersion": "1.0",
+    "resourcePath": "/feedback",
+	 "apis": 
+    [
+    	{
+    		"path": "/feedback/create",
+   			"description": "添加故障报告",
+   			"operations": [
+   				{
+   					"nickname": "feedbackCreate",
+   					"summary": "添加故障报告",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "type",
+                    		"description": "故障类型(1净化器不工作,2净化器不显示数值等ps:产品尚未给出具体的故障类型)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "integer",
+                    		"enum":[
+                    			1,
+                    			2
+                    		]
+                    	},
+                    	{
+                    		"name": "detail",
+                    		"description": "故障描述",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	{
+    		"path": "/feedback/index/token/{token}",
+   			"description": "故障报告列表",
+   			"operations": [
+   				{
+   					"nickname": "feedbackIndex",
+   					"summary": "故障报告列表",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	}
+    ]
+}

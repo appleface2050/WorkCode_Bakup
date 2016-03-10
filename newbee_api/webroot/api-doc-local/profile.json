@@ -1,0 +1,226 @@
+{
+	"swaggerVersion": "1.0",
+	"basePath": "/v2",
+	"apiVersion": "2.0",
+    "resourcePath": "/share",
+	"apis": 
+    [
+    	{
+    		"path": "/profile/index/token/{token}",
+   			"description": "个人信息",
+   			"operations": [
+   				{
+   					"nickname": "index",
+   					"summary": "个人信息",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户的token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+               }
+            ]
+    	},
+    	{
+    		"path": "/profile/changePassword",
+   			"description": "更改密码",
+   			"operations": [
+   				{
+   					"nickname": "changePasword",
+   					"summary": "更改密码",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户的token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "origin_pwd",
+                    		"description": "原密码",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "new_pwd",
+                    		"description": "新密码",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+               }
+            ]
+    	},
+    	{
+    		"path": "/profile/logout/token/{token}",
+   			"description": "获取分享数据",
+   			"operations": [
+   				{
+   					"nickname": "logout",
+   					"summary": "退出登录",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户的token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+               }
+            ]
+    	},
+    	{
+    		"path": "/profile/address",
+   			"description": "填写个人信息",
+   			"operations": [
+   				{
+   					"nickname": "address",
+   					"summary": "填写个人信息",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户的token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "name",
+                    		"description": "用户姓名",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "mobile",
+                    		"description": "手机号",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "provinceId",
+                    		"description": "省(市)城市id",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "provinceName",
+                    		"description": "省(市)名称",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "cityId",
+                    		"description": "市(区)id",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "cityName",
+                    		"description": "市(区)名称",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "address",
+                    		"description": "详细地址",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+               }
+            ]
+    	},
+    	{
+    		"path": "/profile/update",
+   			"description": "修改个人地址信息",
+   			"operations": [
+   				{
+   					"nickname": "update",
+   					"summary": "修改个人地址信息",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户的token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "name",
+                    		"description": "不定参数,可能的key为 name,mobile,provinceId(provinceName),cityId(cityName),address",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+               }
+            ]
+    	},
+    	{
+    		"path": "/profile/silenceSet/token/{token}",
+   			"description": "获取全局的静音时间设置",
+   			"operations": [
+   				{
+   					"nickname": "silenceSet",
+   					"summary": "获取全局的静音时间设置",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户的token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+               }
+            ]
+    	},
+        {
+            "path": "/profile/changeNickname",
+            "description": "更改昵称",
+            "operations": [
+              {
+                "nickname": "changeNickname",
+                "summary": "更改昵称",
+                "method": "POST",
+                "parameters": [
+                  {
+                    "name": "token",
+                    "description": "用户的token",
+                    "required": true,
+                    "paramType": "form",
+                    "type": "string"
+                  },
+                  {
+                    "name": "nickname",
+                    "description": "昵称",
+                    "required": true,
+                    "paramType": "form",
+                    "type": "string"
+                  }
+                ]
+        }
+        ]
+      }
+    ]
+ }

@@ -1,0 +1,264 @@
+{
+    "swaggerVersion": "1.0",
+    "basePath": "/v2",
+    "apiVersion": "2.0",
+    "resourcePath": "/exchange",
+	 "apis": 
+    [
+
+		{
+		  "path": "/task/login/token/{token}",
+		  "description": "登录获取积分",
+		  "operations": [
+			{
+			  "nickname": "login",
+			  "summary": "登录获取积分",
+			  "method": "GET",
+			  "notes": "",
+			  "parameters": [
+				{
+				  "name": "token",
+				  "description": "用户token",
+				  "required": true,
+				  "paramType": "path",
+				  "type": "string"
+				}
+			  ]
+			}
+		  ]
+		},
+		{
+		  "path": "/task/share/token/{token}",
+		  "description": "分享获取积分",
+		  "operations": [
+			{
+			  "nickname": "login",
+			  "summary": "分享获取积分",
+			  "method": "GET",
+			  "notes": "",
+			  "parameters": [
+				{
+				  "name": "token",
+				  "description": "用户token",
+				  "required": true,
+				  "paramType": "path",
+				  "type": "string"
+				}
+			  ]
+			}
+		  ]
+		},
+	  	{
+    		"path": "/exchange/index/token/{token}",
+   			"description": "积分首页，获取商品列表",
+   			"operations": [
+   				{
+   					"nickname": "index",
+   					"summary": "积分首页，获取商品列表",
+                    "method": "GET",
+                    "responseClass": "ApplyList",
+                    "notes": "",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	 {
+    		"path": "/exchange/exchange",
+   			"description": "兑换接口",
+   			"operations": [
+   				{
+   					"nickname": "exchange",
+   					"summary": "兑换接口",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "goods_id",
+                    		"description": "商品id",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "name",
+                    		"description": "姓名",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "mobile",
+                    		"description": "手机号码",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "address",
+                    		"description": "地址",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+		{
+		  "path": "/exchange/getCreditLog/token/{token}",
+		  "description": "获取积分记录",
+		  "operations": [
+			{
+			  "nickname": "GetCreditLog",
+			  "summary": "获取积分记录",
+			  "method": "GET",
+			  "responseClass": "creditList",
+			  "notes": "",
+			  "parameters": [
+				{
+				  "name": "token",
+				  "description": "用户token",
+				  "required": true,
+				  "paramType": "path",
+				  "type": "string"
+				}
+			  ]
+			}
+		  ]
+		},
+		{
+		  "path": "/exchange/getExchangeLog/token/{token}",
+		  "description": "获取兑换记录",
+		  "operations": [
+			{
+			  "nickname": "getExchangeLog",
+			  "summary": "获取兑换记录",
+			  "method": "GET",
+			  "parameters": [
+				{
+				  "name": "token",
+				  "description": "用户token",
+				  "required": true,
+				  "paramType": "path",
+				  "type": "string"
+				}
+			  ]
+			}
+		  ]
+		},
+		{
+		  "path": "/exchange/getCredit/token/{token}",
+		  "description": "获取用户当前剩余积分",
+		  "operations": [
+			{
+			  "nickname": "getCredit",
+			  "summary": "获取用户当前剩余积分",
+			  "method": "GET",
+			  "notes": "",
+			  "parameters": [
+				{
+				  "name": "token",
+				  "description": "用户token",
+				  "required": true,
+				  "paramType": "path",
+				  "type": "string"
+				}
+			  ]
+			}
+		  ]
+		}
+    ],
+    "models": {
+    	"ApplyList": {
+    		"id" : "goods",
+    		"properties": {
+    			"id": {
+    				"type": "integer",
+    				"description": "商品id",
+    				"required": true
+    			},
+    			"name": {
+    				"type": "string",
+    				"description": "商品名称",
+    				"required": true
+    			},
+    			"cost_credit": {
+    				"type": "integer",
+    				"description": "兑换需要的积分",
+    				"required": true
+    			},
+    			"exchange_index": {
+    				"type": "integer",
+    				"description": "兑换指数",
+    				"required": true
+    			},
+    			"can_exchange": {
+    				"type": "boolean",
+    				"description": "是否可以兑换 true 是 false 否",
+    				"required": true
+    			},
+				"left_unlock_days": {
+				  "type": "integer",
+				  "description": "剩余解锁天数",
+				  "required": true
+				}
+    		}
+    	},
+		"creditList": {
+		  "id" : "credit_data",
+		  "properties": {
+			"type_id": {
+			  "type": "integer",
+			  "description": "类型：1 加积分 2 减积分",
+			  "required": true
+			},
+			"credit": {
+			  "type": "integer",
+			  "description": "积分",
+			  "required": true
+			},
+			"time": {
+			  "type": "string",
+			  "description": "时间",
+			  "required": true
+			}
+		  }
+		},
+		"exchangeList": {
+		  "id" : "value",
+		  "properties": {
+			"goods_name": {
+			  "type": "string",
+			  "description": "商品名称",
+			  "required": true
+			},
+			"cost_credit": {
+			  "type": "integer",
+			  "description": "积分",
+			  "required": true
+			},
+			"exchange_time": {
+			  "type": "string",
+			  "description": "兑换时间",
+			  "required": true
+			}
+		  }
+		}
+
+
+    }
+}

@@ -1,0 +1,241 @@
+{
+    "swaggerVersion": "1.0",
+    "basePath": "/v2",
+    "apiVersion": "2.0",
+    "resourcePath": "/cleaner",
+	 "apis": 
+    [
+    	{
+    		"path": "/apply/getBindUser/token/{token}/cleaner_id/{cleaner_id}/sign/{sign}",
+   			"description": "查看某个净化器的全部的申请添加历史",
+   			"operations": [
+   				{
+   					"nickname": "applyIndex",
+   					"summary": "查看某个净化器的全部的申请添加历史",
+                    "method": "GET",
+                    "responseClass": "ApplyList",
+                    "notes": "<p>返回历史申请列表(全部), 每条数据的字段结构参照“返回说明”</p>",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "cleaner_id",
+                    		"description": "净化器id",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "sign",
+                    		"description": "签名字符串(token,client_id,cleaner_id字母表顺序由小到大PS：参考之前的签名规则)",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+    	 {
+    		"path": "/apply/pass",
+   			"description": "同意净化器的申请添加",
+   			"operations": [
+   				{
+   					"nickname": "applyPass",
+   					"summary": "同意净化器的申请添加",
+                    "method": "POST",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户token",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "user_id",
+                    		"description": "申请添加的用户id",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "cleaner_id",
+                    		"description": "要添加的净化器的id",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "apply_id",
+                    		"description": "申请id(通过/apply/index接口里返回的apply_id字段)",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "sign",
+                    		"description": "签名字符串",
+                    		"required": true,
+                    		"paramType": "form",
+                    		"type": "string"
+                    	}
+                    ]
+   				}
+   			]
+    	},
+		{
+		  "path": "/apply/refuse",
+		  "description": "拒绝申请",
+		  "operations": [
+			{
+			  "nickname": "refuse",
+			  "summary": "拒绝申请",
+			  "method": "POST",
+			  "parameters": [
+				{
+				  "name": "token",
+				  "description": "用户token",
+				  "required": true,
+				  "paramType": "form",
+				  "type": "string"
+				},
+				{
+				  "name": "user_id",
+				  "description": "申请添加的用户id",
+				  "required": true,
+				  "paramType": "form",
+				  "type": "string"
+				},
+				{
+				  "name": "cleaner_id",
+				  "description": "要添加的净化器的id",
+				  "required": true,
+				  "paramType": "form",
+				  "type": "string"
+				},
+				{
+				  "name": "apply_id",
+				  "description": "申请id(通过/apply/index接口里返回的apply_id字段)",
+				  "required": true,
+				  "paramType": "form",
+				  "type": "string"
+				},
+				{
+				  "name": "sign",
+				  "description": "签名字符串",
+				  "required": true,
+				  "paramType": "form",
+				  "type": "string"
+				}
+			  ]
+			}
+		  ]
+		},
+		{
+		  "path": "/apply/RemoveBind",
+		  "description": "解除绑定",
+		  "operations": [
+			{
+			  "nickname": "RemoveBind",
+			  "summary": "解除绑定",
+			  "method": "POST",
+			  "parameters": [
+				{
+				  "name": "token",
+				  "description": "用户token",
+				  "required": true,
+				  "paramType": "form",
+				  "type": "string"
+				},
+				{
+				  "name": "user_id",
+				  "description": "要解绑的用户id",
+				  "required": true,
+				  "paramType": "form",
+				  "type": "string"
+				},
+				{
+				  "name": "cleaner_id",
+				  "description": "净化器id",
+				  "required": true,
+				  "paramType": "form",
+				  "type": "string"
+				}
+			  ]
+			}
+		  ]
+		},
+		{
+		  "path": "/apply/ChangeCharger",
+		  "description": "升级主账号",
+		  "operations": [
+			{
+			  "nickname": "ChangeCharger",
+			  "summary": "升级主账号",
+			  "method": "POST",
+			  "parameters": [
+				{
+				  "name": "token",
+				  "description": "用户token",
+				  "required": true,
+				  "paramType": "form",
+				  "type": "string"
+				},
+				{
+				  "name": "user_id",
+				  "description": "要解绑的用户id",
+				  "required": true,
+				  "paramType": "form",
+				  "type": "string"
+				},
+				{
+				  "name": "cleaner_id",
+				  "description": "净化器id",
+				  "required": true,
+				  "paramType": "form",
+				  "type": "string"
+				}
+			  ]
+			}
+		  ]
+		}
+    ],
+    "models": {
+    	"ApplyList": {
+    		"id" : "value",
+    		"properties": {
+    			"user_id": {
+    				"type": "integer",
+    				"description": "申请用户id",
+    				"required": true
+    			},
+    			"user_mobile": {
+    				"type": "string",
+    				"description": "手机号",
+    				"required": true
+    			},
+    			"is_charger": {
+    				"type": "integer",
+    				"description": "是否是主账号  1 是  0 否",
+    				"required": true
+    			},
+    			"apply_id": {
+    				"type": "integer",
+    				"description": "申请id",
+    				"required": true
+    			},
+    			"apply_status": {
+    				"type": "integer",
+    				"description": "申请状态(1申请中2已通过3拒绝)",
+    				"required": true
+    			}
+    		}
+    	}
+    }
+}

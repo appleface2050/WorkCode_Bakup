@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+	<title>滤芯终身免费用</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/json2.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script language="JavaScript">
+
+		/*分享成功页面刷新*/
+
+		function addlx(obj){
+			var addDom='';
+			for(var i in obj){
+				if(obj[i].can_exchange==false){
+		  			addDom+='<section class="exchange_box">'
+								+'<h3>'+obj[i].name+'</h3>'
+								+'<div class="clearfix now_condition">'
+									+'<img src="'+obj[i].filter_img_url+'">'
+									+'<div>'
+										+'<p>滤芯剩余寿命：<span>'+obj[i].life_value+'</span>%</p>'
+									+'</div>'
+								+'</div>'
+								+'<p class="share_change">'
+									+'<a href="javascript:;" class="share" lx_id="'+obj[i].id+'">分享</a>'
+									+'<a href="javascript:;" class="cant_exchange">兑换</a>'
+								+'</p>'
+								+'<p class="has_share">'
+									+'<span>已分享次数：<i>'+obj[i].share_total+'</i>次</span>'
+									+'<span>已兑换次数：<i>'+obj[i].exchange_total+'</i>次</span>'
+								+'</p>'
+								+'<div class="change_condition">'
+									+'<p>兑换条件：</p>'
+									+'<p>1、滤芯剩余寿命低于'+obj[i].filter_condition.surplus_life+'%；</p>'
+									+'<p>2、分享'+obj[i].filter_condition.share_total+'次。（每日首次分享计次。）</p>'
+								+'</div>'
+							+'</section>';
+				}else{
+					addDom+='<section class="exchange_box">'
+								+'<h3>'+obj[i].name+'</h3>'
+								+'<div class="clearfix now_condition">'
+									+'<img src="'+obj[i].filter_img_url+'">'
+									+'<div>'
+										+'<p>滤芯剩余寿命：<span>'+obj[i].life_value+'</span>%</p>'
+									+'</div>'
+								+'</div>'
+								+'<p class="share_change">'
+									+'<a href="javascript:;" class="share" lx_id="'+obj[i].id+'">分享</a>'
+									+'<a href="javascript:;" class="cant_exchange can_exchange" id="'+obj[i].id+'">兑换</a>'
+								+'</p>'
+								+'<p class="has_share">'
+									+'<span>已分享次数：<i>'+obj[i].share_total+'</i>次</span>'
+									+'<span>已兑换次数：<i>'+obj[i].exchange_total+'</i>次</span>'
+								+'</p>'
+								+'<div class="change_condition">'
+									+'<p>兑换条件：</p>'
+									+'<p>1、滤芯剩余寿命低于'+obj[i].filter_condition.surplus_life+'%；</p>'
+									+'<p>2、分享'+obj[i].filter_condition.share_total+'次。（每日首次分享计次。）</p>'
+								+'</div>'
+							+'</section>';
+				}		
+			}
+			return addDom;
+		}
+
+		function addlx2(obj){
+			var addDom='';
+			for(var i in obj){
+				if(obj[i].can_exchange==false){
+		  			addDom+='<section class="exchange_box">'
+								+'<h3>'+obj[i].name+'</h3>'
+								+'<div class="clearfix now_condition">'
+									+'<img src="'+obj[i].filter_img_url+'">'
+									+'<div>'
+										+'<p>使用天数：<span>'+obj[i].opened_days+'</span></p>'
+									+'</div>'
+								+'</div>'
+								+'<p class="share_change">'
+									+'<a href="javascript:;" class="share" lx_id="'+obj[i].id+'">分享</a>'
+									+'<a href="javascript:;" class="cant_exchange">兑换</a>'
+								+'</p>'
+								+'<p class="has_share">'
+									+'<span>已分享次数：<i>'+obj[i].share_total+'</i>次</span>'
+									+'<span>已兑换次数：<i>'+obj[i].exchange_total+'</i>次</span>'
+								+'</p>'
+								+'<div class="change_condition">'
+									+'<p>兑换条件：</p>'
+									+'<p>1、开机天数大于'+obj[i].filter_condition.opened_days+'；</p>'
+									+'<p>2、分享'+obj[i].filter_condition.share_total+'次。（每日首次分享计次。）</p>'
+								+'</div>'
+							+'</section>';
+				}else{
+					addDom+='<section class="exchange_box">'
+								+'<h3>'+obj[i].name+'</h3>'
+								+'<div class="clearfix now_condition">'
+									+'<img src="'+obj[i].filter_img_url+'">'
+									+'<div>'
+										+'<p>使用天数：<span>'+obj[i].opened_days+'</span></p>'
+									+'</div>'
+								+'</div>'
+								+'<p class="share_change">'
+									+'<a href="javascript:;" class="share" lx_id="'+obj[i].id+'">分享</a>'
+									+'<a href="javascript:;" class="cant_exchange can_exchange" id="'+obj[i].id+'">兑换</a>'
+								+'</p>'
+								+'<p class="has_share">'
+									+'<span>已分享次数：<i>'+obj[i].share_total+'</i>次</span>'
+									+'<span>已兑换次数：<i>'+obj[i].exchange_total+'</i>次</span>'
+								+'</p>'
+								+'<div class="change_condition">'
+									+'<p>兑换条件：</p>'
+									+'<p>1、开机天数大于'+obj[i].filter_condition.opened_days+'；</p>'
+									+'<p>2、分享'+obj[i].filter_condition.share_total+'次。（每日首次分享计次。）</p>'
+								+'</div>'
+							+'</section>';
+				}		
+			}
+			return addDom;
+		}
+
+		function share_success(){
+
+			$.ajax({type:'GET',
+					url:get_url+"/task/getFilterInfo/",
+					data:{token:bearer_token,
+						  cleaner_id:cleaner_id
+					},
+					beforeSend: function(){
+						$('.c_load').css('display','block');
+					},
+					success:function(data){
+						$('.c_load').css('display','none');
+						if(data.status==1){
+							$('.active').html('');
+							var addDom
+							if(data.value.activity_type=="1"){
+								addDom=addlx(data.value.filterData); 
+							}else if(data.value.activity_type=="2"){
+								addDom=addlx2(data.value.filterData); 
+								$('.dif').html('4.当正常使用空气净化器，到达滤芯寿命相对应的天数后，即可点击申请更换新滤芯，我们将为您送货上门。');
+							}else if(data.value.activity_type=="3"){
+								addDom=addlx(data.value.filterData);
+								$('#title').html("滤芯五年免费用");
+							}
+							$('.active').append(addDom);
+						}	  
+					},
+					error:function(){
+						$('.c_load').css('display','none');
+						alert("网络请求错误");
+					}
+			});
+
+		}
+
+	  	Zepto(function($){
+
+	  		//判断ios还是android
+			var browser = {
+			versions: function() {
+			var u = navigator.userAgent, app = navigator.appVersion;
+			return {//移动终端浏览器版本信息 
+			trident: u.indexOf('Trident') > -1, //IE内核
+			presto: u.indexOf('Presto') > -1, //opera内核
+			webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+			gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+			mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+			ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+			android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+			iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+			iPad: u.indexOf('iPad') > -1, //是否iPad
+			webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+			};
+			}(),
+			language: (navigator.browserLanguage || navigator.language).toLowerCase()
+			}
+			 
+			if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+				$(".c_back").click(function(){
+					top.location = "threefather://public/popToRootViewController";	
+				});
+			}
+			else if (browser.versions.android) {
+				$(".c_back").click(function(){
+					window.js2Android.fxFinish();
+				});
+			}
+	
+			/*获取净化器滤芯信息*/
+
+			$.ajax({type:'GET',
+					url:get_url+"/task/getFilterInfo/",
+					data:{token:bearer_token,
+						  cleaner_id:cleaner_id
+					},
+					beforeSend: function(){
+						$('.c_load').css('display','block');
+					},
+					success:function(data){
+						$('.c_load').css('display','none');
+						if(data.status==1){
+							var addDom
+							if(data.value.activity_type=="1"){
+								addDom=addlx(data.value.filterData); 
+							}else if(data.value.activity_type=="2"){
+								addDom=addlx2(data.value.filterData); 
+								$('.dif').html('4.当正常使用空气净化器，到达滤芯寿命相对应的天数后，即可点击申请更换新滤芯，我们将为您送货上门。');
+							}else if(data.value.activity_type=="3"){
+								addDom=addlx(data.value.filterData);
+								$('#title').html("滤芯五年免费用");
+							}
+							$('.active').append(addDom);
+						}
+					},
+					error:function(){
+						$('.c_load').css('display','none');
+						alert("网络请求错误");
+					}
+			});
+
+			/*分享*/
+
+			 $('.active').on('click','.share',function(){
+			 	var lx_id = $(this).attr('lx_id');
+				 if(!lx_id)
+					 return;
+				 //获取数据
+				 $.ajax({
+						 type:'GET',
+						 url:get_url+"/share/GetShareText/",
+						 data:{token:bearer_token},
+						 success:function(data){
+
+							 if(data.status==1)
+							 {
+								 var title = data.value.title;
+								 var message = data.value.content;
+								 var img_url = data.value.image_path;
+								 shareurl = data.value.page_url;
+
+								 //判断ios还是android
+								 if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+									 window.location.href = "threefather://webWeixinShare?shareurl="+shareurl+"&title="+title+"&message="+message+"&img_url="+img_url+"&lx_id="+lx_id;
+								 }
+								 else if (browser.versions.android) {
+									 window.js2Android.webWeixinShare(shareurl,title,message,img_url,lx_id);
+								 }
+							 }else
+							 {
+
+							 }
+						 },
+						 error:function(){
+							alert('发生错误，清稍后再试');
+						 }
+				 });
+
+
+			 });
+
+			/*点击兑换弹出填写地址*/
+
+			$('.active').on('click','.can_exchange',function(){
+				$('.c_tip').show();
+				$('.change_message').show();
+				$('.sure_exchange').attr('id',$(this).attr('id'));
+			});
+
+			/*确定兑换*/
+
+			$('.sure_exchange').click(function(){
+				if($('.change_message').find('input').val()==''){
+					alert('联系人、联系电话、地址都必填');
+				}else{
+					$.ajax({type:'POST',
+							url:get_url+"/task/exchange",
+							data:{token:bearer_token,
+	 							  cleaner_id:cleaner_id,
+	 							  filter_id:$(this).attr('id'),
+	 							  name:$('.user_name').val(),
+	 							  mobile:$('.user_tel').val(),
+	 							  address:$('.user_address').val()
+							},
+							beforeSend: function(){
+								// $('.c_load').css('display','block');
+							},
+							success:function(data){
+								$('.c_load').css('display','none');
+								if(data.status==1){
+									$('.change_message').hide();
+									$('.success_ch').show();
+									$('.user_name').val('');
+									$('.user_tel').val('');	
+									$('.user_address').val('');
+									$('.active').html('');
+									$.ajax({type:'GET',
+											url:get_url+"/task/getFilterInfo/",
+											data:{token:bearer_token,
+												  cleaner_id:cleaner_id
+											},
+											beforeSend: function(){
+												$('.c_load').css('display','block');
+											},
+											success:function(data){
+												$('.c_load').css('display','none');
+												if(data.status==1){
+													$('.active').html('');
+													var addDom
+													if(data.value.activity_type=="1"){
+														addDom=addlx(data.value.filterData); 
+													}else if(data.value.activity_type=="2"){
+														addDom=addlx2(data.value.filterData); 
+														$('.dif').html('4.当正常使用空气净化器，到达滤芯寿命相对应的天数后，即可点击申请更换新滤芯，我们将为您送货上门。');
+													}else if(data.value.activity_type=="3"){
+														addDom=addlx(data.value.filterData);
+														$('#title').html("滤芯五年免费用");
+													}
+													$('.active').append(addDom);
+												}		  
+											},
+											error:function(){
+												$('.c_load').css('display','none');
+												alert("网络请求错误");
+											}
+									});
+								}
+								
+							},
+							error:function(XMLHttpRequest, textStatus, errorThrown){
+								$('.c_load').css('display','none');
+								var data = JSON.parse(XMLHttpRequest.responseText);
+								if(data.status==0){alert(data.msg);}
+							}
+					});	
+				}
+			});
+
+			/*地址填写完成后确定按钮高亮*/
+
+			$('.change_message').find('input').keypress(function(){
+				if($('.user_address').val()!='' && $('.user_tel').val()!='' && $('.user_name').val()!=''){
+					$('.sure_exchange').css('background','#169bd5');
+				}
+			}); 
+			$('.change_message').find('input').keyup(function(){
+				if($('.user_address').val()=='' || $('.user_tel').val()=='' || $('.user_name').val()==''){
+					$('.sure_exchange').css('background','#999');
+				}
+			}); 
+
+
+			/*关闭兑换地址弹出层*/
+
+			$('.change_message img').click(function(){
+				$('.c_tip').hide();
+				$('.change_message').hide();
+			});
+
+			/*关闭兑换成功弹出层*/
+
+			$('.sure_success').click(function(){
+				$('.c_tip').hide();
+				$('.success_ch').hide();
+			});
+			
+		});
+		
+	</script>
+</head>
+<body>
+<section class="order_head"><a href="javascript:;" class="c_back">返回</a><span id="title">滤芯终身免费用</span></section>
+<section class="active">
+	<!-- <section class="exchange_box">
+		<h3>守护天使滤芯</h3>
+		<div class="clearfix now_condition">
+			<img src="img/share.png">
+			<div>
+				<p>累计开机天数：<span>27</span>天</p>
+				<p>滤芯剩余寿命：<span>98</span>%</p>
+			</div>
+		</div>
+		<p class="share_change">
+			<a href="javascript:;">分享</a>
+			<a href="javascript:;">兑换</a>
+		</p>
+		<p class="has_share">
+			<span>已分享次数：<i>5</i>次</span>
+			<span>已兑换次数：<i>5</i>次</span>
+		</p>
+		<div class="change_condition">
+			<p>兑换条件：</p>
+			<p>1、累计开机天数大于100天；</p>
+			<p>2、滤芯剩余寿命低于20%；</p>
+			<p>3、分享15次。（每日首次分享计次。）</p>
+		</div>
+	</section> -->
+</section>
+<section class="active_explain">
+	<a href="javascript:;">活动流程</a>
+	<p>1、通过App Store 或安卓应用商店下载“三个爸爸”APP；</p>
+	<p>2、拆箱安装净化器上电，根据说明书和APP提示配置净化器连接无线网络；</p>
+	<p>3、根据APP活动页面指引，完成分享挑战任务。在朋友圈分享15次活动内容即可。每天只计1次；</p>
+	<p class="dif">4、当正常使用空气净化器，滤芯寿命已低于20%后，即可点击申请更换新滤芯，我们将为您送货上门；</p>
+	<p>5、新滤芯收到后，请替换掉旧滤芯。然后在APP净化器页面点击对应滤芯的“滤芯寿命重置”按钮。</p>
+</section>
+<section class="other_related">
+	<a href="javascript:;">其他事项</a>
+	<p>1、参与活动的净化器如因问题发生退换货的情况，请及时与我们的客服联系，登记变更参与活动的机器序列号（SN码）和其他信息；</p>
+	<p>2、在活动期内，请保证空气净化器能通过WIFI正常联网，以免影响您的滤芯兑换；</p>
+	<!-- <p>3、为鼓励您形成保护家人健康呼吸的良好习惯，连续100天不开机视为放弃滤芯免费兑换权力；</p> -->
+	<p>3、本次活动免费更换的滤芯仅限于机器的原厂标配滤芯，其他非标配专用滤芯（如高达卫士型除甲醛专用滤芯、守护天使型除甲醛专用滤芯）不参与；</p>
+	<p>4、三个爸爸空气净化器的滤芯都有一个标准参考寿命，根据滤芯型号不同，有半年、一年和一年半三种。根据使用环境、方法和时间的不同，实际滤芯使用时间会有变化。具体请以我们APP中显示的寿命为准；</p>
+	<p>5、标准寿命是半年的滤芯（高达卫士型空气净化器的下层F9级HEPA滤芯、守护天使型空气净化器的标配桶形滤芯），一年免费兑换不超过3个；标准寿命是一年的滤芯（高达卫士型空气净化器的中层多功能活性炭滤芯），两年免费兑换不超过3个；标准寿命是一年半的滤芯（高达卫士型空气净化器的上层H13级HEPA滤芯），两年免费兑换不超过2个；</p>
+	<p>6、由于滤芯成本较高，寄送滤芯的运费由用户负担，还请谅解；</p>
+	<p>7、如有任何疑问，请咨询我公司官方服务热线：400-700-0909。</p>
+</section>
+<section class="other_related">
+	<b>注意</b>：更换滤芯后，需“重置滤芯”，以免影响下次兑换。
+</section>
+<section class="other_related">
+	最终解释权归三个爸爸版权所有
+</section>
+<!--遮罩层-->
+<div class="c_tip"></div>
+<!--页面加载动画-->
+<section class="c_load">
+	<img src="img/897342225754436199.jpg.gif">
+</section>
+<!--填写兑换信息弹出层-->
+<section class="change_message">
+	<h2>我要兑换</h2>
+	<p>
+		<span>地址：</span>
+		<input type="text" placeholder="请填写详细地址" class="user_address">
+	</p>
+	<p>
+		<span>联系人：</span>
+		<input type="text" placeholder="请填写联系人" class="user_name">
+	</p>
+	<p>
+		<span>联系电话：</span>
+		<input type="tel" placeholder="请填写联系电话" class="user_tel">
+	</p>
+	<a href="javascript:;" class="sure_exchange">确定</a>
+	<img src="img/close.png">
+</section>
+<!--兑换成功弹出层-->
+<section class="success_ch">
+	<h4>兑换成功</h4>
+	<p>兑换成功，请耐心等待滤芯的到来！</p>
+	<a href="javascript:;" class="sure_success">确定</a>
+</section>
+</body>
+</html>

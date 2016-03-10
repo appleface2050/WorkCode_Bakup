@@ -1,0 +1,8 @@
+.project
+.settings
+.buildpath
+.idea
+protected/config/local.php
+protected/config/console_local.php
+webroot/ping-test
+webroot/assets

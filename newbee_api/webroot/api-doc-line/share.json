@@ -1,0 +1,61 @@
+{
+    "swaggerVersion": "1.0",
+    "basePath": "http://api.sangebaba.com/v1",
+    "apiVersion": "1.0",
+    "resourcePath": "/share",
+	"apis": 
+    [
+    	{
+    		"path": "/share/callback/token/{token}/platform/{platform}",
+   			"description": "分享回调",
+   			"operations": [
+   				{
+   					"nickname": "messageIndex",
+   					"summary": "分享回调",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户的token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	},
+                    	{
+                    		"name": "platform",
+                    		"description": "分享平台,1微信好友2微信朋友圈3新浪微博",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "integer",
+                    		"enum":[
+                    			1,
+                    			2,
+                    			3
+                    		]
+                    	}
+                    ]
+               }
+            ]
+    	},
+    	{
+    		"path": "/share/data/token/{token}",
+   			"description": "获取分享数据",
+   			"operations": [
+   				{
+   					"nickname": "shareData",
+   					"summary": "获取分享数据",
+                    "method": "GET",
+                    "parameters": [
+                    	{
+                    		"name": "token",
+                    		"description": "用户的token",
+                    		"required": true,
+                    		"paramType": "path",
+                    		"type": "string"
+                    	}
+                    ]
+               }
+            ]
+    	}
+    ]
+ }

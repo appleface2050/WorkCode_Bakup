@@ -1,0 +1,139 @@
+/*基础样式*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+li,ul,ol{list-style:none;}
+a{text-decoration: none;}
+i,em{ font-style: normal;}
+body{font-size: 100%; font-size: 10px;}
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+a,input,span{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+p,li,img{
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*header*/
+
+.order_head{width: 100%; height: 52px; position: fixed; left: 0; top: 0; line-height: 52px; z-index: 1; text-align: center; color: #000; font-size: 2em; font-weight: bold; background: #fff;}
+.c_back{width: 80px; height: 52px; position: absolute; left: 0; top: 0; background: url(../img/back.png) no-repeat; background-position: 25% 45%; text-indent: 36px; font-size: 1em; color: #52b4d9; background-size:14px; line-height: 52px;}
+ 
+/*遮罩层*/
+
+.c_tip{width:100%; height: 100%; background:black; opacity:0.6; position:fixed; left:0; top:0; z-index:3; display:none;}
+
+/*页面加载动画*/
+
+.c_load{display:none; position:absolute; left:50%; top:50%; margin-top:-25px; margin-left: -25px;}
+.c_load img{width:50px; height:50px;}
+
+/*5年免费换滤芯页*/
+
+.active{margin-top: 55px;}
+.exchange_box{width: 80%; margin: 10px 5%; background: #f2f2f2; padding: 10px 5%; border: 0; border-radius: 5px;}
+.exchange_box h3{font-size: 1.6em;}
+.now_condition{margin-top: 10px;}
+.now_condition img,.now_condition div{float: left;}
+.now_condition img{width: 25%;}
+.now_condition div{margin-left: 10%; margin-top: 20px; color: #666;}
+.now_condition div p{line-height: 22px; font-size: 1.3em;}
+.share_change{margin-top: 16px;}
+.share_change a{ width: 40%; text-align: center; font-size: 1.4em; color: #fff; border: 0; border-radius: 5px; padding: 8px 0;}
+.share_change a:first-child{float: left; margin-right: 20%; background: #169bd5;}
+.share_change .cant_exchange{float: right; background: #999;}
+.share_change .can_exchange{background: #169bd5;}
+.has_share span{float: left; width: 40%; padding: 10px 0; color: #999; font-size: 1.2em;}
+.has_share span:first-child{margin-right: 20%;}
+.change_condition{margin-top: 10px; line-height: 16px; color: #666; font-size: 1.3em;}
+.change_condition p:first-child{padding: 5px 0; font-size: 1.2em;}
+.active_explain,.other_related{width: 90%; margin: 0 5%; font-size: 1.4em; line-height: 20px;}
+.active_explain a,.other_related a{display: inline-block; padding: 5px 12px; color: #fff; background: #219cd5; margin: 10px 0; margin-top: 20px; font-size: 1.2em;}
+.active_explain span,.other_related span{color: #219cd5;}
+.other_related{margin-bottom: 20px;}
+.change_message{width: 76%; padding: 20px 5%; position: fixed; left: 7%; top: 28%; background: #fff; border: 1px solid #000; border-radius: 5px; display: none; z-index: 4; font-size: 1.4em;}
+.change_message h2{text-align: center; font-size: 1.5em; margin-bottom: 16px;}
+.change_message p{margin-top: 10px; line-height: 28px;}
+.change_message span{display: inline-block; width: 30%;}
+.change_message input{width: 68%; height: 28px; font-size: 1.2em; text-indent: 8px;}
+.change_message a{display: block; width: 50%; margin: 20px 25%; margin-bottom: 0; background: #999; color: #fff; font-size: 1.5em; border: 0; border-radius: 5px; text-align: center; padding: 6px 0;}
+.change_message img{position: absolute; right: 10px; top: 5px; width: 20px;}
+.success_ch{width: 86%; position: fixed; left: 7%; top: 36%; text-align: center; background: #fff; border: 0; border-radius: 5px; line-height: 30px; display: none; z-index: 4;}
+.success_ch h4{padding-top: 10px; font-size: 1.4em;}
+.sure_success{background: #219cd5; color: #fff; width: 40%; display: inline-block; margin: 10px 0; border: 0; border-radius: 5px; font-size: 1.3em;}
+
+/*转发的页面*/
+
+.order_head1{font-size: 1.6em;}
+.order_head1 .c_back{background: none;}
+.active_describe{width: 90%; margin: 20px 5%; margin-top: 65px; font-size: 1.2em; line-height: 22px; font-size: 1.6em;}
+.zan_num{width: 100%; padding: 5px 0; background: #f0e3d3; margin-top: 20px;}
+.bg{background: #f0faff; padding-bottom: 20px;}
+.c_video{margin-top: 20px;}
+.box{width: 100%; margin-top: 20px;}
+.box img{width: 100%; margin-bottom: 10px;}
+
+	/*2016-1-25添加 董翔*/
+	.blue{
+		color: #30b7f1 !important;
+	}
+	.lh26{
+		width: 90%;
+		line-height: 26px !important;
+		padding:0 5%;
+	}
+	.bg2{
+		background-color: #fff;
+	}
+	.bg2 .box p{
+		line-height: 26px;
+		text-indent: 2em;
+		color: #333;
+		font-size: 1.3em;
+		padding: 0 5%;
+		margin: 13px 0;
+	}
+	.bg2 .box p a{
+		color:#30b7f1;
+	}
+	.bg2 .box img{
+		margin-bottom: 0;
+	}
+	.bg2 .box span{
+		display: block;
+		line-height: 26px;
+		text-indent: 2em;
+		color: #333;
+		font-size: 1.3em;
+		font-weight: bold;
+		letter-spacing: 1.4em;
+		padding: 0 5%;
+		margin: 13px 0;
+	}
+	.bg2 .box span em{
+		padding-right: 1.4em;
+		letter-spacing: 0;
+	}
+	.bg2 .box h3{
+		display: block;
+		line-height: 26px;
+		text-indent: 2em;
+		color: #333;
+		font-size: 1.3em;
+		font-weight: bold;
+		padding: 0 5%;
+		margin: 13px 0;
+	}
+/*微信二维码*/
+.weixin{width: 100%; text-align: center;}
+.weixin img{width: 40%; margin-top: 10px;}
+.see_more{display: block; width: 60%; margin-left: 20%; text-align: center; padding: 12px 0; color: #fff; background: #249bd3; border: 0; border-radius: 10px; font-size: 1.6em; margin-top: 30px;}
+	/*2016-1-25添加 董翔*/
+	.weixin p{
+		color: #30b7f1;
+		font-size: 1.6em;
+		margin: 20px 0;
+	}
