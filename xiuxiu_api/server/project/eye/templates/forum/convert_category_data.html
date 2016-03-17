@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+  <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+    </style>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td>
+                <select name="current_category">
+                    {% for c in categories %}
+                        {% ifequal c.id current_category_id %}
+                            <option value="{{ c.id }}" selected="selected">{{ c.name }}</option>
+                        {% else %}
+                            <option value="{{ c.id }}">{{ c.name }}</option>
+                        {% endifequal %}
+                    {% endfor %}
+                </select>
+            </td>
+            <td>
+                <select name="new_category">
+                    {% for c in categories %}
+                        {% ifequal c.id new_category_id %}
+                            <option value="{{ c.id }}" selected="selected">{{ c.name }}</option>
+                        {% else %}
+                            <option value="{{ c.id }}">{{ c.name }}</option>
+                        {% endifequal %}
+                    {% endfor %}
+                </select>
+            </td>
+            <td>
+                <input type="submit" value="转换">
+            </td>
+            <td>
+                <input type="text" value="{{ success }}" readonly="true"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="hidden" value="{{ current_category_id }}" readonly="true"/>
+            </td>
+            <td>
+                <input type="hidden" value="{{ new_category_id }}" readonly="true"/>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

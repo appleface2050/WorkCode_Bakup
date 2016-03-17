@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title></title>
+    <link rel="stylesheet" href="https://api.xiuxiu.babadeyan.com/media_root/css/forum/community.css">
+    <script src="https://api.xiuxiu.babadeyan.com/media_root/js/jquery-2.1.1.min.js"></script>
+    <script src="https://api.xiuxiu.babadeyan.com/media_root/js/forum/iscroll.js"></script>
+</head>
+<body>
+
+
+<header>
+        <a class="back">
+            <img src="/media_root/img/forum/back.png">
+        </a>
+        <a id="new">
+            <img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/create.png">
+        </a>
+        <span id="c-title">
+            <a>{{ category.name }}</a>
+        </span>
+
+    </header>
+
+    <div class="mask">
+        <img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/loading3.png" id="loading">
+        <div id="unsuccess">关注不成功</div>
+        <div id="unlogin">请登录</div>
+        <div id="refresh">刷新中...</div>
+    </div>
+
+
+    <div id="wrapper">
+        <div id="scroller">
+            <div class="head-container">
+                <div id="pullDown">
+                    <span class="pullDownIcon"><img class="pullDownIconImg" src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/loading1.png"></span>
+                    <span class="pullDownLabel">下拉刷新</span>
+                </div>
+                <div class="barname">
+                    <div class="baricon">
+                        <img src="{{ category.icon }}">
+                    </div>
+                    <div class="name">
+                        <div class="line1">
+                            <span class="nn">{{ category.name }}</span>
+                            {% if c.is_hot %}
+                                <span class="hot"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/hot.png"></span>
+                            {% endif %}
+
+                            {% if category.is_new %}
+                                <span class="new"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/newest.png"></span>
+                            {% endif %}
+                        </div>
+                        <div class="line2">
+                            {% if category.is_concerned %}
+                                <a class="concerned"><span title="{{ catgory.id }}" ><img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/attentioned.png"></span></a>
+                            {% else %}
+
+                                <a class="concern"><span title="{{ catgory.id }}"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/attention.png"></span></a>
+                            {% endif %}
+                            <span class="num">贴子<span id="num">{{ category_count.total }}</span></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        <div class="top">
+            {% for p in posts %}
+            {% if p.is_top %}
+            <div class="toppiece ding">
+                <a href="{% url 'post_detail' p.id %}?post_id={{ p.id }}&category_id={{ category.id }}&user_id={{ user_id }}&key={{ key }}" id="post_top_{{ p.id }}">
+                <img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/top.png">
+                <span class="toptitle">{{ p.title }}</span>
+                    </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            {% for p in posts %}
+            {% if p.is_category_rule %}
+            <div class="toppiece rule">
+                <a href="{% url 'post_detail' p.id %}?post_id={{ p.id }}&category_id={{ category.id }}&user_id={{ user_id }}&key={{ key }}" id="post_rule_{{ p.id }}">
+                <img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/rule.png">
+                <span class="toptitle">{{ p.title }}</span>
+                    </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <ul id="thelist">
+        {% for p in posts %}
+        {% if p.is_top or p.is_category_rule %}
+        {% else %}
+            <li>
+        <a href="{% url 'post_detail' p.id %}?post_id={{ p.id }}&category_id={{ category.id }}&user_id={{ user_id }}&key={{ key }}" id="post_{{ p.id }}">
+            <div class="content">
+                <div class="content-head">
+                    <div class="user">
+                        <img src="{{ p.big_user_image }}">
+                        <span class="username">{{ p.user_nickname }}</span>
+                        <span class="pubtime">{{ p.show_time }}</span>
+                        <span class="zan"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/good.png">{{ p.win_count }}</span>
+                        <span class="renum"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/re.png">{{ p.reply_count }}</span>
+
+                    </div>
+                </div>
+                <div class="content-detail">
+                    <div class="content-title">
+                        <p>{{ p.title|truncatewords:"30" }}</p>
+                    </div>
+                    <div class="content-abstrat">
+                        <p>
+                            {% autoescape off %}
+                            {{ p.content|truncatewords:"80" }}
+                            {% endautoescape %}
+                        </p>
+                    </div>
+                    <div class="content-img">
+                        {% if p.image1 %}
+                            <img src="{{ p.image1 }}">
+                        {% endif %}
+                        {% if p.image2 %}
+                            <img src="{{ p.image2 }}">
+                        {% endif %}
+                        {% if p.image3 %}
+                            <img src="{{ p.image3 }}">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+            </li>
+        </ul>
+        <input type="hidden" id="start_id" value="{{ start_id }}" />
+            <div id="nomore">没有更多内容了</div>
+            <div id="pullUp">
+                <span class="pullUpLabel">上拉加载更多</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var imgwidth = $(".content-img img:first").width();
+        $(".content-img").children("img").css("height",imgwidth+"px");
+    </script>
+    <script src="https://api.xiuxiu.babadeyan.com/media_root/js/forum/index.js"></script>
+
+</body>
+</html>

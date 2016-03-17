@@ -1,0 +1,323 @@
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0;}
+ul,ol,menu{list-style:none}
+fieldset,img{border:none}
+img,object,select,input,textarea,button{vertical-align:middle}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6,input,textarea,select,address,caption,cite,code,dfn,em,i,b,strong,small,th,var,abbr{font-size:100%;font-style:normal}
+q:before,q:after{content:''}
+ins,s,u,del{text-decoration:none}
+html,body{background-color: #fff;}
+a{text-decoration: none;color: #333;}
+img {border: 0}
+/*body {font-family: "微软雅黑", sans-serif;}*/
+body {
+    font-family: sans-serif;
+    color: #999999;
+    /*zoom: 1.104;*/
+    position: relative;
+}
+
+/*优惠券渠道、兑换专区////////////////////*/
+.channel{
+    background-color: #ebebeb;
+    padding: 10px 0 0 0;
+}
+.channel-piece{
+    width: 100%;
+    height: 118px;
+    margin: 0 0 10px 0;
+    background-color: #ebebeb;
+}
+.channel-piece img{
+    width: 100%;
+    height: 118px;
+}
+.nodata{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 180px;
+    font-size: 18px;
+    text-align: center;
+}
+.nodata div{
+    margin: 20px auto;
+    text-align: center;
+}
+
+/*优惠券兑换//////////////////////////////////////////*/
+.coupon{
+    background-color: #ebebeb;
+}
+#channel{
+    width: 100%;
+    margin: 0 0 10px 0;
+    height: 118px;
+}
+.redeem{
+    background-color: #fafafa;
+    padding: 10px 0 100px 0;
+    font-size: 18px;
+}
+.redeem .textin1{
+    border-top: solid 1px #aeaeae;
+    border-bottom: solid 1px #aeaeae;
+    background-color: #ffffff;
+}
+.redeem .textin2{
+    border-bottom: solid 1px #aeaeae;
+    background-color: #ffffff;
+}
+.redeem .textin3{
+    margin: 20px 0 0 0;
+    border-top: solid 1px #aeaeae;
+    border-bottom: solid 1px #aeaeae;
+    background-color: #ffffff;
+}
+.redeem input{
+    overflow:auto;
+    border: none;
+}
+.redeem #code{
+    width: 330px;
+    padding: 10px 0 15px 45px;
+    background: url("https://api.xiuxiu.babadeyan.com/media_root/img/coupon/ticket.png") 10px 14px no-repeat;
+    background-size: 25px;
+}
+.redeem #tel{
+    width: 210px;
+    padding: 10px 0 15px 45px;
+    background: url("https://api.xiuxiu.babadeyan.com/media_root/img/coupon/phone.png") 12px 14px no-repeat;
+    background-size: 17px;
+}
+
+.redeem #confirm{
+    width: 330px;
+    padding: 10px 0 15px 45px;
+    display: inline-block;
+    background: url("https://api.xiuxiu.babadeyan.com/media_root/img/coupon/protect.png") 10px 14px no-repeat;
+    background-size: 20px;
+}
+.redeem #sendmsg{
+    /*display: none;*/
+    font-size: 18px;
+    text-align: center;
+    width: 110px;
+    border-left: solid 1px #aeaeae;
+    padding: 10px 0 10px 10px;
+}
+.redeem #resend{
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    width: 110px;
+    border-left: solid 1px #aeaeae;
+    padding: 10px 0 10px 10px;
+}
+.redeem #resendtime{
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    width: 110px;
+    border-left: solid 1px #aeaeae;
+    padding: 10px 0 10px 15px;
+}
+.redeem .error{
+    margin: 10px 20px;
+}
+.redeem .error .errortxt{
+    color: #ff363f;
+}
+.invisable{
+    display: none;
+}
+.redeem .rule{
+    margin: 20px 0 0 0;
+}
+.redeem .ruletitle .line{
+    color: #999999;
+    margin: auto 17px;
+    font-size: 14px;
+}
+.redeem .rule .ruletitle{
+    color: #999999;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+}
+.redeem .rule .ruletxt{
+    color: #999999;
+    font-size: 18px;
+    font-weight: 100;
+    margin: 20px 25px 30px;
+    line-height: 24px;
+}
+#codedype{
+
+}
+#codedate{}
+#bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 130px;
+    background-color: #ffffff;
+    border-top: 2px solid #ebebeb;
+}
+#bottom #wechat{
+    font-size: 18px;
+    margin: 10px 5px;
+}
+
+#bottom #wechat img{
+    width: 30px;
+    margin: auto 10px auto 15px;
+}
+#bottom #action{
+    margin: 10px auto;
+    padding: 15px 27px;
+    height: 50px;
+    text-align: center;
+    width: 100%;
+    border-top: 2px solid #ebebeb;
+
+}
+#action #action-btn{
+    float: left;
+    padding: 12px 140px;
+    margin: 0 auto;
+    background-color: #fa645c;
+    color:#ffffff;
+    font-size: 20px;
+}
+.success{
+    text-align: center;
+    width: 100%;
+}
+.mainbox{
+    background-color: #53d66c;
+    border-radius: 20px;
+    color: #ffffff;
+    width: 200px;
+    margin: 150px auto 10px auto;
+    padding: 50px 0 55px 0;
+    font-size: 20px;
+}
+.tip{
+    text-align: center;
+    width: 220px;
+    margin: 10px auto;
+    padding: 10px 0 55px 0;
+    font-size: 20px;
+}
+
+
+
+
+/*我的优惠券 my coupon///////////////////////////////*/
+.mycoupon{
+    background-color: #ebebeb;
+    padding: 10px 5px ;
+    color: #333333;
+}
+.nocoupon{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 180px;
+    font-size: 18px;
+    text-align: center;
+}
+.nocoupon div{
+    margin: 20px auto;
+    text-align: center;
+}
+.coupon-piece{
+    position: relative;
+    width: 100%;
+    margin: 0 0 15px 0;
+    background-color: #ffffff;
+    height: 130px;
+}
+.coupon-piece .topimg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.coupon-piece .coupon-detail{
+    width: 100%;
+    position: absolute;
+    height: 130px;
+    /*padding: 0 5px;*/
+}
+.coupon-piece .coupon-detail .price{
+    font-size: 26px;
+    position: absolute;
+    top: 35px;
+    left: 10px;
+}
+.coupon-piece .coupon-detail .num{
+    font-size: 38px;
+}
+.coupon-piece .coupon-detail .type{
+    position: absolute;
+    font-size: 18px;
+    top: 20px;
+    left: 125px;
+}
+.coupon-piece .coupon-detail .date{
+    position: absolute;
+    font-size: 13px;
+    top: 50px;
+    left: 125px;
+    color: #8c8c8c;
+}
+.coupon-piece .coupon-detail .coupon-code{
+    position: absolute;
+    font-size: 16px;
+    top: 75px;
+    left: 125px;
+    color: #8c8c8c;
+}
+.coupon-piece .indate{
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    width: 92%;
+    padding: 7px 5px;
+    border-top: 1px solid #999999;
+    font-size: 14px;
+    color: #999999;
+}
+.na{
+    -webkit-filter: grayscale(100%);
+    color: #999999;
+}
+.overdue{
+    position: absolute;
+    width: 100px;
+    right: 0;
+    bottom: 0;
+}
+.overdate{
+    position: absolute;
+
+}
+
+@media (max-width: 360px) {
+    body{
+        zoom:0.96;
+    }
+}
+@media (max-width: 320px) {
+    body{
+        zoom: 0.86;
+    }
+}
+
+@media (min-width: 400px) {
+    body{
+        zoom: 1.12;
+    }
+}

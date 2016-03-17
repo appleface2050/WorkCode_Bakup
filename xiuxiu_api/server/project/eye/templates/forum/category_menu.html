@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>嗅嗅社区</title>
+    <link rel="stylesheet" href="https://api.xiuxiu.babadeyan.com/media_root/css/forum/menu.css">
+    <!--<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>-->
+    <script src="https://api.xiuxiu.babadeyan.com/media_root/js/jquery-2.1.1.min.js"></script>
+    <!--<script type="text/javascript">-->
+        <!--!window.jQuery && document.write('<script src="media/jquery-2.1.1.min.js"><\/script>');-->
+    <!--</script>-->
+</head>
+<body>
+
+    <header>
+        <!--<a class="back">-->
+            <!--<img src="/media_root/img/forum/back.png">-->
+        <!--</a>-->
+        <div id="c-title">
+            嗅嗅社区
+        </div>
+    </header>
+    <div class="mask">
+        <img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/loading3.png" id="loading">
+        <div id="unsuccess">关注不成功</div>
+        <div id="unlogin">请登录</div>
+    </div>
+    <div class="container">
+        <div id="bannerbox">
+            <div class="slider-container">
+                <div class="main-slider">
+
+                    {% for car in carousel %}
+
+                    <div
+                            {% if forloop.first %}
+                                class="slide-item curr" style="display:block;">
+                            {% else %}
+                                class="slide-item">
+                            {% endif %}
+                        <a href="{{ car.url }}">
+                            <img src="{{ car.image }}"  alt="">
+                            <div class="title"><span>{{ car.descriptions }}</span></div>
+                        </a>
+                    </div>
+                    {% endfor %}
+
+
+                </div>
+
+            </div>
+        </div>
+        <ul>
+            {% for c in categories %}
+            <li class="piece" id="category_{{ c.id }}">
+                <a href="{% url 'post_list' c.id %}?user_id={{ user_id }}&category_id={{ c.id }}&key={{ key }}">
+                    <img src="{{ c.icon }}">
+                    <span class="detail">
+                        <span class="name">{{ c.name }}</span>
+
+                        {% if c.is_hot %}
+                            <span class="hot"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/hot.png"></span>
+                        {% endif %}
+
+                        {% if c.is_new %}
+                            <span class="new"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/newest.png"></span>
+                        {% endif %}
+                        <span class="des">{{ c.subheading }}</span>
+                    </span>
+                </a>
+                        {% if c.is_concerned %}
+                            <a class="concerned"><span title="{{ c.id }}" ><img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/attentioned.png"></span></a>
+                        {% else %}
+                            <a class="concern"><span title="{{ c.id }}"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/attention.png"></span></a>
+                        {% endif %}
+
+
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+    <input type="hidden" value="{{ user_id }}" id="user_id" />
+    <input type="hidden" value="{{ key }}" id="key" />
+
+
+   <script>
+
+function parse_parameters()
+{
+	var data = {};
+	var loc = window.location.search;
+	params = loc.substr(1);
+
+    params_array = params.split("&");
+	for(var i=0; i<params_array.length; i++)
+	{
+		var temp = params_array[i];
+		var temp_array = temp.split("=");
+		if (temp_array.length > 1)
+		{
+			data[temp_array[0]] = temp_array[1]
+		}
+	}
+	return data
+}
+
+
+       $(".concern").click(function(){
+           if(user_id == 0){
+               $(".mask").css("display","block");
+               $("#unlogin").css("display","block");
+               $(".mask").click(function(){
+                   $(this).css("display","none");
+               })
+           }else{
+               var base_url = "https://api.xiuxiu.babadeyan.com/";
+               var concrete_url = "forum/post/list/add/concern/";
+               var url = base_url + concrete_url;
+
+               var forum_id = $(this).children("span").attr("title");
+//            var user_id = $("#user_id").val();
+//            var key = $("#key").val();
+
+               var data = parse_parameters();
+               var user_id = data["user_id"];
+               var key = data["key"];
+//var forum_id = data["category_id"];
+               console.log("用户ID：");
+               console.log(user_id);
+               console.log("key:");
+               console.log(key);
+               console.log("forum_id:");
+               console.log(forum_id);
+
+
+               var althis = $(this);
+               console.log(forum_id);
+               $.ajax({
+                   type:"POST",
+                   url: url,
+                   data:{
+                       user_id: user_id,
+                       forum_category_id: forum_id,
+                       key: key
+                   },
+                   dataType:"json" ,
+                   success:function(data){
+                       var con = data.success;
+                       var is_login = data.is_login;
+                       console.log("是否登录");
+                       console.log(is_login);
+                       console.log(con);
+                       con_change(con);
+                   },
+                   error:function(){
+                       $(".mask").css("display","block");
+                       $("#unsuccess").css("display","block");
+                       $(".mask").click(function(){
+                           $(this).css("display","none");
+                           $("#unsuccess").css("display","none");
+                       })
+                   }
+               });
+               function con_change(con){
+                   if(con == true){
+                       var concerned = '<a class="concerned"><span><img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/attentioned.png"></span></a>'
+                       althis.after(concerned);
+                       althis.remove();
+                   }else{
+                       console.log("关注不成功");
+                       $(".mask").css("display","block");
+                       $("#unsuccess").css("display","block");
+                       $(".mask").click(function(){
+                           $(this).css("display","none");
+                           $("#unsuccess").css("display","none");
+                       });
+                   }
+               }
+           }
+
+        })
+$(document).ready(function(){
+    var wwidth = $(window).width()*0.6;
+    $(".main-slider").height(wwidth);
+    $(".slide-item img").height(wwidth);
+    startTimer();
+
+    /** Main Slider **/
+    var timer;
+    var slideCount = $('.main-slider .slide-item').length;
+    var currSlide = $('.main-slider .slide-item').filter('.curr').index();
+    var nextSlide = currSlide + 1;
+    var fadeSpeed = 1000;
+
+    //Start slides timer functions
+    function startTimer() {
+        timer = setInterval(function () {
+            $('.slide-item').eq(currSlide).fadeOut(fadeSpeed);
+
+            $('.slide-item').eq(nextSlide).addClass('curr').fadeIn(fadeSpeed);
+
+            currSlide = nextSlide;
+            nextSlide = currSlide + 1 < slideCount ? currSlide + 1 : 0;
+
+        }, 6000);
+    }
+
+
+});
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

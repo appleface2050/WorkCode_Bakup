@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content="" />
+    <title></title>
+    <link rel="stylesheet" href="media/jianceyi.css" media="all" />
+    <script type="text/javascript" src="media/jquery-1.9.1.min.js"></script>
+
+
+</head>
+
+<body>
+    <div style="display: none">
+        <img src="img/xiuxiu.png">
+    </div>
+    <div class="container">
+        <div class="shop">
+            <img class="shoppic" src="" >
+            <div class="shop-cont">
+                <div class="shopname"></div>
+                <span class="grade"><img class="star" src=""><span class="star1"></span></span>
+                <span class="price"></span>
+                <div class="dis-type">
+                    <span class="dis"></span>
+                    <span class="type"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="user">
+                <span class="usericon" ><img class="usericoni" src=""></span>
+                <span class="username"></span>
+                <span class="pubtime"></span>
+            </div>
+            <div>
+                <div class="pubpic">
+                    <div class="redbag">
+                        <img src="img/redbag.png">
+                        <span class="redbagtxt">本次检测获红包<span class="money"></span>元</span>
+                    </div>
+                    <div class="tags"> </div>
+                    <div class="pm25">
+                        <p class="p1">PM2.5</p>
+                        <p class="p2" id="pm2_5"></p>
+                        <p class="p3" id="degree"></p>
+                    </div>
+                    <div id="formaldehyde">
+                        <p class="f1">甲醛 mg/m3</p>
+                        <p class="f2"><span id="f-num"></span><span id="f-degree"></span></p>
+                    </div>
+                    <div class="time">
+                        <span class="from"><span class="datetime"></span><span class="datafrom">数据来自：三个爸爸检测器</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="description"></div>
+            <div class="czc">
+                <span class="comment">
+                    <img src="img/comment.png">
+                    <span class="num" id="connum"></span>
+                </span>
+                 <span class="good">
+                    <img src="img/good1.png">
+                    <span class="num" id="goodnum"></span>
+                </span>
+                 <span class="bad">
+                    <img src="img/bad1.png">
+                    <span class="num" id="badnum"></span>
+                </span>
+            </div>
+        </div>
+        
+        <!--<div class="hot">-->
+            <!--<p class="hottitle">热门数据</p>-->
+            <!--<div class="hotpics">-->
+                <!--<a href="https://api.xiuxiu.babadeyan.com/media_root/share/jianceyi/index.html?id=1279&from=timeline&isappinstalled=1">-->
+                    <!--<div class=hotpic id="hotpic1">-->
+                        <!--<div class="bottom">-->
+                            <!--<span class="name">新东安市场</span>-->
+                            <!--<span class="pm"><span class="pmpm">PM2.5</span> 398</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+                <!--<a href="https://api.xiuxiu.babadeyan.com/media_root/share/jianceyi/index.html?id=1328&from=timeline&isappinstalled=1">-->
+                    <!--<div class=hotpic id="hotpic2">-->
+                        <!--<div class="bottom">-->
+                            <!--<span class="name">麻膳堂</span>-->
+                            <!--<span class="pm"><span class="pmpm">PM2.5</span> 6</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+                <!--<a href="https://api.xiuxiu.babadeyan.com/media_root/share/jianceyi/index.html?id=1326&from=timeline&isappinstalled=1">-->
+                    <!--<div class=hotpic id="hotpic3">-->
+                            <!--<div class="bottom">-->
+                                <!--<span class="name">望京soho</span>-->
+                                <!--<span class="pm"><span class="pmpm">PM2.5</span> 7</span>-->
+                            <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+                <!--<a href="https://api.xiuxiu.babadeyan.com/media_root/share/jianceyi/index.html?id=1293&from=timeline&isappinstalled=1">-->
+                    <!--<div class=hotpic id="hotpic4">-->
+                            <!--<div class="bottom">-->
+                                <!--<span class="name">麦当劳</span>-->
+                                <!--<span class="pm"><span class="pmpm">PM2.5</span> 152</span>-->
+                            <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="hot" id="dlredbag">
+            <img id="activity" src="img/activityinshare.jpg">
+        </div>
+        <!--<div class="hot" id="game">-->
+            <!--<a href="https://api.xiuxiu.babadeyan.com/rest/api/games/index?count-title=游戏from数据分享页"><img id="game1" src="img/gameemter.png"></a>-->
+        <!--</div>-->
+    </div>
+<footer id="download">
+    <a id="downloada">
+        <img src="img/footershare.png">
+    </a>
+</footer>
+
+<script src="media/share.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".pubpic").css("height",$(".pubpic").css("width"));
+        $(".hotpic").css("height",$(".hotpic").css("width"));
+        $(".hotpics").css("height",$(".hotpics").css("width"));
+    })
+</script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>雾霾致癌！急需净化器！600元现金快来抢！</title>
+    <meta name="description" content="aaaaa" />
+    <!--<link rel="stylesheet" href="media/main.css">-->
+    <style>
+        body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}
+        table{border-collapse:collapse;border-spacing:0;}
+        ul,ol,menu{list-style:none}
+        fieldset,img{border:none}
+        img,object,select,input,textarea,button{vertical-align:middle}
+        caption,th{text-align:left}
+        h1,h2,h3,h4,h5,h6,input,textarea,select,address,caption,cite,code,dfn,em,i,b,strong,small,th,var,abbr{font-size:100%;font-style:normal}
+        q:before,q:after{content:''}
+        ins,s,u,del{text-decoration:none}
+        html,body{background-color: #fff;}
+        a{text-decoration: none;color: #333;}
+        img {border: 0}
+        html{
+            background-color: #ff4830;
+        }
+        .container{
+            width: 100%;
+            text-align: center;
+            position: relative;
+
+        }
+        .container #bg{
+            width: 100%;
+            height: 554px;
+        }
+        .container .center{
+            position: relative;
+            text-align: center;
+            width: 100%;
+        }
+        .container .sign{
+            position: absolute;
+            top: 420px;
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .sign .textin2{
+            margin: 3px auto;
+            text-align: center;
+            display: inline-block;
+        }
+        .sign input{
+            overflow:auto;
+            border: none;
+            border-radius: 5px;
+            padding: 2px 0 2px 30px;
+            background-color: #ffffff;
+            font-size: 16px;
+        }
+        .sign #tel{
+            width: 240px;
+            background: url("https://api.xiuxiu.babadeyan.com/media_root/img/coupon/phone.png") 10px 10px no-repeat;
+            background-color: #ffffff;
+            background-size: 14px;
+            height: 40px;
+        }
+        .sign .error{
+            margin: 2px auto;
+        }
+        .sign .error .errortxt{
+            color: #ffffff;
+        }
+        .invisable{
+            display: none;
+        }
+        #getnow{
+            position: absolute;
+            top: 535px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        #getnow img{
+            width: 300px;
+        }
+        .mask{
+            display: none;
+            position: fixed;
+            top: 0;
+            z-index: 9999;
+            width: 100%;
+            height: 800px;
+            background-color: #333333;
+            background-color: rgba(0,0,0,0.6);
+            text-align: center;
+        }
+        #signsuccess{
+            margin: 100px auto 50px;
+            width: 240px;
+            height: 200px;
+            background-color: #ffdb4a;
+            border-radius: 50px;
+            padding: 20px;
+            font-size: 24px;
+            color: #000000;
+        }
+        #signsuccess p{
+            margin: 25px 0;
+        }
+        #close{
+            padding: 10px 20px;
+            margin: 20px auto;
+            color: #ffffff;
+            background-color: #53d66c;
+            text-align: center;
+            border-radius: 15px;
+        }
+        #logo{
+            width: 0;
+            position: fixed;
+            z-index: -9999;
+        }
+        @media (max-width: 360px) {
+            body{
+                zoom:0.96;
+            }
+        }
+        @media (max-width: 320px) {
+            body{
+                zoom: 0.86;
+            }
+            @media (max-height: 480px){
+                body{
+                    zoom: 0.76;
+                }
+            }
+        }
+        @media (min-width: 400px) {
+            body {
+                zoom: 1.12;
+            }
+        }
+        @media (min-width: 480px) {
+            body{
+                zoom: 1.28;
+            }
+        }
+    </style>
+</head>
+<body>
+<img id="logo" src="https://api.xiuxiu.babadeyan.com/media_root/img/activity/icon.png">
+<div class="container">
+    <img id="bg" src="https://api.xiuxiu.babadeyan.com/media_root/img/activity/coupon600-bg.png">
+    <div class="sign">
+        <div class="center">
+            <div class="textin2">
+                <input id="tel" type="text" placeholder="输入手机号码"  value="" />
+            </div>
+
+            <div class="error">
+                <p class="errortxt invisable" id="errorcode">领取不成功,请稍后再试</p>
+                <p class="errortxt invisable" id="errorconnect">网络错误请重试</p>
+                <!--<p class="errortxt invisable" id="notfull">请填写全部内容</p>-->
+                <p class="errortxt invisable" id="wrongtel">请填写正确的手机号</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="getnow">
+        <div class="center">
+            <img src="https://api.xiuxiu.babadeyan.com/media_root/img/activity/getcoupon600.png">
+        </div>
+    </div>
+
+</div>
+<div class="mask">
+    <div id="signsuccess">
+        <p>优惠券领取成功!</p>
+        <p>赶快去我嗅嗅商城购买净化器吧!</p>
+        <span id="close">关闭</span>
+    </div>
+</div>
+
+<script src="https://api.xiuxiu.babadeyan.com/media_root/js/zepto.min.js"></script>
+<script>
+    var thisheight = $(window).height()-73;
+//    alert(thisheight)
+    $("html").css("height",thisheight+"px");
+
+    var key;
+
+    $("#close").click(function(){
+        $(".mask").hide();
+    });
+
+    $("#getnow").click(function(){
+        $("#errorcode").addClass("invisable");
+        $("#errorconnect").addClass("invisable");
+        $("#wrongtel").addClass("invisable");
+        wait = 0;
+        var tel = $("#tel").attr("value");
+        if(tel!=""){
+            console.log("allin");
+            $.ajax({
+                type:"POST" ,
+                url: "https://api.xiuxiu.babadeyan.com/rest/api/coupon/again/activate/",
+                data: {
+                    phone: tel,
+                },
+                dataType:"json" ,
+                success:function(data){
+                    if(data.success){
+                        console.log("获取成功！");
+                        $(".mask").css("display","block");
+                        setTimeout('window.location.href="http://app.xiu.sangebaba.com/?count-title=下载送守护600优惠券-下载"',3000);
+                    }else{
+                        $("#errorcode").removeClass("invisable");
+                    }
+                },
+                error:function(){
+                    $("#errorconnect").removeClass("invisable");
+                }
+            });
+        }else{
+            $("#wrongtel").removeClass("invisable");
+        }
+    });
+
+
+    function opencount(){
+        $.ajax({
+            type:"POST" ,
+            url: "https://api.xiuxiu.babadeyan.com/rest/api/record/create" ,
+            data:{title : "下载送守护600优惠券-领取" },
+            dataType:"json" ,
+            success:function(){
+                console.log("opencount+1");
+            },
+            error: function(){
+                console.log("opencount failed");
+            }
+        });
+    }
+    opencount();
+
+</script>
+</body>
+</html>

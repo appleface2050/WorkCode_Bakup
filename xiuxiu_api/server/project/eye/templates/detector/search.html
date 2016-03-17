@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询场所ID</title>
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            /*width: 20%;*/
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+       input
+       {
+            width: 300px;
+       }
+       select
+       {
+            width: 300px;
+       }
+    </style>
+</head>
+<body>
+<form>
+    <table>
+        <tr class="even">
+            <td>城市</td>
+            <td><input type="text" placeholder="城市" name="city" value="{{ city }}"/></td>
+            <td>场所名称</td>
+            <td><input type="text" placeholder="场所名称" name="shop_name" value="{{ shop_name }}"/></td>
+        </tr>
+        <tr class="odd">
+            <td>地址</td>
+            <td><input type="text" placeholder="地址" name="shop_address" value="{{ shop_address }}"/></td>
+            <td>场所ID</td>
+            <td><input type="text" placeholder="场所ID" name="shop_ids" value="{{ shop_ids }}" readonly="readonly"/></td>
+        </tr>
+        <tr class="even">
+            <td colspan="4"><input type="submit" placeholder="submit" name="search" value="查询"/></td>
+            <!--<td><input type="text" placeholder="地址" name="address"/></td>-->
+            <!--<td>场所ID</td>-->
+            <!--<td><input type="text" placeholder="场所ID" name="shop_id" readonly="readonly"/></td>-->
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>场所ID</td>
+            <td>场所名称</td>
+            <td>场所地址</td>
+            <td>场所图片</td>
+            <td>场所类别</td>
+            <td>是否绑定检测器</td>
+            <td>操作</td>
+        </tr>
+        {% for si in shop_info %}
+            <tr {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+                >
+                <td>{{ si.id }}</td>
+                <td>{{ si.name }}</td>
+                <td>{{ si.dianping_address }}</td>
+                <td><img src="{{ si.dianping_s_photo_url }}"/></td>
+                <td>{{ si.category_name }}</td>
+                <td>{{ si.has_detector }}</td>
+                <td>{% if si.has_detector %}
+                    <a href="/support/detector/search?city={{city}}&shop_name={{shop_name}}&shop_address{{shop_name}}&shop_ids={{shop_ids}}&search=True&has_detector=0&the_id={{si.id}}">解绑</a>
+                    {% else %}
+                    <a href="/support/detector/search?city={{city}}&shop_name={{shop_name}}&shop_address{{shop_name}}&shop_ids={{shop_ids}}&search=True&has_detector=1&the_id={{si.id}}">绑定</a>
+                    {% endif %}
+                </td>
+                </tr>
+        {% endfor %}
+    </table>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+<percentages>
+    <percentage name="pm25" default="0">40</percentage>
+    <percentage name="tvoc" default="0">0</percentage>
+    <percentage name="formaldehyde" default="50">40</percentage>
+    <percentage name="co2" default="0">0</percentage>
+    <percentage name="category" default="100">20</percentage>
+</percentages>

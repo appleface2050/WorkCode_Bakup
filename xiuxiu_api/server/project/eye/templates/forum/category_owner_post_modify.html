@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+    //下面用于图片上传预览功能
+    function setImagePreview(file_id, preview_id) {
+        console.log("file_id");
+        console.log(file_id);
+        var docObj=document.getElementById(file_id);
+        console.log(docObj);
+
+        var imgObjPreview=document.getElementById(preview_id);
+        if(docObj.files &&docObj.files[0])
+        {
+            //火狐下，直接设img属性
+            imgObjPreview.style.display = 'block';
+            imgObjPreview.style.width = '150px';
+            imgObjPreview.style.height = '180px';
+            //imgObjPreview.src = docObj.files[0].getAsDataURL();
+
+            //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+            imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+        }
+        else
+        {
+            //IE下，使用滤镜
+            docObj.select();
+            var imgSrc = document.selection.createRange().text;
+            var localImagId = document.getElementById("localImag");
+            //必须设置初始大小
+            localImagId.style.width = "150px";
+            localImagId.style.height = "180px";
+            //图片异常的捕捉，防止用户修改后缀来伪造图片
+            try{
+                localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+            }
+            catch(e)
+            {
+                alert("您上传的图片格式不正确，请重新选择!");
+                return false;
+            }
+            imgObjPreview.style.display = 'none';
+            document.selection.empty();
+        }
+        return true;
+    }
+
+</script>
+   <style type="text/css">
+       body{margin: 0;padding: 0;}
+       a{
+           text-decoration:none;
+           color: #000000;
+           -webkit-tap-highlight-color: rgba(0,0,0,0);
+           -webkit-touch-callout: none;
+           /*-webkit-user-select: none;*/
+       }
+       header{
+           width: 100%;
+           height: 40px;
+           background-color: #EBEBEB;
+       }
+       .icon{
+           float: left;
+           width: 40px;
+           vertical-align: middle;
+           margin: auto 0 auto 50px;
+           line-height: 40px;
+       }
+       .title{float: left;
+           vertical-align: middle;
+           margin: auto 20px;
+           line-height: 40px;
+           font-size: 20px;}
+       .subtitle{
+           float: left;
+           vertical-align: middle;
+           margin: auto 10px auto 0;
+           line-height: 40px;
+           font-size: 18px;
+       }
+       .exite{
+           float: right;
+           margin: auto 50px;
+           line-height: 40px;
+           font-size: 18px;
+       }
+       .container{
+           padding: 30px;
+       }
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        tr{
+            margin: 15px auto;
+        }
+        #title {
+            height: 80px;
+        }
+        #title input{
+            height: 30px;
+        }
+        #title textarea{
+            height: 60px;
+        }
+
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            width: 25%;
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+       input
+       {
+            width: 300px;
+       }
+       .button{
+           height: 40px;
+           font-size: 20px;
+           margin: 10px 20px;
+       }
+   </style>
+    <title>版主后台</title>
+</head>
+<body>
+<header>
+    <img class="icon" src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/xiuxiu.png">
+    <a href="/support/webmaster/"><span class="title">嗅嗅社区版块管理后台</span></a>
+    <a href="/support/webmaster/post/?category_id={{ category_id }}"><span class="subtitle"> >贴子管理</span></a>
+    <span class="subtitle">> 贴子修改</span>
+    <a class="exite" href="/support/webmaster?logout=1">退出</a>
+
+    <a class="exite" href="/support/webmaster/post/?category_id={{ category_id }}">返回帖子管理</a>
+</header>
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <table>
+            <tr id="title">
+                <td>标题：</td>
+                <td><input type="text" placeholder="标题" name="title" value="{{ post.title }}" /></td>
+                <td>内容：</td>
+                <td><textarea rows="3" cols="80" name="content" placeholder="内容">{{ post.content }}</textarea></td>
+            </tr>
+            <tr class="bordernone">
+                <td class="bordernone">是否版规：</td>
+                <td class="bordernone">
+                    {%　if post.is_category_rule %}
+                    <input type="checkbox" checked="true" name="is_category_rule"/>
+                    {% else %}
+                    <input type="checkbox" name="is_category_rule"/>
+                    {% endif %}
+                </td>
+                <td class="bordernone">是否加精：</td>
+                <td class="bordernone">
+                    {%　if post.is_digest %}
+                    <input type="checkbox" checked="true" name="is_digest"/>
+                    {% else %}
+                    <input type="checkbox" name="is_digest"/>
+                    {% endif %}
+                </td>
+
+            </tr>
+            <tr>
+                <td class="bordernone">是否置顶：</td>
+                <td class="bordernone">
+                    {%　if post.is_digest %}
+                    <input type="checkbox" checked="true" name="is_top"/>
+                    {% else %}
+                    <input type="checkbox" name="is_top"/>
+                    {% endif %}
+                </td>
+                <td class="bordernone">置顶权重：</td>
+                <td class="bordernone"><input type="text" placeholder="置顶权重" name="top_weight" value="{{ post.top_weight }}" /></td>
+            </tr>
+            <tr>
+                <td>图片1：</td>
+                <td><img src="{{ post.image1 }}" id="preview_image1" width="50" height="50"/>
+                    <input type="file" value="{{ post.image1 }}" id="image1" name="image1"
+                           onchange="javascript:setImagePreview('image1', 'preview_image1');"/></td>
+                <td>图片2：</td>
+                <td><img src="{{ post.image2 }}" id="preview_image2" width="50" height="50"/>
+                    <input type="file" value="{{ post.image2 }}" id="image2" name="image2"
+                           onchange="javascript:setImagePreview('image2', 'preview_image2');"/></td>
+            </tr>
+            <tr>
+                <td>图片3：</td>
+                <td><img src="{{ post.image3 }}" id="preview_image3" width="50" height="50"/>
+                    <input type="file" id="image3" name="image3"
+                           onchange="javascript:setImagePreview('image3', 'preview_image3');"/></td>
+                <td>图片4：</td>
+                <td><img src="{{ post.image4 }}" id="preview_image4" width="50" height="50"/>
+                    <input type="file" value="{{ post.image4 }}" id="image4" name="image4"
+                           onchange="javascript:setImagePreview('image4', 'preview_image4');"/></td>
+            </tr>
+            <tr>
+                <td>图片5：</td>
+                <td><img src="{{ post.image5 }}" id="preview_image5" width="50" height="50"/>
+                    <input type="file" value="{{ post.image5 }}" id="image5" name="image5"
+                           onchange="javascript:setImagePreview('image5', 'preview_image5');"/></td>
+                <td>图片6：</td>
+                <td><img src="{{ post.image6 }}" id="preview_image6" width="50" height="50"/>
+                    <input type="file" value="{{ post.image6 }}" id="image6" name="image6"
+                           onchange="javascript:setImagePreview('image6', 'preview_image6');"/></td>
+            </tr>
+            <tr>
+                <td>图片7：</td>
+                <td><img src="{{ post.image7 }}" id="preview_image7" width="50" height="50"/>
+                    <input type="file" value="{{ post.image7 }}" id="image7" name="image7"
+                           onchange="javascript:setImagePreview('image7', 'preview_image7');"/></td>
+                <td>图片8：</td>
+                <td><img src="{{ post.image8 }}" id="preview_image8" width="50" height="50"/>
+                    <input type="file" value="{{ post.image8 }}" id="image8" name="image8"
+                           onchange="javascript:setImagePreview('image8', 'preview_image8');"/></td>
+            </tr>
+            <tr>
+                <td>图片9：</td>
+                <td><img src="{{ post.image9 }}" id="preview_image9" width="50" height="50"/>
+                    <input type="file" value="{{ post.image9 }}" id="image9" name="image9"
+                           onchange="javascript:setImagePreview('image9', 'preview_image9');"/></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+                    <input type="submit" value="确定" name="ok" class="button" />
+
+                    <input type="submit" value="取消" name="cancel" class="button"/>
+
+                    <input type="submit" value="回到版块" name="back" class="button"/>
+
+
+
+
+        </table>
+
+    </form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--<meta http-equiv="refresh" content="10" />-->
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+   </style>
+</head>
+<body>
+<form action="/publish/actions/" method="post">
+    {% csrf_token %}
+    排序： <select name="publish_sort">
+    <option value="id"
+            {% ifequal publish_sort "id" %}
+                selected="True"
+            {% endifequal %}
+            >发布时间</option>
+    <option value="-id"
+            {% ifequal publish_sort "-id" %}
+                selected="True"
+            {% endifequal %}
+            >发布时间倒序</option>
+    <option value="user__username"
+            {% ifequal publish_sort "user__username" %}
+                selected="True"
+            {% endifequal %}
+            >用户</option>
+    <option value="-user__username"
+            {% ifequal publish_sort "-user__username" %}
+                selected="True"
+            {% endifequal %}
+            >用户倒序</option>
+    <option value="recommend_weight"
+            {% ifequal publish_sort "recommend_weight" %}
+                selected="True"
+            {% endifequal %}
+            >权重</option>
+    <option value="-recommend_weight"
+            {% ifequal publish_sort "-recommend_weight" %}
+                selected="True"
+            {% endifequal %}
+            >权重倒序</option>
+
+    <option value="PM2_5"
+            {% ifequal publish_sort "PM2_5" %}
+                selected="True"
+            {% endifequal %}
+            >PM2.5</option>
+    <option value="-PM2_5"
+             {% ifequal publish_sort "-PM2_5" %}
+                selected="True"
+            {% endifequal %}
+            >PM2.5倒序</option>
+    </select>
+    关键字：<input type="text" placeholder="发布内容中的关键字" name="publish_search" value="{{ publish_search }}"/>
+    城市： <input type="text" placeholder="查询的城市（默认为北京）" name="city" value="{{ city }}" />
+    场所名称： <input type="text" placeholder="场所名称" name="shop_name" value="{{ shop_name }}" />
+    <input type="submit" name="sort" value="查询并排序" />
+    <input type="submit" name="submit" value="提交" />
+    发布信息总数量： {{ count }}
+    当前用户发布信息总量： {{ current_user_count }}
+    当前页面为： {{ current_page }}
+    <input type="hidden" value="{{ current_page }}" name="current_page" />
+    <a href="/support/index">返回</a><br/>
+    <table>
+        <tr>
+            <td>选择<input type="checkbox" name="checkbox_all" />
+            <input type="hidden" name="publish_ids" value="{{ publish_ids }}" />
+            <input type="hidden" name="shop_ids" value="{{ shop_ids }}" />
+            </td>
+            <td>用户</td>
+            <td>用户昵称</td>
+            <td>照片</td>
+            <td>发布审核状态</td>
+            <td>场所名称</td>
+            <td>详细地址</td>
+            <td>场所审核状态</td>
+            <td>经度</td>
+            <td>纬度</td>
+            <td>描述信息</td>
+            <td>PM2.5</td>
+            <td>标签</td>
+            <td>赞</td>
+            <td>踩</td>
+            <td>评论数</td>
+            <!--<td>总评分</td>-->
+            <td>发布日期</td>
+            <td>权重</td>
+
+        </tr>
+        {% for p in publishes %}
+        <tr {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+                >
+            <td width="5%"><input type="checkbox" name="checkbox_{{ p.id }}" value="{{ p.id }}" /></td>
+            <td width="5%">
+                <!--<img src="http://123.56.137.206/media_root/{{ p.user_image }}" />-->
+                {{ p.username }}</td>
+            <td width="5%">
+                <!--<img src="http://123.56.137.206/media_root/{{ p.user_image }}" />-->
+                {{ p.nickname }}</td>
+            <td width="10%">
+                <a target="_blank" href="{{ p.photo }}">
+                    <img src="{{ p.photo }}"  width="80" height="50"/>
+                </a>
+
+                {% ifequal p.audit -1 %}
+                <a href="/publish/check?publish_id={{ p.id }}&checked=1&page={{ current_page }}&city={{ city }}&publish_sort={{ publish_sort }}&publish_search={{ publish_search }}">通过</a>
+                |<a href="/publish/check?publish_id={{ p.id }}&checked=0&page={{ current_page }}&city={{ city }}&publish_sort={{ publish_sort }}&publish_search={{ publish_search }}">未通过</a>
+                {% endifequal %}
+
+                {% ifequal p.audit 0 %}
+                <a href="/publish/check?publish_id={{ p.id }}&checked=1&page={{ current_page }}&city={{ city }}&publish_sort={{ publish_sort }}&publish_search={{ publish_search }}">通过</a>
+                {% endifequal %}
+                {% ifequal p.audit 1 %}
+                <a href="/publish/check?publish_id={{ p.id }}&checked=0&page={{ current_page }}&city={{ city }}&publish_sort={{ publish_sort }}&publish_search={{ publish_search }}">未通过</a>
+                {% endifequal %}
+
+            </td>
+            <td width="5%">
+                {% ifequal p.audit -1 %}未审核{% endifequal %}
+                {% ifequal p.audit 0 %}审核未通过{% endifequal %}
+                {% ifequal p.audit 1 %}审核已通过{% endifequal %}
+
+            </td>
+            <td width="5%">{{ p.shop_name }}
+
+            </td>
+            <td width="5%">{{ p.detail_address }}
+                {% ifequal p.shop_audit -1 %}
+                <a href="/shop/check?shop_id={{ p.shop_id }}&checked=1&page={{ current_page }}&city={{ city }}&publish_sort={{ publish_sort }}&publish_search={{ publish_search }}">通过</a>
+                |<a href="/shop/check?shop_id={{ p.shop_id }}&checked=0&page={{ current_page }}&city={{ city }}&publish_sort={{ publish_sort }}&publish_search={{ publish_search }}">未通过</a>
+                {% endifequal %}
+
+                {% ifequal p.shop_audit 0 %}
+                <a href="/shop/check?shop_id={{ p.shop_id }}&checked=1&page={{ current_page }}&city={{ city }}&publish_sort={{ publish_sort }}&publish_search={{ publish_search }}">通过</a>
+                {% endifequal %}
+                {% ifequal p.shop_audit 1 %}
+                <a href="/shop/check?shop_id={{ p.shop_id }}&checked=0&page={{ current_page }}&city={{ city }}&publish_sort={{ publish_sort }}&publish_search={{ publish_search }}">未通过</a>
+                {% endifequal %}
+            </td>
+            <td width="5%">
+                {% ifequal p.shop_audit -1 %}未审核{% endifequal %}
+                {% ifequal p.shop_audit 0 %}审核未通过{% endifequal %}
+                {% ifequal p.shop_audit 1 %}审核已通过{% endifequal %}
+
+            </td>
+            <td width="5%">{{ p.longitude }}</td>
+            <td width="5%">{{ p.latitude }}</td>
+            <td width="15%">{{ p.description }}</td>
+            <td width="5%">{{ p.PM2_5 }}</td>
+            <td width="5%">{{ p.label }}</td>
+            <td width="5%">{{ p.win }}</td>
+            <td width="5%">{{ p.lost }}</td>
+            <td width="5%">{{ p.comment }}</td>
+            <!--<td width="5%">{{ p.score }}</td>-->
+            <td width="5%">{{ p.created_at }}</td>
+            <td><input type="text" name="weight_{{ p.id }}" value="{{ p.weight }}"/></td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+</form>
+    {% if previous_page %}
+        <a href="/support/publish/?page={{ previous_page }}&city={{ city }}&publish_search={{ publish_search }}&publish_sort={{ publish_sort }}"> << </a>
+    {% else %}
+        <<
+    {% endif %}
+
+    {% for p in page_list %}
+        <a href="/support/publish/?page={{ p }}&city={{ city }}&publish_search={{ publish_search }}&publish_sort={{ publish_sort }}">{{ p }}</a>
+    {% endfor %}
+
+    {% if next_page %}
+        <a href="/support/publish/?page={{ next_page }}&city={{ city }}&publish_search={{ publish_search }}&publish_sort={{ publish_sort }}"> >> </a>
+    {% else %}
+        >>
+    {% endif %}
+    (共{{ total_page }} 页）
+ 
+</body>
+</html>

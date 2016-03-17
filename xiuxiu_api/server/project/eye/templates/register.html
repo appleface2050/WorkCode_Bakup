@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            border: solid #000 1px;
+            width: 25%;
+        }
+    </style>
+<body>
+<form action="/accounts/register/" method="post">
+    {% csrf_token %}
+    {% if error_content %}
+    <font color="red" >{{ error_content }}</font><br /><br/>
+    {% endif %}
+    <table>
+        <tr>
+            <td>
+    手机号:
+                </td><td><input type="text" name="phone">
+            </td><td>
+    昵  称:
+            </td><td><input type="text" name="nickname">
+            </td>
+        </tr><tr><td>
+    密  码:
+        </td><td>
+            <input type="password" name="password">
+        </td><td>
+    密  码(请再次输入密码):
+        </td><td><input type="password" name="password1">
+        </td>
+        </tr>
+    </table>
+    <input type="submit" value="注册"> <a href="/accounts/login/">登录</a>
+</form>
+ 
+ 
+</body>
+</html>

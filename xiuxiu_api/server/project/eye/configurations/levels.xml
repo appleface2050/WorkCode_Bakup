@@ -1,0 +1,6 @@
+<levels>
+    <level key="优" min="76" max="100">好</level>
+    <level key="良" min="51" max="75">满意</level>
+    <level key="中" min="26" max="50">一般</level>
+    <level key="差" min="-10" max="25">不好</level>
+</levels>

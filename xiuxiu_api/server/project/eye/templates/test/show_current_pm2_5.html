@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 99%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            width: 50%;
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+    </style>
+</head>
+<body>
+    {% csrf_token %}
+
+    当前页是：{{ shops_page }} <br>
+    <a href="/test/shop/get?page=1&city=北京&average={{ average }}">北京</a>
+    <a href="/test/shop/get?page=1&city=上海&average={{ average }}">上海</a>
+    <a href="/test/shop/get?page=1&city=广州&average={{ average }}">广州</a>
+
+    {% for i in shops_count %}
+    {% ifequal i shops_page %}
+        {{ i }}
+    {% else %}
+        <a href="/test/shop/get?page={{ i }}&city={{ shops_city }}&average={{ average }}">{{ i }}</a>
+    {% endifequal %}
+    {% endfor %}
+
+    <table>
+        <tr>
+            <td>场所名称</td>
+            <td>PM2.5</td>
+        </tr>
+        {% for s in shops_info %}
+        <tr>
+            <td>{{ s.shop_name }}</td>
+            <td>{{ s.PM2_5 }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+ 
+ 
+</body>
+</html>

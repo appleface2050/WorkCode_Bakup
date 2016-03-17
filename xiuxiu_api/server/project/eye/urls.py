@@ -1,0 +1,45 @@
+from django.conf.urls import include, url
+from rest_framework import routers
+from . import views
+
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'userextensions', views.UserExtensionViewSet)
+router.register(r'shops', views.ShopViewSet)
+router.register(r'levels', views.LevelViewSet)
+router.register(r'devices', views.DeviceViewSet)
+router.register(r'publishes', views.PublishViewSet)
+router.register(r'addresses', views.AddressViewSet)
+router.register(r'comments', views.CommentViewSet)
+router.register(r'china', views.ChinaViewSet)
+router.register(r'shopcategories', views.ShopCategoryViewSet)
+router.register(r'usershoprelations', views.UserShopRelationsViewSet)
+router.register(r'userpublishrelations', views.UserPublishRelationsViewSet)
+router.register(r'forumcategories', views.ForumCategoryViewSet)
+router.register(r'forumposts', views.ForumPostViewSet)
+router.register(r'forumreplies', views.ForumReplyViewSet)
+router.register(r'forumposts4editor', views.ForumPostSourceViewSet)
+router.register(r'forumreplies4editor', views.ForumReplySourceViewSet)
+router.register(r'detectors', views.DetectorViewSet)
+# router.register(r'detectormacaddresses', views.DetectorMacAddressViewSet)
+router.register(r'carousels', views.ForumCategoryCarouselViewSet)
+router.register(r'coupons', views.CouponViewSet)
+router.register(r'channels', views.ChannelViewSet)
+router.register(r'products', views.ProductViewSet)
+router.register(r'uses', views.UseViewSet)
+router.register(r'homepagecarousels', views.HomePageCarouselViewSet)
+router.register(r'games', views.GameViewSet)
+router.register(r'detectorrelations', views.DetectorRelationViewSet)
+router.register(r'companies', views.CompanyViewSet)
+router.register(r'popwindows', views.PopWindowViewSet)
+router.register(r'pushshops', views.PushShopViewSet)
+router.register(r'sharestatistics', views.ShareStatisticsViewSet)
+router.register(r'credits', views.CreditViewSet)
+router.register(r'devicephones', views.DevicePhoneViewSet)
+router.register(r'forumlabels', views.ForumLabelViewSet)
+router.register(r'forumarticles', views.ForumArticleViewSet)
+router.register(r'userforumarticles', views.UserForumArticleViewSet)
+
+urlpatterns = [
+    url(r'^', include(router.urls)),
+]

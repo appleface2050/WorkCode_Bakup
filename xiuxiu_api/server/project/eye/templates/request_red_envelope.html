@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+    </style>
+</head>
+<body>
+<marquee width=100% behavior=alternate direction=left align=middle>
+    正在获得红包的人数：{{ red_envelope.user_count }}  正在获取红包的总金额： {{ red_envelope.total_bonus}}
+</marquee>
+
+<table>
+        <tr>
+            <td>用户名</td>
+            <td>用户昵称</td>
+            <td>红包类型</td>
+            <td>红包</td>
+        </tr>
+        {% for s in red_envelope.detail %}
+        <tr>
+            <td>{{ s.user_username }}</td>
+            <td>{{ s.user_nickname }}</td>
+            <td>{{ s.type }}</td>
+            <td>{{ s.bonus }}</td>
+        </tr>
+        {% endfor %}
+</table>
+
+ 
+ 
+</body>
+</html>

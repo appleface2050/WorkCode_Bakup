@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>xiugame</title>
+
+    <link rel="stylesheet" href="https://api.xiuxiu.babadeyan.com/media_root/css/games/main.css">
+    <script src="https://api.xiuxiu.babadeyan.com/media_root/js/jquery-2.1.1.min.js"></script>
+
+</head>
+<body>
+<div class="container0">
+    <div class="title"><img id="titletxt" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/title.png"><img id="jian" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/jian.png"></div>
+    <img id="icon" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/xiufavicon.png">
+    <img id="loading" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/loading.jpg">
+</div>
+<div class="container1">
+    <div class="title"><img id="titletxt" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/title.png"><img id="jian" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/jian.png"></div>
+    <div class="select">
+        <div class="beli">
+            <div id="believe">真的会</div>
+            <div id="unbelieve">不可能</div>
+        </div>
+    </div>
+    <div class="ad"><img src=""></div>
+</div>
+<div class="container1-1 middle">
+    <div class="try try1">
+        <img class="subtitle" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/no.png">
+        <img class="bg" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/g1-bg1.png">
+    </div>
+</div>
+<div class="container1-2 middle">
+    <div class="try try2">
+        <img class="subtitle" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/yes.png">
+        <img class="bg" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/g1-bg1.png">
+    </div>
+</div>
+
+<div class="container2">
+    <div class="maingame">
+        <!--时间倒数-->
+        <div class="timecount">
+            还有 <span id="time"></span>"
+            <div id="timebar">
+                <div id="timered"></div>
+            </div>
+        </div>
+        <img class="haze" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/haze.png">
+
+        <!--问题主体-->
+        <div class="que">
+            <div class="quetitle">哪个颜色与文字相对应?</div>
+            <div class="quecontent">
+                <div class="quesel">
+                    <div id="left">aaa</div>
+                    <div id="right">aaa</div>
+                </div>
+            </div>
+        </div>
+
+        <!--问题数-->
+        <!--<div class="quenum">-->
+            <!--第 <span id="quenum">1</span> 题-->
+        <!--</div>-->
+    </div>
+
+
+</div>
+
+<div class="container3">
+    <div class="gameover">
+        <div class="overtitle">游戏结束</div>
+        <div class="score">您当前答对<span id="sum"></span>道题目</div>
+        <div class="cell">
+            <div class="usermsg">
+                <input id="tel" type="text" placeholder="请输入手机号"/>
+                <div class="intel">输入您的手机号查看获奖情况</div>
+            </div>
+        </div>
+        <div id="sendtel" class="intel"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/games/send.png"></div>
+    </div>
+
+    <div id="ad">
+        <img src="">
+    </div>
+</div>
+
+<div class="container4">
+    <div id="share">分享到朋友圈让小伙伴挑战<img src="https://api.xiuxiu.babadeyan.com/media_root/img/games/share.png"></div>
+    <div class="result gameover">
+        <div class="intel">抱歉，您的智力已透支</div>
+        <div class="prize"></div>
+        <div class="rank">
+            <div>第</div>
+            <div id="ranknum"></div>
+            <div>名</div>
+        </div>
+        <div class="soap"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/games/soap.png"></div>
+    </div>
+    <a id="download" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.sangebaba.airdetetor"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/games/g1-download.png"></a>
+    <div id="replay"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/games/replay.png"></div>
+</div>
+
+
+
+<!--<script src="media/game.js">-->
+<script src="https://api.xiuxiu.babadeyan.com/media_root/js/games/game1.js">
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

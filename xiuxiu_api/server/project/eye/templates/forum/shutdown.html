@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title></title>
+    <style>
+        body{margin: 0;}
+        #up{background-color: #ffdb4a;text-align: center;}
+        #up img{width: 100%;}
+        #down{background-color: #fff6d4;text-align: center;}
+        #down img{width: 60%;margin: 30px auto;}
+        @media (max-height: 567px) {#up img{width: 85%;}}
+    </style>
+</head>
+<body>
+    <div id="up">
+        <img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/shutdown-bg.png">
+    </div>
+    <div id="down">
+        <img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/shutdown-logo.png">
+    </div>
+<script>
+    window.onload = function(){
+        var windowheight = document.documentElement.clientHeight;
+        var upheight = document.getElementById("up").clientHeight;
+        console.log(windowheight+"///"+upheight);
+        document.getElementById("down").style.height = windowheight-upheight+"px";
+    }
+</script>
+</body>
+
+</html>

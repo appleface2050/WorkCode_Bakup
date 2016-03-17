@@ -1,0 +1,7 @@
+<rewards>
+    <!--min <= value <= max-->
+    <reward max="1" min="1">10</reward>
+    <reward min="2" max="5">5</reward>
+    <reward min="6" max="10">2</reward>
+    <reward min="11" score="20">1</reward>
+</rewards>

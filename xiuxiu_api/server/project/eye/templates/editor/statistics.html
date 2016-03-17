@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>城市</th>
+        <th>场所数量</th>
+        <th>发布数量</th>
+    </tr>
+    {% for d in result %}
+    <tr {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+                >
+        <td>{{ d.city }}</td>
+        <td>{{ d.shop_count }}</td>
+        <td>{{ d.count }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,843 @@
+body{
+    font-family: "微软雅黑";
+    margin: auto 0;
+    letter-spacing: 0px;
+}
+a{
+    text-decoration:none;
+    color: #000000;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    /*-webkit-user-select: none;*/
+}
+
+header{
+    position: fixed;
+    top:0;
+    height: 43px;
+    width: 100%;
+    background-color: #FAFAFA;
+    z-index: 999;
+}
+header .back{
+    position: fixed;
+    padding: 12px 15px;
+    z-index: 9999;
+}
+header .back img{
+    width: 10px;
+}
+header #c-title{
+    display:block;
+    text-align: center;
+    margin: 12px 0;
+    font-size: 16px;
+    padding: 0 10px;
+}
+header #new{
+    position: fixed;
+    right: 5px;
+    padding: 13px 12px;
+    z-index: 9999;
+}
+header #new img{
+    width: 16px;
+}
+
+#wrapper {
+    position:absolute; z-index:1;
+    top:0; bottom:0; left:-9999px;
+    width:100%;
+    overflow:auto;
+    background-color: #EBEBEB;
+}
+
+#scroller {
+    position:absolute; z-index:1;
+    /*	-webkit-touch-callout:none;*/
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-transform:translate3d(0,0,0);
+    width:100%;
+    padding:0;
+    background-color: #ffffff;
+}
+#scroller ul {
+    background-color: #EBEBEB;
+    clear: both;
+    padding: 10px;
+    line-height: 18px;
+    margin: 0;
+}
+
+#scroller li {
+    margin-bottom: 10px;;
+}
+#myFrame {
+    position:absolute;
+    top:0; left:0;
+}
+/**
+ *
+ * Pull down styles
+ *
+ */
+#pullDown, #pullUp {
+    background:#fff;
+    height:40px;
+    line-height:20px;
+    padding:10px;
+    /*border-bottom:1px solid #ccc;*/
+    font-weight:bold;
+    font-size:14px;
+    color:#888;
+    text-align: center;
+}
+#pullUp{
+    background-color: #EBEBEB;
+}
+
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+    /*display:block;*/
+    /*float:left;*/
+    width:40px; height:20px;
+    /*background:url(../img/loading1.gif) 0 0 no-repeat;*/
+    -webkit-background-size:40px 80px; background-size:40px 40px;
+    -webkit-transition-property:-webkit-transform;
+    -webkit-transition-duration:250ms;
+}
+.pullDownIcon img, .pullUpIcon img{
+    width: 30px;
+    margin-bottom: -5px;
+}
+#nomore{
+    text-align: center;
+    display: none;
+    padding:10px;
+    background-color: #EBEBEB;
+    font-weight:bold;
+    font-size:14px;
+    color:#888;
+}
+.mask{
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 9998;
+    width: 100%;
+    height: 1000px;
+    background-color: #000000;
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+}
+.mask #loading{
+    margin: 40% 0 5%;
+    width: 20%;
+}
+.mask #unsuccess{
+    display: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.mask #unlogin{
+    display: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.mask #refresh{
+    display: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+
+.head-container{
+    width: 100%;
+    margin: 45px 0;
+    background-color: #FFFFFF;
+}
+.barname{
+    margin: 5px 10px;
+}
+.baricon{
+    float: left;
+    width: 20%;
+    margin: 5px 0;
+}
+.baricon img{
+    border-radius: 10px;
+    width: 100%;
+}
+.name{
+    float: left;
+    margin: 3px 10px;
+    width: 70%;
+}
+.name .line1, .line2{
+    clear: both;
+    margin: 5px;
+    padding: 3px;
+    margin-top: 3px;
+}
+.name .line1 .nn{
+    font-size: 16px;
+    letter-spacing: 2px;
+    max-width: 85%;
+    display:inline-block;
+    word-break:keep-all;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    float: left;
+}
+.name .line1 .new{
+    float: left;
+    padding: 1px 3px;
+}
+.name .line1 .new img{
+    width: 18px;
+    height: 18px;
+    border-radius: 0;
+}
+.name .line1 .hot{
+    float: left;
+    padding: 2px 3px;
+}
+.name .line1 .hot img{
+    width: 18px;
+    height: 18px;
+    border-radius: 0;
+}
+.name .line2{
+    padding: 5px 5px 0 5px;
+}
+.name .line2 .concern{
+    float: left;
+}
+.name .line2 .concern img{
+    width: 48px;
+    height: 20px;
+    border-radius: 0;
+}
+.name .line2 .concerned{
+    float: left;
+}
+.name .line2 .concerned img{
+    width: 42px;
+    height: 18px;
+    border-radius: 0;
+}
+.name .line2 .num{
+    /*float: left;*/
+    margin: 2px 10px;
+    font-size: 12px;
+}
+.name .line2 #num{
+    margin: 0 5px;
+    color: #53D66C;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.top{
+    clear: both;
+    margin: 5px 0;
+    font-size: 12px;
+}
+.top .toppiece {
+    padding: 2px;
+    border-top: #EBEBEB solid 1px;
+    clear: both;
+}
+.top .toppiece img{
+    float: left;
+    width: 8%;
+    vertical-align: bottom;
+    margin: 12px 0 12px 10px;
+}
+.toptitle{
+    float: left;
+    margin: 9px 10px;
+    vertical-align: bottom;
+    width: 82%;
+    word-break:keep-all;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    font-size: 14px;
+
+}
+.content-container{
+    background-color: #EBEBEB;
+    clear: both;
+    padding: 10px;
+    line-height: 18px;
+}
+.content{
+    background-color: #FFFFFF;
+    width: 100%;
+    margin: 0 auto 10px auto;
+}
+.content .content-head{
+    height: 32px;
+    padding: 5px;
+    border-bottom: #EBEBEB solid 1px;
+}
+.content .content-head .user{
+    padding: 5px 0;
+    height: 15px;
+}
+.content .content-head .user img{
+    width: 30px;
+    border-radius: 30px;
+    margin: -3px 0 0 6px;
+    float: left;
+}
+.content .content-head .user .username{
+    float: left;
+    font-size: 14px;
+    margin: 5px 8px;
+    color: #000000;
+}
+.content .content-head .user .pubtime{
+    float: left;
+    font-size: 12px;
+    color: #B3B3B3;
+    margin: 6px 8px;
+}
+.content .content-head .user .renum{
+    float: right;
+    color: gray;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-top: 4px;
+    margin: auto 6px;
+}
+.content .content-head .user .zan{
+    float: right;
+    color: gray;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-top: 4px;
+    margin-right: 8px;
+
+}
+.content .content-head .user .renum img ,.content .content-head .user .zan img{
+    width: 20px;
+    margin: 5px 3px;
+    margin-top: -2px;
+}
+
+
+.content-detail{
+    clear: both;
+    margin: 5px;
+    padding-bottom: 2px;
+}
+.content-detail .content-title {
+    margin: 5px auto;
+}
+.content-detail .content-title p{
+    width: 93%;
+    margin: 1px 5px;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 0px;
+    line-height: 22px;
+}
+.content-detail .content-abstrat{
+    margin: 5px;
+}
+.content-detail .content-abstrat p{
+    width: 100%;
+    margin: 5px 0;
+    color:   gray;
+    letter-spacing: 0px;
+    font-size: 14px;
+    line-height: 22px;
+}
+.content-detail .content-img{
+    width: 100%;
+    margin: 5px;
+}
+.content-detail .content-img img{
+    width: 30.2%;
+    margin: 5px 2px 5px 0;
+
+}
+
+
+@media(min-width: 350px){
+    header{
+        position: fixed;
+        top:0;
+        height: 40px;
+        width: 100%;
+        background-color: #FAFAFA;
+        z-index: 999;
+    }
+    header .back{
+        position: fixed;
+        padding: 10px 15px;
+        z-index: 9999;
+    }
+    header .back img{
+        width: 11px;
+    }
+    header #c-title{
+        display:block;
+        text-align: center;
+        margin: 10px 0;
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    header #new{
+        position: fixed;
+        right: 5px;
+        padding: 10px 15px;
+        z-index: 9999;
+    }
+    header #new img{
+        width: 18px;
+    }
+    .head-container{
+        width: 100%;
+        margin: 40px 0;
+        background-color: #FFFFFF;
+    }
+    .barname{
+        margin: 5px 10px;
+    }
+    .baricon{
+        float: left;
+        width: 20%;
+        margin: 5px 0;
+    }
+    .baricon img{
+        border-radius: 10px;
+        width: 100%;
+    }
+    .name{
+        float: left;
+        margin-left: 10px;
+        width: 70%;
+    }
+    .name .line1, .line2{
+        clear: both;
+        margin: 5px;
+        padding: 3px;
+        margin-top: 0px;
+    }
+    .name .line1, .line2{
+        clear: both;
+        margin: 3px 5px;
+    }
+    .name .line2{
+        padding: 8px 3px;
+    }
+    .name .line1 .nn{
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .name .line1 .new{
+        float: left;
+        padding: 0 3px;
+    }
+    .name .line1 .new img{
+        width: 18px;
+        height: 18px;
+        border-radius: 0;
+    }
+    .name .line1 .hot{
+        float: left;
+        padding: 2px 3px;
+    }
+    .name .line1 .hot img{
+        width: 18px;
+        height: 18px;
+        border-radius: 0;
+    }
+
+    .name .line2 .concern{
+        float: left;
+    }
+    .name .line2 .concern img{
+        width: 56px;
+        height: 24px;
+        border-radius: 0;
+    }
+    .name .line2 .concerned{
+        float: left;
+    }
+    .name .line2 .concerned img{
+        width: 48px;
+        height: 20px;
+        border-radius: 0;
+    }
+    .name .line2 .num{
+        float: left;
+        margin: 5px 10px 0 10px;
+        font-size: 14px;
+    }
+    .name .line2 #num{
+        margin: 0 5px;
+        color: #53D66C;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+
+    .top .toppiece {
+        padding: 3px;
+        border-top: #EBEBEB solid 1px;
+        clear: both;
+    }
+    .top .toppiece img{
+        float: left;
+        width: 10%;
+        vertical-align: bottom;
+        margin: 8px 0 10px 10px;
+    }
+    .toptitle{
+        float: left;
+        margin: 8px 10px;
+        width: 80%;
+        word-break:keep-all;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        vertical-align: bottom;
+        font-size: 16px;
+    }
+
+
+    .content-container{
+        background-color: #EBEBEB;
+        clear: both;
+        padding: 10px;
+        line-height: 18px;
+    }
+    .content{
+        background-color: #FFFFFF;
+        width: 100%;
+        margin: 0 auto 10px auto;
+    }
+    .content .content-head{
+        height: 35px;
+        padding: 5px;
+        border-bottom: #EBEBEB solid 1px;
+    }
+    .content .content-head .user img{
+        width: 35px;
+        border-radius: 35px;
+        margin: -5px 0 0 5px;
+        float: left;
+    }
+    .content .content-head .user .username{
+        float: left;
+        font-size: 16px;
+        margin: 5px 8px;
+        color: #000000;
+    }
+    .content .content-head .user .pubtime{
+        float: left;
+        font-size: 12px;
+        color: #B3B3B3;
+        margin: 5px 8px;
+    }
+    .content .content-head .user .renum{
+        float: right;
+        color: gray;
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding-top: 4px;
+        margin: auto 4px;
+    }
+    .content .content-head .user .zan{
+        float: right;
+        color: gray;
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding-top: 4px;
+        margin-right: 6px;
+    }
+    .content .content-head .user .renum img ,.content .content-head .user .zan img{
+        width: 20px;
+    }
+    .content-detail{
+        clear: both;
+        margin: 0px;
+        padding: 5px;
+    }
+    .content-detail .content-title {
+        margin: 6px auto;
+    }
+    .content-detail .content-title p{
+        width: 97%;
+        margin: 1px auto;
+        font-size: 18px;
+        color: #000000;
+        letter-spacing: 0px;
+        line-height: 24px;
+    }
+    .content-detail .content-abstrat{
+        margin: 5px;
+    }
+    .content-detail .content-abstrat p{
+        width: 100%;
+        margin: 5px auto;
+        color:   gray;
+        letter-spacing: 0px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .content-detail .content-img{
+        width: 98%;
+        margin: 5px auto;
+    }
+    .content-detail .content-img img{
+        width: 30.8%;
+        margin: 2px;
+
+    }
+
+}
+
+
+
+
+
+
+
+@media(min-width: 400px){
+    header{
+        position: fixed;
+        top:0;
+        height: 43px;
+        width: 100%;
+        background-color: #FAFAFA;
+        z-index: 999;
+    }
+    header .back{
+        position: fixed;
+        padding: 11px 15px;
+        z-index: 9999;
+    }
+    header .back img{
+        width: 12px;
+    }
+    header #c-title{
+        display:block;
+        text-align: center;
+        margin: 7px 0;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    header #new{
+        position: fixed;
+        right: 5px;
+        padding: 11px 15px;
+        z-index: 9999;
+    }
+    header #new img{
+        width: 20px;
+    }
+    .head-container{
+        width: 100%;
+        margin: 50px 0;
+        background-color: #FFFFFF;
+    }
+    .barname{
+        margin: 5px 10px;
+    }
+    .baricon{
+        float: left;
+        width: 20%;
+        margin: 5px 0;
+    }
+    .baricon img{
+        border-radius: 10px;
+        width: 100%;
+    }
+    .name{
+        float: left;
+        margin: 0 10px;
+        width: 70%;
+    }
+    .name .line1, .line2{
+        clear: both;
+        margin:5px;
+        padding: 3px;
+    }
+    .name .line2{
+        padding: 9px 5px;
+    }
+    .name .line1 .nn{
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    .name .line1 .new{
+        float: left;
+        padding: 3px 3px;
+    }
+    .name .line1 .new img{
+        width: 22px;
+        height: 22px;
+        border-radius: 0;
+    }
+    .name .line1 .hot{
+        float: left;
+        padding: 2px 3px;
+    }
+    .name .line1 .hot img{
+        width: 22px;
+        height: 22px;
+        border-radius: 0;
+    }
+
+    .name .line2 .concern{
+        float: left;
+    }
+    .name .line2 .concern img{
+        width: 60px;
+        height: 26px;
+        border-radius: 0;
+    }
+    .name .line2 .concerned{
+        float: left;
+    }
+    .name .line2 .concerned img{
+        width: 52px;
+        height: 20px;
+        border-radius: 0;
+    }
+    .name .line2 .num{
+        float: left;
+        margin: 2px 10px;
+        font-size: 16px;
+    }
+    .name .line2 #num{
+        margin:5px;
+        color: #53D66C;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+
+    .top .toppiece {
+        padding: 3px;
+        border-top: #EBEBEB solid 1px;
+        clear: both;
+    }
+    .top .toppiece img{
+        float: left;
+        width: 10%;
+        vertical-align: bottom;
+        margin: 10px 0 10px 8px;
+    }
+    .toptitle{
+        float: left;
+        margin: 8px 10px;
+        width: 82%;
+        word-break:keep-all;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        vertical-align: bottom;
+        font-size: 16px;
+    }
+    .content-container{
+        background-color: #EBEBEB;
+        clear: both;
+        padding: 10px;
+        line-height: 18px;
+    }
+    .content{
+        background-color: #FFFFFF;
+        width: 100%;
+        margin: 0 auto 10px auto;
+    }
+    .content .content-head{
+        height: 40px;
+        padding: 5px 8px;
+        border-bottom: #EBEBEB solid 1px;
+    }
+
+    .content .content-head .user{
+        padding: 8px 0;
+        height: 20px;
+    }
+    .content .content-head .user img{
+        width: 35px;
+        border-radius: 35px;
+        margin-top: -5px;
+        float: left;
+    }
+    .content .content-head .user .username{
+        float: left;
+        font-size: 16px;
+        margin: 5px 8px;
+        color: #000000;
+    }
+    .content .content-head .user .pubtime{
+        float: left;
+        font-size: 12px;
+        color: #B3B3B3;
+        margin: 5px 8px;
+    }
+    .content .content-head .user .renum{
+        float: right;
+        color: gray;
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding-top: 4px;
+        margin: auto 8px;
+    }
+    .content .content-head .user .zan{
+        float: right;
+        color: gray;
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding-top: 4px;
+        margin: auto 4px;
+    }
+    .content .content-head .user .renum img ,.content .content-head .user .zan img{
+        width: 25px;
+        margin: 5px 3px;
+        margin-top: -4px;
+    }
+    .content-detail{
+        margin: 0px;
+        padding: 5px;
+    }
+    .content-detail .content-title {
+        margin: 5px;
+    }
+    .content-detail .content-title p{
+        width: 98%;
+        margin: 5px auto;
+        color: #000000;
+        letter-spacing: 0px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .content-detail .content-abstrat{
+        margin: 5px;
+    }
+    .content-detail .content-abstrat p{
+        width: 98%;
+        margin: 5px auto;
+        color:   gray;
+        letter-spacing: 0px;
+        font-size: 16px;
+    }
+    .content-detail .content-img{
+        width: 98%;
+        margin: 5px auto;
+    }
+    .content-detail .content-img img{
+        width: 30.6%;
+        margin: 2px 3px;
+
+    }
+
+}
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title></title>
+
+    <style>
+        body{padding: 100px;}
+        a{
+            text-decoration:none;
+            color: #000000;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-touch-callout: none;
+            font-size: 32px;
+            margin: 20px;
+            border: gray dashed 1px;
+            padding: 5px;
+        }
+        div{margin: 50px auto;}
+        h1{font-size: 38px;}
+        h2{font-size: 32px;}
+        .container{border: gray solid 2px; padding: 50px;}
+        .context{margin-left: 50px; padding: 15px;}
+        #app{background-color: #D5F3F4}
+        #airbyuser{background-color: #FFFACD}
+        #community{background-color: #FFE4E1}
+        #official-account{background-color: #E8FFE8}
+        #inapp{background-color: #D5F3F4}
+        #inofficial{background-color: #FFFACD}
+        #wechat-group{background-color: #FFE4E1}
+        #other{background-color: #E8FFE8}
+
+    </style>
+
+</head>
+
+<body>
+    <a href="{{ base_url }}support/logout/">退出</a>
+    <div class="container content">
+        <h1>内容运营</h1>
+        <div id="app" class="context">
+            <h2>APP设置</h2>
+            <a href="{{ base_url }}support/configuration/">红包及购买链接</a>
+            <a href="{{ base_url }}support/shop/">各城市热门场所推荐</a>
+            <a href="">通知推送</a>
+            <a href="">公告</a>
+            <a href="{{ base_url }}support/user/">查看用户注册</a>
+            <a href="{{ base_url }}support/feedback/">反馈</a>
+            <a href="{{ base_url }}support/shop/get?average=0">场所最新的PM2.5值</a>
+            <a href="{{ base_url }}support/shop/get?average=1">场所最近七天的平均PM2.5值</a>
+            <a href="{{ base_url }}support/shop/get?average=2">场所今天的最新PM2.5值</a>
+        </div>
+        <div id="airbyuser" class="context">
+            <h2>用户测空气内容管理</h2>
+            <a href="{{ base_url }}support/address/">自定义场所审核</a>
+            <a href="{{ base_url }}support/publish/">照片和文字审核</a>
+        </div>
+        <div id="community" class="context">
+            <h2>APP社区管理</h2>
+            <a href="{{ base_url }}editor/">社区管理</a>
+            <a href="{{ base_url }}editor/forumcategories/">版块管理</a>
+            <a href="{{ base_url }}rest/api/users/">用户管理</a>
+        </div>
+        <div id="official-account" class="context">
+            <h2>公众号管理</h2>
+            <a href="">公众号微部落</a>
+            <a href="">公众号每周推送</a>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="container user">
+        <h1>用户运营</h1>
+        <div id="inapp" class="context">
+            <h2>APP内</h2>
+            <a href="">APP内照片评论互动</a>
+            <a href="">社区内贴子评论互动</a>
+            <a href="">线上活动</a>
+        </div>
+        <div id="inofficial" class="context">
+            <h2>公众号内</h2>
+            <a href="">公众号微部落内每帖互动</a>
+            <a href="">公众号多客服</a>
+        </div>
+        <div id="wechat-group" class="context">
+            <h2>微信群</h2>
+            <a href="">话题引到</a>
+            <a href="">用户答疑</a>
+        </div>
+        <div id="other" class="context">
+            <h2>公众号内</h2>
+            <a href="">用户需求采集及反馈</a>
+            <a href="">线下活动</a>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>我的优惠券</title>
+
+    <link rel="stylesheet" href="https://api.xiuxiu.babadeyan.com/media_root/css/coupon/main.css">
+</head>
+<body>
+<div class="nocoupon">
+    <div>当前没有获得优惠券</div>
+</div>
+<div class="nodata">
+    <div>网络异常，没有获取到数据哦~</div>
+    <div>请尝试刷新~</div>
+</div>
+<div class="container mycoupon">
+    <!--<div class="coupon-piece">-->
+        <!--<img class="topimg" src="img/sawtooth.png">-->
+        <!--<div class="coupon-detail">-->
+            <!--<p class="price">￥<span class="num">200</span></p>-->
+            <!--<p class="type">三个爸爸随身检测器</p>-->
+            <!--<p class="date">嗅嗅商城使用，有效期至<span id="valid_date">2015-11-11</span></p>-->
+            <!--<p class="coupon-code">兑换码：dofjcnsmwo</p>-->
+            <!--<p class="indate">还有 4 天过期</p>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="coupon-piece na">-->
+        <!--<img class="topimg" src="img/sawtooth.png">-->
+        <!--<div class="coupon-detail">-->
+            <!--<p class="price">￥<span class="num">200</span></p>-->
+            <!--<p class="type">IKARE空气净化器</p>-->
+            <!--<p class="date">嗅嗅商城使用，有效期至<span id="validdate">2015-11-11</span></p>-->
+            <!--<p class="indate">已过期</p>-->
+            <!--<img class="overdue" src="img/overdue.png">-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+
+<script src="https://api.xiuxiu.babadeyan.com/media_root/js/zepto.min.js"></script>
+<script>
+    var userid;
+    var thisurl = window.location.href;
+    var userarray = new Array();
+    userarray = thisurl.split("?user_id=");
+    userid = userarray[1];
+    console.log(userid);
+//    var userid = 20;
+
+    $.ajax({
+        type:"GET" ,
+        url: "https://api.xiuxiu.babadeyan.com/rest/api/coupon/get" ,
+        data: {
+            user_id: userid
+        },
+        dataType:"json" ,
+        success:function(data){
+            if(data.length == 0){
+                $(".nocoupon").css("display","block");
+            }else{
+                for(var i = 0; i<data.length; i++){
+                    var enddate = new Array();
+                    enddate = data[i].valid_end.split(" ");
+                    console.log(enddate)
+//                    var enddate = addDate(actdate[0],data[i].valid_days);
+                    console.log(enddate[0]);
+                    var now = new Date();
+                    var nowdate = now.getFullYear()+"-"+(now.getMonth()+1)+"-"+now.getDate();
+                    var indate = parseInt(DateDiff(enddate[0],nowdate));
+                    var product;
+                    switch (data[i].product_id){
+                        case 1: product = "全场";break;
+                        case 2: product = "守护天使滤芯";break;
+                        case 3: product = "守护天使";break;
+                        case 4: product = "高达卫士";break;
+                        case 5: product = "伊娃宝贝";break;
+                        case 6: product = "三个爸爸随身pm2.5检测器";break;
+                        case 7: product = "嗅嗅口罩";break;
+                    }
+                    var coupon = '<div class="coupon-piece"><img class="topimg" src="https://api.xiuxiu.babadeyan.com/media_root/img/coupon/sawtooth.png">'
+                            +'<div class="coupon-detail"><p class="price">￥<span class="num">'+data[i].coupon_value+'</span></p>'
+                            +'<p class="type">'+product+'</p>'
+                            +'<p class="date">嗅嗅商城使用，有效期至 <span id="valid_date">'+enddate[0]+'</span></p>'
+                            +'<p class="coupon-code">兑换码：'+data[i].youzan_sequence+'</p>'
+                            +'<p class="indate">还有 '+indate+' 天过期</p>';
+                    $(".mycoupon").append(coupon);
+
+//                    function addDate(date,days){
+//                        var d=new Date(date);
+//                        d.setDate(d.getDate()+days);
+//                        var m=d.getMonth()+1;
+//                        return d.getFullYear()+'-'+m+'-'+d.getDate();
+//                    }
+                    function DateDiff(d1,d2) {
+                        var day = 24 * 60 * 60 * 1000;
+                        try {
+                            var dateArr = d1.split("-");
+                            var checkDate = new Date();
+                            checkDate.setFullYear(dateArr[0], dateArr[1] - 1, dateArr[2]);
+                            var checkTime = checkDate.getTime();
+
+                            var dateArr2 = d2.split("-");
+                            var checkDate2 = new Date();
+                            checkDate2.setFullYear(dateArr2[0], dateArr2[1] - 1, dateArr2[2]);
+                            var checkTime2 = checkDate2.getTime();
+
+                            var cha = (checkTime - checkTime2) / day;
+                            return cha;
+                        } catch (e) {
+                            return false;
+                        }
+                    }
+                }
+            }
+
+        },
+        error:function(){
+            $(".nodata").css("display","block");
+        }
+    })
+
+</script>
+</body>
+
+</html>

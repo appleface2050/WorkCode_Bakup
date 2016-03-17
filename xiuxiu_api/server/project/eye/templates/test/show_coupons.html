@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>展示优惠券</title>
+    <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 99%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            width: 20%;
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+        tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+        input
+        {
+            width: 300px;
+        }
+        select
+        {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="get">
+    <table>
+        <tr class="odd">
+            <td>产品</td>
+            <td><select name="product">
+                {% for p in products %}
+                <option value="{{ p.id }}">{{ p.name }}</option>
+                {% endfor %}
+            </select></td>
+            <td>渠道</td>
+            <td><select name="channel">
+                {% for c in channels %}
+                <option value="{{ c.id }}">{{ c.name }}</option>
+                {% endfor %}
+            </select></td>
+        </tr>
+        <tr class="even">
+            <td>是否外部使用</td>
+            <td><select name="is_out">
+                <option value="False">否</option>
+                <option value="True">是</option>
+            </select></td>
+            <td><input type="submit" value="搜索" name="search" /></td>
+            <td><input type="submit" value="显示全部" name="search_all" /></td>
+        </tr>
+    </table>
+</form>
+{% if coupon %}
+<table>
+    <tr class="odd">
+        <td>产品</td>
+        <td>渠道</td>
+        <td>券值</td>
+        <td>数量</td>
+        <td>描述</td>
+    </tr>
+    <tr class="even">
+        <td>{{ coupon.product }}</td>
+        <td>{{ coupon.channel }}</td>
+        <td>{{ coupon.coupon_value }}</td>
+        <td>{{ coupon.count }}</td>
+        <td>{{ coupon.descriptions }}</td>
+    </tr>
+</table>
+{% endif %}
+
+{% if coupons %}
+<table>
+    <tr>
+        <td>产品</td>
+        <td>渠道</td>
+        <td>券值</td>
+        <td>数量</td>
+        <td>描述</td>
+    </tr>
+    {% for coupon in coupons %}
+    <tr {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+                >
+        <td>{{ coupon.product }}</td>
+        <td>{{ coupon.channel }}</td>
+        <td>{{ coupon.coupon_value }}</td>
+        <td>{{ coupon.count }}</td>
+        <td>{{ coupon.descriptions }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+
+</body>
+</html>

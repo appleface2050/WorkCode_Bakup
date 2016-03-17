@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+    </style>
+</head>
+<body>
+
+<marquee bgcolor="#00FFFF" onmouseover="this.stop()" onmouseout="this.start()">总数量为： <font color="#008B00">{{ count }}</font>
+    开始时间： <font color="#008B8B">{{ start }}</font>
+    结束时间： <font color="#008B8B">{{ end }}</font></marquee>
+<form method="get">
+<table bgcolor="#7fff00">
+    <tr>
+        <td>开始时间</td><td><input type="datetime-local" name="start" value="{{ start }}"/></td>
+        <td>结束时间</td><td><input type="datetime-local" name="end" value="{{ end }}"/></td>
+    </tr>
+    <tr>
+        <td>场所类型</td><td><select name="category">
+        <option value="0">请选择</option>
+        {% for c in categories %}
+            <option value="{{ c.id }}">{{ c.name }}</option>
+        {% endfor %}
+    </select></td>
+        <td>场所名称</td><td><input type="text" name="name" value="{{ name }}"/></td>
+    </tr>
+    <tr>
+        <td>城市</td><td><input type="text" name="city" value="{{ city }}" placeholder="北京"/></td>
+        <td colspan="2"><input type="submit"></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>场所名称</th>
+        <th>城市</th>
+        <th>场所类型</th>
+        <th>发布数量</th>
+    </tr>
+    {% for d in data %}
+    <tr {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+                >
+        <td>{{ d.name }}</td>
+        <td>{{ d.city }}</td>
+        <td>{{ d.category }}</td>
+        <td>{{ d.count }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</form>
+</body>
+</html>

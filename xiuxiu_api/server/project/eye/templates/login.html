@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 50%;
+        }
+        td
+        {
+            border: solid #000 0px;
+            width: 25%;
+        }
+    </style>
+<body>
+<form action="/login_action/" method="post">
+    {% csrf_token %}
+    <table><tr><td>
+    手机号码:
+        </td><td>
+            <input type="text" name="username">
+        </td>
+        </tr><tr><td>
+<!--    手机号: <input type="text" name="phone"> <br/><br/><br/>-->
+    密  码:
+        </td><td><input type="password" name="password">
+        </td></tr>
+    </table>
+
+    <input type="hidden" name="is_staff" value="True">
+    <input type="hidden" name="first_name" value="">
+    <input type="hidden" name="last_name" value="">
+    <input type="hidden" name="email" value="">
+    <a href="/accounts/register/">注册</a><input type="submit" value="登录">
+    <a href="/logout/">退出</a><br/><br/>
+    当前状态:<label>{{ state }}</label>
+</form>
+ 
+ 
+</body>
+</html>

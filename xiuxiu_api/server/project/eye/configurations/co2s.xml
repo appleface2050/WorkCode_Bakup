@@ -1,0 +1,7 @@
+<co2s>
+    <!--min < value <= max-->
+    <co2 max="1400" score="100">优</co2>
+    <co2 min="1400" max="1800" score="80">良</co2>
+    <co2 min="1800" max="2000" score="40">中</co2>
+    <co2 min="2000" score="0">差</co2>
+</co2s>

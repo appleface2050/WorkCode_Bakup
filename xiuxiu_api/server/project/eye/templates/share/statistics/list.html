@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>分享列表</title>
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+{#            width: 20%;#}
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+       input
+       {
+            width: 300px;
+       }
+       select
+       {
+            width: 300px;
+       }
+    </style>
+</head>
+<body>
+<form>
+    <table>
+        <tr class="even">
+            <td>起始日期</td>
+            <td><input type="text" placeholder="2016-01-01 12:30:00" name="start_datetime" value="{{ start_datetime }}"/></td>
+            <td>结束日期</td>
+            <td><input type="text" placeholder="2016-01-01 12:30:00" name="end_datetime" value="{{ end_datetime }}"/></td>
+        </tr>
+        <tr class="odd">
+            <td>排序方式</td>
+            <td><select name="order_by">
+                <option value="user_id" {% ifequal ordey_by 'user_id' %} selected="selected" {% endifequal %}>用户ID</option>
+                <option value="behavior_name" {% ifequal order_by 'behavior_name' %} selected="selected" {% endifequal %}>行为名称</option>
+            </select></td>
+            <td colspan="2"><input type="submit" name="search" value="搜索"/></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>用户ID</td>
+            <td>行为名称</td>
+            <td>数量</td>
+        </tr>
+        {% for d in data %}
+        <tr {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+                >
+            <td>{{ d.user_id }}</td>
+            <td>{{ d.behavior_name }}</td>
+            <td>{{ d.count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+
+</body>
+</html>

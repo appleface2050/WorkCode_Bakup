@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>优惠券激活</title>
+
+    <link rel="stylesheet" href="https://api.xiuxiu.babadeyan.com/media_root/css/coupon/main.css">
+</head>
+<body>
+
+    <div class="container coupon">
+        <img id="channel" src="">
+        <div class="redeem">
+            <div class="textin1">
+                <input id="code" type="text" placeholder="输入激活码"  value="" />
+            </div>
+            <div class="textin2">
+                <input id="tel" type="text" placeholder="输入手机号码"  value="" />
+                <span id="sendmsg">发送验证码</span>
+                <span id="resend">重发验证码</span>
+                <span id="resendtime">（ <span id="sendtime"></span> 秒 ）</span>
+            </div>
+            <div class="textin3">
+                <input id="confirm" type="text" placeholder="输入验证码"  value="" />
+            </div>
+            <div class="error">
+                <p class="errortxt invisable" id="errorcode">兑换码或验证码输入错误</p>
+                <p class="errortxt invisable" id="errorconnect">网络错误请重试</p>
+                <p class="errortxt invisable" id="notfull">请填写全部内容</p>
+            </div>
+
+
+            <div class="rule">
+                <p class="ruletitle"><span class="line">————————</span>活动规则<span class="line">————————</span></p>
+                <p class="ruletxt"></p>
+        </div>
+        <div id="bottom">
+            <div id="wechat"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/coupon/wechat.png">朋友圈<img src="https://api.xiuxiu.babadeyan.com/media_root/img/coupon/choose.png"></div>
+            <div id="action"><span id="action-btn">激活</span></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://api.xiuxiu.babadeyan.com/media_root/js/zepto.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var thisurl = window.location.href;
+        var urlarray = new Array();
+        urlarray = thisurl.split("?channel_id=");
+        var channelimg = "https://api.xiuxiu.babadeyan.com/rest/api/channels/"+urlarray[1];
+        $.ajax({
+            type:"GET" ,
+            url: channelimg ,
+//            url: "https://api.xiuxiu.babadeyan.com/rest/api/channels/1/" ,
+//        data: ,
+            dataType:"json" ,
+            success:function(data){
+                $("#channel").prop("src",data.icon);
+                $(".ruletxt").html(data.rules);
+            },
+            error:function(){}
+        });
+    });
+    var key;
+    var wait = 60;
+    $("#sendmsg").click(function(){sendmsg();});
+    $("#resend").click(function(){sendmsg();});
+
+    $("#action").click(function(){
+        $("#errorcode").addClass("invisable");
+        $("#errorconnect").addClass("invisable");
+        $("#wrongtel").addClass("invisable");
+        $("#notfull").addClass("invisable");
+        wait = 0;
+        var tel = $("#tel").attr("value");
+        var sequencecode = $("#code").attr("value");
+        var verificationcode = $("#confirm").attr("value");
+        if(tel!=""&&sequencecode!=""&&verificationcode!=""){
+            console.log("allin");
+            $.ajax({
+                type:"POST" ,
+                url: "https://api.xiuxiu.babadeyan.com/rest/api/coupon/activate/",
+                data: {
+                    phone: tel,
+                    sequence: sequencecode,
+                    verification_code: verificationcode,
+                    session_key: key
+                },
+                dataType:"json" ,
+                success:function(data){
+                    if(data.success){
+                        console.log("绑定成功！");
+                        window.location.href = "https://api.xiuxiu.babadeyan.com/rest/api/coupon/success";
+                    }else{
+                        $("#errorcode").removeClass("invisable");
+                    }
+                },
+                error:function(){
+                    $("#errorconnect").removeClass("invisable");
+                }
+            });
+        }else{
+            $("#notfull").removeClass("invisable");
+        }
+    });
+
+    function sendmsg(){
+        var tel = $("#tel").attr("value");
+//        console.log(tel)
+        var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
+        if (reg.test(tel)) {
+            console.log("cellnumber ir correct!");
+            $("#resendtime").css("display","inline");
+            $("#sendmsg").css("display","none");
+            $("#resend").css("display","none");
+
+            resend();
+            $.ajax({
+            type:"POST" ,
+            url: "https://api.xiuxiu.babadeyan.com/rest/api/SMS/send/" ,
+            data: {
+                phone: tel
+            },
+            dataType:"json" ,
+            async :false,
+            success:function msg(data){
+                if(data.success){
+                    console.log("textsended");
+                    key = data.key;
+                }
+            },
+            error:function(){
+                wait = 0;
+            }
+        });
+
+            function resend(){
+                if (wait == 0){
+                    $("#resendtime").css("display","none");
+                    $("#resend").css("display","inline");
+                    wait = 60;
+
+                }else{
+                    $("#sendtime").text(""+wait);
+                    wait--;
+                    setTimeout(function(){
+                        resend();
+                    },1000);
+                }
+            }
+        }else{
+            console.log("cellnumber ir wrong!");
+            $("#notfull").removeClass("invisable");
+        }
+    }
+</script>
+</body>
+</html>

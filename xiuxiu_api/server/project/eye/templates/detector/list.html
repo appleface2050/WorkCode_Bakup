@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>添加商用检测器关系</title>
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+{#            width: 20%;#}
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+       input
+       {
+            width: 300px;
+       }
+       select
+       {
+            width: 300px;
+       }
+    </style>
+</head>
+<body>
+<form>
+    <table>
+        <tr class="even">
+            <td>用户名</td>
+            <td><input type="text" placeholder="用户名" name="username" value="{{ username }}"/></td>
+            <td>设备MAC地址</td>
+            <td><input type="text" placeholder="设备MAC地址" name="mac_address" /></td>
+        </tr>
+        <tr class="odd">
+            <td colspan="2"><input type="submit" name="search" value="搜索"/></td>
+            <td colspan="2"><a href="/support/detector/add">添加页面</a></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>用户名</td>
+            <td>设备地址</td>
+            <td>商店地址</td>
+            <td>城市</td>
+            <td>阈值</td>
+            <td>状态</td>
+            <td>删除</td>
+            <td>更新</td>
+        </tr>
+        {% for d in data %}
+        <tr {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+                >
+            <td>{{ d.username }}</td>
+            <td>{{ d.mac_address }}</td>
+            <td>{{ d.address }}</td>
+            <td>{{ d.city }}</td>
+            <td>{{ d.threshold }}</td>
+            <td>{{ d.state }}</td>
+            <td>
+                {% if d.state %}
+                    <a
+                    href="/support/detector/list/?delete=true&search=true&state=0&username={{ username }}&ma={{ d.mac_address }}"
+                    >关闭</a></td>
+                {% else %}
+                    <a
+                    href="/support/detector/list/?delete=true&search=true&state=1&username={{ username }}&ma={{ d.mac_address }}"
+                    >开启</a>
+                {% endif %}
+            </td>
+            <td><a href="/support/detector/update/?mac_address={{ d.mac_address }}">更新页面</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+<formaldehydes>
+    <!-- min < value <= max -->
+    <formaldehyde max="0.05" score="100">舒适</formaldehyde>
+    <formaldehyde min="0.05" max="0.08" score="50">偏高</formaldehyde>
+    <formaldehyde min="0.08" score="-10">超标</formaldehyde>
+</formaldehydes>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+    </style>
+</head>
+<body>
+<marquee bgcolor="#00FFFF" onmouseover="this.stop()" onmouseout="this.start()">总数量为： <font color="#008B00">{{ count }}</font>
+    开始时间： <font color="#008B8B">{{ start }}</font>
+    结束时间： <font color="#008B8B">{{ end }}</font></marquee>
+<table>
+    <tr>
+        <th>发布人昵称</th>
+        <th>发布时间</th>
+        <th>发布地址</th>
+        <th>发布审核状态</th>
+    </tr>
+    {% for d in data %}
+    <tr {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+                >
+        <td>{{ d.user.nickname }}</td>
+        <td>{{ d.created_at }}</td>
+        <td>{{ d.shop.dianping_city }} {{ d.shop.dianping_address }}</td>
+        <td>
+            {% ifequal d.audit -1 %} <font color="gray">未审核</font> {% endifequal %}
+            {% ifequal d.audit 0 %} <font color="red">审核未通过</font> {% endifequal %}
+            {% ifequal d.audit 1 %}<font color="green">审核通过</font> {% endifequal %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

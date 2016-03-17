@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>用户昵称</th>
+        <th>发的帖子数</th>
+        <th>发的评论数</th>
+        <th>帖子被赞的数量</th>
+        <th>帖子被回复的数量</th>
+        <th>用户赞的帖子数量</th>
+    </tr>
+    {% for d in data %}
+    <tr {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+                >
+        <td>{{ d.nickname }}</td>
+        <td>{{ d.post_count }}</td>
+        <td>{{ d.reply_count }}</td>
+        <td>{{ d.post_won_count }}</td>
+        <td>{{ d.reply_count_from_post }}</td>
+        <td>{{ d.post_win_count }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

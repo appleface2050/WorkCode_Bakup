@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title></title>
+    <link rel="stylesheet" href="https://api.xiuxiu.babadeyan.com/media_root/css/forum/new.css">
+    <script src="https://api.xiuxiu.babadeyan.com/media_root/js/jquery-2.1.1.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'post_list' category_id %}?user_id={{ user_id }}&category_id={{ category_id }}&key={{ key }}" class="back">
+            <img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/back.png">
+        </a>
+        <div id="c-title">
+            新建
+        </div>
+        <input type="hidden" value="{{ category_id }}" id="category_id">
+    </header>
+<div class="mask">
+    <img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/page_loading_01.gif" id="loading">
+    <div id="unsuccess">发表不成功</div>
+    <div id="unfilled">请填写标题和内容</div>
+    <div id="waiting">请稍候...</div>
+</div>
+
+    <div class="container">
+        <div class="title-input">
+            <textarea id="titlearea" class="title textarea"   required="required" placeholder="输入标题" maxlength="30" ></textarea>
+        </div>
+
+        <div class="content-input">
+            <textarea id="content" class="content textarea"  required="required"  placeholder="正文" ></textarea>
+        </div>
+
+    </div>
+    <footer class="push">
+        <div class="line1">
+            <a id="addimg">
+                <span class="addimg">
+                    <img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/photo.png">
+                    <span class="imgnum"></span>
+                </span>
+            </a>
+            <a><span id="submit">发表</span></a>
+        </div>
+        <div class="img" id="imgcont">
+
+
+            <a id="add"><img class="newadd" src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/addimg.png"></a>
+        </div>
+    </footer>
+    <script src="https://api.xiuxiu.babadeyan.com/media_root/js/forum/new.js"></script>
+
+
+</body>
+
+</html>

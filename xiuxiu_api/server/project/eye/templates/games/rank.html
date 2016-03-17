@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>rank</title>
+
+    <script src="https://api.xiuxiu.babadeyan.com/media_root/js/jquery-2.1.1.min.js"></script>
+
+</head>
+<style>
+    body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}
+    table{border-collapse:collapse;border-spacing:0;}
+    ul,ol,menu{list-style:none}
+    fieldset,img{border:none}
+    img,object,select,input,textarea,button{vertical-align:middle}
+    caption,th{text-align:left}
+    h1,h2,h3,h4,h5,h6,input,textarea,select,address,caption,cite,code,dfn,em,i,b,strong,small,th,var,abbr{font-size:100%;font-style:normal}
+    q:before,q:after{content:''}
+    ins,s,u,del{text-decoration:none}
+    html,body{background-color: #fff;}
+    a{text-decoration: none;color: #333;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+    img {border: 0}
+    body{
+        -webkit-user-select: none;
+        font-size: 20px;
+        font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;
+    }
+    @font-face
+    {
+        font-family: hyouzi_display;
+        src: url(https://api.xiuxiu.babadeyan.com/media_root/css/games/gomarice_hyouzi_display2.woff);
+    }
+
+    body{
+
+    }
+    .container{
+        width: 100%;
+        text-align: center;
+        background-color: #ffdb4a;
+    }
+    .container #top20{
+        width: 92%;
+        margin: 10px auto 0;
+    }
+    #rank {
+        margin: 0 auto 70px;
+        padding: 0 0 20px 0;
+    }
+    #rank hr{
+        margin: 0 40px;
+        height: 20px;
+        width: 2px;
+        color: #4d4d4d;
+        background-color: #4d4d4d;
+        border: none;
+    }
+    .rankpiece {
+        text-align: left;
+        height: 70px;
+        position: relative;
+
+    }
+    .rankpiece #no1img{
+        position: absolute;
+        width: 50px;
+        left: 15px;
+        display: inline-block;
+        z-index: 999;
+
+    }
+    .rankpiece .ranknum{
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        border-radius: 50px;
+        border: 2px solid #4d4d4d;
+        text-align: center;
+        left: 15px;
+        display: inline-block;
+        z-index: 999;
+        background-color: #f5db73;
+        font-family: hyouzi_display;
+        font-size: 26px;
+        line-height: 50px;
+    }
+    .rankpiece .rankbar{
+        position: absolute;
+        display: inline-block;
+        left: 40px;
+        width: 310px;
+        height: 50px;
+        background-color: #ffea94;
+    }
+    .rankbar .ranktxt{
+    }
+    .rankbar .redbag{
+        position: absolute;
+        left: 35px;
+        top: 10px;
+        width: 35px;
+        height: 25px;
+        padding: 3px 3px 3px 30px;
+        background: url("https://api.xiuxiu.babadeyan.com/media_root/img/games/redbag.png") 0 0 no-repeat;
+        background-size: 100%;
+        font-size: 16px;
+    }
+    .rankbar .tel{
+        position: absolute;
+        left: 100px;
+        top: 10px;
+        margin: auto 0;
+        padding: 3px 8px 3px 12px;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+    }
+    .rankbar #thistel{
+        color: red;
+    }
+    .rankbar #getprize{
+        position: absolute;
+        top: 8px;
+        right: 5px;
+        width: 70px;
+    }
+    footer{
+        position: fixed;
+        z-index: 9999;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+        background-color: #ff9933;
+        text-align: center;
+    }
+    footer img{
+        display: inline;
+        width: 150px;
+    }
+    footer #prizerule{
+
+        margin: 15px 10px 15px 0;
+    }
+    footer #invite{
+        margin: 15px 0 15px 10px;
+    }
+
+    #mask{
+        display: none;
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 800px;
+        background-color: #333333;
+        background-color: rgba(0,0,0,0.6);
+        text-align: center;
+    }
+    #mask .getprize{
+        display: none;
+        margin: 100px auto 50px;
+        width: 240px;
+        height: 150px;
+        background-color: #ffdb4a;
+        border-radius: 50px;
+        padding: 50px 20px;
+        font-size: 24px;
+    }
+    #mask #getpsuccess, #getpfailed{
+        display: none;
+    }
+    #mask .getprize p{
+        margin: 25px 0;
+    }
+    #mask #readrule{
+        display: none;
+        margin: 60px auto 50px;
+        width: 240px;
+        height: 380px;
+        background-color: #ffdb4a;
+        border-radius: 50px;
+        padding: 20px 20px;
+        font-size: 24px;
+    }
+    #mask #readrule p{
+        position: relative;
+        margin: 10px 0;
+        text-align: left;
+        font-size: 24px;
+    }
+    #mask #known{
+        padding: 10px 20px;
+        margin: 20px auto;
+        color: #ffffff;
+        background-color: #53d66c;
+        text-align: center;
+        border-radius: 15px;
+    }
+
+
+
+    @media (max-width: 360px) {
+        body{
+            zoom:0.96;
+        }
+    }
+    @media (max-width: 320px) {
+        body{
+            zoom: 0.86;
+        }
+    }
+    @media (min-width: 400px) {
+        body{
+            zoom: 1.12;
+        }
+    }
+</style>
+<body>
+
+<div class="container">
+    <div class="title">
+        <img id=top20 src="https://api.xiuxiu.babadeyan.com/media_root/img/games/top20.png">
+    </div>
+    <div id="rank">
+        <div class="rankpiece" id="no1">
+            <hr/>
+            <img id="no1img" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/no1.png">
+            <div class="rankbar">
+                <div class="ranktxt">
+                    <span class="redbag"></span>
+                    <span class="tel"></span>
+                </div>
+            </div>
+        </div>
+        <!--<div class="rankpiece" id="no2">-->
+            <!--<hr/>-->
+            <!--<div class="ranknum">2</div>-->
+            <!--<div class="rankbar">-->
+                <!--<div class="ranktxt">-->
+                    <!--<span class="redbag">5元</span>-->
+                    <!--<span class="tel">186****5930</span>-->
+                <!--</div>-->
+
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+
+    <footer>
+        <img id="prizerule" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/prizerule.png">
+        <img id="invite" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/invite.png">
+    </footer>
+</div>
+
+<div id="mask">
+    <div id="readrule">
+        <p>本排行榜仅包含发榜前24小时内的所有玩家的成绩。</p>
+        <p>每天凌晨榜单会刷新一次，前二十名会获得相应奖励。</p>
+        <p>本榜录入的成绩均为玩家当日所得的最高成绩。</p>
+        <span id="known">我知道了</span>
+    </div>
+    <div id="getpsuccess" class="getprize">
+        <p>红包已放入您的账户下</p>
+        <p>请至我的红包查看</p>
+    </div>
+    <div id="getpfailed" class="getprize">
+        <p>啊哦~</p>
+        <p id="failedtxt">领取没有成功哦~</p>
+    </div>
+
+</div>
+
+
+<script>
+    var userid;
+    var thisurl = window.location.href;
+    var userarray = new Array();
+    userarray = thisurl.split("?user_id=");
+    userid = userarray[1];
+
+
+    $(document).ready(function(){
+        $.ajax({
+            type:"GET" ,
+            url: "https://api.xiuxiu.babadeyan.com/rest/api/games/ranking " ,
+//        data: ,
+            dataType:"json" ,
+            success:function(data){
+                $("#no1").find(".tel").html(data[0].username);
+                $("#no1").find(".redbag").html(data[0].reward+"元");
+                if(data[0].user_id == userid){
+                    $("#no1").find(".rankbar").append('<img src="https://api.xiuxiu.babadeyan.com/media_root/img/games/getprize.png" id="getprize">');
+                }
+//                console.log(data[0].username);
+
+                for(var i = 1; i < data.length; i++){
+                    var it = "no"+data[i].ranking;
+                    var rankpiece = '<div class="rankpiece" id='+it+'><hr/><div class="ranknum"></div>' +
+                            '<div class="rankbar"><div class="ranktxt"><span class="redbag"></span>' +
+                            '<span class="tel"></span></div></div></div>';
+
+                    $("#rank").append(rankpiece);
+                    $(".rankpiece:last").find(".ranknum").html(data[i].ranking);
+                    $(".rankpiece:last").find(".tel").html(data[i].username);
+                    $(".rankpiece:last").find(".redbag").html(data[i].reward+"元");
+                    if(data[i].user_id == userid){
+                        $(".rankpiece:last").find(".rankbar").append('<img src="https://api.xiuxiu.babadeyan.com/media_root/img/games/getprize.png" id="getprize">');
+                    }
+                }
+
+                $("#getprize").click(function(){
+
+                    $.ajax({
+                        type:"post" ,
+                        url: "https://api.xiuxiu.babadeyan.com/rest/api/games/reward" ,
+                        data: {
+                            user_id: userid
+                        },
+                        dataType:"json" ,
+                        success:function(data){
+                            if(data.success){
+                                $("#mask").show();
+                                $("#getpsuccess").show()
+                            }else{
+                                $("#mask").show();
+                                $("#getpfailed").show();
+                                if(data.type == 2){
+                                    $("#failedtxt").html("你今天领取的红包已达上限呦~")
+                                }else if(data.type == 3){
+                                    $("#failedtxt").html("你已经领取过今天的游戏红包了呦~")
+                                }
+                            }
+                        },
+                        error:function(){
+                            $("#mask").show();
+                            $("#getpfailed").show();
+                            $("#failedtxt").html("领奖没有成功~")
+                        }
+                    });
+                });
+
+            },
+            error:function(){}
+        });
+    });
+
+        $(".getprize").click(function(){
+            $("#mask").hide();
+            $("#getpfailed").hide();
+            $("#getpsuccess").hide();
+        });
+        $("#prizerule").click(function(){
+            $("#mask").show();
+            $("#readrule").show();
+        });
+        $("#known").click(function(){
+            $("#mask").hide();
+            $("#readrule").hide();
+        });
+
+        $("#invite").click(function(){
+            var href = "https://api.xiuxiu.babadeyan.com/rest/api/games/index";
+            var title = "";
+            javascript:myjavascript.androidShare(href,title);
+        });
+
+
+
+
+</script>
+
+
+</body>
+</html>

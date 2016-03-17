@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+    </style>
+</head>
+<body>
+<form action="/shop/actions/" method="post">
+    {% csrf_token %}
+    排序： <select name="shop_sort">
+    <option value="id">先添加优先</option>
+    <option value="-id">后添加优先</option>
+    <option value="audit">未审核优先</option>
+    <option value="-audit">审核优先</option>
+    </select>
+    <input type="submit" name="sort" value="排序" />
+    <input type="submit" name="submit" value="提交" />
+    <table>
+        <tr>
+            <td>选择</td>
+            <td>场所名称</td>
+            <td>场所城市</td>
+            <td>场所详细地址</td>
+            <td>场所分类</td>
+            <td>审核状态</td>
+        </tr>
+        {% for s in shops %}
+        <tr>
+            <td><input type="checkbox" name="checkbox_{{ s.id }}" value="{{ s.id }}" /></td>
+            <td>{{ s.name }}</td>
+            <td>{{ s.city }}</td>
+            <td>{{ s.detail_address }}</td>
+            <td>{{ s.category }}</td>
+            <td>
+                <!--<input type="hidden" name="audit_{{ s.id }}" value="{{ s.audit }}" />-->
+                <!--{{ s.audit }}-->
+                {% if s.audit %}<font color="blue">已审核</font>
+                {% else %}<font color="red">未审核</font>
+                {% endif %} </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</form>
+ 
+ 
+</body>
+</html>

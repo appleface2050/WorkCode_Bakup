@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+    </style>
+</head>
+<body>
+<form method="get">
+<label>开始时间</label> {{ result.start_datetime }}
+<table>
+    <tr>
+        <td>开始时间</td>
+        <td><input type="text" value="{{ start_datetime}}" name="start_datetime"></td>
+        <td>结束时间</td>
+        <td><input type="text" value="{{ end_datetime}}" name="end_datetime"></td>
+    </tr>
+    <tr>
+        <td colspan="4"><input type="submit" name="submit"/></td>
+    </tr>
+</table>
+<table>
+        <tr>
+            <td>标题</td>
+            <td>点击次数</td>
+        </tr>
+        {% for s in result.click_title_records %}
+        <tr>
+            <td>{{ s.title }}</td>
+            <td>{{ s.count }}</td>
+        </tr>
+        {% endfor %}
+</table>
+</form>
+ 
+ 
+</body>
+</html>

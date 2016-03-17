@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>优惠券激活成功</title>
+
+    <link rel="stylesheet" href="https://api.xiuxiu.babadeyan.com/media_root/css/coupon/main.css">
+</head>
+<body>
+
+<div class="container success">
+    <div class="mainbox">
+        <span class="successtxt">激 活 成 功</span>
+    </div>
+    <div class="tip">请到我的优惠券页面查看已获得的优惠券</div>
+</div>
+<a id="native_auto" name="xiu$act=share_wxt^ttl=嗅嗅--室内场所空气测量^url=http://app.xiu.sangebaba.com/$" style="display: none;"></a>
+<script src="https://api.xiuxiu.babadeyan.com/media_root/js/zepto.min.js"></script>
+<script>
+    $(document).ready(function(){
+        setTimeout(function(){
+            share2wechat()
+        },2000);
+    });
+    function share2wechat(){
+        var href = "http://app.xiu.sangebaba.com/";
+        var title = "嗅嗅——室内场所空气测量";
+//        console.log(href);
+        javascript:myjavascript.shareWeChat(href,title);
+    }
+</script>
+</body>
+
+</html>

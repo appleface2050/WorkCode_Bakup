@@ -1,0 +1,240 @@
+<categories>
+
+    <category name="tableware">
+        <shop_categories>
+            <shop_category percentage="35">美食</shop_category>
+        </shop_categories>
+        <question>
+            <description>餐具是否干净</description>
+        </question>
+        <answer id="0">
+            <choice>干净</choice>
+            <description>餐具干净</description>
+            <score>100</score>
+        </answer>
+        <answer id="1">
+            <choice>一般</choice>
+            <description>餐具较干净</description>
+            <score>50</score>
+        </answer>
+        <answer id="2">
+            <choice>脏</choice>
+            <description>餐具脏</description>
+            <score>0</score>
+        </answer>
+    </category>
+
+    <category name="environment">
+        <shop_categories>
+            <shop_category percentage="35">美食</shop_category>
+            <shop_category percentage="35">酒店</shop_category>
+            <shop_category percentage="50">丽人</shop_category>
+            <shop_category percentage="50">娱乐</shop_category>
+            <shop_category percentage="50">购物</shop_category>
+        </shop_categories>
+        <question>
+            <description>环境是否干净</description>
+        </question>
+        <answer id="0">
+            <choice>干净</choice>
+            <description>环境干净</description>
+            <score>100</score>
+        </answer>
+        <answer id="1">
+            <choice>一般</choice>
+            <description>环境较干净</description>
+            <score>50</score>
+        </answer>
+        <answer id="2">
+            <choice>脏</choice>
+            <description>环境脏</description>
+            <score>0</score>
+        </answer>
+    </category>
+
+    <category name="child">
+        <shop_categories>
+            <shop_category percentage="30">美食</shop_category>
+            <shop_category percentage="50">其他</shop_category>
+            <shop_category percentage="50">娱乐</shop_category>
+            <shop_category percentage="50">购物</shop_category>
+        </shop_categories>
+        <question>
+            <description>是否适合带孩子玩</description>
+        </question>
+        <answer id="0">
+            <choice>不宜</choice>
+            <description>不宜带孩子</description>
+            <score>0</score>
+        </answer>
+        <answer id="1">
+            <choice>适合</choice>
+            <description>适合带孩子</description>
+            <score>100</score>
+        </answer>
+    </category>
+
+    <category name="smell">
+        <shop_categories>
+            <shop_category percentage="35">运动</shop_category>
+        </shop_categories>
+        <question>
+            <description>有无异味</description>
+        </question>
+        <answer id="0">
+            <choice>无</choice>
+            <description>无异味</description>
+            <score>100</score>
+        </answer>
+        <answer id="1">
+            <choice>有</choice>
+            <description>有异味</description>
+            <score>0</score>
+        </answer>
+    </category>
+
+    <category name="equipment">
+        <shop_categories>
+            <shop_category percentage="35">运动</shop_category>
+        </shop_categories>
+        <question>
+            <description>器材新旧</description>
+        </question>
+        <answer id="0">
+            <choice>旧</choice>
+            <description>旧器材</description>
+            <score>0</score>
+        </answer>
+        <answer id="1">
+            <choice>新</choice>
+            <description>新器材</description>
+            <score>100</score>
+        </answer>
+    </category>
+
+    <category name="water">
+        <shop_categories>
+            <shop_category percentage="30">运动</shop_category>
+        </shop_categories>
+        <question>
+            <description>游泳池水质</description>
+        </question>
+        <answer id="0">
+            <choice>无泳池</choice>
+            <description>无泳池</description>
+            <score>50</score>
+        </answer>
+        <answer id="1">
+            <choice>干净</choice>
+            <description>泳池干净</description>
+            <score>100</score>
+        </answer>
+        <answer id="2">
+            <choice>脏</choice>
+            <description>泳池脏</description>
+            <score>0</score>
+        </answer>
+    </category>
+
+    <category name="soundproof">
+        <shop_categories>
+            <shop_category percentage="30">运动</shop_category>
+        </shop_categories>
+        <question>
+            <description>隔音效果如何</description>
+        </question>
+        <answer id="0">
+            <choice>不好</choice>
+            <description>不隔音</description>
+            <score>0</score>
+        </answer>
+        <answer id="1">
+            <choice>好</choice>
+            <description>隔音</description>
+            <score>100</score>
+        </answer>
+    </category>
+
+    <category name="quiet">
+        <shop_categories>
+            <shop_category percentage="30">运动</shop_category>
+            <shop_category percentage="50">丽人</shop_category>
+        </shop_categories>
+        <question>
+            <description>是否安静</description>
+        </question>
+        <answer id="0">
+            <choice>安静</choice>
+            <description>安静</description>
+            <score>100</score>
+        </answer>
+        <answer id="1">
+            <choice>正常</choice>
+            <description>较安静</description>
+            <score>50</score>
+        </answer>
+        <answer id="2">
+            <choice>吵闹</choice>
+            <description>吵闹</description>
+            <score>0</score>
+        </answer>
+    </category>
+
+    <category name="pet">
+        <shop_categories>
+            <shop_category percentage="50">其他</shop_category>
+        </shop_categories>
+        <question>
+            <description>能不能带宠物</description>
+        </question>
+        <answer id="0">
+            <choice>不能</choice>
+            <description>不能带宠物</description>
+            <score>0</score>
+        </answer>
+        <answer id="1">
+            <choice>能</choice>
+            <description>能带宠物</description>
+            <score>100</score>
+        </answer>
+    </category>
+
+    <category name="watchman">
+        <shop_categories>
+            <shop_category percentage="50">亲子</shop_category>
+        </shop_categories>
+        <question>
+            <description>有无看护人员</description>
+        </question>
+        <answer id="0">
+            <choice>无</choice>
+            <description>无看护人员</description>
+            <score>0</score>
+        </answer>
+        <answer id="1">
+            <choice>有</choice>
+            <description>有看护人员</description>
+            <score>100</score>
+        </answer>
+    </category>
+
+    <category name="monitor">
+        <shop_categories>
+            <shop_category percentage="50">亲子</shop_category>
+        </shop_categories>
+        <question>
+            <description>有无摄像头</description>
+        </question>
+        <answer id="0">
+            <choice>无</choice>
+            <description>无摄像头</description>
+            <score>0</score>
+        </answer>
+        <answer id="1">
+            <choice>有</choice>
+            <description>有摄像头</description>
+            <score>100</score>
+        </answer>
+    </category>
+
+</categories>

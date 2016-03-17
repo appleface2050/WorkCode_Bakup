@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title></title>
+    <style>
+        body{margin:0;}
+        .container{width: 100%;}
+        #head{width: 100%;}
+        @media(min-width: 320px){
+            #head #corner{position: absolute; top: 0; right: 0; width: 36%;}
+            #head #logo{position: absolute; top: 0; left: 0; margin: 20px; width: 17%;}
+            #content{position: absolute; top: 12%; padding: 20px;}
+            #content h3{font-size: 16px;}
+            #content div{font-size: 14px;}
+            #browser div{margin: 5px 0;}
+            #browser #src{margin: 20px 0; font-size: 14px;}
+            #taobao div{margin: 5px 0; line-height: 130%;}
+            #taobao #tkl{margin: 20px 0; font-size: 14px;}
+            #explore div{margin: 5px 0;}
+        }
+        @media(min-width: 350px) {
+            #head #corner{position: absolute; top: 0; right: 0; width: 40%;}
+            #head #logo{position: absolute; top: 0; left: 0; margin: 30px; width: 20%;}
+            #content{position: absolute; top: 15%; padding: 30px;}
+            #browser div{margin: 5px 0;}
+            #browser #src{margin: 20px 0;}
+            #taobao div{margin: 5px 0; line-height: 130%;}
+            #taobao #tkl{margin: 20px 0;}
+            #explore div{margin: 5px 0;}
+        }
+        @media(min-width: 400px) {
+            #head #corner{position: absolute; top: 0; right: 0; width: 40%;}
+            #head #logo{position: absolute; top: 0; left: 0; margin: 30px; width: 20%;}
+            #content{position: absolute; top: 15%; padding: 30px;}
+            #content h3{font-size: 20px;}
+            #content div{font-size: 18px;}
+            #browser div{margin: 5px 0;}
+            #browser #src{margin: 20px 0; font-size: 18px;}
+            #taobao div{margin: 5px 0; line-height: 130%;}
+            #taobao #tkl{margin: 20px 0; font-size: 18px;}
+            #explore div{margin: 5px 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div id="head">
+            <img id="logo" src="https://api.xiuxiu.babadeyan.com/media_root/share/jianceyi/img/xiuxiu.png">
+            <img id="corner" src="http://app.xiu.sangebaba.com/img/corner.png">
+        </div>
+        <div id="content">
+            <div id="taobao">
+                <h3>1、淘宝APP打开</h3>
+                <div>如果您安装了淘宝客户端，请复制如下淘口令后打开淘宝客户端。</div>
+                <div id="tkl">
+                    #淘口令#长按复制这条信息，打开手机淘宝app即可看到￥AAAkRipO￥
+                </div>
+            </div>
+            <div id="browser">
+                <h3>2、浏览器打开</h3>
+                <div>点击右上角按钮，选择“用浏览器打开”。</div>
+                <div>或复制如下地址，到手机浏览器中粘贴并打开。</div>
+                <div id="src">http://m.tb.cn/h.ysYB?sm=b87041</div>
+            </div>
+            <div id="explore">
+                <h3>3、淘宝众筹搜索</h3>
+                <div>打开淘宝APP或支付宝APP，下滑进入淘宝众筹，搜索“三个爸爸”</div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+<script>
+    var hheight = window.innerHeight;
+//    document.getElementById('tbPage').style.height = hheight+"px";
+    var ua = navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i)=="micromessenger") {
+
+    } else {
+        window.location.href = "https://h5.m.taobao.com/app/dream/www/detail.html?sourceType=other&ttid=201200%40taobao_iphone_5.3.3&spm=a215p.7673650.5.14&pid=10045256&un=13c818e96347658c4c6e4bed9157ce66&share_crt_v=1&_navigation_params=%7B%22needdismiss%22%3A1%7D";
+    }
+</script>
+</body>
+</html>

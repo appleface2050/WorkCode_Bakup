@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+       input
+       {
+            width: 300px;
+       }
+    </style>
+</head>
+<body>
+<form action="" method="post">
+    <input type="submit" value="确定" />  <a href="/support/index">返回</a><br/>
+    <table>
+        <tr class="even">
+            <td>红包因子：</td>
+            <td><input name="factor" placeholder="数值的精确度（默认为100）" value="{{ redenvelope.factor }}"/> </td>
+            <td>个人红包阈值：</td>
+            <td><input name="person_threshold" placeholder="个人得红包数值的阈值" value="{{ redenvelope.person_threshold }}"/></td>
+        </tr>
+        <tr class="odd">
+            <td>设备红包：</td>
+            <td><input name="device_bonus" placeholder="设备红包" value="{{ redenvelope.device_bonus }}"/> </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="even">
+            <td>连续红包最小金额：</td>
+            <td><input name="extra_min" placeholder="连续红包最小金额" value="{{ redenvelope.extra_min }}"/></td>
+            <td>连续红包最大金额：</td>
+            <td><input name="extra_max" placeholder="连续红包最大金额" value="{{ redenvelope.extra_max }}"/> </td>
+        </tr>
+        <tr class="odd">
+            <td>连续红包掉包机率：</td>
+            <td><input name="extra_possibility" placeholder="连续红包掉包机率" value="{{ redenvelope.extra_possibility }}"/> </td>
+            <td>连续红包池限额：</td>
+            <td><input name="extra_threshold" placeholder="连续红包池限额" value="{{ redenvelope.extra_threshold }}"/></td>
+        </tr>
+        <tr class="even">
+            <td>连续红包时间：</td>
+            <td><input name="extra_keep" placeholder="得连续红包需要连续发布的天数" value="{{ redenvelope.extra_keep }}"/> </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="odd">
+            <td>红包雨最小金额：</td>
+            <td><input name="rain_min" placeholder="红包雨最小金额" value="{{ redenvelope.rain_min }}"/> </td>
+            <td>红包雨最大金额：</td>
+            <td><input name="rain_max" placeholder="红包雨最大金额" value="{{ redenvelope.rain_max }}"/> </td>
+        </tr>
+        <tr class="even">
+            <td>红包雨掉包机率：</td>
+            <td><input name="rain_possibility" placeholder="红包雨掉包机率"value="{{ redenvelope.rain_possibility }}"/> </td>
+            <td>红包雨池限额：</td>
+            <td><input name="rain_threshold" placeholder="红包雨池限额" value="{{ redenvelope.rain_threshold }}"/></td>
+        </tr>
+        <tr class="odd">
+            <td>红包雨起始时间：</td>
+            <td><input name="rain_start" placeholder="红包雨起始时间（如12：00：00）" value="{{ redenvelope.rain_start }}"/> </td>
+            <td>红包雨结束时间：</td>
+            <td><input name="rain_end" placeholder="红包雨结束时间（如13：59：59）" value="{{ redenvelope.rain_end }}"/> </td>
+        </tr>
+        <tr class="even">
+            <td>红包雨数量：</td>
+            <td><input name="rain_count" placeholder="一天红包雨的数量" value="{{ redenvelope.rain_count }}"/> </td>
+            <td>红包雨星期（如1,2,3,4,5,6,7)：</td>
+            <td><input name="rain_week" placeholder="红包雨在星期几发（尚未开通）" value="{{ redenvelope.rain_week }}"/></td>
+        </tr>
+        <tr class="odd">
+            <td>红包雨开始日期：</td>
+            <td><input name="rain_start_date" placeholder="红包雨在哪天开始（如2015-03-08,尚未开通）" value="{{ redenvelope.rain_start_date }}"/> </td>
+            <td>红包雨结束日期：</td>
+            <td><input name="rain_end_date" placeholder="红包雨在哪天结束（如2015-03-08,尚未开通）" value="{{ redenvelope.rain_end_date }}"/></td>
+        </tr>
+        <tr class="even">
+            <td>购买链接：</td>
+            <td><input name="purchase_url" placeholder="购买链接" value="{{ redenvelope.purchase_url }}"/> </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+</form>
+ 
+ 
+</body>
+</html>

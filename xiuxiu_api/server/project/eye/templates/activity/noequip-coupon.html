@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>50元防霾口罩免费领</title>
+
+    <link rel="stylesheet" href="https://api.xiuxiu.babadeyan.com/media_root/css/activity/main.css">
+    <style>
+        html{background-color: #ffdb4a;}
+    </style>
+</head>
+<body>
+<img id="logo" style="display: none" src="https://api.xiuxiu.babadeyan.com/media_root/img/activity/icon.png">
+<div class="container-noequip">
+    <img id="coupon1000" src="https://api.xiuxiu.babadeyan.com/media_root/img/activity/coupon2.png">
+    <input id="tel" type="text" placeholder="输入手机号领取优惠券" >
+    <input type="button" id="getcoupon" value="领取">
+    <p id="numwrong" class="msgwrong">手机号格式有误!</p>
+    <p id="webwrong" class="msgwrong">sorry!网络好像有问题哦~稍后重试!</p>
+    <p id="getwrong" class="msgwrong">sorry!优惠券获取失败了哦~请重试!</p>
+    <p id="getting" class="msgwrong">获取中...</p>
+</div>
+<div class="mask">
+    <div id="signsuccess">
+        <p id="both">优惠券领取成功!</p>
+        <p id="package">优惠券礼包领取成功!</p>
+        <p id="facemask">防雾霾专用口罩优惠券领取成功!</p>
+        <p id="gotten">您已经领取过我们的优惠券啦!</p>
+        <!--<p id="nocoupon">本期优惠券发放已结束!<br/>下一期2016年1月11号开始发放,敬请期待!</p>-->
+        <p>赶快去我们的商城使用优惠券吧!</p>
+        <span id="close">关闭</span>
+    </div>
+</div>
+
+<script src="https://api.xiuxiu.babadeyan.com/media_root/js/zepto.min.js"></script>
+<script>
+    var tel = $("#tel").attr("value");
+    var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
+
+    var channel = window.location.href.match(/channel=[0-9]+/g);
+    if(channel != null){var channelid = channel.toString().split("=")[1];}
+
+//    setTimeout("$('#getcoupon').click()",1500);
+    $("#getcoupon").click(function(){
+        getcoupon();
+//        $(".mask").show();
+//        $("#nocoupon").show();
+    });
+    function getcoupon(){
+        $(".msgwrong").hide();
+        $("#getting").show();
+        $("#getcoupon").unbind("click");
+        $("#getcoupon").css("background-color","#aeaeae");
+        var tel = $("#tel").attr("value");
+        var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
+        if (reg.test(tel)){
+            console.log("allin");
+            $.ajax({
+                type:"POST" ,
+                url: "https://api.xiuxiu.babadeyan.com/rest/api/activity/send_coupons/",
+                data: {
+                    phone: tel,
+                },
+                dataType:"json" ,
+                success:function(data){
+                    $("#getting").hide();
+                    $("#getcoupon").click(function(){
+                        getcoupon()
+                    });
+                    $("#getcoupon").css("background-color","#ff9933");
+                    if(channel == null){
+                        if(data.package&&data.mask){
+                            console.log("领取成功！");
+                            $(".mask").show();
+                            $("#both").show();
+                            setTimeout("window.location='http://app.xiu.sangebaba.com/?count-title=from口罩和优惠券礼包领取'",2000);
+                        }else if(data.package&&!data.mask){
+                            $(".mask").show();
+                            $("#package").show();
+                            setTimeout("window.location='http://app.xiu.sangebaba.com/?count-title=from口罩和优惠券礼包领取'",2000);
+                        }else if(!data.package&&data.mask){
+                            $(".mask").show();
+                            $("#facemask").show();
+                            setTimeout("window.location='http://app.xiu.sangebaba.com/?count-title=from口罩和优惠券礼包领取'",2000);
+                        }else if(data.package_type==1&&data.mask_type==1){
+                            $(".mask").show();
+                            $("#gotten").show();
+                            setTimeout("window.location='http://app.xiu.sangebaba.com/?count-title=from口罩和优惠券礼包领取'",2000);
+                        }else{
+                            $("#getwrong").show();
+                        }
+                    }else{
+                        if(data.package&&data.mask){
+                            console.log("领取成功！");
+                            $(".mask").show();
+                            $("#both").show();
+                            setTimeout("window.location='https://api.xiuxiu.babadeyan.com/rest/api/app/download/?channel='+channelid",2000);
+                        }else if(data.package&&!data.mask){
+                            $(".mask").show();
+                            $("#package").show();
+                            setTimeout("window.location='https://api.xiuxiu.babadeyan.com/rest/api/app/download/?channel='+channelid",2000);
+                        }else if(!data.package&&data.mask){
+                            $(".mask").show();
+                            $("#facemask").show();
+                            setTimeout("window.location='https://api.xiuxiu.babadeyan.com/rest/api/app/download/?channel='+channelid",2000);
+                        }else if(data.package_type==1&&data.mask_type==1){
+                            $(".mask").show();
+                            $("#gotten").show();
+                            setTimeout("window.location='https://api.xiuxiu.babadeyan.com/rest/api/app/download/?channel='+channelid",2000);
+                        }else{
+                            $("#getwrong").show();
+                        }
+                    }
+
+                },
+                error:function(){
+                    $("#getcoupon").attr("disabled","");
+                    $("#getcoupon").click(function(){
+                        getcoupon()
+                    });
+                    $("#webwrong").show();
+                    $("#getting").hide();
+                }
+            });
+        }else{
+            $("#getcoupon").click(function(){
+                getcoupon()
+            });
+            $("#getcoupon").css("background-color","#ff9933");
+            $("#numwrong").show();
+            $("#getting").hide();
+        }
+    }
+    $("#close").click(function(){
+        $(".mask").hide();
+        $("#both").hide();
+        $("#package").hide();
+        $("#facemask").hide();
+        $("#gotten").hide();
+        $("#nocoupon").hide();
+    });
+
+
+</script>
+</body>
+</html>

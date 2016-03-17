@@ -1,0 +1,9 @@
+# my.cnf
+[client]
+
+database = babadeyan_www
+user = root
+password = 111111
+host = 192.168.2.196
+port = 3306
+default-character-set = utf8

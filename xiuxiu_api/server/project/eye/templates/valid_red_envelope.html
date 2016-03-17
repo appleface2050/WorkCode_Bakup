@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+    </style>
+</head>
+<body>
+<marquee width=100% behavior=alternate direction=left align=middle>
+    获得红包的人数：{{ red_envelope.user_count }}  已经获取红包的总金额： {{ red_envelope.total_bonus}}
+    预计的红包总金额：{{ red_envelope.total_threshold }}
+    预计的连续红包总金额： {{ red_envelope.extra_threshold }}
+    预计的红包雨总金额： {{ red_envelope.rain_threshold }}</marquee>
+
+<table>
+        <tr>
+            <td>用户名</td>
+            <td>用户昵称</td>
+            <td>红包</td>
+            <td>设备红包</td>
+            <td>连续红包</td>
+            <td>雨红包</td>
+        </tr>
+        {% for s in red_envelope.detail %}
+        <tr>
+            <td>{{ s.user_username }}</td>
+            <td>{{ s.user_nickname }}</td>
+            <td>{{ s.bonus }}</td>
+            <td>{{ s.device_bonus }}</td>
+            <td>{{ s.extra_bonus }}</td>
+            <td>{{ s.rain_bonus }}</td>
+        </tr>
+        {% endfor %}
+</table>
+
+ 
+ 
+</body>
+</html>

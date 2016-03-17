@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+    </style>
+</head>
+<body>
+<form method="get" >
+<table>
+    <tr>
+        <td>起始时间</td>
+        <td><input type="datetime-local" name="start" value="{{ start }}"/></td>
+        <td>结束时间</td>
+        <td><input type="datetime-local" name="end" value="{{ end }}"/></td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="查询" name="submit"/></td>
+        <td></td>
+        <td>注册总数</td>
+        <td><input type="text" value="{{ count }}" readonly="readonly" /></td>
+    </tr>
+</table>
+</form>
+<table>
+    <tr>
+        <th>名称</th>
+        <th>数量</th>
+    </tr>
+    {% for data in all_list %}
+        <tr
+            {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+        >
+            <td>{{ data.name }}</td>
+            <td>{{ data.count }}</td>
+        </tr>
+    {% endfor %}
+    {% for data in new_list %}
+        <tr
+            {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+        >
+            <td>新增用户的{{ data.name }}</td>
+            <td>{{ data.count }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

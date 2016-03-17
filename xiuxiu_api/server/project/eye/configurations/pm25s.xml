@@ -1,0 +1,10 @@
+<pm25s>
+    <!--min <= value <= max-->
+    <pm25 min="0" max="35" score="100">空气良好</pm25>
+    <pm25 min="36" max="75" score="80">空气正常</pm25>
+    <pm25 min="76" max="115" score="0">轻度污染</pm25>
+    <pm25 min="116" max="150" score="-5">中度污染</pm25>
+    <pm25 min="151" max="250" score="-10">重度污染</pm25>
+    <pm25 min="251" max="350" score="-15">严重污染</pm25>
+    <pm25 min="351" max="99999" score="-20">不宜生存</pm25>
+</pm25s>

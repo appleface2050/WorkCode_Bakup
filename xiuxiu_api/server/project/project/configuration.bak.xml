@@ -1,0 +1,31 @@
+<root>
+ <redenvelope factor="100" person_threshold="119">
+	<device>
+		<bonus>0.2</bonus>
+	</device>
+	<extra>
+		<max>1</max>
+		<min>0.01</min>
+		<possibility>0.5</possibility>
+		<threshold>0</threshold>
+		<keep>5</keep>
+	</extra>
+	<rain>
+		<max>0.5</max>
+		<min>0.01</min>
+		<possibility>0.5</possibility>
+		<threshold>5000</threshold>
+		<start_time>00:00:00</start_time>
+		<end_time>23:59:00</end_time>
+		<count>90</count>
+
+		<start_date />
+		<end_date />
+		<week />
+	</rain>
+
+ </redenvelope>
+ <purchase>
+	<url>https://api.xiuxiu.babadeyan.com/shop/show/?shop_sort=id&amp;search_value=%E8%A5%BF%E4%BA%8C%E6%97%97%E8%A5%BF%E8%B7%AF%E9%A2%86%E7%A7%80%E6%96%B0%E7%A1%85%E8%B0%B7</url>
+ </purchase>
+</root>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>badairrank</title>
+    <link rel="stylesheet" href="https://api.xiuxiu.babadeyan.com/media_root/css/activity/main.css">
+    <script src="https://api.xiuxiu.babadeyan.com/media_root/js/jquery-2.1.1.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container-rank">
+    <div class="title">
+        <img id=top20 src="https://api.xiuxiu.babadeyan.com/media_root/img/activity/jiuchahuaikongqi.png">
+    </div>
+    <div id="rank">
+        <div class="ranktitle">
+            <hr/>
+            <div class="rankbar">
+                <span id="name">昵称</span>
+                <span id="pm">PM2.5数值</span>
+                <span id="companyname">阵营</span>
+            </div>
+        </div>
+        <div class="rankpiece" id="no1">
+            <!--<hr/>-->
+            <img id="no1img" src="https://api.xiuxiu.babadeyan.com/media_root/img/games/no1.png">
+            <div class="rankbar">
+                <span class="name"></span>
+                <span class="pm"></span>
+                <span class="companyname"></span>
+            </div>
+        </div>
+        <!--<div class="rankpiece" id="no2">-->
+            <!--<hr/>-->
+            <!--<div class="ranknum">2</div>-->
+            <!--<div class="rankbar">-->
+                <!--<span class="name">Rebecca</span>-->
+                <!--<span class="pm">112</span>-->
+                <!--<span class="companyname">爸爸的眼</span>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+
+    <footer>
+        <a><img id="goback" src="https://api.xiuxiu.babadeyan.com/media_root/img/activity/tosign.png"></a>
+        <div id="activetimer">
+            <img src="https://api.xiuxiu.babadeyan.com/media_root/img/activity/toend.png">
+            <span id="hour"></span>
+            <span id="minute"></span>
+            <span id="seconds"></span>
+        </div>
+
+    </footer>
+</div>
+
+
+
+
+<script>
+    var companyname;
+    var thisurl = window.location.href;
+    var companyarray = new Array();
+    companyarray = thisurl.split("?company_name=");
+    companyname = companyarray[1];
+    companyname = decodeURI(companyname);
+    $(document).ready(function(){
+        $.ajax({
+            type:"GET" ,
+            url: "https://api.xiuxiu.babadeyan.com/rest/api/activity/ranking/" ,
+            data: {
+                company_name: companyname,
+            },
+            dataType:"json" ,
+            success:function(data){
+                rankdata = data.data;
+                $("#no1").find(".name").html(rankdata[0].nickname);
+                $("#no1").find(".pm").html(rankdata[0].pm2_5);
+                $("#no1").find(".companyname").html(companyname);
+
+                for(var i = 1; i < rankdata.length; i++){
+                    var it = "no"+rankdata[i].ranking;
+                    console.log(it);
+                    var rankpiece = '<div class="rankpiece" id='+it+'><hr/><div class="ranknum">'+rankdata[i].ranking+'</div>' +
+                            '<div class="rankbar"><span class="name"></span>' +'<span class="pm"></span>'+
+                            '<span class="companyname">'+companyname+'</span></div></div>';
+
+                    $("#rank").append(rankpiece);
+                    $(".rankpiece:last").find(".name").html(rankdata[i].nickname);
+                    $(".rankpiece:last").find(".pm").html(rankdata[i].pm2_5);
+                    $(".rankpiece:last").find(".company").html(companyname);
+
+
+                }
+//                var closetime = "2016-01-01 23:59:00";
+                var closetime = data.end;
+                function fresh(t)
+                {
+                    var endtime=new Date((t).replace(/-/g, "\/"));
+                    var nowtime = new Date();
+                    var leftsecond=parseInt((endtime.getTime()-nowtime.getTime())/1000);
+                    if(leftsecond<0){leftsecond=0;}
+//        d=parseInt(leftsecond/3600/24);
+//        h=parseInt((leftsecond/3600)%24);
+                    h=parseInt((leftsecond/3600));
+                    m=parseInt((leftsecond/60)%24);
+                    s=parseInt(leftsecond%60);
+                    $("#hour").html(h+"小时");
+                    $("#minute").html(m+"分");
+                    $("#seconds").html(s+"秒");
+
+                }
+                fresh(closetime);
+                setInterval(function(){
+                    fresh(closetime);
+                },1000);
+            },
+            error:function(){}
+        });
+    });
+
+    $("#goback").click(function(){
+        window.history.back();
+    })
+
+
+
+
+</script>
+
+
+</body>
+</html>

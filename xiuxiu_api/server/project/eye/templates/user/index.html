@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+        td
+        {
+            width: 25%;
+        }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+    </style>
+</head>
+<body>
+<form method="post" action="" >
+用户名： <input placeholder="用户名（一般是手机号）" type="text" name="username" value="{{ search_username }}"/>
+昵称： <input placeholder="昵称" type="text" name="nickname" value="{{ search_nickname }}"/>
+<input type="submit" value="查找" />   {% if search_username and not user %} <font color="red"> 不存在！</font> {% endif %}
+
+<table>
+    {% for user in result %}
+    <tr class="even">
+        <td>用户名：</td>
+        <td>{{ user.username }}</td>
+        <td>用户昵称：</td>
+        <td>{{ user.nickname }}</td>
+    </tr>
+    <tr class="odd">
+        <td>用户性别：</td>
+        <td>{{ user.gender }}</td>
+        <td>用户城市：</td>
+        <td>{{ user.city }}</td>
+    </tr>
+    <tr class="even">
+        <td>用户ID：</td>
+        <td>{{ user.id }}</td>
+        <td>用户在线：</td>
+        <td>{{ user.online }}</td>
+    </tr>
+    <tr class="odd">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    {% endfor %}
+</table>
+</form>
+</body>
+</html>

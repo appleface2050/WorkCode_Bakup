@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            width: 20%;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+       input
+       {
+            width: 300px;
+       }
+       select
+       {
+            width: 300px;
+       }
+    </style>
+</head>
+<body>
+<form method="post">
+    <table>
+        <tr>
+            <td>优惠券序列号</td>
+            <td><input placeholder="优惠券序列号" name="sequence" value="{{ coupon.sequence }}">
+            </td>
+            <td>优惠券券值</td>
+            <td><input placeholder="优惠券券值" name="coupon_value" value="{{ coupon.coupon_value }}"></td>
+        </tr>
+        <tr>
+            <td>优惠券用途</td>
+            <td>
+                <select name="use_id">
+                    <option value="0">请选择</option>
+                    {% for u in uses %}
+                    <option value="{{ u.id }}">{{ u.name }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+            <td>有效天数</td>
+            <td><input placeholder="有效天数" name="valid_days" value="{{ coupon.valid_days }}"></td>
+        </tr>
+        <tr>
+            <td>渠道</td>
+            <td>
+                <select name="channel_id">
+                    <option value="0">请选择</option>
+                    {% for c in channels %}
+                    <option value="{{ c.id }}">{{ c.name }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+            <td></td>
+            <td></td>
+            <!--<td>用户</td>-->
+            <!--<td>-->
+                <!--<select name="user_id">-->
+                    <!--{% for u in users %}-->
+                    <!--<option value="{{ u.id }}">{{ u.nickname }}</option>-->
+                    <!--{% endfor %}-->
+                <!--</select>-->
+            <!--</td>-->
+        </tr>
+        <tr>
+            <td colspan="4"><input type="submit" value="提交"> </td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>

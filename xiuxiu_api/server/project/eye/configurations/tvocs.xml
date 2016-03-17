@@ -1,0 +1,7 @@
+<tvocs>
+    <!--min < value <= max-->
+    <tvoc max="0.3" score="100">优</tvoc>
+    <tvoc min="0.3" max="0.5" score="70">良</tvoc>
+    <tvoc min="0.5" max="0.6" score="30">中</tvoc>
+    <tvoc min="0.6" score="-10">差</tvoc>
+</tvocs>

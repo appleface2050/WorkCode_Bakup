@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="/media_root/css/forum/content.css">
+    <script src="/media_root/js/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+
+
+<header>
+    <a id="c-title">
+        {{ post.category_name }}
+    </a>
+</header>
+<div style="display: none">
+    <img src="http://xiuxiu.cdn.babadeyan.com/media_root/img/forum/xiuxiu.png">
+</div>
+
+
+        <div class="head">
+            <div class="tie">
+                <div class="usericon">
+                    <img src="{{ post.big_user_image }}">
+                </div>
+                <div class="username">
+                    <span class="name">{{ post.user_nickname}}</span>
+                    <span class="louzhu"><img src="http://xiuxiu.cdn.babadeyan.com/media_root/img/forum/louzhu.png"></span>
+                    <span class="pubtime">{{ post.show_time }}</span>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content">
+            <div class="title">
+                {% if post.is_digest %}
+                <span class="jing"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/jing.png"></span>
+                {% endif %}
+                <p>{{ post.title }}</p>
+            </div>
+            <div class="content-detail">
+                <p>
+              {% for c in post.content %}
+
+                {{ c|linebreaks }}
+
+                {% ifequal forloop.counter 1 %}
+                    {% if post.image1 %}
+                        <img src="{{ post.image1 }}">
+                    {% endif %}
+                {% endifequal %}
+                {% ifequal forloop.counter 2 %}
+                    {% if post.image2 %}
+                        <img src="{{ post.image2 }}">
+                    {% endif %}
+                {% endifequal %}
+                {% ifequal forloop.counter 3 %}
+                    {% if post.image3 %}
+                        <img src="{{ post.image3 }}">
+                    {% endif %}
+                {% endifequal %}
+                {% ifequal forloop.counter 4 %}
+                    {% if post.image4 %}
+                        <img src="{{ post.image4 }}">
+                    {% endif %}
+                {% endifequal %}
+                {% ifequal forloop.counter 5 %}
+                    {% if post.image5 %}
+                        <img src="{{ post.image5 }}">
+                    {% endif %}
+                {% endifequal %}
+                {% ifequal forloop.counter 6 %}
+                    {% if post.image6 %}
+                        <img src="{{ post.image6 }}">
+                    {% endif %}
+                {% endifequal %}
+                {% ifequal forloop.counter 7 %}
+                    {% if post.image7 %}
+                        <img src="{{ post.image7 }}">
+                    {% endif %}
+                {% endifequal %}
+                {% ifequal forloop.counter 8 %}
+                    {% if post.image8 %}
+                        <img src="{{ post.image8 }}">
+                    {% endif %}
+                {% endifequal %}
+                {% ifequal forloop.counter 9 %}
+                    {% if post.image9 %}
+                        <img src="{{ post.image9 }}">
+                    {% endif %}
+                {% endifequal %}
+                {% endfor %}
+
+            {% ifequal post.content_length 1 %}
+                <!--{% if post.image1 %}-->
+                    <!--<img src="{{ post.image1 }}">-->
+                <!--{% endif %}-->
+                {% if post.image2 %}
+                    <img src="{{ post.image2 }}">
+                {% endif %}
+                {% if post.image3 %}
+                    <img src="{{ post.image3 }}">
+                {% endif %}
+                {% if post.image4 %}
+                    <img src="{{ post.image4 }}">
+                {% endif %}
+                {% if post.image5 %}
+                    <img src="{{ post.image5 }}">
+                {% endif %}
+                {% if post.image6 %}
+                    <img src="{{ post.image6 }}">
+                {% endif %}
+                {% if post.image7 %}
+                    <img src="{{ post.image7 }}">
+                {% endif %}
+                {% if post.image8 %}
+                    <img src="{{ post.image8 }}">
+                {% endif %}
+                {% if post.image9 %}
+                    <img src="{{ post.image9 }}">
+                {% endif %}
+
+            {% endifequal %}
+
+                <div class="zaned"><span>{{ post.win_users_nickname }}</span><span class="goodnum">{{ post.win_users_count }}</span>人赞过</div>
+            </div>
+
+        </div>
+
+        <div class="comment">
+            {% for r in reply %}
+            <div class="comment-piece">
+                <div class="usericon">
+                    <img src="{{ r.small_owner_image }}">
+                </div>
+                <div class="username">
+                    <span class="name">{{ r.small_owner_nickname }}</span>
+                    <span class="floor"><span class="flnum">{{ r.layer }}</span>楼</span>
+                    <span class="pubtime">{{ r.show_time }}</span>
+                </div>
+                <div class="comment-detail">
+                    <p>{{ r.content }}</p>
+                    {% if r.image1 %}
+                    <img src="{{ r.image1 }}">
+                    {% endif %}
+                    {% if r.image2 %}
+                    <img src="{{ r.image2 }}">
+                    {% endif %}
+                    {% if r.image3 %}
+                    <img src="{{ r.image3 }}">
+                    {% endif %}
+                    {% if r.image4 %}
+                    <img src="{{ r.image4 }}">
+                    {% endif %}
+                    {% if r.image5 %}
+                    <img src="{{ r.image5 }}">
+                    {% endif %}
+                    {% if r.image6 %}
+                    <img src="{{ r.image6 }}">
+                    {% endif %}
+                    {% if r.image7 %}
+                    <img src="{{ r.image7 }}">
+                    {% endif %}
+                    {% if r.image8 %}
+                    <img src="{{ r.image8 }}">
+                    {% endif %}
+                    {% if r.image9 %}
+                    <img src="{{ r.image9 }}">
+                    {% endif %}
+                </div>
+                {% if r.parent_reply %}
+                <div class="quote">
+                    <span class="quote-user">{{ r.parent_reply_owner_nickname }}</span>：<span class="quote-con">{{ r.parent_reply_content }}</span>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+
+        </div>
+
+
+<footer id="download">
+    <a href="http://app.xiu.sangebaba.com/">
+        <img src="https://api.xiuxiu.babadeyan.com/media_root/img/forum/appshare.png">
+    </a>
+</footer>
+
+<!--<script src="/media_root/js/forum/content.js"></script>-->
+
+
+
+</body>
+</html>

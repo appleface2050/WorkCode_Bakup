@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+    </style>
+</head>
+<body>
+<form action="/shop/actions/" method="post">
+    {% csrf_token %}
+    <a href="/support/shop?page=1&city={{ shops_city }}&search={{ shop_search }}&local=1" >手工添加场所</a>
+    <a href="/support/shop?page=1&city={{ shops_city }}&search={{ shop_search }}&local=2" >非手工添加场所</a>
+    <a href="/support/shop?page=1&city={{ shops_city }}&search={{ shop_search }}&local=0" >全部场所</a>
+    排序：
+    <select name="shop_sort">
+    <option value="id"
+            {% ifequal shop_sort "id" %}
+            selected="True"
+            {% endifequal %}
+            >先添加优先</option>
+    <option value="-id"
+            {% ifequal shop_sort "-id" %}
+            selected="True"
+            {% endifequal %}
+            >后添加优先</option>
+    <option value="audit"
+            {% ifequal shop_sort "audit" %}
+            selected="True"
+            {% endifequal %}
+            >未审核优先</option>
+    <option value="-audit"
+            {% ifequal shop_sort "-audit" %}
+            selected="True"
+            {% endifequal %}
+            >审核优先</option>
+        <option value="-weight"
+            {% ifequal shop_sort "-weight" %}
+            selected="True"
+            {% endifequal %}
+            >权重优先</option>
+    </select>
+    搜索： <input type="text" name="search_value" placeholder="搜索的场所的名称"  value="{{ shops_search }}"
+        />
+    城市： <input type="text" name="search_city" placeholder="城市（默认为全国）"  value="{{ shops_city }}"/>
+    <input type="submit" name="sort" value="排序" />
+    <input type="submit" name="search" value="搜索" />
+    <input type="submit" name="submit" value="提交" />
+    <input type="hidden" name="local" value="{{ local }}" />
+
+    当前页是：{{ shops_page }} <br>
+    <a href="/support/index">返回</a><br/>
+    <table>
+        <tr>
+            <td>选择</td>
+            <td>场所名称</td>
+            <td>场所地址</td>
+            <td>场所分类</td>
+            <td>热门总评分</td>
+            <td>发布总数</td>
+            <td>发布人数</td>
+            <td>发布PM2.5数</td>
+            <td>发布总回复数</td>
+            <td>点赞总数</td>
+            <td>点踩总数</td>
+            <td>推荐总数</td>
+            <td>不推荐总数</td>
+            <td>审核状态</td>
+            <td>权重值</td>
+            <td>详情</td>
+        </tr>
+        {% for s in shops_info %}
+        <tr {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+                >
+            <td><input type="checkbox" name="checkbox_{{ s.id }}" value="{{ s.id }}" /></td>
+            <td>{{ s.name }}</td>
+            <td>{{ s.city }} {{ s.detail_address }}</td>
+            <td>{{ s.category }}</td>
+            <td>{{ s.total_score }}</td>
+            <td>{{ s.publish_count }}</td>
+            <td>{{ s.person_count }}</td>
+            <td>{{ s.PM2_5_count }}</td>
+            <td>{{ s.comment_count }}</td>
+            <td>{{ s.win_count }}</td>
+            <td>{{ s.lost_count }}</td>
+            <td>{{ s.recommended_count }}</td>
+            <td>{{ s.not_recommended_count }}</td>
+            <td>
+                {% ifequal s.audit -1 %}未审核<input type="checkbox" name="{{ s.id }}_checkout" />{% endifequal %}
+                {% ifequal s.audit 0 %}审核未通过<input type="checkbox" name="{{ s.id }}_checkout" />{% endifequal %}
+                {% ifequal s.audit 1 %}审核已通过<input type="checkbox" name="{{ s.id }}_checkout"  checked="True" />{% endifequal %}
+
+            </td>
+
+            <td><input type="text" name="weight_{{ s.id }}" value="{{ s.weight }}"/></td>
+            <td><a href="{{ s.detail_url }}">详情</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</form>
+    {% if previous_page %}
+        <a href="/support/shop/?page={{ previous_page }}&city={{ shops_city }}&search={{ shop_search }}&local={{ local }}&shop_sort={{ shop_sort }}"><<</a>
+    {% else %}
+        <<
+    {% endif %}
+    {% for i in shops_count %}
+    {% ifequal i shops_page %}
+        {{ i }}
+    {% else %}
+        <a href="/support/shop/?page={{ i }}&city={{ shops_city }}&search={{ shop_search }}&local={{ local }}&shop_sort={{ shop_sort }}">{{ i }}</a>
+    {% endifequal %}
+    {% endfor %}
+
+    {% if next_page %}
+        <a href="/support/shop/?page={{ next_page }}&city={{ shops_city }}&search={{ shop_search }}&local={{ local }}&shop_sort={{ shop_sort }}">>></a>
+    {% else %}
+        >>
+    {% endif %}
+    (共{{ total_page }} 页）
+ 
+</body>
+</html>

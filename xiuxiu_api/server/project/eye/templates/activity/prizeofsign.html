@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>注册得奖</title>
+
+    <link rel="stylesheet" href="https://api.xiuxiu.babadeyan.com/media_root/css/activity/main.css">
+    <style>
+        html{background-color: #00c7b0}
+    </style>
+</head>
+<body>
+
+<div class="container3">
+    <img id="contaiiner3-bg" src="https://api.xiuxiu.babadeyan.com/media_root/img/activity/prizeofsign.png">
+    <a class = 'native_manual' name = 'xiu$act=kill_me$'><img id="measurenow" src="https://api.xiuxiu.babadeyan.com/media_root/img/activity/measure.png"></a>
+    <a class = 'native_manual' name = 'xiu$act=share_all^ttl=50元防霾口罩免费领^url=https://api.xiuxiu.babadeyan.com/rest/api/activity/coupon/$'>
+        <img id="shareforcoupon" src="https://api.xiuxiu.babadeyan.com/media_root/img/activity/sharenow.png">
+    </a>
+</div>
+
+
+<script src="https://api.xiuxiu.babadeyan.com/media_root/js/zepto.min.js"></script>
+<script>
+
+    $("#measurenow").click(function(){
+        javascript:myjavascript.goBack();
+    });
+    $("#shareforcoupon").click(function(){
+        function androidShare(){
+            var href = "https://api.xiuxiu.babadeyan.com/rest/api/activity/coupon/";
+            var title = "50元防霾口罩免费领";
+            javascript:myjavascript.androidShare(href,title);
+        }
+        androidShare();
+    });
+
+
+</script>
+</body>
+</html>

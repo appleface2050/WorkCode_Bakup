@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <title>嗅嗅</title>
+    <meta name="keywords" content="pm2.5,检测器,三个爸爸">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <style>
+        body,html{margin:0;padding:0;background-color:#fff}
+        button,img,input,object,select,textarea{vertical-align:middle}
+        a{color:#333;text-decoration:none;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
+        img{border:0}
+        body{font-family:arial,sans-serif;}
+        #container{position: absolute;margin:0 auto;width:100%;background:url(https://api.xiuxiu.babadeyan.com/media_root/img/forum/bg-short.jpg) center 0 no-repeat;background-size:100%}
+        #container a{position:absolute;top:470px;margin:0 auto;width:100%;height:auto;text-align:center}
+        #container img{width:225px;}
+        #container #unavailable{position:absolute;top:525px;margin:0 auto;width:100%;height:auto;text-align:center;color: #ff363f;display: none;}
+
+        @media (max-width: 360px) {
+            body{
+                zoom:0.96;
+            }
+        }
+        @media (max-width: 320px) {
+            body{
+                zoom: 0.86;
+            }
+        }
+        @media (min-width: 400px) {
+            body {
+                zoom: 1.12;
+            }
+        }
+        @media (min-width: 480px) {
+            body{
+                zoom: 1.28;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="container">
+    <a href="" id="download">
+        <img src="../../img/forum/dlbtn.png">
+    </a>
+    <div id="unavailable">亲~目前不支持您的系统哦~感谢支持~</div>
+</div>
+
+<script src="../../js/zepto.min.js"></script>
+<script src="../downloadxiu.js"></script>
+<script>
+    var wheight = window.screen.height;
+    document.getElementById("container").style.height = wheight + "px";
+    ////////////////////////////
+    const url = window.location.href;
+    var uid = 0;
+    var bid = 0;
+
+    var userid = url.match(/u=\d+/g)+"";
+    uid = userid.split("=")[1];
+    var behaviorid = url.match(/b=CF_(URL|QRC)SB_W(XS|XT|B)_\d{1}/g)+"";
+    if(bid == 0){
+        behaviorid = url.match(/b=[A-Z]{1,3}_(A|B)\d{5}S\d{1}/g)+"";
+        bid = behaviorid.split("=")[1];
+        stepid = parseInt(bid.match(/\d{1,2}$/g));
+        var behaveid = bid.replace(/\d{1,2}$/g, "");
+        nbid = behaveid + (stepid+1);
+        nnbid = behaveid + (stepid+2);
+        console.log(nbid);
+    }else{
+        bid = behaviorid.split("=")[1];
+        var stepid = parseInt(bid.match(/\d+/g));
+        var nbid = bid.match(/CF_(URL|QRC)SB_W(XS|XT|B)_/g)+""+(stepid+1);
+        var nnbid = bid.match(/CF_(URL|QRC)SB_W(XS|XT|B)_/g)+""+(stepid+2);
+    }
+
+
+    $(document).ready(function(){
+        $.ajax({
+            type:"POST" ,
+            url: "https://api.xiuxiu.babadeyan.com/rest/api/sharestatistics/" ,
+            data:{
+                user_id : uid,
+                behavior_name : nbid
+            },
+            dataType:"json" ,
+            success:function(){
+                console.log("open+1");
+            },
+            error: function(){
+                console.log("opencount failed");
+            }
+        });
+        $("#download").click(function(){
+            $.ajax({
+                type:"POST" ,
+                url: "https://api.xiuxiu.babadeyan.com/rest/api/sharestatistics/" ,
+                data:{
+                    user_id : uid,
+                    behavior_name : nnbid
+                },
+                dataType:"json" ,
+                success:function(){
+                    console.log("download+1");
+                },
+                error: function(){
+                    console.log("downloadcout failed");
+                }
+            });
+        });
+    });
+
+</script>
+
+</body>
+</html>

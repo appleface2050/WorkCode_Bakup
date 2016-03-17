@@ -1,0 +1,1021 @@
+body{
+    font-family: "微软雅黑";
+    margin: 0;
+    letter-spacing: 0px;
+
+}
+a{
+    color: #000000;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    /*-webkit-touch-callout: none;*/
+    /*-webkit-user-select: none;*/
+}
+img{
+    -webkit-touch-callout: default;
+}
+header{
+    position: fixed;
+    top:0;
+    height: 43px;
+    width: 100%;
+    background-color: #FAFAFA;
+    z-index: 999;
+}
+header .back{
+    position: fixed;
+    padding: 12px 15px;
+    z-index: 9999;
+}
+header .back img{
+    width: 10px;
+}
+header #c-title{
+    display:block;
+    text-align: center;
+    margin: 12px 0;
+    font-size: 16px;
+    padding: 0 10px;
+}
+header #share{
+    position: fixed;
+    right: 5px;
+    padding: 8px 10px;
+    z-index: 9999;
+}
+header #share img{
+    width: 24px;
+}
+
+.mask{
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 9998;
+    width: 100%;
+    height: 1000px;
+    background-color: #000000;
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+}
+.mask #loading{
+    margin: 40% 0 5%;
+    width: 20%;
+}
+.mask #unsuccess{
+    display: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.mask #unlogin{
+    display: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.mask #unfilled{
+    display: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.mask #unzan{
+    display: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.mask #waiting{
+    display: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.mask #refresh{
+    display: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+#big{
+    position: fixed;
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 1000px;
+    background-color: #000000;
+    opacity: 0.98;
+    text-align: center;
+    z-index: 9999;
+}
+#big img{
+    width: 90%;
+    margin: 30% 5% ;
+}
+#wrapper {
+    position:absolute; z-index:1;
+    top:0; bottom:0; left:-9999px;
+    width:100%;
+    overflow:auto;
+    background-color: #EBEBEB;
+}
+
+#scroller {
+    position:absolute; z-index:1;
+    -webkit-touch-callout: inherit;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-transform:translate3d(0,0,0);
+    width:100%;
+    padding:0;
+}
+
+#scroller ul {
+    clear: both;
+    list-style-type: none;
+    padding: 0 15px;
+    line-height: 18px;
+    margin: 0;
+}
+
+#scroller li {
+    /*margin-bottom: 10px;;*/
+}
+
+#myFrame {
+    position:absolute;
+    top:0; left:0;
+}
+/**
+ *
+ * Pull down styles
+ *
+ */
+#pullDown, #pullUp {
+    background:#fff;
+    height:40px;
+    line-height:20px;
+    padding:10px;
+    /*border-bottom:1px solid #ccc;*/
+    font-weight:bold;
+    font-size:14px;
+    color:#888;
+    text-align: center;
+}
+#pullUp{
+    margin-bottom: 30px;
+    background-color: #EBEBEB;
+    padding: 0;
+}
+
+.pullDownLabel, .pullUpLabel{
+    text-align: center;
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+    /*display:block;*/
+    /*float:left;*/
+    width:40px; height:20px;
+    /*background:url(../img/loading1.gif) 0 0 no-repeat;*/
+    -webkit-background-size:40px 80px; background-size:40px 40px;
+    -webkit-transition-property:-webkit-transform;
+    -webkit-transition-duration:250ms;
+}
+.pullDownIcon img, .pullUpIcon img{
+    width: 30px;
+    margin-bottom: -5px;
+}
+#nomore{
+    text-align: center;
+    vertical-align: middle;
+    display: none;
+    padding-top: 10px;
+    height: 80px;
+    background-color: #EBEBEB;
+    font-weight:bold;
+    font-size:14px;
+    color:#888;
+}
+
+
+.head{
+    margin: 43px 0 0 0;
+    width: 100%;
+    clear: both;
+    background:#fff;
+}
+.tie{
+    padding: 8px 19px;
+    background:#fff;
+}
+.head .usericon{
+    /*float:left;*/
+    display:inline-block;
+    background:#fff;
+}
+.head .usericon img{
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+}
+.head .username{
+    /*float: left;*/
+    display:inline-block;
+    vertical-align: top;
+    margin: 8px 2px;
+    margin-right:0;
+    width: 84%;
+    background:#fff;
+}
+.head .username .name{
+    font-size: 14px;
+    max-width: 40%;
+    display:inline-block;
+    word-break:keep-all;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.head .username .louzhu{
+    border-radius: 3px;
+
+}
+.head .username .louzhu img{
+    width: 35px;
+    margin: 0 0 -3px 0;
+}
+
+.head .username .pubtime{
+    font-size: 12px;
+    color: #B3B3B3;
+    margin: 1px 5px;
+}
+.head .username .good{
+    float: right;
+}
+.head .username .good img{
+    width: 40px;
+    margin: -1px 0 0 0;
+}
+.head .username .gooded{
+    float: right;
+}
+.head .username .gooded img{
+    width: 40px;
+    margin: -1px 10px 0 0;
+}
+
+.content{
+    clear: both;
+    padding: 5px 20px;
+    line-height: 18px;
+    background:#fff;
+}
+.content .title{
+    margin: 5px 0;
+}
+.content .title .jing{
+    float: left;
+}
+.content .title .jing img{
+    width: 20px;
+    height: 20px;
+    margin: -2px 1px 0;
+}
+.content .title p{
+    margin: 5px 0;
+    font-size: 16px;
+}
+.content .content-detail{
+    padding: 5px 0 0 0;
+}
+.content .content-detail p{
+    margin: 0;
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0px;
+    line-height: 22px;
+    padding-bottom: 5px;
+}
+.content .content-detail img{
+    width: 100%;
+    margin: 8px 0;
+}
+.zaned{
+    font-size: 10px;
+    letter-spacing: 0;
+    padding: 5px 15px;
+    background-color: #FAFAFA;
+    border-top: #e6e6e6 solid 1px;
+    border-bottom: #e6e6e6 solid 1px;
+}
+.zaned .goodnum{
+    padding-left: 10px;
+}
+
+.comment{
+    background-color: #EBEBEB;
+}
+.comment-piece{
+    padding: 10px;
+    background-color: #EBEBEB;
+    border-bottom: #e6e6e6 solid 1px;
+}
+.comment-piece .usericon{
+    float:left;
+    margin-left: 10px;
+}
+.comment-piece .usericon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+.comment-piece .username{
+    float: left;
+    width: 80%;
+    margin: 2px 0 2px 8px;
+}
+.comment-piece .username .name{
+    font-size: 14px;
+    margin: 3px 0;
+    max-width: 40%;
+    display:inline-block;
+    word-break:keep-all;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.comment-piece .username .floor{
+    font-size: 10px;
+    color: gray;
+    letter-spacing: 0;
+    vertical-align: middle;
+}
+.comment-piece .username .floor .flnum{
+    vertical-align: middle;
+}
+.comment-piece .username .pubtime{
+    font-size: 10px;
+    color: gray;
+    letter-spacing: 0;
+    margin: 0 2px;
+    vertical-align: middle;
+}
+.comment-piece .username .re{
+    float: right;
+    font-size: 12px;
+    color: gray;
+    margin-top: 4px;
+    padding: 1px 0;
+}
+.comment-piece .username .re img{
+    float: right;
+    width: 20px;
+    margin: 1px 0 0 5px;
+}
+.comment-piece .comment-detail{
+    clear: both;
+    width: 72%;
+    margin: 5px 16%;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+.comment-piece .comment-detail p{
+    margin: 5px auto;
+}
+.comment-piece .comment-detail img{
+    width: 100%;
+    margin: auto;
+}
+.comment-piece .quote{
+    max-width: 70%;
+    margin-left: 15%;
+    padding: 10px 5px;
+    font-size: 12px;
+    letter-spacing: 0;
+    background: url("https://api.xiuxiu.babadeyan.com/media_root/img/forum/kuang.png") 0 0 no-repeat;
+    background-size: auto 100%;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    border-top: #e6e6e6 solid 1px;
+    padding: 5px;
+    background-color: #FFFFFF;
+    width: 100%;
+    z-index: 999;
+}
+footer .add{
+    float: left;
+    width: 11%;
+
+}
+footer img{
+    width: 100%;
+}
+footer .addpic{
+    float: left;
+    border: #B3B3B3 solid 1px;
+    border-radius: 50px;
+}
+
+footer .input{
+    float: left;
+    margin: auto 5px;
+    width: 60%;
+
+}
+footer input{
+    width: 100%;
+    height: 26px;
+    font-size: 14px;
+}
+footer #submit{
+    float: left;
+    margin: 3px 0 3px 15px;
+    padding: 6px 15px;
+    font-size: 14px;
+    background-color: #F6D71D;
+}
+footer .img{
+    clear: both;
+    background-color: #FFFFFF;
+    padding: 8px;
+    display: none;
+}
+footer .img .imgpiece{
+    clear: both;
+}
+footer .img img{
+    float: left;
+    width: 62px;
+    height: 62px;
+    margin: 5px 4px;
+}
+footer .img .del{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: -2px 0 0 -15px;
+    z-index: 9999;
+}
+footer .img #add{
+    display: inline-block;
+    float: left;
+    width: 58px;
+    height: 58px;
+    margin: 5px 3px;
+    border: gray dashed 1px;
+    text-align: center;
+    vertical-align: middle;
+}
+footer .img #add img{
+    width: 25px;
+    height: 25px;
+    margin: 30% 28%;
+
+}
+#download{
+    height: 49px;
+    margin: 0;
+    padding: 0;
+    border:0
+}
+
+
+
+
+
+
+@media(min-width: 350px){
+    header{
+        position: fixed;
+        top:0;
+        height: 40px;
+        width: 100%;
+        background-color: #FAFAFA;
+        z-index: 999;
+    }
+    header .back{
+        position: fixed;
+        padding: 10px 15px;
+        z-index: 9999;
+    }
+    header .back img{
+        width: 11px;
+    }
+    header #c-title{
+        display:block;
+        text-align: center;
+        margin: 12px 0;
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    header #share{
+        position: fixed;
+        right: 5px;
+        padding: 6px 10px;
+        z-index: 9999;
+    }
+    header #share img{
+        width: 24px;
+    }
+
+    .head{
+        margin-top: 40px;
+        width: 100%;
+        clear: both;
+    }
+    .tie{
+        padding: 8px 19px;
+        background:#fff;
+    }
+    .head .usericon{
+        /*float:left;*/
+        display:inline-block;
+        background:#fff;
+    }
+    .head .usericon img{
+        width: 45px;
+        height: 45px;
+        border-radius: 45px;
+    }
+    .head .username{
+        margin: 12px 2px;
+        display:inline-block;
+        vertical-align: top;
+        margin-right:0;
+        width: 83%;
+        font-size: 14px;
+    }
+    .head .username .name{
+        font-size: 16px;
+        max-width: 40%;
+        display:inline-block;
+        word-break:keep-all;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+    .head .username .louzhu{
+        border-radius: 3px;
+    }
+    .head .username .louzhu img{
+        width: 35px;
+        margin: -1px 0 0 1px;
+    }
+    .head .username .pubtime{
+        font-size: 12px;
+        color: #B3B3B3;
+        margin: 1px 5px;
+        vertical-align: super;
+    }
+    .content{
+        clear: both;
+        padding: 5px 20px;
+        line-height: 18px;
+    }
+    .content .title{
+        margin: 5px 0;
+    }
+    .content .title .jing{
+        float: left;
+        padding: 0 1px;
+    }
+    .content .title .jing img{
+        width: 20px;
+        height: 20px;
+    }
+    .content .title p{
+        margin: 5px 0;
+        font-size: 18px;
+    }
+    .content .content-detail{
+        padding: 5px 0 0 0;
+    }
+    .content .content-detail p{
+        margin: auto 0;
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+    .content .content-detail img{
+        width: 100%;
+        margin: 5px 0;
+    }
+    .zaned{
+        font-size: 14px;
+        letter-spacing: 0;
+        padding: 5px 15px;
+        background-color: #FAFAFA;
+        border-top: #e6e6e6 solid 1px;
+        border-bottom: #e6e6e6 solid 1px;
+    }
+    .zaned .goodnum{
+        padding-left: 10px;
+    }
+    .comment{
+        /*padding-bottom: 30px;*/
+    }
+    .comment-piece{
+        padding: 10px;
+        background-color: #EBEBEB;
+        border-bottom: #e6e6e6 solid 1px;
+    }
+    .comment-piece .usericon{
+        float:left;
+        margin-left: 10px;
+    }
+    .comment-piece .usericon img{
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+    }
+    .comment-piece .username{
+        float: left;
+        width: 80%;
+        margin: 2px 0 2px 8px;
+    }
+    .comment-piece .username .name{
+        font-size: 16px;
+        margin: 3px 0;
+        max-width: 40%;
+        float: left;
+        display:inline-block;
+        word-break:keep-all;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+    .comment-piece .username .floor{
+        float: left;
+        font-size: 12px;
+        color: gray;
+        letter-spacing: 0;
+        margin: 7px;
+    }
+    .comment-piece .username .pubtime{
+        float: left;
+        font-size: 12px;
+        color: gray;
+        letter-spacing: 0;
+        margin: 7px;
+    }
+    .comment-piece .username .floor .flnum{
+        margin: -1px 0 0 0;
+    }
+    .comment-piece .username .re{
+        float: right;
+        font-size: 12px;
+        color: gray;
+        margin-top: 4px;
+        padding: 3px 0;
+    }
+    .comment-piece .username .re img{
+        float: right;
+        width: 20px;
+        margin: 1px 0 0 5px;
+    }
+    .comment-piece .comment-detail{
+        clear: both;
+        width: 72%;
+        margin: 5px auto;
+        font-size: 14px;
+        letter-spacing: 0px;
+    }
+    .comment-piece .comment-detail p{
+        margin: 5px auto;
+        font-size: 16px;
+    }
+    .comment-piece .comment-detail img{
+        width: 100%;
+        margin: auto;
+    }
+    .comment-piece .quote{
+        max-width: 75%;
+        margin-left: 15%;
+        padding: 10px 5px;
+        font-size: 14px;
+        letter-spacing: 0;
+        background: url("https://api.xiuxiu.babadeyan.com/media_root/img/forum/kuang.png") 0 0 no-repeat;
+        background-size: auto 100%;
+    }
+    footer .add{
+        float: left;
+        width: 10%;
+    }
+    footer .input{
+        float: left;
+        margin: auto 5px auto 10px;
+        width: 62%;
+
+    }
+    footer input{
+        width: 100%;
+        height: 32px;
+        font-size: 18px;
+    }
+    footer #submit{
+        float: left;
+        margin: 1px 10px;
+        padding: 8px 15px;
+        font-size: 16px;
+        background-color: #F6D71D;
+    }
+    footer .img img{
+        float: left;
+        width: 76px;
+        height: 76px;
+        margin: 5px 3px;
+    }
+    footer .img .del{
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: -2px 0 0 -15px;
+        z-index: 9999;
+    }
+    footer .img #add{
+        display: inline-block;
+        float: left;
+        width: 70px;
+        height: 70px;
+        margin: 6px 3px;
+        border: gray dashed 1px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    #download{
+        height: 55px;
+        margin: 0;
+        padding: 0;
+        border:none;
+    }
+}
+
+
+
+
+
+
+
+
+@media(min-width: 400px){
+    header{
+        position: fixed;
+        top:0;
+        height: 43px;
+        width: 100%;
+        background-color: #FAFAFA;
+        z-index: 999;
+    }
+    header .back{
+        position: fixed;
+        padding: 11px 15px;
+        z-index: 9999;
+    }
+    header .back img{
+        width: 12px;
+    }
+    header #c-title{
+        display:block;
+        text-align: center;
+        margin: 7px 0;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    header #share{
+        position: fixed;
+        right: 5px;
+        padding: 8px 10px;
+        z-index: 9999;
+    }
+    header #share img{
+        width: 26px;
+    }
+    .head{
+        margin-top: 43px;
+        width: 100%;
+        clear: both;
+    }
+    .tie{
+        padding: 8px 19px;
+        background:#fff;
+    }
+    .head .usericon{
+        /*float:left;*/
+        display:inline-block;
+        background:#fff;
+    }
+    .head .usericon img{
+        width: 45px;
+        height: 45px;
+        border-radius: 45px;
+    }
+    .head .username{
+        margin: 10px 2px;
+        display:inline-block;
+        vertical-align: top;
+        margin-right:0;
+        width: 86%;
+        font-size: 18px;
+    }
+    .head .username .name{
+        font-size: 18px;
+        max-width: 40%;
+        margin-top: -5px;
+        display:inline-block;
+        word-break:keep-all;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+    .head .username .louzhu{
+        border-radius: 3px;
+
+    }
+    .head .username .louzhu img{
+        width: 35px;
+        margin: 1px 0 0 1px;
+        vertical-align: middle
+    }
+
+    .head .username .pubtime{
+        font-size: 14px;
+        color: #B3B3B3;
+        margin: 1px 5px;
+        vertical-align: initial;
+
+    }
+    .content{
+        clear: both;
+        padding: 5px 20px;
+        line-height: 18px;
+    }
+    .content .title{
+        margin: 5px 0;
+    }
+    .content .title .jing{
+        float: left;
+        padding: 0 1px;
+    }
+    .content .title .jing img{
+        width: 20px;
+        height: 20px;
+    }
+    .content .title p{
+        margin: 5px 0;
+        font-size: 18px;
+    }
+    .content .content-detail{
+        padding: 5px 0 0 0;
+    }
+    .content .content-detail p{
+        margin: auto 0;
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+    .content .content-detail img{
+        width: 100%;
+        margin: 5px 0;
+    }
+    .zaned{
+        font-size: 14px;
+        letter-spacing: 0;
+        padding: 5px 15px;
+        background-color: #FAFAFA;
+        border-top: #e6e6e6 solid 1px;
+        border-bottom: #e6e6e6 solid 1px;
+    }
+    .zaned .goodnum{
+        padding-left: 5px;
+    }
+    .comment{
+        padding-bottom: 30px;
+    }
+    .comment-piece{
+        padding: 10px;
+        background-color: #EBEBEB;
+        border-bottom: #e6e6e6 solid 1px;
+    }
+    .comment-piece .usericon{
+        float:left;
+        margin-left: 8px;
+    }
+    .comment-piece .usericon img{
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+    }
+    .comment-piece .username{
+        float: left;
+        width: 85%;
+        margin: 0 0 2px 8px;
+    }
+    .comment-piece .username .name{
+        font-size: 16px;
+        margin: 3px 0;
+        max-width: 40%;
+        float: left;
+        display:inline-block;
+        word-break:keep-all;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+    .comment-piece .username .floor{
+        float: left;
+        font-size: 14px;
+        color: gray;
+        letter-spacing: 0;
+        margin: 5px 7px;
+    }
+    .comment-piece .username .pubtime{
+        float: left;
+        font-size: 14px;
+        color: gray;
+        letter-spacing: 0;
+        margin: 5px 7px;
+    }
+
+    .comment-piece .username .re{
+        float: right;
+        font-size: 14px;
+        color: gray;
+        margin-top: 0;
+        padding: 3px 0;
+    }
+    .comment-piece .username .re img{
+        float: right;
+        width: 22px;
+        margin: 3px 0 0 5px;
+    }
+    .comment-piece .comment-detail{
+        clear: both;
+        width: 75%;
+        margin: 5px auto;
+        font-size: 14px;
+        letter-spacing: 0px;
+    }
+    .comment-piece .comment-detail p{
+        margin: 5px auto;
+        font-size: 16px;
+    }
+    .comment-piece .comment-detail img{
+        width: 100%;
+        margin: auto;
+    }
+    .comment-piece .quote{
+        max-width: 73%;
+        margin-left: 12%;
+        padding: 10px 5px;
+        font-size: 14px;
+        letter-spacing: 0;
+        background: url("https://api.xiuxiu.babadeyan.com/media_root/img/forum/kuang.png") 0 0 no-repeat;
+        background-size: auto 100%;
+    }
+    footer .add{
+        float: left;
+        width: 10%;
+    }
+    footer .input{
+        float: left;
+        margin: auto 5px auto 10px;
+        width: 62%;
+
+    }
+    footer input{
+        width: 100%;
+        height: 32px;
+        font-size: 18px;
+    }
+    footer #submit{
+        float: left;
+        margin: 1px 0 0 25px;
+        padding: 8px 15px;
+        font-size: 16px;
+        background-color: #F6D71D;
+    }
+    footer .img img{
+        float: left;
+        width: 76px;
+        height: 76px;
+        margin: 5px 3px;
+    }
+    footer .img .del{
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: -2px 0 0 -15px;
+        z-index: 9999;
+    }
+    footer .img #add{
+        display: inline-block;
+        float: left;
+        width: 70px;
+        height: 70px;
+        margin: 6px 3px;
+        border: gray dashed 1px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    #download{
+        height: 63px;
+        margin: 0;
+        padding: 0;
+        border:none;
+    }
+}

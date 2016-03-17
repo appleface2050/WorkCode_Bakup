@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+    </style>
+    <title>添加甲醛</title>
+</head>
+<body>
+
+<form action="/shop/editor/publish/actions/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    场所名称：<input type="text" name="shop_name" value="{{ name }}" />
+    场所城市：<input type="text" name="shop_city" value="{{ city }}" />
+    场所地址：<input type="text" name="shop_address" value="{{ address }}" />
+
+    <input type="submit" name="sort" value="查找" />
+    <input type="submit" name="submit" value="提交" />
+
+    <br />
+    甲醛图片： <input type="file" name="formaldehyde_image" value="添加图片"/>
+    <br />
+    发布日期： <input type="date" name="formaldehyde_checked_date"/>
+    发布时间： <input type="time" name="formaldehyde_checked_time"/>
+    <br />
+    发布内容： <textarea cols="120" rows="10" name="formaldehyde_content"></textarea>
+    <br />
+    发布用户： <input type="text" value="admin" name="username" readonly="true" />
+    <br />
+    <table>
+        <tr>
+            <td>场所ID</td>
+            <td>大众点评场所ID</td>
+            <td>场所名称</td>
+            <td>场所城市</td>
+            <td>场所地址</td>
+            <td>原甲醛数值</td>
+            <td>新甲醛数值</td>
+        </tr>
+        {% for s in shops_info %}
+        <tr {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+                >
+            <input type="hidden" name="shop_id_{{ s.shop_id }}" value="{{ s.shop_id }}"/>
+            <td>{{ s.shop_id }}</td>
+            <td>{{ s.shop_business_id }}</td>
+            <td>{{ s.shop_name }}</td>
+            <td>{{ s.shop_city }}</td>
+            <td>{{ s.shop_address }}</td>
+            <td>{{ s.formaldehyde }}</td>
+            <td><input type="text" name="formaldehyde_{{ s.shop_id }}" value="{{ s.formaldehyde }}"/></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="/publish_action/" method="post" ENCTYPE="multipart/form-data">
+    {% csrf_token %}
+    <table width="100%">
+        <tr>
+            <td>
+    商铺:
+            </td><td>
+            <select name="shop">
+        {% for val,name in shops%}
+                <option value="{{ val }}"> {{ name }} </option>
+        {% endfor %}
+    </select><a href = "/accounts/shop">添加商铺</a>
+            </td><td>
+    测试日期:
+            </td><td><input type="date" name="checked_at_date">
+            </td>
+        </tr><tr><td>
+    测试时间:
+            </td><td>
+        <input type="time" name="checked_at_time">
+            </td><td>
+    PM2.5:
+            </td><td>
+        <input type="text" name="PM2_5">
+            </td>
+        </tr><tr><td>
+    甲醛:
+            </td><td>
+        <input type="text" name="formaldehyde">
+            </td><td>
+    温度:
+            </td><td>
+        <input type="text" name="temperature">
+            </td>
+        </tr><tr><td>
+    湿度:
+            </td><td>
+        <input type="text" name="humidity">
+            </td><td>
+    内容:
+            </td><td>
+        <textarea name="content"></textarea>
+            </td>
+        </tr><tr><td>
+    图片:
+            </td><td>
+        <input type="file" name="big_image">
+            </td><td>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="添加">
+
+    <a href="/logout/">退出</a>
+
+</form>
+ 
+ 
+</body>
+</html>

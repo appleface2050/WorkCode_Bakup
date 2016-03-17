@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+    </style>
+    <title>添加甲醛</title>
+</head>
+<body>
+
+<form action="/shop/editor/actions/" method="post">
+    {% csrf_token %}
+    场所名称：<input type="text" name="shop_name" value="{{ name }}" />
+    场所城市：<input type="text" name="shop_city" value="{{ city }}" />
+    场所地址：<input type="text" name="shop_address" value="{{ address }}" />
+
+    <input type="submit" name="sort" value="查找" />
+    <input type="submit" name="submit" value="提交" />
+    <table>
+        <tr>
+            <!--<td>场所ID</td>-->
+            <td>场所名称</td>
+            <td>场所城市</td>
+            <td>场所地址</td>
+            <td>原甲醛数值</td>
+            <td>新甲醛数值</td>
+        </tr>
+        {% for s in shops_info %}
+        <tr>
+            <input type="hidden" name="shop_id_{{ s.shop_id }}" value="{{ s.shop_id }}"/>
+            <td>{{ s.shop_name }}</td>
+            <td>{{ s.shop_city }}</td>
+            <td>{{ s.shop_address }}</td>
+            <td>{{ s.formaldehyde }}</td>
+            <td><input type="text" name="formaldehyde_{{ s.shop_id }}" value="{{ s.formaldehyde }}"/></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</form>
+
+
+</body>
+</html>

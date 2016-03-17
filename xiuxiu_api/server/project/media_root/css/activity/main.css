@@ -1,0 +1,622 @@
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0;}
+ul,ol,menu{list-style:none}
+fieldset,img{border:none}
+img,object,select,input,textarea,button{vertical-align:middle}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6,input,textarea,select,address,caption,cite,code,dfn,em,i,b,strong,small,th,var,abbr{font-size:100%;font-style:normal}
+q:before,q:after{content:''}
+ins,s,u,del{text-decoration:none}
+html,body{background-color: #fff;}
+a{text-decoration: none;color: #333;}
+img {border: 0}
+@font-face
+{
+    font-family: hyouzi_display;
+    src: url(https://api.xiuxiu.babadeyan.com/media_root/css/games/gomarice_hyouzi_display2.woff);
+}
+body {
+    color: #999999;
+    /*zoom: 1.104;*/
+    position: relative;
+    background-color: #fafafa;
+    -webkit-user-select: none;
+    font-size: 20px;
+    font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;
+}
+.mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 800px;
+    background-color: #333333;
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+}
+/*纠察坏空气 员工及榜单入口////////////////////*/
+.container1 img{
+    width: 100%;
+    height: 290px;
+    position: relative;
+    background: url("https://api.xiuxiu.babadeyan.com/media_root/img/activity/enter.jpg") 0 -55px no-repeat;
+    background-size: 100%;
+}
+.container1 #scrolltxt{
+    position: absolute;
+    top: 268px;
+    width: 345px;
+    height: 26px;
+    color: #ffffff;
+    padding: 0 15px;
+    overflow:hidden;
+    white-space:nowrap;
+    font-size: 16px;
+}
+.container2{
+    background-color: #00c7b0;
+
+}
+.container2 #torank{
+    display: block;
+    text-align: center;
+}
+.container2 #torank img{
+    width: 130px;
+    margin: 10px auto;
+}
+
+.container2 .entertitle .line{
+    color: #ffffff;
+    margin: auto 17px;
+    font-size: 14px;
+}
+.container2 .entertitle {
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+}
+.container2 .enters{
+    padding: 0 20px 10px;
+    text-align: center;
+}
+.container2 .enters .signenter{
+    width: 300px;
+    height: 45px;
+    margin: 20px auto;
+    background: url("https://api.xiuxiu.babadeyan.com/media_root/img/activity/enter-bg.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    text-align: left;
+}
+.container2 .enters .eachenter{
+    display: inline-block;
+    width: 300px;
+    height: 45px;
+}
+.container2 .enters .signenter .com-logo{
+    margin: 1px 0 1px 30px;
+    width: 40px;
+    height: 40px;
+}
+.container2 .enters .signenter .entername{
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 0 20px;
+    /*width: 260px;*/
+    /*line-height: 45px;*/
+    font-size: 20px;
+}
+.mask #rankenterblock{
+    width: 315px;
+    margin: 50px 20px;
+    padding: 10px 10px 20px 10px;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+.mask #rankentertitle{
+    margin: 20px auto;
+    text-align: center;
+}
+.mask #ranklist{
+    margin: 20px;
+    width: 275px;
+    height: 300px;
+    text-align: left;
+    overflow-y: auto;
+}
+.mask #ranklist .eachrank{
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 90px;
+    text-align: center;
+    margin: 5px 3px;
+}
+.mask #ranklist img{
+    width: 60px;
+    height: 60px;
+    display: inline;
+    margin: 5px;
+}
+.mask #ranklist .rank-com-name{
+    display: block;
+    font-size: 14px;
+    width: 80px;
+    text-align: center;
+}
+
+/*员工报名//////////////////////////////////////////*/
+
+.coupon{
+    background-color: #ebebeb;
+    height: 497px;
+}
+#companyimg{
+    width: 100%;
+    margin: 0 0 10px 0;
+    height: 117px;
+}
+.sign{
+    background-color: #fafafa;
+    padding: 10px 0 100px 0;
+    font-size: 18px;
+    height: 379px;
+}
+.sign .textin1{
+    border-top: solid 1px #aeaeae;
+    border-bottom: solid 1px #aeaeae;
+    background-color: #ffffff;
+}
+.sign .textin2{
+    border-top: solid 1px #aeaeae;
+    border-bottom: solid 1px #aeaeae;
+    background-color: #ffffff;
+}
+.sign .textin3{
+    margin: 0 0 20px 0;
+    border-bottom: solid 1px #aeaeae;
+    background-color: #ffffff;
+}
+.sign input{
+    overflow:auto;
+    border: none;
+}
+.sign #code{
+    width: 330px;
+    padding: 10px 0 15px 45px;
+    background: url("https://api.xiuxiu.babadeyan.com/media_root/img/activity/name.png") 13px 16px no-repeat;
+    background-size: 20px;
+}
+.sign #tel{
+    width: 330px;
+    padding: 10px 0 15px 45px;
+    background: url("https://api.xiuxiu.babadeyan.com/media_root/img/coupon/phone.png") 12px 16px no-repeat;
+    background-size: 17px;
+}
+
+.sign #confirm{
+    width: 210px;
+    padding: 10px 0 15px 45px;
+    display: inline-block;
+    background: url("https://api.xiuxiu.babadeyan.com/media_root/img/activity/lock.png") 12px 18px no-repeat;
+    background-size: 20px;
+}
+.sign #sendmsg{
+    /*display: none;*/
+    font-size: 18px;
+    text-align: center;
+    width: 110px;
+    border-left: solid 1px #aeaeae;
+    padding: 10px 0 10px 10px;
+}
+.sign #resend{
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    width: 110px;
+    border-left: solid 1px #aeaeae;
+    padding: 10px 0 10px 10px;
+}
+.sign #resendtime{
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    width: 110px;
+    border-left: solid 1px #aeaeae;
+    padding: 10px 0 10px 15px;
+}
+.sign .error{
+    margin: 10px 20px;
+}
+.sign .error .errortxt{
+    color: #ff363f;
+}
+.invisable{
+    display: none;
+}
+.sign .rule{
+    margin: 20px 0 0 0;
+}
+.sign .ruletitle .line{
+    color: #999999;
+    margin: auto 17px;
+    font-size: 14px;
+}
+.sign .rule .ruletitle{
+    color: #999999;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+}
+.sign .rule .ruletxt{
+    color: #999999;
+    font-size: 18px;
+    font-weight: 100;
+    margin: 20px 25px;
+    line-height: 24px;
+}
+
+#bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 130px;
+    background-color: #fafafa;
+}
+
+#bottom #action{
+    padding: 25px 27px;
+    height: 50px;
+    text-align: center;
+    width: 100%;
+}
+#action #action-btn{
+    float: left;
+    padding: 12px 140px;
+    margin: 0 auto;
+    background-color: #fa645c;
+    color:#ffffff;
+    font-size: 20px;
+}
+.success{
+    text-align: center;
+    width: 100%;
+}
+.mainbox{
+    background-color: #53d66c;
+    border-radius: 20px;
+    color: #ffffff;
+    width: 200px;
+    margin: 150px auto 10px auto;
+    padding: 50px 0 55px 0;
+    font-size: 20px;
+}
+.tip{
+    text-align: center;
+    width: 220px;
+    margin: 10px auto;
+    padding: 10px 0 55px 0;
+    font-size: 20px;
+}
+#signsuccess{
+    margin: 100px auto 50px;
+    width: 240px;
+    height: 240px;
+    background-color: #ffdb4a;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 24px;
+    color: #000000;
+}
+#signsuccess p{
+    margin: 25px 0;
+}
+#close{
+    padding: 10px 20px;
+    margin: 20px auto;
+    color: #ffffff;
+    background-color: #53d66c;
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+
+/*坏空气榜单///////////////////////////////*/
+.container-rank{
+    width: 100%;
+    text-align: center;
+    background-color: #ffdb4a;
+}
+/*.container-rank*/
+#top20{
+    width: 92%;
+    margin: 10px auto 0;
+}
+#rank {
+    margin: 0 auto 70px;
+    padding: 0 0 20px 0;
+    background-color: #ffffff;
+}
+hr{
+    margin: 0 40px;
+    height: 20px;
+    width: 2px;
+    color: #4d4d4d;
+    background-color: #4d4d4d;
+    border: none;
+}
+.rankpiece {
+    text-align: left;
+    height: 70px;
+    position: relative;
+    color: #000000;
+}
+#no1{
+    height: 50px;
+}
+.rankpiece #no1img{
+    position: absolute;
+    width: 50px;
+    left: 15px;
+    display: inline-block;
+    z-index: 999;
+
+}
+.rankpiece .ranknum{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    border: 2px solid #4d4d4d;
+    text-align: center;
+    left: 15px;
+    display: inline-block;
+    z-index: 999;
+    background-color: #f5db73;
+    font-family: hyouzi_display;
+    font-size: 26px;
+    line-height: 50px;
+}
+.ranktitle{
+    font-size: 16px;
+    color: #999999;
+    text-align: left;
+    height: 30px;
+    position: relative;
+}
+.ranktitle span{
+    position: absolute;
+    width: 70px;
+}
+.ranktitle hr{
+    position: absolute;
+    left: 0;
+    margin: 0 40px;
+    height: 40px;
+    width: 2px;
+    color: #4d4d4d;
+    background-color: #4d4d4d;
+    border: none;
+    display: inline-block;
+}
+.rankpiece .rankbar{
+    position: absolute;
+    display: inline-block;
+    left: 40px;
+    width: 310px;
+    height: 50px;
+    background-color: #ffea94;
+    font-size: 18px;
+
+}
+.rankbar #name{
+    position: absolute;
+    left: 75px;
+    top: 5px;
+    text-align: center;
+    width: 70px;
+
+}
+.rankbar #pm{
+    position: absolute;
+    left: 165px;
+    top: 5px;
+    text-align: center;
+    width: 80px;
+}
+.rankbar #companyname{
+    position: absolute;
+    left: 265px;
+    top: 5px;
+    text-align: center;
+    width: 70px;
+}
+.rankbar span{
+
+}
+.rankbar .name{
+    position: absolute;
+    left: 35px;
+    top: 15px;
+    text-align: center;
+    width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.rankbar .pm{
+    position: absolute;
+    left: 130px;
+    top: 15px;
+    text-align: center;
+    width: 70px;
+}
+.rankbar .companyname{
+    position: absolute;
+    left: 220px;
+    top: 15px;
+    text-align: center;
+    width: 80px;
+}
+
+footer {
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    background-color: #ff9933;
+    text-align: left;
+}
+footer a img{
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    left: 5px;
+    top: 18px;
+}
+footer #activetimer{
+    position: absolute;
+    display: inline-block;
+    left: 110px;
+}
+footer #activetimer img{
+    position: absolute;
+    display: inline-block;
+    width: 150px;
+    top: 10px;
+    left: 5px;
+}
+footer #activetimer span{
+    display: inline-block;
+    min-width: 35px;
+    height: 33px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 32px 3px;
+    font-size: 16px;
+    line-height: 33px;
+    padding: 0 15px;
+    color: #000000;
+}
+
+
+
+/*//注册得奖///////////////////////////*/
+.container3{
+    width: 100%;
+    height: 627px;
+    position: relative;
+    text-align: center;
+}
+.container3 #contaiiner3-bg{
+    width: 100%;
+    height: 627px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container3 #measurenow{
+    position: absolute;
+    display: inline-block;
+    margin: 0 auto;
+    top: 200px;
+    left: 128px;
+    width: 120px;
+}
+.container3 #shareforcoupon{
+    position: absolute;
+    display: inline-block;
+    margin: 0 auto;
+    bottom: 40px;
+    left: 128px;
+    width: 120px;
+}
+
+
+
+/*///无设备用户获取优惠券///////////////////*/
+.container-noequip{
+    width: 100%;
+    height: 627px;
+    background: url("https://api.xiuxiu.babadeyan.com/media_root/img/activity/coupon-bg.png") 0 390px no-repeat;
+    background-size: 100%;
+    background-color: #ffdb4a;
+    text-align: center;
+}
+.container-noequip #coupon1000{
+    width: 240px;
+    margin-top: 10px;
+}
+.container-noequip p{
+    color: #333333;
+    margin: 10px auto 0;
+}
+.container-noequip #tel{
+    width: 270px;
+    height: 30px;
+    margin: 10px auto 15px;
+    padding: 5px 15px;
+    border: none;
+}
+.container-noequip #getcoupon{
+    display: inline-block;
+    width: 300px;
+    height: 40px;
+    background-color: #ff9933;
+    font-size: 22px;
+    color: #ffffff;
+    line-height: 40px;
+    text-align: center;
+    border: none;
+}
+.container-noequip .msgwrong{
+    display: none;
+    margin: 10px auto;
+    color: #ff363f;
+    font-size: 18px;
+}
+.mask #signsuccess{
+    font-size: 20px;
+}
+.mask #both{
+    display: none;
+}
+.mask #package{
+    display: none;
+}
+.mask #facemask{
+    display: none;
+}
+.mask #gotten{
+    display: none;
+}
+
+
+
+
+@media (max-width: 360px) {
+    body{
+        zoom:0.96;
+    }
+}
+@media (max-width: 320px) {
+    body{
+        zoom: 0.86;
+    }
+}
+@media (min-width: 400px) {
+    body {
+        zoom: 1.12;
+    }
+}
+@media (min-width: 480px) {
+    body{
+        zoom: 1.28;
+    }
+}

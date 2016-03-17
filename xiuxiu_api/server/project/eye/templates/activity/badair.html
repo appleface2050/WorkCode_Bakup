@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>公司活动入口</title>
+
+    <link rel="stylesheet" href="https://api.xiuxiu.babadeyan.com/media_root/css/activity/main.css">
+    <style>
+        html{background-color: #00c7b0;}
+    </style>
+</head>
+<body>
+
+<div class="container1">
+    <img src="">
+    <marquee id="scrolltxt" width="345px" height="26px" direction="left" scrollamount="3">
+        <span id="scrolldiv1"></span>
+        <span id="scrolldiv2"></span>
+    </marquee>
+</div>
+<div class="container2">
+
+    <div id="torank"><img src="https://api.xiuxiu.babadeyan.com/media_root/img/activity/badairtosign.png"></div>
+    <p class="entertitle"><span class="line">————————</span>活动规则<span class="line">————————</span></p>
+    <div class="enters">
+        <!--<div class="signenter">-->
+            <!--<a class="eachenter">-->
+                <!--<img class="com-logo" src="">-->
+                <!--<span class="entername">百度员工入口</span>-->
+            <!--</a>-->
+        <!--</div>-->
+    </div>
+
+</div>
+<div class="mask">
+    <div id="rankenterblock">
+        <div id="rankentertitle">请选择您所属的坏空气纠察大队:</div>
+        <div id="ranklist">
+            <a class="eachrank" href=""><img src=""><span class="rank-com-name">aaaa</span></a>
+            <a class="eachrank" href=""><img src=""><span class="rank-com-name">aaaaa</span></a>
+            <a class="eachrank" href=""><img src=""><span class="rank-com-name">aaa</span></a>
+        </div>
+        <span id="close">关闭</span>
+    </div>
+
+
+</div>
+
+
+<script src="https://api.xiuxiu.babadeyan.com/media_root/js/jquery-2.1.1.min.js"></script>
+<script>
+    $("#close").click(function(){
+        $(".mask").hide();
+    });
+    $("#torank").click(function(){
+        $(".mask").show();
+    });
+
+    $.ajax({
+        type:"GET" ,
+        url: "https://api.xiuxiu.babadeyan.com/rest/api/activity/carousel/",
+//        data: {},
+        dataType:"json" ,
+        success:function(data){
+//            $("#scrolldiv1").html(data+" "+" ");
+            $("#scrolltxt").html(data+" "+" "+data+" "+" ");
+//            var s,s2,s3,timer;
+//            function init(){
+//                s=getid("scrolltxt");
+//                s2=getid("scrolldiv1");
+//                s3=getid("scrolldiv2");
+//                s3.innerHTML=s2.innerHTML;
+//                timer=setInterval(mar,30)
+//            }
+//            function mar(){
+//                if(s2.offsetWidth<=s.scrollLeft){
+//                    s.scrollLeft-=s2.offsetWidth;
+//                }else{
+//                    s.scrollLeft += 1;}
+//            }
+//            function getid(id){
+//                return document.getElementById(id);
+//            }
+//            init();
+        },
+        error:function(){}
+    });
+
+
+    $.ajax({
+        type:"GET" ,
+        url: "https://api.xiuxiu.babadeyan.com/rest/api/companies/?limit=100",
+//        data: {},
+        dataType:"json" ,
+        success:function(data){
+            var companies = data.results;
+            for(var i = 0; i < companies.length; i++){
+                 var eachcomp = '<div class="signenter"><a class="eachenter" href=""><img class="com-logo" src="">'+
+                                '<span class="entername"></span></a></div>';
+
+                $(".enters").append(eachcomp);
+                $(".signenter:last").find(".com-logo").prop("src",companies[i].logo);
+                $(".signenter:last").find(".eachenter").attr("href","https://api.xiuxiu.babadeyan.com/rest/api/activity/rank_of_bad_air/?company_name="+companies[i].name);
+                $(".signenter:last").find(".entername").html(companies[i].name+"排行榜");
+
+                var eachrank = '<a class="eachrank" href=""><img src=""><span class="rank-com-name"></span></a>';
+                $("#ranklist").append(eachrank);
+                $(".eachrank:last").attr("href","https://api.xiuxiu.babadeyan.com/rest/api/activity/company_sign/?company_name"+companies[i].name);
+                $(".eachrank:last").find("img").prop("src",companies[i].logo);
+                $(".eachrank:last").find(".rank-com-name").html(companies[i].name);
+            }
+        },
+        error:function(){
+
+        }
+    });
+</script>
+</body>
+</html>

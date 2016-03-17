@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+       <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+    </style>
+
+</head>
+<body>
+<form method="post" enctype="multipart/form-data" action="/show/post/add">
+<input type="file" name="my_picture" />
+<input type="submit" value="添加" />
+</form>
+<table>
+    <tr>
+        <td>图片大小(KB)</td>
+        <td>图片</td>
+        <td>图片路径</td>
+    </tr>
+    {% for h in path %}
+    <tr>
+        <td>{{ h.size }}</td>
+        <td><a href="{{ h.url }}" ><img src="{{ h.url }}" width="50px" height="50px" /></a></td>
+        <td>{{ h.url }}</td>
+        <!--<td><a href="/copy?data={{ h.url }}" >复制</a></td>-->
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

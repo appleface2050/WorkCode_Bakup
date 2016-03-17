@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>优惠券渠道</title>
+
+    <link rel="stylesheet" href="https://api.xiuxiu.babadeyan.com/media_root/css/coupon/main.css">
+
+</head>
+<body>
+
+    <div class="nodata">
+        <div>网络异常，没有获取到数据哦~</div>
+        <div>请尝试刷新~</div>
+    </div>
+    <div class="container channel">
+
+    </div>
+
+<script src="https://api.xiuxiu.babadeyan.com/media_root/js/zepto.min.js"></script>
+<script>
+    userid = 123123;
+    $.ajax({
+        type:"GET" ,
+        url: "https://api.xiuxiu.babadeyan.com/rest/api/channels/?limit=100&audit=1" ,
+//        data: ,
+        dataType:"json" ,
+        success:function(data){
+            var channels = data.results;
+            console.log(channels.length);
+            if(channels.length == 0){
+                $(".nodata").css("display","block");
+            }else{
+                for(var i = 0 , len = channels.length; i<len; i++){
+                    var channel = channels[i];
+                    var charray = new Array();
+                    charray = channel.url.split("channels/");
+                    var channel_id = charray[1];
+                    var channelpiece = '<div class="channel-piece"><a href='
+                                        +'https://api.xiuxiu.babadeyan.com/rest/api/coupon/index?channel_id='+channel_id+'></a></div>';
+                    var channelimg = '<img name = '+channel.name+' src='+channel.icon+'>';
+                    $(".container").append(channelpiece);
+                    var thispiece = $(".channel-piece").last();
+                    thispiece.children("a").append(channelimg);
+                }
+            }
+        },
+        error:function(){
+            $(".nodata").css("display","block");
+        }
+    });
+
+
+    ///////////////
+$("#invite").click(function(){
+    console.log("clickclickclick")
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+Server version: 5.5.41-MariaDB-log MariaDB Server
+python 2.7.9
+
+django 1.8.2
+djangorestframework (3.1.2)
+markdown
+django-filter (0.10.0)
+django-filters
+PIL
+
+# django-xadmin
+# django-polls
+# django-crispy-forms
+
+MySQL-python (yum install MySQL-python)
+Pygments
+django-admin-bootstrapped (2.5.0)
+django-allauth (0.20.0)
+django-braces (1.8.0)
+django-oauth-toolkit (0.8.1)
+django-rest-auth (0.4.0)
+
+django-cors-headers
+pytz
+
+chardet
+
+# https://github.com/Hipo/drf-extra-fields
+django-extra-fields
+django-crontab
+
+# 富文本
+pillow
+django-ckeditor
+
+# 跨平台粘贴板操作
+Pyperclip
+

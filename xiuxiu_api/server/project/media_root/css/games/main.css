@@ -1,0 +1,368 @@
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0;}
+ul,ol,menu{list-style:none}
+fieldset,img{border:none}
+img,object,select,input,textarea,button{vertical-align:middle}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6,input,textarea,select,address,caption,cite,code,dfn,em,i,b,strong,small,th,var,abbr{font-size:100%;font-style:normal}
+q:before,q:after{content:''}
+ins,s,u,del{text-decoration:none}
+html,body{background-color: #fff;}
+a{text-decoration: none;color: #333;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+img {border: 0}
+body{
+    -webkit-user-select: none;
+    font-size: 20px;
+    font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;
+}
+
+.container0{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+#icon{
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+}
+#loading{
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
+
+
+
+/*/////////////////////!*游戏主屏*!/*/
+.container2{
+    z-index: 0;
+    display: none;
+    width: 100%;
+    height: 800px;
+    position: fixed;
+    padding: 20px 0 0 0;
+    text-align: center;
+    /*background: url("../img/hazebg.png") 0 0 repeat-x;*/
+
+}
+.container2 .maingame{
+
+}
+.container2 .timecount{
+    margin: 0 auto 20px;
+}
+.container2 .timecount #timebar{
+    display: inline-block;
+    width: 240px;
+    height: 17px;
+    background: gainsboro;
+    margin: auto 10px;
+}
+.container2 .timecount #timebar #timered{
+    background-color: #fa2138;
+    width: 240px;
+    height: 17px;
+}
+.haze{
+    display: inline-block;
+    display: none;
+    width: 150px;
+    float: left;
+    margin: 0 20px;
+}
+.container2 .que{
+    width: 100%;
+    height: 400px;
+    margin: 120px auto 100px;
+    font-size: 24px;
+    text-align: center;
+}
+.container2 .que .quetitle{
+    width: 300px;
+    margin: 40px auto;
+    text-align: center;
+
+}
+.container2 .que .quecontent{
+    margin: 0 auto;
+    width: 288px;
+    height: 350px;
+    color: #ffffff;
+    background: url("https://api.xiuxiu.babadeyan.com/media_root/img/games/g1-bg1.png") 0 48px no-repeat;
+    background-size: 100%;
+}
+.container2 .que .quecontent .quesel{
+    width: 275px;
+    margin: 0 auto;
+}
+.container2 .que #left{
+    float: left;
+    width: 122px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: #fa2138;
+    text-align: center;
+    line-height: 120px;
+    margin: 10px 10px 10px 0;
+}
+.container2 .que #right{
+    float: right;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: #000000;
+    text-align: center;
+    line-height: 120px;
+    margin: 10px 0 10px 20px;
+}
+.container2 .quenum{
+    font-size: 22px;
+}
+
+
+/*////////////////////////////游戏开始屏*/
+.container1 {
+    display: none;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+ .title{
+    padding: 80px 20px 20px;
+    font-size: 26px;
+}
+ .title #titletxt{
+    width: 300px;
+    margin-left: -70px;
+}
+ .title #jian{
+    width: 60px;
+    margin: 0 0 -50px -120px;
+}
+
+.container1 .bg{
+    width: 320px;
+}
+.container1 .select{
+    /*display: none;*/
+    background: url("https://api.xiuxiu.babadeyan.com/media_root/img/games/g1-bg1.png") 0 48px no-repeat;
+    background-size: 100%;
+    margin: 65px auto 0;
+    font-size: 22px;
+    width: 288px;
+    height: 350px;
+    color: #000000;
+}
+.container1 .beli{
+    width: 275px;
+    margin: 0 auto;
+}
+.container1 .select #believe{
+    float: left;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: #ffd731;
+    text-align: center;
+    line-height: 120px;
+    margin: 10px 10px 10px 0;
+}
+.container1 .select #unbelieve{
+    float: right;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: #ffd731;
+    text-align: center;
+    line-height: 120px;
+    margin: 10px 0 10px 20px;
+}
+.container1-1{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 800px;
+    background-color: #ffd731;
+}
+.container1-2{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 800px;
+    background-color: #ffd731;
+}
+.try{
+    padding: 100px 20px;
+    font-size: 36px;
+    text-align: center;
+}
+.try div{
+    margin: 50px auto;
+}
+.try .subtitle{
+    width: 200px;
+    float: left;
+    margin: 0 0 45px 20px;
+}
+.try .bg{
+    width: 288px;
+    margin-top: 50px;
+}
+
+
+/*//////////////////////////////////游戏结束屏*/
+.container3{
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #333333;
+    background-color: rgba(0,0,0,0.6);
+    height: 800px;
+    z-index: 9999;
+}
+.gameover{
+    margin: 50px auto 50px;
+    padding: 20px;
+    width: 280px;
+    height: 360px;
+    background-color: #ffd734;
+    border-radius: 30px;
+    position: relative;
+}
+.container3 .gameover .overtitle{
+    margin: 40px auto 20px;
+    font-size: 34px;
+}
+.container3 .gameover .score, .intel, .cell, .usermsg{
+    margin: 15px auto;
+    font-size: 22px;
+}
+.container3 .gameover .score, .intel{
+    width: 240px;
+}
+
+.container3 .gameover #tel{
+    margin: 0 10px;
+    padding: 8px;
+    width: 240px;
+    border-radius: 10px;
+    border: 3px solid #a3a3a3;
+}
+.container3 .gameover #sendtel{
+    position: absolute;
+    width: 300px;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    padding: 8px 10px;
+    background-color: #ff6632;
+    color: #ffffff;
+    border-radius: 0 0 30px 30px;
+    font-size: 30px;
+}
+#sendtel img{
+    width: 80px;
+}
+.container3 #replay{
+    display: inline-block;
+    width: 180px;
+    padding: 10px 0;
+    background-color: #fa2138;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 26px;
+}
+.container3 #ad{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 60px;
+}
+
+.container4{
+    z-index: 0;
+    display: none;
+    width: 100%;
+    height: 800px;
+    position: fixed;
+    padding: 20px 0 0 0;
+    text-align: center;
+    background-color: #ffd731;
+}
+.container4 #share{
+    position: absolute;
+    right: 80px;
+    top: 30px;
+    font-size: 22px;
+}
+.container4 #share img{
+    position: absolute;
+    width: 50px;
+    right: -55px;
+    top: -20px;
+}
+.container4 .result{
+    background-color: #ffffff;
+    height: 300px;
+    width: 260px;
+    margin: 60px auto 0;
+    padding: 5px 20px;
+}
+.container4 .result .intel{
+    margin: 10px auto 5px;
+}
+.container4 .result .prize{
+    font-size: 22px;
+}
+.container4 .rank{
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: #ffd731;
+    border: 4px solid #926e22;
+    border-radius: 100px;
+    font-size: 24px;
+}
+.container4 .rank div{
+    height: 30px;
+}
+.container4 .rank #ranknum{
+    height: 40px;
+    font-size: 32px;
+    letter-spacing: 10px;
+    line-height: 40px;
+    margin-left: 10px;
+}
+.container4 .soap img{
+    width: 150px;
+}
+.container4 #download img, #replay img{
+    width: 300px;
+}
+@media (max-width: 360px) {
+    body{
+        zoom:0.96;
+    }
+}
+@media (max-width: 320px) {
+    body{
+        zoom: 0.86;
+    }
+    @media (max-height: 480px) {
+        body{
+            zoom: 0.74;
+        }
+    }
+
+}
+
+@media (min-width: 400px) {
+    body{
+        zoom: 1.12;
+    }
+}

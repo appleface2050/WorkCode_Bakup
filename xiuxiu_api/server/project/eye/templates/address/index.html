@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+        td
+        {
+            text-align: center;
+            border: solid #000 1px;
+            width: 20%;
+            <!--width: 9%;-->
+        }
+       img
+       {
+            vertical-align: middle;
+       }
+       tr.even
+       {
+            background:#FFF38F;
+       }
+       tr.odd
+       {
+            background:#FFFFEE;
+       }
+       input
+       {
+            width: 200px;
+       }
+    </style>
+</head>
+<body>
+<form method="post">
+    <input placeholder="经度值" type="text" value="{{ longitude }}" name="longitude" />
+    <input placeholder="纬度值" type="text" value="{{ latitude }}" name="latitude" />
+    <input placeholder="详细地址信息" type="text" value="{{ detail_address }}" name="detail_address" />
+    <input placeholder="保留的地址ID" type="text" value="{{ address_id }}" name="address_id" />
+    <input type="submit" name="search" value="查找" />
+    <input type="submit" name="ok" value="确定" />
+    <table>
+        <tr>
+            <td>选择</td>
+            <td>经度</td>
+            <td>纬度</td>
+            <td>详细地址</td>
+        </tr>
+        {% for address in addresses %}
+        <tr {% if forloop.counter|divisibleby:2 %}
+                class="even"
+            {% else %}
+                class="odd"
+            {% endif %}
+                >
+            <td>{{ address.id }}</td>
+            <td>{{ address.longitude }}</td>
+            <td>{{ address.latitude }}</td>
+            <td>{{ address.detail_address }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+{% if previous_page %}
+        <a href="/support/address?page={{ previous_page }}&longitude={{ longitude }}&latitude={{ latitude }}&address_detail={{ address_detail }}"> << </a>
+    {% else %}
+        <<
+    {% endif %}
+
+    {% for p in show_page_indexes %}
+        <a href="/support/address?page={{ p }}&longitude={{ longitude }}&latitude={{ latitude }}&address_detail={{ address_detail }}"> {{ p }} </a>
+    {% endfor %}
+
+    {% if next_page %}
+        <a href="/support/address?page={{ next_page }}&longitude={{ longitude }}&latitude={{ latitude }}&address_detail={{ address_detail }}"> >> </a>
+    {% else %}
+        >>
+    {% endif %}
+    (共{{ total_page }}页）
+</body>
+</html>
