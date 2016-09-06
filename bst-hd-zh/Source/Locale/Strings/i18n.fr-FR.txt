@@ -1,0 +1,707 @@
+﻿;*********************************************************************************************
+; Agent Sys tray context menu
+;*********************************************************************************************
+
+RestoreFactorySettings = Restaurer les param&egrave;tres Dock
+
+RestartBlueStacks = Red&eacute;marrer
+
+QuitBlueStacks = Quitter
+
+StopBlueStacks = Arr&ecirc;ter
+
+RotatePortraitApps = Faire pivoter les applications Portrait
+RotatePortraitAppsAutomatic = Automatique
+RotatePortraitAppsEnabled = Activ&eacute;
+RotatePortraitAppsDisabled = D&eacute;sactiv&eacute;
+
+UploadDebugLogs = Signaler un probl&egrave;me
+
+FreeDuringBeta = Gratuit pendant la b&ecirc;ta
+
+SMSSetupMenu = Param&egrave;tres SMS de synchronisation
+
+ShowNotificationsMenu = Afficher les notifications
+
+PauseSync = Faire une pause dans la synchronisation
+
+ResumeSync = Reprendre la synchronisation
+
+CheckForUpdates = V&eacute;rifier les mises &agrave; jour
+DownloadingUpdates = T&eacute;l&eacute;chargement des mises &agrave; jour
+InstallUpdates = Installer les mises &agrave; jour
+
+Apps = Applications
+App = Application
+Installed = install&eacute;e
+DiskUsageUnavailable = Utilisation du disque indisponible
+Of = de
+DiskUsed = disque utilis&eacute;
+
+;*********************************************************************************************
+; Frontend buttons tool tip
+;*********************************************************************************************
+
+BackButtonToolTip = Retour
+
+MenuButtonToolTip = Afficher le menu
+
+HomeButtonToolTip = Page d'accueil
+
+SettingsButtonToolTip = Param&egrave;tres
+
+ShareButtonToolTip = Partager Snapshot
+
+FullScreenButtonToolTip = Inverser le mode plein &eacute;cran
+
+CloseButtonToolTip = Fermer
+
+;*********************************************************************************************
+; Frontend buttons tool tip
+;*********************************************************************************************
+
+ResizeMessageBoxCaption = Redimensionner le lecteur&nbsp;BlueStacks App
+
+ResizeMessageBoxText = Remarque : dans cette version b&ecirc;ta-1, pour redimensionner l'application, nous devons la refermer. Veuillez red&eacute;marrer l'application apr&egrave;s le redimensionnement. Merci !
+
+
+;*********************************************************************************************
+; Frontend Info/Error messages
+;*********************************************************************************************
+
+LoadingMessage = Chargement...
+
+Initializing = Initialisation
+
+InitializingGame = Initialisation du&nbsp;jeu
+
+DownloadingGameData = T&eacute;l&eacute;chargement des donn&eacute;es de jeu
+
+CanNotStart = Impossible de d&eacute;marrer BlueStacks. Veuillez contacter support@bluestacks.com
+
+FullScreenToastText = Vous &ecirc;tes pass&eacute;s en&nbsp;plein &eacute;cran. Appuyez sur F11 pour quitter le mode Plein &eacute;cran.
+
+SnapshotErrorToastText = Aucune application de partage de photo n'est install&eacute;e
+
+GraphicsDriverOutdatedError = Vos pilotes graphiques ont peut-&ecirc;tre besoin d'une mise &agrave; jour. BlueStacks n&eacute;cessite des pilotes mis &agrave; jour. Voulez-vous les mettre &agrave; jour maintenant ?
+
+GraphicsDriverOutdatedWarning = Vos pilotes graphiques ont peut-&ecirc;tre besoin d'une mise &agrave; jour. Nous vous recommandons de mettre &agrave; jour vos pilotes pour une performance optimale. Voulez-vous les mettre &agrave; jour maintenant ?
+
+GraphicsDriverUpdatedMessage = Vos Pilotes graphiques ont &eacute;t&eacute; mis &agrave; jour. Vous devez red&eacute;marrer votre ordinateur pour que ces modifications prennent effet. \n\nVoulez-vous red&eacute;marrer votre ordinateur maintenant?
+
+;*********************************************************************************************
+; Agent strings
+;*********************************************************************************************
+
+NetworkAvailableIconText = BlueStacks Agent en ligne
+
+NetworkUnavailableIconText = Agent BlueStacks
+
+BalloonTitle = BlueStacks
+
+OKButtonText = OK
+
+CancelButtonText = Annuler
+
+InstallSuccess = a &eacute;t&eacute; install&eacute;
+
+UninstallSuccess = a &eacute;t&eacute; d&eacute;sinstall&eacute;
+
+UninstallFailed = Impossible de d&eacute;sinstaller
+
+UninstallingWait = D&eacute;sinstallation de l'application ...
+
+CloudConnectTitle = BlueStacks CloudConnect
+
+CloudConnectedMsg = Connect&eacute;
+
+CloudDisconnectedMsg = D&eacute;connect&eacute;
+
+InsufficientStorageMessage = La carte SD interne dans la version gratuite de l'App BlueStacks Player que vous utilisez est pleine. Vous &ecirc;tes invit&eacute;s &agrave; d&eacute;sinstaller un ou plusieurs applications pour lib&eacute;rer de l'espace.
+
+
+;*********************************************************************************************
+; ApkInstaller strings
+;*********************************************************************************************
+
+InstallFail = L'installation a &eacute;chou&eacute;
+
+UserWaitText = Installation APK ...
+
+;*********************************************************************************************
+; LogCollector Strings
+;*********************************************************************************************
+
+NC_ONLY_FORM_TEXT = Outil d'aide Notification Center
+
+FORM_TEXT = Outil d'aide du lecteur d'applications
+
+BUTTON_TEXT = Envoyer
+
+EMAIL_LABEL = Adresse de courriel
+
+ZENDESK_ID_TEXT = Id Zendesk (Facultatif)
+
+DESCRIPTION_LABEL = Description du probl&egrave;me
+
+STATUS_INITIAL = D&eacute;marrage de Collector
+
+STATUS_COLLECTING_PRODUCT = Collecte d'informations sur le produit
+
+STATUS_COLLECTING_HOST = Collecte d'informations sur l'h&ocirc;te
+
+STATUS_COLLECTING_GUEST = Collecte d'informations Android
+
+STATUS_ARCHIVING = Cr&eacute;ation d'archives de support
+
+STATUS_SENDING = Envoi du rapport de probl&egrave;me
+
+APP_NAME = Enter App Name
+
+FINISH_CAPT = Outil d'aide complet
+
+FINISH_TEXT = Votre rapport de probl&egrave;me a bien &eacute;t&eacute; envoy&eacute;. Nous reviendrons vers vous bient&ocirc;t.
+
+PROMPT_TEXT = Impossible d'envoyer un rapport de probl&egrave;me. Un fichier appel&eacute; BlueStacksSupport.zip a &eacute;t&eacute; cr&eacute;&eacute; sur votre bureau.  Veuillez envoyer&nbsp;ce fichier par courriel&nbsp;avec une br&egrave;ve description de votre probl&egrave;me &agrave; support@bluestacks.com.
+
+DESC_MISSING_TEXT = Veuillez entrer&nbsp;une description de votre probl&egrave;me.
+
+ZENDESK_INVALID_ID_TEXT = Veuillez entrer un ID zendesk valide
+
+SELECT_CATEGORY_TEXT = Veuillez s&eacute;lectionner une cat&eacute;gorie de probl&egrave;me.
+
+EMAIL_MISSING_TEXT = Adresse &eacute;lectronique non valide. Veuillez indiquer une adresse &eacute;lectronique valide.
+
+RPC_FORM_TEXT = Troubleshoot RPC Error
+
+WORK_DONE_TEXT = All Done, If the issue still persists then please report a problem
+
+RPC_PROGRESS_TEXT = Please wait, we are trying to fix the issue
+
+TROUBLESHOOTER_TEXT = Troubleshoot and try to fix my problem automatically
+
+LOGCOLLECTOR_RUNNING_TEXT = Report Problem already running
+
+;*********************************************************************************************
+; Please do not translate strings on the left of ":"
+; for eg, LOGCOLLECTOR_PROBLEMS = category:分类, Bluestacks stuck at initializing:BlueStacks在初始化的时候卡住, Bluestacks crash:BlueStacks崩溃, System restart/crash:系统重启/ 崩溃, App not working:应用无法运行, Other:其它
+;*********************************************************************************************
+
+LOGCOLLECTOR_PROBLEMS = Category:Category, Bluestacks stuck at initializing:BlueStacks stuck at initializing, Bluestacks crash:BlueStacks crash, System restart/crash:System restart/crash, App not working:App not working, Other:Other
+
+Category = Category
+
+APP_MISSING_TEXT = Enter App Name
+
+ZIP_NAME = BlueStacks-Support.zip
+
+;*********************************************************************************************
+; Restart Utility Strings
+;*********************************************************************************************
+
+RESTART_UTILITY_TITLE_TEXT = BlueStacks Restart Utility
+RESTART_UTILITY_USAGE_TEXT = Usage
+RESTART_UTILITY_RESTARTING_TEXT = Restarting BlueStacks
+RESTART_UTILITY_CANNOT_STOP_TEXT = Cannot Stop BlueStacks
+RESTART_UTILITY_CANNOT_START_TEXT = Cannot Start BlueStacks
+RESTART_UTILITY_EXIT_TEXT = Exit
+RESTART_UTILITY_UNHANDLED_EXCEPTION_TEXT = Caught unhandled exception. Please check the log for details.
+APKINSTALLER_ALREADY_RUNNING = An app is already being installed. Please wait while it finishes installing.
+
+;*********************************************************************************************
+; Updater Utility Strings
+;*********************************************************************************************
+
+UPDATER_UTILITY_NO_UPDATE_TITLE = BlueStacks Updater
+UPDATER_UTILITY_NO_UPDATE_TEXT = No new updates available
+UPDATER_UTILITY_ASK_TO_INSTALL_TITLE = Update Available
+UPDATER_UTILITY_ASK_TO_INSTALL_TEXT = Would you like to update to the latest version of BlueStacks?
+UPDATER_UTILITY_ASK_TO_INSTALL_NOW = Install Now
+UPDATER_UTILITY_ASK_TO_INSTALL_REMIND_LATER = Remind Me Later
+UpdateSuccess = has been updated 
+
+;*********************************************************************************************
+; Tooltips
+;*********************************************************************************************
+
+GuidanceTooltip = Configurations du contrôleur ou du clavier pour ce jeu
+
+SettingsTooltip = Paramètres
+
+MinimizeTooltip = Réduire dans la barre des tâches
+
+ToggleScreenTooltip = Activer/désactiver l'écran
+
+CloseTooltip = Fermer
+
+HelpTooltip = Aide
+
+BackTooltip = Précédent
+
+;*********************************************************************************************
+; Close popup
+;*********************************************************************************************
+
+ClosePopupText = Voulez-vous continuer à recevoir des notifications de vos applications ?
+
+YesText = Oui
+
+NoText = Non
+
+CancelText = Annuler
+
+RememberChoiceText = Se souvenir de mon choix
+
+;*********************************************************************************************
+; Settings menu
+;*********************************************************************************************
+
+ReportProblemText = Signaler un problème
+
+RestartAndroidText = Redémarrer le plug-in Android
+
+CheckForUpdatesText = Rechercher les mises à jour
+
+SettingsText = Paramètres
+
+LanguageAndInputSettingsText = Langue et entrée
+
+MyAccountText = Mon compte
+
+LocationText = Définir l'emplacement
+
+;*********************************************************************************************
+; Wait Message Strings
+;*********************************************************************************************
+
+Wait_Message_String_Comma_Seprated = Veuillez patienter...,Mise en route...,Chargement des données en cours...,Un moment s'il vous plaît...
+
+
+;*********************************************************************************************
+; Control bar
+;*********************************************************************************************
+
+ToolBarChangeAppSize = Modifier la taille de l'application
+
+ToolBarShake = Secouer
+
+ToolBarCamera = Faire une capture d'écran
+
+ToolBarInstallApk = Installer le fichier apk
+
+ToolBarCopyFromWindows = Copier des fichiers depuis Windows
+
+ToolBarCopy = Copier
+
+ToolBarPaste = Coller
+
+ToolBarVolume = Volume
+
+ToolBarHelp = Aide
+
+Android = Android
+
+Welcome = Bienvenue
+
+Finish = Terminer
+
+StartBlueStacks = Démarrer BlueStacks
+
+InstallLocationError = L'emplacement des données n'est pas accessible. Sélectionnez un autre emplacement
+
+SelectTheme = Sélectionner un thème
+
+;*********************************************************************************************
+; Updater Progress
+;*********************************************************************************************
+
+UpdateInstallingText = Installation en cours...
+
+UpdateSuccessText = BlueStacks installé
+
+UpdateErrorText = Erreur lors de la mise à jour. Veuillez réessayer ultérieurement
+
+UpdateMessageBoxTitleText = Mise à jour BlueStacks
+
+UpdateDownloadedText = Téléchargé...
+
+UpdateProgressTitleText = Programme de mise à jour BlueStacks
+
+UpdateDownloadPreparingText = Préparation du téléchargement...
+
+UpdateAvailableText = Une mise à jour est disponible. Voulez-vous l'installer maintenant ?
+
+CopyFiles = Copie de fichiers en cours
+
+InstallCompleted = Installation achev&eacute;e
+
+PreserveUserData = Pr&eacute;server les donn&eacute;es des utilisateurs
+
+RestoreAndroidUserData = Restauration des donn&eacute;es des utilisateurs Android
+
+CreateAppShortcuts = Cr&eacute;ation des raccourcis des applications
+
+SetupAndroidLibrary = Mise en place de la biblioth&egrave;que Android
+
+RemoveAndroidLibrary = Retrait de la biblioth&egrave;que Android
+
+WaitServiceStart = Attente du d&eacute;marrage du service
+
+CleanFilesAndReg = Nettoyage des fichiers et des param&egrave;tres de registre
+
+InstallService = Service de l'installation
+
+InstallUpdaterService = Installation des&nbsp;service de mise &agrave; jour BlueStacks
+
+StartService = D&eacute;marrage du service
+
+UninstallService = D&eacute;sinstallation du service
+
+CreateFSFiles = Cr&eacute;ation des fichiers FS
+
+StartRollback = D&eacute;marrage de Rollback
+
+InstallComponents = Installation des composants...
+
+InstallRuntime = Installation de l'ex&eacute;cution. Quelques secondes restantes...
+
+ErrorOccured = Oups ... Une erreur s'est produite. Nouvelle tentative...
+
+Downloading = T&eacute;l&eacute;chargement
+
+Installing = Installation
+
+Installer = Installateur
+
+BlueStacks = BlueStacks
+
+Progress = ...
+
+BlueStacksInstaller = Installateur de&nbsp;BlueStacks
+
+VerifyDependence = V&eacute;rification des d&eacute;pendances ...
+
+DownloadingBlueStacks = T&eacute;l&eacute;chargement de BlueStacks ...
+
+StartInstall = D&eacute;but de l'installation ...
+
+DownloadAppRuntime = T&eacute;l&eacute;chargement de la dur&eacute;e d'ex&eacute;cution de l'application...
+
+DownloadAVG = T&eacute;l&eacute;chargement antivirus AVG ...
+
+InstallBlueStacks = Installation de BlueStacks en cours&nbsp;...
+
+LaunchAVG = Lancez AVG AntiVirus PRO &agrave; partir du menu Mes applications. Pour en savoir plus
+
+RecommendAVG = BlueStacks recommande la barre d'outils AVG pour am&eacute;liorer votre protection Internet.
+
+BlueStacksDownMan = Gestionnaire des t&eacute;l&eacute;chargements BlueStacks
+
+ContinueStatement = En cliquant sur Continuer, j'accepte les termes du contrat de licence.
+
+Continue = Continuer
+
+Next = Suivant
+
+Browse = Naviguer
+
+Install = Installer
+
+Back = Retour
+
+Exit = Quitter
+
+RunsBest = BlueStacks fonctionne mieux avec les fonctions suivantes activ&eacute;es
+
+AppStore = Acc&egrave;s &agrave; App Store
+
+AppNotify = Notifications d'applications
+
+BlueStacksAVG = BlueStacks App Player inclut maintenant l'antivirus PRO d'AVG pour Android&acirc; &cent; &quot;.
+
+DataFolderLocation = S&eacute;lectionner l'emplacement des donn&eacute;es BlueStacks
+
+AVGDescription = La barre d'outils AVG vous prot&egrave;ge contre les sites Internet malveillants, pr&eacute;serve votre vie priv&eacute;e en toute s&eacute;curit&eacute; avec AVG Do Not Track et vous permet de faire des&nbsp;recherches en toute s&eacute;curit&eacute; avec&nbsp;AVG Secure Search. \Installez la barre d'outils AVG, d&eacute;finissez AVG Secure Search&nbsp;comme page d'accueil, les onglets r&eacute;cemment ouverts et la recherche de&nbsp;fournisseur par d&eacute;faut.
+
+AVGLicenceStatement = S'applique &agrave; Chrome, Firefox et Internet Explorer\nEn cliquant sur&nbsp;\ &quot;Install \&quot;, vous acceptez le contrat de licence de l'utilisateur final AVG et la politique de confidentialit&eacute;
+
+DownloadRuntimeData = T&eacute;l&eacute;chargement des donn&eacute;es d'ex&eacute;cution ...
+
+InstallingProduct = Installation {0} ...
+
+DownloadingProduct = T&eacute;l&eacute;chargement en cours&nbsp;{0}...
+
+InstallingProgress = Installation en cours...
+
+InstallCompletedPending = Presque fini. Quelques secondes restantes...
+
+InstallProgressBar = Progression de l'installation: {0} ...
+
+DirectoryNotFound = {0} n'existe pas
+
+NotEnoughSpace = Espace insuffisant ! Choisir un autre lecteur
+
+NotEnoughPermissions = Vous n'avez pas les permissions n&eacute;cessaires pour installer dans ce r&eacute;pertoire.
+
+InstallationInterrupted = L'installation de BlueStacks a &eacute;t&eacute; interrompue. Veuillez cliquer deux fois sur le programme d'installation de BlueStacks pour terminer l'installation.
+
+InstallationFailed = L'installation de&nbsp;BlueStacks &nbsp;a &eacute;chou&eacute;
+
+ContactInstallationFailed = L'installation de BlueStacks a &eacute;chou&eacute;. Veuillez contacter support@bluestacks.com
+
+FailedToInstall = Impossible d'installer BlueStacks.
+
+DownloadInProgress = T&eacute;l&eacute;chargement de&nbsp;BlueStacks App Player en cours. Veuillez attendre qu'elle se termine.
+
+InstallInProgress = Installation de BluesStacks en cours.
+
+ErrorWhileInstallingFile = Oups... Une erreur s'est produite lors de l'installation de {0}. \nVeuillez essayer de l'installer &agrave; nouveau.
+
+ProductInstallationFailed = {0} l'installation a &eacute;chou&eacute;
+
+ApkInstallFailed = Impossible d'installer apk. Err : {0}
+
+WelcomeToBlueStacks = Bienvenue dans BlueStacks
+
+InstallingBlueStacks = Installation de BlueStacks
+
+Step1InstallingRuntime = Étape 1 sur 4 : Installation du runtime. Temps restant:
+
+Step2PreparingForFirstTimeUse = Étape 2 sur 4 : Préparation pour la première utilisation. Temps restant:
+
+Step3AlmostDone = Étape 3 sur 4 : Installation presque terminée Finalisation en cours. Temps restant:
+
+Step4VerifyingInstallation = Étape 4 sur 4 : Vérification de l’installation. Temps restant:
+
+Step4Installing = Étape 4 sur 4 : Installation ...
+
+
+BlueStacksApkHandlerTitle = Gestionnaire d'Apk BlueStacks
+
+CommonAppTitleText  = Lecteur d'applications BlueStacks
+
+SnapShotShareString = partagé via le lecteur d'applications BlueStacks (www.bluestacks.com)
+
+AppTitle = Lecteur d'applications BlueStacks
+
+General = Général
+
+Themes = Thèmes
+
+Preferences = Préférences
+
+Text = Texte
+
+Tab = Onglet
+
+LeftSideBar = Barre latérale gauche
+
+SettingsMenu = Menu des paramètres
+
+TabBar = BarreOnglet
+
+Border = Bordure
+
+Style = Style
+
+InactiveTabBottom = Onglet inactif du bas
+
+InactiveTabTop = Onglet inactif du haut
+
+SelectedTabBottom = Onglet sélectionné du bas
+
+SelectedTabTop = Onglet sélectionné du haut
+
+SelectedTabText = Texte de l'onglet sélectionné
+
+MouseOverTabText = Texte de l'onglet au passage de la souris
+
+InactiveTabText = Texte de l'onglet inactif
+
+BottomGradient = Dégradé du bas
+
+TopGradient = Dégradé du haut
+
+MouseOverColor = Couleur lors du survol de la souris
+
+ForeGroundColor = Couleur du premier plan
+
+BackGroundColor = Couleur de l'arrière-plan
+
+TabTopColorMouseOver = Onglet du haut lors du survol de la souris
+
+TabBottomColorMouseOver = Onglet du bas lors du survol de la souris
+
+InnerBorder = Bordure intérieure
+
+TabBorder = Bordure de l'onglet
+
+ToolBarBorder = Bordure de la barre latérale gauche
+
+GameManagerBorder = Bordure du lecteur d'applications
+
+Apply = Appliquer
+
+NewTheme = Nouveau thème
+
+AppRestartConfirmMsg = L'application redémarrera. Souhaitez-vous continuer ?
+
+EnterTheme = Veuillez saisir le nom du thème
+
+ThemeAlreadyExists = Le thème existe déjà
+
+Confirm = Confirmer l'action
+
+ControlBar = BarreDeContrôle
+
+LableConfigureGamePad = Activer la manette de jeu
+
+LabelSideBar = Afficher la barre latérale
+
+LabelWindowSize = Taille de la fenêtre
+
+LabelRestartNote = Les réglages nécessiteront le redémarrage de l'application.
+
+LabelStayAwake = Rester éveillé
+
+LabelLanguage = Langue
+
+LabelAutoStart = Démarrage automatique au démarrage de Windows
+
+GroupBoxBluestacksPreferences = Préférences BlueStacks
+
+XPNotSupported = Cette fonctionnalité n'est pas supportée sur Windows XP !
+
+ToolBarGoLive = Diffuser
+
+EndStreaming = Terminer la diffusion
+
+KeepStreaming = Continuer à diffuser
+
+CloseMessagePrompt = La fermeture de cette fenêtre mettra fin à la diffusion.\nSouhaitez-vous vraiment arrêter la diffusion ?
+
+CloseWhileStreamingTooltip = Arrêter la diffusion
+
+ConfirmMsgOnThemeChange = Thème non appliqué ! Voulez-vous continuer sans enregistrer les modifications ?
+
+UpdateSuccessAndLaunchText = BlueStacks a été mis à jour avec succès.\nVoulez-vous exécuter BlueStacks maintenant ?
+
+ToolBarWatchVideos = Voir les vidéos
+
+LabelHideTopBar = Masquer les onglets en plein écran
+
+VMX_IN_USE = Malheureusement, BlueStacks (beta-1) ne peut pas fonctionner sur un PC où une machine virtuelle (Virtual Machine - VM) est en cours d'utilisation. Vous pouvez soit désinstaller la machine virtuelle, redémarrer et ré-exécuter BlueStacks, ou attendre une prochaine version de BlueStacks dans laquelle cette possibilité est intégrée.
+
+HYPERV_ENABLED = Malheureusement, BlueStacks (beta-1) ne peut pas fonctionner sur un PC où un autre logiciel de virtualisation (VMWare/VirtualBox/Hyper-V) est actif. L'installation va maintenant être abandonnée.
+
+SYSTEM_UPGRADED_ERROR = Il semble que votre système a été amélioré. Veuillez cliquer sur OK pour configurer et exécuter BlueStacks App Player.
+
+DRIVER_UPDATE_MESSAGE = BlueStacks ne peut pas procéder à l'installation parce que le pilote de votre carte graphique nécessite une mise à jour.\n\nCliquez sur En savoir plus pour suivre les instructions sur la façon de mettre à jour votre pilote.
+
+ToolBarLiveStreaming = Streaming en direct
+
+TryAgainText = Réessayer
+
+LabelForceKill = Force l'arrêt de l'application à la fermeture de l'onglet
+
+LabelShowExitMenu = M'avertir avant de fermer l'application
+
+ANDROID_DATA_BACKUP_FAILED = Oh oh - Il y a eu un problème en essayant de préserver vos données. Voulez-vous vraiment poursuivre ?
+
+UNINSTALLATION_CONFIRMATION = Etes-vous sûr que vous souhaitez désinstaller BlueStacks App Player ?
+
+PRESERVE_BSDATA_ON_UNINSTALL = Voulez-vous garder toutes vos applications et vos données ?\nRemarque : Cela peut prendre un peu d'espace sur votre système en fonction de la taille des données de l'application que vous avez actuellement
+
+UNINSTALLATION_FORM_MSG = Veuillez patienter pendant que nous désinstallons BlueStacks App Player.\nDites-nous comment nous pouvons l'améliorer sur www.bluestacks.com
+
+PRE_INSTALL_CHECKS = Vérification de pré-installation de BlueStacks
+
+COPY_BLUESTACKS_FILES_FOLDERS = Copie de fichiers et de dossiers BlueStacks
+
+CREATE_BLUESTACKS_REGISTRY = Création du registre BlueStacks
+
+CREATE_BLUESTACKS_SERVICES = Installation des pilotes et des services BlueStacks
+
+RESTORE_BLUESTACKS_BACKUP = Restauration des données de sauvegarde BlueStacks
+
+CREATE_SHORTCUTS = Création de raccourcis BlueStacks
+
+ROLLBACK_DELETE_SERVICE = Échec de l'installation, retour en arrière, suppression des services
+
+ROLLBACK_DELETE_FILES_FOLDERS = Échec de l'installation, retour en arrière, suppression des fichiers et des dossiers
+
+WINXP64_UNSUPPORTED = Système d'exploitation non pris en charge. BlueStacks ne prend pas en charge Windows XP X64
+
+InstallFailed = L'installation a échoué
+
+INSTALL_FAILED_MESSAGE = Échec de l'installation,\nVeuillez redémarrer votre machine et essayer à nouveau,\nEnvoyez le fichier journal par email à support@bluestacks.com\n à emplacement
+
+STOPPING_BLUESTACKS = Quitte BlueStacks
+
+BACKINGUP_BLUESTACKS_DATA = Sauvegarde les données de BlueStacks
+
+REMOVING_BLUESTACKS_SERVICES = Supprime les services BlueStacks
+
+REMOVING_BLUESTACKS_FOLDERS = Suppression des fichiers BlueStacks
+
+Settings = Paramètres
+
+Location = Emplacement
+
+WINXPSP3_REQUIRED = Système d'exploitation non pris en charge. BlueStacks nécessite Windows XP SP3
+
+WINVISTASP2_REQUIRED = Système d'exploitation non pris en charge. BlueStacks nécessite Windows Vista SP2 ou plus récent
+
+INSUFFICIENT_DISKSPACE = Espace disque insuffisant ! BlueStacks nécessite
+
+INSUFFICIENT_PHYSICALMEMORY = BlueStacks a besoin d'au moins 2 Go de mémoire physique
+
+DX_UNSUPPORTED = Votre carte/pilote graphique ne prend pas en charge la version actuelle de BlueStacks
+
+REGISTRY_EDITING_DISABLED = BlueStacks nécessite les droits d'édition de registre pour l'installation
+
+DOTNET2_SP2REQUIRED = dot net 2 sp 2 ou plus récent non installé sur la machine
+
+DOTNET35_FULLREQUIRED = dot net 3.5 ou plus récent non installé sur la machine
+
+CREATE_BACKUP = Création de la sauvegarde du produit
+
+ROLLBACK_CREATE_BACKUP_FAILED = Échec de la création de la sauvegarde, retour en arrière
+
+UPGRADE_FAILED = Échec de la mise à niveau
+
+UPGRADE_FAILED_MESSAGE = Veuillez redémarrer votre machine et essayer à nouveau,\nEnvoyez également le fichier journal à support@bluestacks.com présent à l'emplacement\n
+
+ROLLBACK_FAILED_MESSAGE = Impossible de revenir en arrière après la mise à niveau. Veuillez redémarrer votre machine et essayer à nouveau,\nEnvoyez également le fichier journal à support@bluestacks.com présent à l'emplacement\n
+
+UpdateProgressTitleText = Logiciel de mise à jour de BlueStacks
+
+UpdateAvailableText = Une mise à jour est disponible. Voulez-vous l'installer maintenant ?
+
+ForcedUpdateAvailableText = Une mise à jour forcée est disponible. Voulez-vous l'installer maintenant ?
+
+;*********************************************************************************************
+;Filter Download UI Text
+;*********************************************************************************************
+
+FILTER_UPDATE_TITLE = Logiciel de mise à jour du filtre BlueStacks
+
+INITIALIZING_TEXT = Initialisation du logiciel de téléchargement...
+
+DOWNLOADING_TEXT = Téléchargement {0} sur {1}...
+
+DOWNLOADED_TEXT = Téléchargement terminé...
+
+APPLYING_TEXT = Installation du thème...
+
+APPLY_BUTTON_TEXT = Appliquer
+
+LATER_BUTTON_TEXT = Plus tard
+
+DOWNLOAD_ERROR_TEXT Oups ! Des erreurs sont survenues. Les filtres seront mis à jour lors du prochain lancement
+
+STOP_STREAMING_REQUIRED = Cette mise à jour nécessitera l'arrêt du streaming
+
+OBS_ERROR_TEXT = Oups ! Une erreur s’est produite. Voulez-vous réessayer ?
+
+OBS_ALREADY_RUNNING = Une autre instance OBS est déjà en cours d'exécution ! Merci de la fermer avant de continuer.

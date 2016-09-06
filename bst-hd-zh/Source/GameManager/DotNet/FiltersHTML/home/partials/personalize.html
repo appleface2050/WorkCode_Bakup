@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="../../filters/home/styles/personalize.css">
+<div class="personalize_body">
+    <h2 label="Personalize_your_Filter" class="i18n"></h2>
+
+    <div class="theme-container">
+        <div class="main_image-container">
+            <img class="theme-image" ng-src='../../filters/theme/{{package}}/{{activeTheme.dir_name}}/assets/poster.png'>
+            <div class="theme-image-overlay"></div>
+        </div>
+        <span class="theme-title ng-binding">{{activeTheme.display_name}}</span>
+    </div>
+
+    <!--Personalize Fields-->
+    <div class="personalize_form">
+        <!--animate Status-->
+        <div ng-show="activeTheme.personalize_config.animate" tooltips tooltip-class="animate-tooltip" tooltip-side="bottom" tooltip-template="<img class='warning-icon' src='./images/warning_icon.png'><p label='Animations_take_your_stream' class='i18n'></p><p class='i18n' label='Try_disabling_them'></p>" class="button-container">
+            <span class="i18n" label="animate"></span>
+            <div class="animation_status">
+                <input id="animation" ng-click="checked('animate')" type="checkbox" ng-checked="config_json.animate">
+                <label for="animation"></label>
+            </div>
+        </div>
+
+        <!--WebCam Status-->
+        <div ng-show="activeTheme.personalize_config.webcam" class="button-container">
+            <span class="i18n" label="Webcam"></span>
+            <div class="webcam_status">
+                <input id="webcam" ng-click="checked('webcam')" type="checkbox" ng-checked="config_json.webcam">
+                <label for="webcam"></label>
+            </div>
+        </div>
+
+        <!--Chat Status-->
+        <div ng-show="activeTheme.personalize_config.chat" class="button-container">
+            <span class="i18n" label="Chat"></span>
+            <div class="chat_status">
+                <input id="chat" ng-click="checked('chat')" type="checkbox" ng-checked="config_json.chat">
+                <label for="chat"></label>
+            </div>
+        </div>
+
+        <!--Twitter Status-->
+        <div style="display: none" class="twitter_status">
+            <label for="twitter">Twitter</label>
+            <span class="form_field">
+                <a href="#">Connect</a>
+            </span>
+        </div>
+        <!--&lt;!&ndash;FaceBook Status&ndash;&gt;-->
+        <div style="display: none" class="fb_status">
+            <label for="fb">Facebook</label>
+            <span class="form_field">
+                <a href="#">Connect</a>
+            </span>
+        </div>
+        <!--&lt;!&ndash;Youtube Status&ndash;&gt;-->
+        <div style="display: none" class="youtube_status">
+            <label for="youtube">Youtube</label>
+            <span class="form_field">
+                <a href="#">Connect</a>
+            </span>
+        </div>
+    </div>
+
+    <!--End Personalize Fields-->
+    <div style="display: none" class="personalize_restore footer_btn">
+        <button class="i18n" label="Restore_to_Default">Restore to Default</button>
+    </div>
+</div>

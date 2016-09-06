@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+<script src="../../static/js/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h3>数据配置检测</h3>
+<br>
+<table class="table table-bordered">
+  <tr>
+    <th>分类</th>
+    <th>检测项</th>
+  </tr>
+  <tr>
+    <td>游戏库</td>
+    <td>检查游戏库icon_url是否存在</td>
+  </tr>
+  <tr>
+    <td>游戏库</td>
+    <td>检查游戏库关联关系platform_game_ids字段是否有错</td>
+  </tr>
+  <tr>
+    <td>游戏库</td>
+    <td>检查游戏库type是否正确</td>
+  </tr>
+  <tr>
+    <td>渠道包</td>
+    <td>检查渠道包icon_url是否存在</td>
+  </tr>
+  <tr>
+    <td>渠道包</td>
+    <td>检查渠道包size是否存在</td>
+  </tr>
+  <tr>
+    <td>渠道包</td>
+    <td>检查渠道包screenshots是否存在</td>
+  </tr>
+  <tr>
+    <td>渠道包</td>
+    <td>检查渠道包instruction是否存在</td>
+  </tr>
+  <tr>
+    <td>渠道包</td>
+    <td>检查渠道包download_url是否存在</td>
+  </tr>
+  <tr>
+    <td>渠道包</td>
+    <td>检查渠道包package_name是否存在</td>
+  </tr>
+</table>
+<br>
+<form action="check_data" method="post">
+   {% csrf_token %}
+  <input class="btn btn-default" type="submit" value="start check" />
+a little bit slow...
+</form>
+<br>
+{% if datas %}
+<table class="table table-hover">
+  <tr>
+    <th>类型</th>
+    <th>id</th>
+    <th>名称</th>
+    <th>message</th>
+    <th>level</th>
+  </tr>
+    {% for data in datas %}
+      <tr>
+        <td>{{ data.item }}</td>
+        <td>{{ data.id }}</td>
+        <td>{{ data.game_name }}</td>
+        <td>{{ data.message }}</td>
+        <td {% if data.level == "error" %}class="alert alert-danger"{% endif %}{% if data.level == "warning" %}class="alert alert-warning"{% endif %}>{{ data.level }}</td>
+      </tr>
+    {% endfor %}
+
+</table>
+{% endif %}
+</body>
+</html>

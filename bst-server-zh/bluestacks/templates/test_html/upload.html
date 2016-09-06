@@ -1,0 +1,18 @@
+<!--
+<form method='post' action='/bs/upload_file/' enctype="multipart/form-data" accept-charset="utf-8">
+{% csrf_token %}
+
+<input type="text" name="title" />
+<input type='file' name='file' />
+<input type='submit' value='上传' />
+
+</form>
+-->
+<form method='post' action='/bs/upload_file/' enctype="multipart/form-data" accept-charset="utf-8">
+{% csrf_token %}
+
+    {% for field in form %}
+        {{ field.label_tag }}{{ field }}
+    {% endfor %}
+    <input type='submit' value='上传' />
+</form>

@@ -1,0 +1,17 @@
+*.o
+*.obj
+*.pdb
+*.map
+*.swp
+*.exe
+*.dll
+*.ilk
+*.lib
+*.exp
+*.sys
+*.res
+*.resources
+Version.cs
+cscope.out
+tags
+manifest.json

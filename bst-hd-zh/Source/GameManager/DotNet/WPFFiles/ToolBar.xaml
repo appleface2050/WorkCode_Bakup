@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="BlueStacks.hyperDroid.GameManager.ToolBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BlueStacks.hyperDroid.GameManager"
+             xmlns:Common="clr-namespace:BlueStacks.hyperDroid.Common"
+             mc:Ignorable="d"
+			 Loaded="UserControl_Loaded"
+          d:DesignWidth="54" d:DesignHeight="571">
+    <Grid>
+        <Border x:Name="ToolBarBorder"  BorderThickness="1" BorderBrush="Transparent" >
+            <Grid >
+                <Grid.Background >
+                    <LinearGradientBrush>
+                        <GradientStop Color="#3E3D46" Offset="0"/>
+                        <GradientStop Color="#292832" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition x:Name="rowGoLive" Height="*"/>
+                    <RowDefinition x:Name="rowChat" Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="mGoLiveButton"   Grid.Row="0"   Source ="/Assets/golive.png" />
+                <Common:CustomPictureBox x:Name="mChat"  Grid.Row="1" ImageName="chat"/>
+                <Common:CustomPictureBox x:Name="mOrientationChangeButton"  Grid.Row="2" ImageName="rotate"/>
+                <Common:CustomPictureBox x:Name="mShakeButton"  Grid.Row="3" ImageName="shake"  />
+                <Common:CustomPictureBox x:Name="mCameraButton"   Grid.Row="4" ImageName="camera" />
+                <Common:CustomPictureBox x:Name="mLocationButton" Grid.Row="5" ImageName="location"/>
+                <Common:CustomPictureBox x:Name="mApkInstallButton" Grid.Row="6"  ImageName="installapk"/>
+                <Common:CustomPictureBox x:Name="mFileButton"   Grid.Row="7" ImageName="folder"/>
+                <Common:CustomPictureBox x:Name="mCopyButton" Grid.Row="8" ImageName="copy"  />
+                <Common:CustomPictureBox x:Name="mPasteButton"   Grid.Row="9" ImageName="paste" />
+                <Common:CustomPictureBox x:Name="mSoundButton"  Grid.Row="10" ImageName="sound_on"/>
+                <Common:CustomPictureBox x:Name="mHelpButton"    Grid.Row="11" ImageName="help"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

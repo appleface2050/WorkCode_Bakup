@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Is anyone getting tired of repeatedly entering the header over and over?? -->
+        <title>Sign in to BlueStacks CN Data Statistics System</title>
+
+    {% if user.is_authenticated %}
+    <h1>welcome back {{ user.username }}!</h1>
+    {% else %}
+    <h1></h1>
+    {% endif %}
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <h1>Sign in to BlueStacks CN Data Statistics System</h1>
+
+{#        <form id="login_form" method="post" action="/login">#}
+{#            {% csrf_token %}#}
+{#            Username: <input type="text" name="username" value="" size="50" />#}
+{#            <br />#}
+{#            Password: <input type="password" name="password" value="" size="50" />#}
+{#            <br />#}
+{#            <input type="submit" value="submit" />#}
+{#        </form>#}
+
+        <form class="form-horizontal" id="login_form" method="post" action="/sign_in">{% csrf_token %}
+          <div class="control-group">
+            <label class="control-label" for="inputEmail">username</label>
+            <div class="controls">
+              <input type="text" name="username" value="" id="input_username" placeholder="username">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputPassword">Password</label>
+            <div class="controls">
+              <input type="password" name="password" value="" id="inputPassword" placeholder="Password">
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="controls">
+{#              <label class="checkbox">#}
+{#                <input type="checkbox"> 记住我#}
+{#              </label>#}
+              <button type="submit" class="btn">登录</button>
+            </div>
+          </div>
+        </form>
+    </body>
+</html>

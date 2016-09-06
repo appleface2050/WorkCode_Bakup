@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'Roboto-Light';
+    font-weight: 300;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    font-weight: 500;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    font-weight: 700;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'PokemonSolidNormal';
+    src: url('./assets/Pokemon_Solid.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.base-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background-image{
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
+}
+
+.left-container {
+    float: left;
+    width: 34.5vw;
+    height: 100vh;
+}
+
+.right-container {
+    float: right;
+    height: 100vh;
+    /*text-align: right;*/
+    width: 34.5vw;
+}
+
+.left-image, .right-image {
+    width: 100%;
+    height: 100%;
+}
+
+.streamer-info{
+    bottom: -2vh;
+    left: 1vw;
+    width: 32vw;
+    position: absolute;
+    text-align: center;
+}
+
+#crown{
+    position: relative;
+    top: 2vh;
+}
+
+.streamer-name {
+    display: inline-block;
+    font-size: 2.4vw;
+    padding-bottom: 2.5vh;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family:"PokemonSolidNormal";
+    color:#ffffff;
+    letter-spacing:0.5vh;
+    text-shadow:0px 2px 2px rgba(0,0,0,0.25);
+}
+
+#webcam-placeholder {
+    bottom: 10vh;
+    display: inline-block;
+    float: left;
+    height: 35vh;
+    left: 4vw;
+    position: absolute;
+    width: 27vw;
+}
+
+.chat-text{
+    display: block;
+    font-size: 2.5vw;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 3.5vw;
+    text-align: left;
+    top: 0.5vh;
+    font-family:"PokemonSolidNormal";
+    color:#ffffff;
+    letter-spacing:2px;
+}
+.btv-logo{
+    bottom: 0;
+    position: absolute;
+    right: 10vw;
+    width: 15vw;
+}
+div#chat {
+    height: 80vh;
+    padding-left: 3.5vw;
+    width: 31vw !important;
+    overflow: auto;
+    margin-top: 0vh;
+    padding-top: 2vh;
+}
+
+.vertical-handle {
+    width: 6px;            /* How wide is the scrollbar handle? */
+    background-color: transparent; /* What color should the handle be? */
+}
+
+div#chat .chat-line {
+    width: 45vh;
+    font-weight: 500;
+    text-align: left;
+    position: relative;
+    margin-top: 3vw;
+    height: auto;
+    min-height: 9.4vh;
+    border:2px solid #322300;
+    border-radius:4px;
+    background:#fbd800;
+}
+
+div#chat .emoticon {
+    height: 3vh;
+    width: 1.5vw;
+}
+
+.headIcon{
+    position: absolute;
+    right: -10vh;
+    top: -4.9vh;
+    z-index: -1;
+}
+
+div#chat .dummy-chat .chat-name {
+    color: #1779da;
+}
+div#chat .chat-line .chat-name {
+    font-size: 1.5vw;
+    width: 100%;
+    display: block;
+    font-family: 'Roboto-Bold' !important;
+    letter-spacing:0px;
+    text-align:left;
+    padding-top: 2vh;
+    padding-left: 1.5vw;
+}
+
+div#chat .chat-line .chat-message{
+    margin: 1vh 1vw 1vh 1.3vh;
+    display: block;
+    font-family: 'Roboto-Bold';
+    font-size: 1.2vw;
+    color: #000 !important;
+    padding-bottom: 2vh;
+    padding-left: 1vw;
+    word-wrap: break-word;
+}
+
+.vjs-control-bar{
+    display: none;
+}
+
+.chat-line.chat-hosting-yes{
+    display: none;
+}

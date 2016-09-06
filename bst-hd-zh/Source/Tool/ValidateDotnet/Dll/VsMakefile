@@ -1,0 +1,69 @@
+#########################      Read Me     #########################
+# http://msdn.microsoft.com/en-us/library/yz1tske6(v=VS.100).aspx
+# NMAKE [option...] [macros...] [targets...] [@commandfile...]
+# http://msdn.microsoft.com/en-us/library/a23f7tc4(v=VS.100).aspx
+# nmake DBG=1
+# nmake DBG=1 clean
+# nmake DBG=1 rebuild
+# nmake
+# nmake clean
+# nmake rebuild
+######################### Basic Definition #########################
+
+ProjectName = ValidateDotnetDll
+TARGET = HD-$(ProjectName)-Native
+TARGET_EXT = dll
+DEFFILE = ValidateDotnetDll.def
+OUTDLL = ..\Exe
+#SRCS = dllmain.cpp RegUtils.cpp CDisableErrorDialog.cpp CValidateDotnet.cpp ValidateDotnetDll.cpp
+SRCS = CDisableErrorDialog.cpp CValidateDotnet.cpp dllmain.cpp CFileUtil.cpp RegUtils.cpp CNetUtlil.cpp CMultiData.cpp CSystemUtil.cpp ValidateDotnetDll.cpp CConfig.cpp
+
+#CPPS = CDisableErrorDialog.cpp CValidateDotnet.cpp dllmain.cpp CFileUtil.cpp RegUtils.cpp CNetUtlil.cpp CMultiData.cpp CSystemUtil.cpp ValidateDotnetDll.cpp
+
+CL="C:/Program Files/Microsoft Visual Studio 10.0/VC/bin/cl.exe"
+
+
+CFLAGS = $(CFLAGS) /GS- -nologo -c -W3 /I"boost_1_54_0" /EHsc
+LFLAGS = $(LFLAGS) -nologo /dll /def:$(DEFFILE)  /LIBPATH:"boost_1_54_0\lib" 
+LIBS =  $(LIBS) "Wininet.lib" "kernel32.lib" "user32.lib" "gdi32.lib" "winspool.lib" "comdlg32.lib" "advapi32.lib" "shell32.lib" "ole32.lib" "oleaut32.lib" "uuid.lib" "odbc32.lib" "odbccp32.lib"
+OBJS = $(SRCS:.cpp=.obj)
+#################### Compile and Link Options #######################
+!ifdef DBG
+
+ODIR = Debug
+CFLAGS = $(CFLAGS) -Od -DWIN32  -D_DEBUG  -D_WINDOWS  -D_USRDLL  -DVALIDATEDOTNETDLL_EXPORTS -DUNICODE  -ZI -Gy /MTd
+LFLAGS = $(LFLAGS) -map -debug  -PDB:$(ODIR)/$(TARGET).pdb
+
+!else
+
+ODIR = Release
+CFLAGS = $(CFLAGS) -Od -DNDEBUG -DWIN32  -D_WINDOWS  -D_USRDLL  -DVALIDATEDOTNETDLL_EXPORTS  -DUNICODE  -Gy
+LFLAGS = $(LFLAGS)
+
+!endif
+
+#########################  Inference Rules  #########################
+
+all : $(ODIR)/$(TARGET).$(TARGET_EXT) $(ODIR)
+	copy /y "$(ODIR)\$(TARGET).$(TARGET_EXT)" $(OUTDLL)
+	copy /y "$(ODIR)\$(TARGET).lib" $(OUTDLL)
+	-copy /y "$(ODIR)\$(TARGET).pdb" $(OUTDLL)
+
+# http://msdn.microsoft.com/en-us/library/f2x0zs74(v=VS.100).aspx
+# http://msdn.microsoft.com/en-us/library/cx06ysxh.aspx
+# http://msdn.microsoft.com/en-us/library/cbes8ded.aspx
+
+.cpp.obj:
+    cl $(CFLAGS) /Fo$(<D)/ $<
+
+$(ODIR)/$(TARGET).$(TARGET_EXT) : $(ODIR)  $(OBJS) $(DEFFILE)
+	link -out:$(ODIR)/$(TARGET).$(TARGET_EXT) $(LFLAGS) $(OBJS) $(LIBS)
+
+$(ODIR):
+    md $(ODIR)
+clean :
+	-del /q $(OBJS) "$(ODIR)/*.*"
+	-del /q "$(OUTDLL)\$(TARGET).$(TARGET_EXT)" "$(OUTDLL)\$(TARGET).lib"
+	-del /q "$(OUTDLL)\$(TARGET).pdb"
+	-del /q "$(ODIR)\*.pdb"
+rebuild : clean all

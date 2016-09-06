@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="BlueStacks.hyperDroid.GameManager.SystemSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlueStacks.hyperDroid.GameManager"
+        mc:Ignorable="d"
+        d:DesignHeight="670" d:DesignWidth="1010">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200*" />
+            <RowDefinition Height="21*" />
+            <RowDefinition Height="78*" />
+            <RowDefinition Height="21*" />
+            <RowDefinition Height="73*" />
+            <RowDefinition Height="208*" />
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="780*" />
+                <ColumnDefinition Width="190*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37*" />
+		 <RowDefinition Height="40*" />
+		 <RowDefinition Height="37*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="37*" />
+            </Grid.RowDefinitions>
+            <local:PreferencesWindowDarkGrid Grid.Row="0" Grid.RowSpan="7" Grid.Column="0" Grid.ColumnSpan="3" />
+            <local:CustomSlider x:Name="mRamSlider" Label="*RAM"  Maximum="4096" Minimum="1024" Grid.Row="1" Grid.Column="1" PreviewMouseLeftButtonUp="RamSlider_PreviewMouseLeftButtonUp" />
+            <!--<local:CustomSlider x:Name="mDiskSlider" Label="*DISK" Maximum="16" PostFix="GB"  Value="8" IsEnabled="False" Grid.Row="" Grid.Column="1" />-->
+            <local:CustomSlider x:Name="mCPUSlider" Label="*CPU" Maximum="8" Minimum="2" Value="1" Grid.Row="3" Grid.Column="1" PreviewMouseLeftButtonUp="CPUSlider_PreviewMouseLeftButtonUp" />
+        </Grid>
+
+
+        <!--<Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="440*" />
+                <ColumnDefinition Width="160*" />
+                <ColumnDefinition Width="160*" />
+                <ColumnDefinition Width="160*" />
+                <ColumnDefinition Width="45*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="13*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="21*" />
+            </Grid.RowDefinitions>
+            <local:PreferencesWindowDarkGrid Grid.Row="0" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="6" />
+            <Viewbox  Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left">
+                <Label x:Name="mlblEngineType"  Content="Engine Type"  Foreground="White" />
+            </Viewbox>
+            <local:CustomButton x:Name="mAutoEngine" Group="Engine" Grid.Column="2" Grid.Row="1" Content="Auto" PreviewMouseLeftButtonUp="mAutoEngine_PreviewMouseLeftButtonUp"/>
+            <local:CustomButton x:Name="mLegacyEngine" Group="Engine" Grid.Column="3" Grid.Row="1" Content="Legacy" PreviewMouseLeftButtonUp="mLegacyEngine_PreviewMouseLeftButtonUp"/>
+			<local:CustomButton x:Name="mPlusEngine" Group="Engine" Grid.Column="4" Grid.Row="1"  Content="Plus"  PreviewMouseLeftButtonUp="mPlusEngine_PreviewMouseLeftButtonUp"/>
+        </Grid>-->
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="440*" />
+                <ColumnDefinition Width="240*" />
+                <ColumnDefinition Width="240*" />
+                <ColumnDefinition Width="45*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="13*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="21*" />
+            </Grid.RowDefinitions>
+            <local:PreferencesWindowDarkGrid Grid.Row="0" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="5" />
+            <Viewbox  Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left">
+				<Label x:Name="mlblAndroidDpi" Content="Android DPI"  Foreground=" #eaeaea"  />
+            </Viewbox>
+            <local:CustomButton x:Name="mLowDPI" Content="Low" Group="AndroidDpi" Grid.Column="2" Grid.Row="1"  PreviewMouseLeftButtonDown="LowDPI_PreviewMouseLeftButtonDown" />
+			<local:CustomButton x:Name="mHighDPI" Content="High" Group="AndroidDpi" Grid.Column="3" Grid.Row="1"  PreviewMouseLeftButtonDown="HighDPI_PreviewMouseLeftButtonDown" />
+        </Grid>
+    </Grid>
+</UserControl>

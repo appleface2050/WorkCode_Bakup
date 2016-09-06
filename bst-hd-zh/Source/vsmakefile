@@ -1,0 +1,38 @@
+OUT=C:\Program Files\Tencent\TGP\BlueStacks_tc_dt\ProgramFiles
+
+all:
+	CMD /C "CD Frontend\Console\DotNet & $(MAKE) clean all" || EXIT /B 1
+	COPY Frontend\Console\DotNet\HD-Frontend.* "$(OUT)\"
+	CMD /C "CD Agent\DotNet & $(MAKE) clean all" || EXIT /B 1
+	COPY Agent\DotNet\HD-Agent.* "$(OUT)\"
+	CMD /C "CD ApkInstaller\DotNet & $(MAKE) clean all" || EXIT /B 1
+	COPY ApkInstaller\DotNet\HD-ApkHandler.* "$(OUT)\"
+	CMD /C "CD Tool\RunApp\DotNet & $(MAKE) clean all" || EXIT /B 1
+	COPY Tool\RunApp\DotNet\HD-RunApp.* "$(OUT)\"
+Frontend:
+	CMD /C "CD Frontend\Console\DotNet & $(MAKE) clean all" || EXIT /B 1
+Agent:
+	CMD /C "CD Agent\DotNet & $(MAKE) clean all" || EXIT /B 1
+ApkInstaller:
+	CMD /C "CD ApkInstaller\DotNet & $(MAKE) clean all" || EXIT /B 1
+RunApp:
+	CMD /C "CD Tool\RunApp\DotNet & $(MAKE) clean all" || EXIT /B 1
+	
+FrontendCP:Frontend
+	COPY Frontend\Console\DotNet\HD-Frontend.* "$(OUT)\"
+AgentCP:Agent
+	COPY Agent\DotNet\HD-Agent.* "$(OUT)\"
+ApkInstallerCP:ApkInstaller
+	COPY ApkInstaller\DotNet\HD-ApkHandler.* "$(OUT)\"
+RunAppCP:RunApp
+	COPY Tool\RunApp\DotNet\HD-RunApp.* "$(OUT)\"
+
+clean:
+	-DEL $(OUT)\HD-Frontend.*
+	-DEL "$(OUT)\HD-Agent.*"
+	-DEL "$(OUT)\HD-ApkHandler.*"
+	-DEL "$(OUT)\HD-RunApp.*"
+	-DEL Frontend\Console\DotNet\HD-Frontend.exe
+	-DEL Agent\DotNet\HD-Agent.exe
+	-DEL ApkInstaller\DotNet\HD-ApkHandler.exe
+	-DEL Tool\RunApp\DotNet\HD-RunApp.exe 

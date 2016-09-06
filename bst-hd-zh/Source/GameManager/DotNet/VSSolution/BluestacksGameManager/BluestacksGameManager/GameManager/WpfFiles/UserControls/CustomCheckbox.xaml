@@ -1,0 +1,77 @@
+﻿<CheckBox
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BlueStacks.hyperDroid.GameManager"
+             xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="BlueStacks.hyperDroid.GameManager.CustomCheckbox"
+             mc:Ignorable="d" d:DesignWidth="300"  d:DesignHeight="30" Content="CheckBox Text" Style="{DynamicResource CheckBoxStyle1}"
+             MouseEnter="CheckBox_MouseEnter" 
+             MouseLeave="CheckBox_MouseLeave"
+             Checked="CheckBox_Checked"
+             Unchecked="CheckBox_Unchecked"
+    >
+    <CheckBox.Resources>
+        <SolidColorBrush x:Key="CheckBoxFillNormal" Color="#858585"/>
+        <SolidColorBrush x:Key="CheckBoxStroke" Color="#8E8F8F"/>
+        <Style x:Key="EmptyCheckBoxFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="1" SnapsToDevicePixels="true" Stroke="Black" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CheckRadioFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="14,0,0,0" SnapsToDevicePixels="true" Stroke="Black" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CheckBoxStyle1" TargetType="{x:Type CheckBox}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="{StaticResource CheckBoxFillNormal}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource CheckBoxStroke}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FocusVisualStyle" Value="{StaticResource EmptyCheckBoxFocusVisual}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="mImage" Grid.Column="0" Source="/assets\checkbox.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  />
+                            <Viewbox HorizontalAlignment="Left" Grid.Column="2">
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="3" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Center"/>
+                            </Viewbox>
+                        </Grid>
+                        <!--<BulletDecorator Background="Transparent" SnapsToDevicePixels="true">
+                            <BulletDecorator.Bullet>
+                                <Image BorderBrush="{TemplateBinding BorderBrush}" Height="30" Width="30"  Background="{TemplateBinding Background}" IsChecked="{TemplateBinding IsChecked}" RenderMouseOver="{TemplateBinding IsMouseOver}" RenderPressed="{TemplateBinding IsPressed}"/>
+                            </BulletDecorator.Bullet>
+                            <Viewbox HorizontalAlignment="Left">
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="30,3,3,3" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Center"/>
+                            </Viewbox>
+                        </BulletDecorator>-->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="HasContent" Value="true">
+                                <Setter Property="FocusVisualStyle" Value="{StaticResource CheckRadioFocusVisual}"/>
+                                <Setter Property="Padding" Value="4,0,0,0"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </CheckBox.Resources>
+</CheckBox>

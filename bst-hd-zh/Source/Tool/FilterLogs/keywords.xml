@@ -1,0 +1,1095 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <words>
+    <!--Start BlueStacksUsers.log-->
+    <word>
+      <unifycode>oth6</unifycode>
+      <interpretation>DirectX Unsupported</interpretation>
+      <conditions>
+        <str>PgaCtlInitFailed, Access Violation</str>
+        <logfile>BlueStacksUsers</logfile>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>oth1</unifycode>
+      <interpretation>Unknown error</interpretation>
+      <conditions>
+        <logfile>BlueStacksUsers</logfile>
+      </conditions>
+    </word>
+    <word>
+      <unifycode />
+      <interpretation />
+      <conditions>
+        <logfile>BlueStacksUsers</logfile>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>oth50</unifycode>
+      <interpretation>Not exist folder "Logs"</interpretation>
+      <conditions>
+        <function>
+</function>
+        <logfile>BlueStacksUsers</logfile>
+      </conditions>
+    </word>
+    <!--End BlueStacksUsers.log-->
+    <!--Start Boot Failure-->
+    <word>
+      <unifycode>boo1</unifycode>
+      <interpretation>VMX bit is in use by some other driver</interpretation>
+      <conditions>
+        <str>VMX is in use</str>
+        <logfile>Hypervisor.log</logfile>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>boo2</unifycode>
+      <interpretation>Kernel Failure</interpretation>
+      <conditions>
+        <str>Kernel Panic</str>
+        <logfile>Core.log</logfile>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>boo3</unifycode>
+      <interpretation>Invalidopcode</interpretation>
+      <conditions>
+        <str>Invalidopcode</str>
+        <logfile>Core.log</logfile>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>boo4</unifycode>
+      <interpretation>Some Error at guest</interpretation>
+      <conditions>
+        <reg>^.*EXT4-fs error \\(device sd[a-b]1\\): (mb_free_blocks|ext4_mb_generate_buddy|ext4_lookup|.*deleted inode referenced):</reg>
+        <logfile>Core.log</logfile>
+      </conditions>
+    </word>
+    <word>
+      <unifycode />
+      <interpretation />
+      <conditions>
+        <logfile />
+      </conditions>
+    </word>
+    <word>
+      <unifycode>boo8000</unifycode>
+      <interpretation>sdcard is full</interpretation>
+      <conditions>
+        <str>Cannot write to sparse block device sdc1 store offset</str>
+        <logfile>Core.log</logfile>
+      </conditions>
+    </word>
+    <!--End Boot Failure-->
+    <!--Start ApkHandler-->
+    <word>
+      <unifycode>apk-1_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk-2_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk-3_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk1_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk2_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk3_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk4_1</unifycode>
+      <interpretation>INSTALL_FAILED_CONTAINER_ERROR</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.*HDApkInstaller: Got Error: INSTALL_FAILED_CONTAINER_ERROR</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 4\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk5_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk6_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk7_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk8_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk9_1</unifycode>
+      <interpretation>INSTALL_FAILED_INTERNAL_ERROR</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.*HDApkInstaller: Got Error: INSTALL_FAILED_INTERNAL_ERROR</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 9\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk10_1</unifycode>
+      <interpretation>INSTALL_FAILED_INVALID_APK</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.*HDApkInstaller: Got Error: INSTALL_FAILED_INVALID_APK</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 10\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk11_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk12_1</unifycode>
+      <interpretation>INSTALL_FAILED_INVALID_URI</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.*HDApkInstaller: Got Error: INSTALL_FAILED_INVALID_URI</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 12\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk13_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk14_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk15_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk16_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk17_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk18_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk19_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk20_1</unifycode>
+      <interpretation>INSTALL_FAILED_SHARED_USER_INCOMPATIBLE</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.*HDApkInstaller: Got Error.+INSTALL_FAILED_SHARED_USER_INCOMPATIBLE</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 20\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk21_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk22_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk23_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk24_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk25_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk26_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk27_1</unifycode>
+      <interpretation>INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.+HDApkInstaller.+INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 27\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk28_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk29_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk30_1</unifycode>
+      <interpretation>INSTALL_PARSE_FAILED_NO_CERTIFICATES</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.*HDApkInstaller: Got Error: INSTALL_PARSE_FAILED_NO_CERTIFICATES</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 30\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk31_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk32_1</unifycode>
+      <interpretation>Http time out(Exception in post file)</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.+Exception in post file</reg>
+          <reg>HD-Agent.+The operation has timed out</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.*Exception in post file</reg>
+          <reg>HD-Agent.+操作超时</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk32_2</unifycode>
+      <interpretation>Http time out</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.+System\.Net\.WebException.+操作超时</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.*System\.Net\.WebException: The operation has timed out</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk32_3</unifycode>
+      <interpretation>Http closed</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.+System\.Net\.Sockets\.SocketException: 远程主机强迫关闭了一个现有的连接</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.+System\.Net\.WebException: 基础连接已经关闭: 连接被意外关闭</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.+ERROR 基础连接已经关闭: 连接被意外关闭</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.+System\.Net\.WebException: The underlying connection was closed: The connection was closed unexpectedly</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.+ERROR The underlying connection was closed: The connection was closed unexpectedly</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk32_4</unifycode>
+      <interpretation>Http aborted</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.*ERROR System.Net.WebException: The request was aborted.*由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.*ERROR System.Net.WebException: 请求被中止.*由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.+System.Net.WebException: The request was aborted: The operation has timed out</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk32_5</unifycode>
+      <interpretation>Http not connect</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.+Unable to connect to the remote server.+System\.Net\.Sockets\.SocketException: 由于目标机器积极拒绝，无法连接</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk32_6</unifycode>
+      <interpretation>No BstHdAndroidSvc service</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.*System\.InvalidOperationException: 在计算机“\.”上没有找到服务 BstHdAndroidSvc</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.+System.InvalidOperationException: Cannot start service BstHdAndroidSvc</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk32_7</unifycode>
+      <interpretation>Not start BstHdAndroidSvc service</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.*ERROR System\.InvalidOperationException: 无法启动计算机“.”上的服务 BstHdAndroidSvc</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk32_8</unifycode>
+      <interpretation>INSTALL_FAILED_UID_CHANGED</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.*HDApkInstaller: Failed to recognize Installer Codes : INSTALL_FAILED_UID_CHANGED</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk32_9</unifycode>
+      <interpretation>Could not find apk file</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.+System.IO.FileNotFoundException: Could not find file .+\.apk\W</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.+System.IO.FileNotFoundException: 未能找到文件.+\.apk\W</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk32_10</unifycode>
+      <interpretation>Http aborted 2</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.+ ERROR Exception in post file</reg>
+          <reg>HD-Agent.+ERROR 请求被中止: 请求已被取消</reg>
+          <reg>HD-ApkHandler.+ERROR HDApkInstaller: Failed to recognize Installer Codes : Exception</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.+ ERROR Exception in post file</reg>
+          <reg>HD-Agent.+ERROR The request was aborted: The request was canceled</reg>
+          <reg>HD-ApkHandler.+ERROR HDApkInstaller: Failed to recognize Installer Codes : Exception</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk32_11</unifycode>
+      <interpretation>System resource not enough</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.+System.IO.IOException: 系统资源不足，无法完成请求的服务</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode />
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk32_100</unifycode>
+      <interpretation>INSTALL_FAILED_ERROR_AT_GUEST</interpretation>
+      <conditions>
+        <reg>HD-ApkHandler.*Exiting with exit code 32\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk33_1</unifycode>
+      <interpretation>GUEST_NOT_READY_YET</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.+HDApkInstaller: Got Error: GUEST_NOT_READY_YET</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 33\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk34_1</unifycode>
+      <interpretation>Another in Progress</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.+HDApkInstaller: Got Error: APK_INSTALLATION_IN_PROGRESS</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 34\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk35_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk36_1</unifycode>
+      <interpretation>Can not connect</interpretation>
+      <conditions>
+        <and>
+          <str>Failed to download icon from web. Err: System.Net.WebException: Unable to connect to the remote server</str>
+          <str>HDApkInstaller: Got Error: INSTALL_FAILED_BROADCAST_NOT_RECEIVED</str>
+          <reg>HD-ApkHandler.*Exiting with exit code 36\W</reg>
+        </and>
+        <and>
+          <str>Failed to download icon from web. Err: System.Net.WebException: 无法连接到远程服务器</str>
+          <str>HDApkInstaller: Got Error: INSTALL_FAILED_BROADCAST_NOT_RECEIVED</str>
+          <reg>HD-ApkHandler.*Exiting with exit code 36\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk36_2</unifycode>
+      <interpretation>Http closed</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.+System.Net.WebException: 基础连接已经关闭: 发送时发生错误</reg>
+          <str>HDApkInstaller: Got Error: INSTALL_FAILED_BROADCAST_NOT_RECEIVED</str>
+          <reg>HD-ApkHandler.*Exiting with exit code 36\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk36_3</unifycode>
+      <interpretation>INSTALL_FAILED_BROADCAST_NOT_RECEIVED</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.+HDApkInstaller: Got Error: INSTALL_FAILED_BROADCAST_NOT_RECEIVED</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 36\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk37_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk38_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk39_1</unifycode>
+      <interpretation>Http closed(Agent)</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.*WebException: 基础连接已经关闭: 接收时发生错误</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 39\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.*WebException: The underlying connection was closed</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 39\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk39_2</unifycode>
+      <interpretation>Http closed(ApkHandler)</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.*WebException: 基础连接已经关闭: 接收时发生错误</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 39\W</reg>
+        </and>
+        <and>
+          <reg>HD-ApkHandler.*WebException: The underlying connection was closed</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 39\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk39_3</unifycode>
+      <interpretation>Http time out(ApkHandler)</interpretation>
+      <conditions>
+        <and>
+          <str>WebException in install request</str>
+          <reg>HD-ApkHandler.+System\.Net\.WebException.+操作超时</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 39\W</reg>
+        </and>
+        <and>
+          <str>WebException in install request</str>
+          <reg>HD-ApkHandler.+System\.Net\.WebException.+The operation has timed out</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 39\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk39_4</unifycode>
+      <interpretation>Http not connect</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.+Unable to connect to the remote server.+System\.Net\.Sockets\.SocketException.+由于目标计算机积极拒绝，无法连接</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 39\W</reg>
+        </and>
+        <and>
+          <reg>HD-ApkHandler.+Unable to connect to the remote server.+System\.Net\.Sockets\.SocketException.+由于目标机器积极拒绝，无法连接</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 39\W</reg>
+        </and>
+        <and>
+          <reg>HD-ApkHandler.+无法连接到远程服务器.+System\.Net\.Sockets\.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 39\W</reg>
+        </and>
+        <and>
+          <reg>HD-ApkHandler.+无法连接到远程服务器.+System\.Net\.Sockets\.SocketException.+由于目标计算机积极拒绝，无法连接</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 39\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk39_5</unifycode>
+      <interpretation>Http aborted</interpretation>
+      <conditions>
+        <and>
+          <str>WebException in install request</str>
+          <reg>HD-ApkHandler.*ERROR System.Net.WebException: The request was aborted.*由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 39\W</reg>
+        </and>
+        <and>
+          <reg>HD-ApkHandler.+ERROR System\.Net\.WebException: 请求被中止.+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 39\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk40_1</unifycode>
+      <interpretation>ANDROID_BOOT_FAILURE</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Frontend.*Guest not booted yet. err: 操作超时</reg>
+          <reg>HD-ApkHandler.*caught exception in checking reason for android boot failure ex</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 40\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk40_2</unifycode>
+      <interpretation>Service not exist or deleted(COMException 0x80070433)</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Frontend.*System.Runtime.InteropServices.COMException.+0x80070433\): 服务不存在，或已被标记为删除</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 40\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk40_3</unifycode>
+      <interpretation>ANDROID_BOOT_FAILURE</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.+HDApkInstaller: Got Error: ANDROID_BOOT_FAILURE</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 40\W</reg>
+        </and>
+        <and>
+          <reg>HD-ApkHandler.+HDApkInstaller: Got Error: ANDROID_BOOT_FAILURE</reg>
+          <reg>HD-ApkHandler.+The arguments being passed to log collector is :-apk 40 "ANDROID_BOOT_FAILURE"</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk41_1</unifycode>
+      <interpretation>AGENT_SERVER_NOT_RUNNING</interpretation>
+      <conditions>
+        <and>
+          <str>ERROR System.Net.WebException: The remote name could not be resolved: 'www.google-analytics.com'</str>
+          <reg>HD-ApkHandler.*Exiting with exit code 41\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk41_2</unifycode>
+      <interpretation>Operation is not supported on this platform(AGENT_SERVER_NOT_RUNNING)</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.+System\.PlatformNotSupportedException: Operation is not supported on this platform</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 41\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.+System\.PlatformNotSupportedException: 此平台上不支持操作</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 41\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk41_3</unifycode>
+      <interpretation>Failed to start listener</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.+System.Net.HttpListenerException.+0x80004005\): 拒绝访问</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 41\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.+System.Net.HttpListenerException: 拒绝访问</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 41\W</reg>
+        </and>
+        <and>
+          <reg>HD-Agent.+System.Net.HttpListenerException \(0x80004005\): 另一个程序正在使用此文件，进程无法访问</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 41\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk41_4</unifycode>
+      <interpretation>Agent Server Not Running</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Frontend.*ERROR Exception when posting</reg>
+          <reg>HD-Frontend.*ERROR 无法连接到远程服务器</reg>
+          <reg>HD-ApkHandler.*Agent Server Not Running</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 41\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk41_5</unifycode>
+      <interpretation>Can not run frontend in "HD-RunApp"</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-RunApp.+System\.ComponentModel\.Win32Exception: 拒绝访问</reg>
+          <reg>HD-RunApp.+System\.Diagnostics\.Process\.StartWithShellExecuteEx\(ProcessStartInfo startInfo\)</reg>
+          <reg>HD-ApkHandler.*Agent Server Not Running</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 41\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode />
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk41_100</unifycode>
+      <interpretation>AGENT_SERVER_NOT_RUNNING</interpretation>
+      <conditions>
+        <reg>HD-ApkHandler.*Exiting with exit code 41\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk42_1</unifycode>
+      <interpretation>Frontend Process Stopped</interpretation>
+      <conditions>
+        <and>
+          <str>Frontend Process Stopped, aborting Installation with FRONTEND_NOT_RUNNING error</str>
+          <reg>HD-ApkHandler.*Exiting with exit code 42\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk42_2</unifycode>
+      <interpretation>FRONTEND_NOT_RUNNING</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.+HDApkInstaller: Got Error: FRONTEND_NOT_RUNNING</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 42\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk43_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk44_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk45_1</unifycode>
+      <interpretation>Apk File not found</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-ApkHandler.*Exiting with exit code 45\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk46_1</unifycode>
+      <interpretation>FRONTEND_NOT_STARTING</interpretation>
+      <conditions>
+        <and>
+          <str>Frontend not responding to ping response for 50 seconds, aborting installtion with FRONTEND_NOT_STARTING error</str>
+          <str>HDApkInstaller: Got Error: FRONTEND_NOT_STARTING</str>
+          <reg>HD-ApkHandler.*Exiting with exit code 46\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk47_1</unifycode>
+      <interpretation>CONFIG_NOT_SYNCED</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-Agent.+Config not sycned, wait 1 second and try again</reg>
+          <reg>HD-ApkHandler.+HDApkInstaller: Got Error: CONFIG_NOT_SYNCED</reg>
+          <reg>HD-ApkHandler.*Exiting with exit code 47\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>apk48_1</unifycode>
+      <interpretation />
+      <conditions />
+    </word>
+    <word>
+      <unifycode>apk0_1</unifycode>
+      <interpretation>Installation Successful</interpretation>
+      <conditions>
+        <errorType>apk</errorType>
+        <and>
+          <reg>HD-ApkHandler.+HDApkInstaller: Installation Successful</reg>
+          <reg>HD-ApkHandler.+HDApkInstaller: Exit with code 0\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <!--End ApkHandler-->
+    <!--Start DeploytoolFailureLogs-->
+    <word>
+      <unifycode>dep-1_1</unifycode>
+      <interpretation>Access to the path is denied</interpretation>
+      <conditions>
+        <and>
+          <reg>System\.IO\.IOException: Access to the path.*is denied\.</reg>
+          <reg>Error Code: -1\W</reg>
+        </and>
+        <and>
+          <reg>System\.IO\.IOException: 对路径.*的访问被拒绝</reg>
+          <reg>Error Code: -1\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-1_2</unifycode>
+      <interpretation>Access to the file is denied</interpretation>
+      <conditions>
+        <and>
+          <reg>System\.IO\.IOException: The process cannot access the file.*because it is being used by another process</reg>
+          <reg>Error Code: -1\W</reg>
+        </and>
+        <and>
+          <reg>System\.IO\.IOException: .*因此该进程无法访问.*文件</reg>
+          <reg>Error Code: -1\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-1_3</unifycode>
+      <interpretation>This access control list is not in canonical form and therefore cannot be modified</interpretation>
+      <conditions>
+        <and>
+          <str>System.InvalidOperationException: This access control list is not in canonical form and therefore cannot be modified</str>
+          <reg>Error Code: -1\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-1_4</unifycode>
+      <interpretation>ERROR No File</interpretation>
+      <conditions>
+        <and>
+          <reg>HD-DeployTool_KK.*ERROR No File :</reg>
+          <reg>Error Code: -1\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-1_5</unifycode>
+      <interpretation>Error while assigning environment</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -1\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-2_1</unifycode>
+      <interpretation>Unable to create registry file</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -2\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-3_1</unifycode>
+      <interpretation>Unable to import Registries(注册表编辑被管理员禁用)</interpretation>
+      <conditions>
+        <and>
+          <str>注册表编辑被管理员禁用</str>
+          <reg>Error Code: -3\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-3_2</unifycode>
+      <interpretation>Unable to import Registries(并未将所有数据都成功写入到注册表中)</interpretation>
+      <conditions>
+        <and>
+          <str>并未将所有数据都成功写入到注册表中</str>
+          <reg>Error Code: -3\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-3_3</unifycode>
+      <interpretation>Unable to import Registries(有些项由系统或其他进程打开)</interpretation>
+      <conditions>
+        <and>
+          <str>有些项由系统或其他进程打开</str>
+          <reg>Error Code: -3\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-3_4</unifycode>
+      <interpretation>Unable to import Registries(有些项由系统或其他进程打开)</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -3\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-4_1</unifycode>
+      <interpretation>Error Creating symlink</interpretation>
+      <conditions>
+        <str>Cannot delete 64-bit HKLM\Software\BlueStacks_tc_dt: 0xc0000121</str>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-4_2</unifycode>
+      <interpretation>Error Creating symlink</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -4\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-5_1</unifycode>
+      <interpretation>Error while extracting Inputmapper profiles</interpretation>
+      <conditions>
+        <and>
+          <str>System.ComponentModel.Win32Exception: The specified executable is not a valid Win32 application</str>
+          <reg>HD-DeployTool_.*Error Code: -5\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-5_2</unifycode>
+      <interpretation>Error while extracting Inputmapper profiles</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -5\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-6_1</unifycode>
+      <interpretation>Error installing driver</interpretation>
+      <conditions>
+        <and>
+          <str>System.ApplicationException: Command  returned exit code 5</str>
+          <reg>HD-DeployTool_.*Error Code: -6\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-6_2</unifycode>
+      <interpretation>Error installing driver</interpretation>
+      <conditions>
+        <and>
+          <str>System.ApplicationException: Command  returned exit code 87</str>
+          <reg>HD-DeployTool_.*Error Code: -6\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-6_3</unifycode>
+      <interpretation>Error installing driver</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -6\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-7_1</unifycode>
+      <interpretation>Error starting driver(BstHdDrv)</interpretation>
+      <conditions>
+        <and>
+          <str>System.InvalidOperationException: Cannot start service BstHdDrv_tc_dt on computer</str>
+          <reg>HD-DeployTool_.*Error Code: -7\W</reg>
+        </and>
+        <and>
+          <reg>System\.InvalidOperationException: 无法启动计算机.* BstHdDrv_tc_dt</reg>
+          <reg>HD-DeployTool_.*Error Code: -7\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-7_2</unifycode>
+      <interpretation>Error starting driver(BstHdDrv)</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -7\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-8_1</unifycode>
+      <interpretation>Error installing android service</interpretation>
+      <conditions>
+        <and>
+          <str>System.ApplicationException: Command  returned exit code 1726</str>
+          <reg>HD-DeployTool_.*Error Code: -8\W</reg>
+        </and>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-8_2</unifycode>
+      <interpretation>Error installing android service</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -8\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-9_1</unifycode>
+      <interpretation>Error installing logrotator service</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -9\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-10_1</unifycode>
+      <interpretation>Error installing updaterservice</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -10\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-11_1</unifycode>
+      <interpretation>Error while Registering ports</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -11\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-15_1</unifycode>
+      <interpretation>An instance of deploytool is already running</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -15\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-18_1</unifycode>
+      <interpretation>older services gets marked_for_deletion</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -18\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-14_1</unifycode>
+      <interpretation>Error while uninstalling older version</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -14\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-16_1</unifycode>
+      <interpretation>Cannot downgrade from a recent version to an older one</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -16\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-17_1</unifycode>
+      <interpretation>Cannot install product as old installation was not properly uninstalled.</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -17\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-19_1</unifycode>
+      <interpretation>Unable to preserve Data during upgrade.</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -19\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-20_1</unifycode>
+      <interpretation>system supports neither Opengl nor DX</interpretation>
+      <conditions>
+        <str>system supports neither Opengl nor DX</str>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep-20_2</unifycode>
+      <interpretation>system supports neither Opengl nor DX</interpretation>
+      <conditions>
+        <reg>HD-DeployTool_.*Error Code: -20\W</reg>
+      </conditions>
+    </word>
+    <word>
+      <unifycode>dep1_1</unifycode>
+      <interpretation>Unhandled Exception</interpretation>
+      <conditions />
+    </word>
+    <word>
+      <unifycode>depx_1</unifycode>
+      <interpretation>Out of Disk space</interpretation>
+      <conditions>
+        <str>System.IO.IOException: 磁盘空间不足</str>
+      </conditions>
+    </word>
+    <!--End DeploytoolFailureLogs-->
+  </words>
+</root>

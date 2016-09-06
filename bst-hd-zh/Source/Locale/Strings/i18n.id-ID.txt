@@ -1,0 +1,562 @@
+;*********************************************************************************************
+; Agent Sys tray context menu
+;*********************************************************************************************
+
+RestoreFactorySettings = Pulihkan Pengaturan Dock
+
+RestartBlueStacks = Nyalakan ulang
+
+QuitBlueStacks = Keluar
+
+StopBlueStacks = Hentikan
+
+RotatePortraitApps = Aplikasi Putar Potret
+RotatePortraitAppsAutomatic = Otomatis
+RotatePortraitAppsEnabled = Aktif
+RotatePortraitAppsDisabled = Nonaktif
+
+UploadDebugLogs = Laporkan Masalah
+
+FreeDuringBeta = Gratis selama beta
+
+SMSSetupMenu = Pengaturan sinkronisasi SMS
+
+ShowNotificationsMenu = Tampilkan Pemberitahuan
+
+PauseSync = Jeda Sinkronisasi
+
+ResumeSync = Lanjutkan Sinkronisasi
+
+CheckForUpdates = Periksa Pembaruan
+DownloadingUpdates = Mengunduh Pembaruan
+InstallUpdates = Instal Pembaruan
+
+Apps = Aplikasi
+App = Aplikasi
+Installed = terinstal
+DiskUsageUnavailable = Penggunaan disk tidak tersedia
+Of = dari
+DiskUsed = disk digunakan
+
+;*********************************************************************************************
+; Frontend buttons tool tip
+;*********************************************************************************************
+
+BackButtonToolTip = Kembali
+
+MenuButtonToolTip = Tampilkan Menu
+
+HomeButtonToolTip = Beranda
+
+SettingsButtonToolTip = Pengaturan
+
+ShareButtonToolTip = Berbagi Snapshot
+
+FullScreenButtonToolTip = Alih Layar Penuh
+
+CloseButtonToolTip = Tutup
+
+;*********************************************************************************************
+; Frontend buttons tool tip
+;*********************************************************************************************
+
+ResizeMessageBoxCaption = Atur Ukuran Pemutar Aplikasi BlueStacks
+
+ResizeMessageBoxText = Catatan: dalam versi beta-1 ini, untuk mengatur ukuran aplikasi, kita harus menutupnya dahulu. Nyalakan ulang aplikasi setelah pengaturan ukuran. Terima kasih!
+
+
+;*********************************************************************************************
+; Frontend Info/Error messages
+;*********************************************************************************************
+
+LoadingMessage = Memuat...
+
+Initializing = Memulai
+
+InitializingGame = Memulai game
+
+DownloadingGameData = Mengunduh data game
+
+CanNotStart = Tidak dapat menjalankan BlueStacks. Silakan hubungi support@bluestacks.com
+
+FullScreenToastText = Anda telah memilih layar penuh. Tekan F11 untuk keluar dari layar penuh.
+
+SnapshotErrorToastText = Aplikasi berbagi snapshot tidak terinstal
+
+GraphicsDriverOutdatedError = Driver Grafis Anda sepertinya sudah usang. BlueStacks memerlukan driver yang telah diperbarui. Perbarui sekarang?
+
+GraphicsDriverOutdatedWarning = Driver Grafis Anda sepertinya sudah usang. Kami menyarankan Anda untuk memperbarui driver guna mendapatkan performa yang optimal. Perbarui sekarang?
+
+GraphicsDriverUpdatedMessage = Driver Grafis Anda telah diperbarui. Anda harus menyalakan ulang komputer agar perubahan ini berlaku.\n\nApakah Anda ingin menyalakan ulang komputer sekarang?
+
+;*********************************************************************************************
+; Agent strings
+;*********************************************************************************************
+
+NetworkAvailableIconText = Agen BlueStacks Online
+
+NetworkUnavailableIconText = Agen BlueStacks
+
+BalloonTitle = BlueStacks
+
+OKButtonText = OKE
+
+CancelButtonText = Batalkan
+
+InstallSuccess = telah diinstal
+
+UninstallSuccess = telah dihapus instalasinya
+
+UninstallFailed = Gagal Menghapus Instalasi
+
+UninstallingWait = Menghapus Instalasi Aplikasi...
+
+CloudConnectTitle = BlueStacks CloudConnect
+
+CloudConnectedMsg = Terhubung
+
+CloudDisconnectedMsg = Terputus
+
+InsufficientStorageMessage = Kartu SD internal dalam Pemutar Aplikasi BlueStacks versi gratis yang Anda gunakan sudah penuh. Anda dapat menghapus instalasi satu atau beberapa aplikasi untuk mengosongkan ruang disk.
+
+
+;*********************************************************************************************
+; ApkInstaller strings
+;*********************************************************************************************
+
+InstallFail = Instalasi gagal
+
+UserWaitText = Menginstal APK...
+
+;*********************************************************************************************
+; LogCollector Strings
+;*********************************************************************************************
+
+NC_ONLY_FORM_TEXT = Perangkat Dukungan Pusat Pemberitahuan
+
+FORM_TEXT = Perangkat Dukungan Pemutar Aplikasi
+
+BUTTON_TEXT = Kirim
+
+EMAIL_LABEL = Alamat Email
+
+ZENDESK_ID_TEXT = ID Zendesk (Opsional)
+
+DESCRIPTION_LABEL = Deskripsi Masalah
+
+STATUS_INITIAL = Memulai Pengumpul
+
+STATUS_COLLECTING_PRODUCT = Mengumpulkan Informasi Produk
+
+STATUS_COLLECTING_HOST = Mengumpulkan Informasi Host
+
+STATUS_COLLECTING_GUEST = Mengumpulkan Informasi Android
+
+STATUS_ARCHIVING = Membuat Arsip Dukungan
+
+STATUS_SENDING = Mengirimkan Laporan Masalah
+
+APP_NAME = Enter App Name
+
+FINISH_CAPT = Perangkat Dukungan Selesai
+
+FINISH_TEXT = Laporan masalah Anda telah terkirim. Anda akan segera kami hubungi."
+
+PROMPT_TEXT = Tidak dapat mengirimkan Laporan Masalah. File dengan nama BlueStacksSupport.zip telah dibuat di desktop Anda. Mohon kirimkan file ini disertai dengan penjelasan singkat mengenai  :masalah Anda ke support@bluestacks.com.
+
+DESC_MISSING_TEXT = Silakan masukkan deskripsi masalah Anda.
+
+ZENDESK_INVALID_ID_TEXT = Silakan masukkan ID Zendesk yang valid
+
+SELECT_CATEGORY_TEXT = Silakan pilih kategori masalah.
+
+EMAIL_MISSING_TEXT = Email Tidak Valid. Silakan masukkan alamat email yang valid.
+
+RPC_FORM_TEXT = Troubleshoot RPC Error
+
+WORK_DONE_TEXT = All Done, If the issue still persists then please report a problem
+
+RPC_PROGRESS_TEXT = Please wait, we are trying to fix the issue
+
+TROUBLESHOOTER_TEXT = Troubleshoot and try to fix my problem automatically
+
+LOGCOLLECTOR_RUNNING_TEXT = Report Problem already running
+
+;*********************************************************************************************
+; Please do not translate strings on the left of ":"
+; for eg, LOGCOLLECTOR_PROBLEMS = category:分类, Bluestacks stuck at initializing:BlueStacks在初始化的时候卡住, Bluestacks crash:BlueStacks崩溃, System restart/crash:系统重启/ 崩溃, App not working:应用无法运行, Other:其它
+;*********************************************************************************************
+
+LOGCOLLECTOR_PROBLEMS = Category:Category, Bluestacks stuck at initializing:BlueStacks stuck at initializing, Bluestacks crash:BlueStacks crash, System restart/crash:System restart/crash, App not working:App not working, Other:Other
+
+Category = Category
+
+APP_MISSING_TEXT = Enter App Name
+
+ZIP_NAME = BlueStacks-Support.zip
+
+;*********************************************************************************************
+; Restart Utility Strings
+;*********************************************************************************************
+
+RESTART_UTILITY_TITLE_TEXT = BlueStacks Restart Utility
+RESTART_UTILITY_USAGE_TEXT = Usage
+RESTART_UTILITY_RESTARTING_TEXT = Restarting BlueStacks
+RESTART_UTILITY_CANNOT_STOP_TEXT = Cannot Stop BlueStacks
+RESTART_UTILITY_CANNOT_START_TEXT = Cannot Start BlueStacks
+RESTART_UTILITY_EXIT_TEXT = Exit
+RESTART_UTILITY_UNHANDLED_EXCEPTION_TEXT = Caught unhandled exception. Please check the log for details.
+APKINSTALLER_ALREADY_RUNNING = An app is already being installed. Please wait while it finishes installing.
+
+;*********************************************************************************************
+; Updater Utility Strings
+;*********************************************************************************************
+
+UPDATER_UTILITY_NO_UPDATE_TITLE = BlueStacks Updater
+UPDATER_UTILITY_NO_UPDATE_TEXT = No new updates available
+UPDATER_UTILITY_ASK_TO_INSTALL_TITLE = Update Available
+UPDATER_UTILITY_ASK_TO_INSTALL_TEXT = Would you like to update to the latest version of BlueStacks?
+UPDATER_UTILITY_ASK_TO_INSTALL_NOW = Install Now
+UPDATER_UTILITY_ASK_TO_INSTALL_REMIND_LATER = Remind Me Later
+UpdateSuccess = has been updated 
+
+;*********************************************************************************************
+; Tooltips
+;*********************************************************************************************
+
+GuidanceTooltip = Pengontrol atau pemetaan keyboard untuk permainan ini
+
+SettingsTooltip = Pengaturan
+
+MinimizeTooltip = Minimalkan ke taskbar
+
+ToggleScreenTooltip = Hidupkan/matikan layar
+
+CloseTooltip = Tutup
+
+HelpTooltip = Bantuan
+
+BackTooltip = Kembali
+
+;*********************************************************************************************
+; Close popup
+;*********************************************************************************************
+
+ClosePopupText = Ingin tetap menerima pemberitahuan dari aplikasi Anda?
+
+YesText = Ya
+
+NoText = Tidak
+
+CancelText = Batal
+
+RememberChoiceText = Ingat pilihan saya
+
+;*********************************************************************************************
+; Settings menu
+;*********************************************************************************************
+
+ReportProblemText = Laporkan masalah
+
+RestartAndroidText = Mulai Ulang Plugin Android
+
+CheckForUpdatesText = Periksa Pembaruan
+
+SettingsText = Pengaturan
+
+LanguageAndInputSettingsText = Bahasa dan Input
+
+MyAccountText = Akun Saya
+
+LocationText = Atur Lokasi
+
+;*********************************************************************************************
+; Wait Message Strings
+;*********************************************************************************************
+
+Wait_Message_String_Comma_Seprated = Silakan Tunggu...,Persiapan...,Memuat Data...,Mohon tunggu sebentar...
+
+
+;*********************************************************************************************
+; Control bar
+;*********************************************************************************************
+
+ToolBarChangeAppSize = Ubah ukuran aplikasi
+
+ToolBarShake = Goyangkan
+
+ToolBarCamera = Ambil screenshot
+
+ToolBarInstallApk = Instal apk
+
+ToolBarCopyFromWindows = Salin file dari Windows
+
+ToolBarCopy = Salin
+
+ToolBarPaste = Tempel
+
+ToolBarVolume = Volume
+
+ToolBarHelp = Bantuan
+
+Android = Android
+
+Welcome = Selamat Datang
+
+Finish = Selesai
+
+StartBlueStacks = Mulai BlueStacks
+
+InstallLocationError = Lokasi data tidak dapat diakses. Silakan pilih beberapa lokasi lain
+
+SelectTheme = Pilih Tema
+
+;*********************************************************************************************
+; Updater Progress
+;*********************************************************************************************
+
+UpdateInstallingText = Menginstal...
+
+UpdateSuccessText = BlueStacks berhasil diperbarui
+
+UpdateErrorText = Kesalahan selama pembaruan. Silakan coba lagi nanti
+
+UpdateMessageBoxTitleText = Pembaruan BlueStacks
+
+UpdateDownloadedText = Diunduh...
+
+UpdateProgressTitleText = Pembaruan BlueStacks
+
+UpdateDownloadPreparingText = Bersiap untuk mengunduh...
+
+UpdateAvailableText = Pembaruan tersedia. Ingin menginstalnya sekarang?
+
+BlueStacksApkHandlerTitle = Pengelola Apk BlueStacks
+
+CommonAppTitleText  = Pemutar Aplikasi BlueStacks
+
+SnapShotShareString = dibagikan lewat Pemutar Aplikasi BlueStacks (www.bluestacks.com)
+
+AppTitle = Pemutar Aplikasi BlueStacks
+
+General = Umum
+
+Themes = Tema
+
+Preferences = Preferensi
+
+Text = Teks
+
+Tab = Tab
+
+LeftSideBar = Bilah Sisi Kiri
+
+SettingsMenu = Menu Pengaturan
+
+TabBar = BilahTab
+
+Border = Tepian
+
+Style = Gaya
+
+InactiveTabBottom = Tab Bawah Nonaktif
+
+InactiveTabTop = Tab Atas Nonaktif
+
+SelectedTabBottom = Tab Bawah Terpilih
+
+SelectedTabTop = Tab Atas Terpilih
+
+SelectedTabText = Teks Tab Terpilih
+
+MouseOverTabText = Teks Tab ArahKursor
+
+InactiveTabText = Teks Tab Nonaktif
+
+BottomGradient = Gradasi Bawah
+
+TopGradient = Gradasi Atas
+
+MouseOverColor = Warna ArahKursor
+
+ForeGroundColor = Warna Latar Depan
+
+BackGroundColor = Warna Latar Belakang
+
+TabTopColorMouseOver = ArahKursor Tab Atas
+
+TabBottomColorMouseOver = ArahKursor Tab Bawah
+
+InnerBorder = Tepian di Dalam
+
+TabBorder = Tepian Tab
+
+ToolBarBorder = Tepian Bilah sisi kiri
+
+GameManagerBorder = Tepian Pemutar Aplikasi
+
+Apply = Pakai
+
+NewTheme = Tema Baru
+
+AppRestartConfirmMsg = Aplikasi akan dihidupkan ulang. Apakah Anda ingin melanjutkan?
+
+EnterTheme = Silakan masukkan nama tema
+
+ThemeAlreadyExists = Tema sudah ada
+
+Confirm = Konfirmasi Tindakan
+
+ControlBar = BilahKendali
+
+LableConfigureGamePad = Aktifkan GamePad
+
+LabelSideBar = Tampilkan bilah sisi
+
+LabelWindowSize = Ukuran jendela
+
+LabelRestartNote = Pengaturan akan butuh menghidupkan ulang aplikasi.
+
+LabelStayAwake = Tetap Menyala
+
+LabelLanguage = Bahasa
+
+LabelAutoStart = Mulai otomatis saat windows hidup
+
+GroupBoxBluestacksPreferences = Preferensi BlueStacks
+
+XPNotSupported = Fitur ini tidak didukung di Windows XP!
+
+ToolBarGoLive = Siar Langsung
+
+EndStreaming = Akhiri Pengaliran
+
+KeepStreaming = Teruskan Pengaliran
+
+CloseMessagePrompt = Menutup jendela ini akan menghentikan pengaliran Anda.\nApakah Anda ingin menghentikan pengaliran?
+
+CloseWhileStreamingTooltip = Hentikan Pengaliran
+
+ConfirmMsgOnThemeChange = Tema tidak diterapkan! Apakah Anda ingin melanjutkan tanpa menyimpan perubahan?
+
+UpdateSuccessAndLaunchText = BlueStacks berhasil diperbarui.\nApakah Anda ingin menjalankan BlueStacks sekarang?
+
+ToolBarWatchVideos = Tonton Video
+
+LabelHideTopBar = Sembunyikan tab di layar penuh
+
+VMX_IN_USE = Sayangnya, BlueStacks (beta-1) tidak dapat berjalan di PC yang mesin virtualnya (VM) sedang digunakan. Anda boleh menghapus instalan VM, boot ulang lalu jalankan kembali BlueStacks, atau tunggu rilis BlueStacks masa depan di mana kondisi saat ini sedang tenang.
+
+HYPERV_ENABLED = Sayangnya, BlueStacks (beta-1) tidak dapat berjalan di PC yang perangkat lunak virtualisasi lainnya (VMWare/VirtualBox/Hyper-V) sedang aktif. Pemasangan sekarang akan dibatalkan.
+
+SYSTEM_UPGRADED_ERROR = Sepertinya sistem Anda telah ditingkatkan. Silakan klik OK untuk mengkonfigurasi dan menjalankan Pemutar Aplikasi BlueStacks.
+
+DRIVER_UPDATE_MESSAGE = BlueStacks tidak dapat melanjutkan instalasinya karena kartu grafis Anda membutuhkan perbaruan driver.\n\nKlik Pelajari Lebih Lanjut untuk mengikuti instruksi soal bagaimana cara memperbarui driver Anda.
+
+ToolBarLiveStreaming = Pengaliran Langsung
+
+TryAgainText = Coba Lagi
+
+LabelForceKill = Paksa matikan aplikasi saat menutup tab
+
+LabelShowExitMenu = Peringati saya sebelum menutup aplikasi
+
+ANDROID_DATA_BACKUP_FAILED = Oh ow - Ada permasalahan saat mencoba melindungi data Anda. Lanjutkan saja?
+
+UNINSTALLATION_CONFIRMATION = Apakah Anda yakin ingin menghapus instalan Pemutar Aplikasi BlueStacks
+
+PRESERVE_BSDATA_ON_UNINSTALL = Apakah Anda ingin menyimpan semua aplikasi dan data?\nCatatan : Hal ini mungkin membutuhkan sebagian ruang di sistem Anda sesuai ukuran data aplikasi yang Anda miliki
+
+UNINSTALLATION_FORM_MSG = Mohon tunggu sementara kami menghapus instalan Pemutar Aplikasi BlueStacks.\nBeritahu kami bagaimana cara kami dapat memperbaikinya di www.bluestacks.com
+
+PRE_INSTALL_CHECKS = PengecekanPraPasang BlueStacks
+
+COPY_BLUESTACKS_FILES_FOLDERS = Menyalin Berkas dan Folder BlueStacks
+
+CREATE_BLUESTACKS_REGISTRY = Membuat Registry BlueStacks
+
+CREATE_BLUESTACKS_SERVICES = Memasang Driver dan Layanan BlueStacks
+
+RESTORE_BLUESTACKS_BACKUP = Mengembalikan BackupData BlueStacks
+
+CREATE_SHORTCUTS = Membuat Pintasan BlueStacks
+
+ROLLBACK_DELETE_SERVICE = Pemasangan Gagal, Menggulirkan Kembali, Menghapus Layanan
+
+ROLLBACK_DELETE_FILES_FOLDERS = Pemasangan Gagal, Menggulirkan Kembali, Menghapus Berkas dan Folder
+
+WINXP64_UNSUPPORTED = OS tidak didukung. BlueStacks tidak mendukung Windows XP X64
+
+InstallFailed = Pemasangan Gagal
+
+INSTALL_FAILED_MESSAGE = Pemasangan Gagal,\nSilakan Nyalakan Ulang Mesin Anda lalu Coba lagi,\nKirim email berkas catatan ke support@bluestacks.com\n di lokasi
+
+STOPPING_BLUESTACKS = Meninggalkan BlueStacks
+
+BACKINGUP_BLUESTACKS_DATA = Membackup Data BlueStacks
+
+REMOVING_BLUESTACKS_SERVICES = Menghapus Layanan BlueStacks
+
+REMOVING_BLUESTACKS_FOLDERS = Menghapus Berkas BlueStacks
+
+Settings = Setelan
+
+Location = Lokasi
+
+WINXPSP3_REQUIRED = OS tidak didukung. BlueStacks membutuhkan Windows XP SP3
+
+WINVISTASP2_REQUIRED = OS tidak didukung. BlueStacks membutuhkan Windows Vista SP2 atau lebih tinggi
+
+INSUFFICIENT_DISKSPACE = Tidak cukup ruang penyimpanan tersedia. BlueStacks membutuhkan 
+
+INSUFFICIENT_PHYSICALMEMORY = BlueStacks membutuhkan setidaknya 2 GB memori fisik
+
+DX_UNSUPPORTED = Kartu grafis/driver Anda tidak mendukung BlueStacks versi saat ini
+
+REGISTRY_EDITING_DISABLED = BlueStacks membutuhkan hak penyuntingan registry untuk pemasangan
+
+DOTNET2_SP2REQUIRED = mesin tidak mempunyai dot net 2 sp 2 atau lebih tinggi yang terpasang
+
+DOTNET35_FULLREQUIRED = mesin tidak mempunyai dot net 3.5 atau lebih tinggi terpasang
+
+CREATE_BACKUP = Membuat Backup Produk
+
+ROLLBACK_CREATE_BACKUP_FAILED = Pembuatan Backup Gagal, Menggulirkan Kembali
+
+UPGRADE_FAILED = Pembaruan Gagal
+
+UPGRADE_FAILED_MESSAGE = Silakan Nyalakan Ulang Mesin Anda lalu Coba lagi, \nKirimkan juga email berkas catatannya ke support@bluestacks.com yang ada di lokasi\n
+
+ROLLBACK_FAILED_MESSAGE = Tidak dapat menggulirkan kembali pembaruan. Silakan Nyalakan Ulang Mesin Anda lalu Coba lagi, \Kirimkan juga email berkas catatannya ke support@bluestacks.com yang ada di lokasi\n
+
+UpdateProgressTitleText = Pemutakhir BlueStacks
+
+UpdateAvailableText = Pembaruan tersedia. Apakah Anda ingin memasang sekarang?
+
+ForcedUpdateAvailableText = Pembaruan paksa tersedia. Apakah Anda ingin memasang sekarang?
+
+;*********************************************************************************************
+;Filter Download UI Text
+;*********************************************************************************************
+
+FILTER_UPDATE_TITLE = Pembaru Filter BlueStacks
+
+INITIALIZING_TEXT = Memulai pengunduh...
+
+DOWNLOADING_TEXT = Mengunduh {0} dari {1}...
+
+DOWNLOADED_TEXT = Pengunduhan selesai...
+
+APPLYING_TEXT = Menerapkan tema...
+
+APPLY_BUTTON_TEXT = Terapkan
+
+LATER_BUTTON_TEXT = Nanti
+
+DOWNLOAD_ERROR_TEXT = Ups! terjadi kesalahan. Filter akan diperbarui pada peluncuran berikutnya
+
+STOP_STREAMING_REQUIRED = Untuk pembaruan ini, harus berhenti Streaming
+
+OBS_ERROR_TEXT = Ups! Ada kesalahan. Ingin mencoba lagi?
+
+OBS_ALREADY_RUNNING = OBS Instance lain sedang berjalan! Tutup itu lebih dahulu, agar dapat Go Live.

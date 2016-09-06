@@ -1,0 +1,27 @@
+var zh_TW = {
+    "Edit_Filter": "編輯濾鏡",
+    "Filters": "濾鏡",
+    "Add_Filters_to_Your_Stream": "新增濾鏡至你的實況！",
+    "Filters_make_your_stream_look_amazing": "濾鏡能讓你的實況看起來更讚！",
+    "Try_Filters_in_Clash_Royale_now": "現在在「部落衝突：皇室戰爭」或",
+    "Filters_is_currently_available":"目前濾鏡僅適用於 Pokemon Go 和 Clash Royale，但我們正努力盡快讓濾鏡能使用在更多遊戲上 :)",
+    "Filters_livens_up_your_stream": "濾鏡能讓你的實況更加活潑，有絕妙的動態背景和獨特的聊天視窗等等。",
+    "Editing…": "編輯中...",
+    "Select_a_Filter": "選擇一項濾鏡",
+    "personalize": "個人化",
+    "Personalize_your_Filter": "個人化你的濾鏡",
+    "Restore_to_Default": "還原為預設",
+    "back": "返回",
+    "done": "完成",
+    "Webcam": "網路攝影機",
+    "Chat": "聊天",
+    "animate": "動態",
+    "Connect": "連線",
+    "filters": "濾鏡",
+    "cancel": "取消",
+    "Filter_Added": "已新增濾鏡！",
+    "Animations_take_your_stream":"動畫能為您的實況增色，但也需要大量資源。",
+    "Try_disabling_them":"如果遇到速度緩慢的情形，請嘗試將其停用。",
+    "or_pokemon_go_now":"「精靈寶可夢GO」中嘗試使用濾鏡吧！"
+};
+

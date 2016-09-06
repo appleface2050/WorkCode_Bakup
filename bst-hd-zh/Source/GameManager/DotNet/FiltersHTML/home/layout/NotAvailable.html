@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="utf-8" http-equiv="encoding">
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="./styles/notavailable.css">
+
+    <script src="./i18n/en-US.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/localization.js"></script>
+    <script src="js/gmApi.js"></script>
+    <script>
+        //For Translation
+        $('body').ready(function () {
+            initLocalization();
+        });
+    </script>
+</head>
+
+<div class="container-notAvailable">
+    <div class="NotAvailable_Section">
+       <div class="filter-logo">
+           <img src="./images/filter_icon.png" class="filter_image"/>
+       </div>
+        <div class="main-content">
+           <h2 class="i18n" label="Filters_make_your_stream_look_amazing"></h2>
+           <p class="i18n" label="Filters_is_currently_available"></p>
+           <p class="i18n" label="Filters_livens_up_your_stream"></p>
+       </div>
+        <div class="theme_banner_text">
+            <h2 class="i18n" label="Try_Filters_in_Clash_Royale_now"></h2>
+        </div>
+        <div class="theme_banner_text_clone">
+            <h2 class="i18n" label="or_pokemon_go_now"></h2>
+        </div>
+        <div class="close-wrapper">
+            <img onmousedown=src="./images/popup_close_click.png"; onmouseout=src="./images/popup_close.png"; onmouseover=src="./images/popup_close_hover.png"; id="cross" class="cross" src="./images/popup_close.png">
+        </div>
+    </div>
+    <script>
+        document.getElementById("cross").onclick = function(){
+            GmApi.gmCloseFilterWindow([]);
+        }
+    </script>
+</div>

@@ -1,0 +1,221 @@
+﻿;*********************************************************************************************
+; Agent Sys tray context menu
+;*********************************************************************************************
+
+RestoreFactorySettings = Dokkbeállítások visszaállítása
+
+RestartBlueStacks = Restart
+
+QuitBlueStacks = Quit
+
+UploadDebugLogs = Probléma jelentése
+
+FreeDuringBeta = Béta változatban ingyenes
+;*********************************************************************************************
+; Kezelõgombok eszköztipp
+;*********************************************************************************************
+
+BackButtonToolTip = Vissza a
+menühözButtonToolTip = Menü mutatása
+
+HomeButtonToolTip = Home
+
+SettingsButtonToolTip = Beállítások
+
+ShareButtonToolTip = Snapshot
+ megosztása
+
+;*********************************************************************************************
+; Kezelõgombok eszkköztipp
+;*********************************************************************************************
+
+ResizeMessageBoxCaption = BlueStacks alkalmazás lejátszó átméretezése
+
+ResizeMessageBoxText = Megjegyzés: ebben a béta-1 változatban az alkalmazást be kell zárni az átméretezéséhez. Átméretezés után indítsa újra az alkalmazást. Köszönjük!
+
+
+;*********************************************************************************************
+; Kezelõi infó/Hibaüzenetek;*********************************************************************************************
+
+LoadingMessage = Betöltés...
+
+;### {0} bõvítémény betöltése folyik a(z) 'App Name' alkalmazsához. Pl.: "Pulzus betöltése..."
+
+LoadingAppMessage = {0} betöltése...
+
+CanNotStart = A BlueStacks nem  indítható el. Küldjön üzenetet a support@bluestacks.com
+ címre
+;*********************************************************************************************
+; Agent strings
+;*********************************************************************************************
+
+NetworkAvailableIconText = BlueStacks ügynök Online
+
+NetworkUnavailableIconText = BlueStacks ügynök
+
+BalloonTitle = BlueStacks
+
+OKButtonText = OK
+
+CancelButtonText = MÉgsel
+
+InstallSuccess = telepítve
+
+UninstallSuccess = eltávolítvaed
+
+UninstallFailed = Az eltávolítás nem sikerült
+UninstallingWait = Alkalmazás eltávolítása...
+
+CloudConnectTitle = BlueStacks felhõConnect
+
+CloudConnectedMsg = Connected
+
+CloudDisconnectedMsg = Kapcsolat megszakadt
+
+InsufficientStorageMessage = Az Ön által használt BlueStacks alkalmazás-lejátszó ingyenes változatában használt SD-kártya megtelt. Távolítson el egy vagy több alkalmazást, ha több helyre van szüksége.
+
+
+;*********************************************************************************************
+; ApkInstaller strings
+;*********************************************************************************************
+
+InstallFail = Telepítés nem sikerült
+
+UserWaitText = APK telepítése...
+
+;*********************************************************************************************
+; Restart Utility Strings
+;*********************************************************************************************
+
+RESTART_UTILITY_TITLE_TEXT = BlueStacks Restart Utility
+RESTART_UTILITY_USAGE_TEXT = Usage
+RESTART_UTILITY_RESTARTING_TEXT = Restarting BlueStacks
+RESTART_UTILITY_CANNOT_STOP_TEXT = Cannot Stop BlueStacks
+RESTART_UTILITY_CANNOT_START_TEXT = Cannot Start BlueStacks
+RESTART_UTILITY_EXIT_TEXT = Exit
+RESTART_UTILITY_UNHANDLED_EXCEPTION_TEXT = Caught unhandled exception. Please check the log for details.
+APKINSTALLER_ALREADY_RUNNING = An app is already being installed. Please wait while it finishes installing.
+
+;*********************************************************************************************
+; Updater Utility Strings
+;*********************************************************************************************
+
+UPDATER_UTILITY_NO_UPDATE_TITLE = BlueStacks Updater
+UPDATER_UTILITY_NO_UPDATE_TEXT = No new updates available
+UPDATER_UTILITY_ASK_TO_INSTALL_TITLE = Update Available
+UPDATER_UTILITY_ASK_TO_INSTALL_TEXT = Would you like to update to the latest version of BlueStacks?
+UPDATER_UTILITY_ASK_TO_INSTALL_NOW = Install Now
+UPDATER_UTILITY_ASK_TO_INSTALL_REMIND_LATER = Remind Me Later
+UpdateSuccess = has been updated 
+
+
+;*********************************************************************************************
+; Tooltips
+;*********************************************************************************************
+
+GuidanceTooltip = A játék vezérlő- vagy billentyűzetkiosztása
+
+SettingsTooltip = Beállítások
+
+MinimizeTooltip = Kis méretűvé tétel a tálcára
+
+ToggleScreenTooltip = Képernyő váltása
+
+CloseTooltip = Bezárás
+
+HelpTooltip = Súgó
+
+BackTooltip = Vissza
+
+;*********************************************************************************************
+; Close popup
+;*********************************************************************************************
+
+ClosePopupText = Szeretne továbbra is értesítéseket kapni az alkalmazásokból?
+
+YesText = Igen
+
+NoText = Nem
+
+CancelText = Mégse
+
+RememberChoiceText = Választás megjegyzése
+
+;*********************************************************************************************
+; Settings menu
+;*********************************************************************************************
+
+ReportProblemText = Probléma jelentése
+
+RestartAndroidText = Android beépülő modul újraindítása
+
+CheckForUpdatesText = Frissítések keresése
+
+SettingsText = Beállítások
+
+LanguageAndInputSettingsText = Nyelv és bevitel
+
+MyAccountText = Saját fiók
+
+LocationText = Hely beállítása
+
+;*********************************************************************************************
+; Wait Message Strings
+;*********************************************************************************************
+
+Wait_Message_String_Comma_Seprated = Várjon...,Indítás folyamatban...,Adatok betöltése...,Kis türelmet...
+
+
+;*********************************************************************************************
+; Control bar
+;*********************************************************************************************
+
+ToolBarChangeAppSize = Alkalmazásméret módosítása
+
+ToolBarShake = Rázás
+
+ToolBarCamera = Képernyőkép rögzítése
+
+ToolBarInstallApk = Apk telepítése
+
+ToolBarCopyFromWindows = Fájlok másolása a Windowsból
+
+ToolBarCopy = Másolás
+
+ToolBarPaste = Beillesztés
+
+ToolBarVolume = Hangerő
+
+ToolBarHelp = Súgó
+
+Android = Android
+
+Welcome = Üdvözöljük
+
+Finish = Befejezés
+
+StartBlueStacks = BlueStacks indítása
+
+InstallLocationError = Az adatok helye nem érhető el. Válasszon egy másik helyet
+
+SelectTheme = Téma kiválasztása
+
+;*********************************************************************************************
+; Updater Progress
+;*********************************************************************************************
+
+UpdateInstallingText = Telepítés...
+
+UpdateSuccessText = A BlueStacks frissítése sikerült
+
+UpdateErrorText = Hiba a frissítés során. Próbálja újra később
+
+UpdateMessageBoxTitleText = BlueStacks frissítése
+
+UpdateDownloadedText = Letöltve...
+
+UpdateProgressTitleText = BlueStacks frissítő
+
+UpdateDownloadPreparingText = Előkészítés a letöltésre...
+
+UpdateAvailableText = Frissítés érhető el. Kívánja telepíteni most?

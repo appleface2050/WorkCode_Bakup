@@ -1,0 +1,336 @@
+﻿;*********************************************************************************************
+; Agent Sys tray context menu
+;*********************************************************************************************
+
+RestoreFactorySettings = Återställ dockningsinställningar
+
+RestartBlueStacks = Omstart
+
+QuitBlueStacks = Sluta
+
+StopBlueStacks = Sluta
+
+RotatePortraitApps = Rotera porträttappar
+RotatePortraitAppsAutomatic = Automatisk
+RotatePortraitAppsEnabled = Aktiverad
+RotatePortraitAppsDisabled = Obrukbar
+
+UploadDebugLogs = Rapportera problem
+
+FreeDuringBeta = Gratis under beta
+
+SMSSetupMenu = SMS synkroniseringsinställningar
+
+ShowNotificationsMenu = Visa meddelanden
+
+PauseSync = Pausa synk
+
+ResumeSync = Återuppta synk
+
+CheckForUpdates = Leta efter uppdateringar
+DownloadingUpdates = Ladda ned uppdateringar
+InstallUpdates = Installera uppdateringar
+
+Apps = Appar
+App = App
+Installed = installerad
+DiskUsageUnavailable = Diskanvändning otillgänglig
+Of = av
+DiskUsed = skiva använd
+
+;*********************************************************************************************
+; Frontend buttons tool tip
+;*********************************************************************************************
+
+BackButtonToolTip = Gå tillbaka
+
+MenuButtonToolTip = Visa meny
+
+HomeButtonToolTip = Hem
+
+SettingsButtonToolTip = Inställningar
+
+ShareButtonToolTip = Dela bild
+
+FullScreenButtonToolTip = Växla fullskärmsläge
+
+CloseButtonToolTip = Stäng
+
+;*********************************************************************************************
+; Frontend buttons tool tip
+;*********************************************************************************************
+
+ResizeMessageBoxCaption = Ändra storlek BlueStacks App spelare
+
+ResizeMessageBoxText = Notera: för att ändra storlek på appen i denna beta-1-version,  måste vi  stänga den. Vänligen åter-starta appen efter ändrad storlek. Tack!
+
+
+
+;*********************************************************************************************
+; Frontend Info/Error messages
+;*********************************************************************************************
+
+LoadingMessage = Loading...
+
+
+Initializing = Initializing
+InitializingGame = Initierar spel
+
+DownloadingGameData = Nerladdning speldata
+
+CanNotStart = Kan inte starta BlueStacks. Vänligen kontakta support@bluestacks.com
+
+FullScreenToastText = Du har valt helskärm. Tryck på F11 för att avsluta helskärmsläge.
+
+SnapshotErrorToastText = Inget program för bilddelning är installerat
+
+GraphicsDriverOutdatedError = Dina drivrutiner för grafik verkar vara föråldrade. BlueStacks kräver uppdaterade drivrutiner för att köra. Uppdatera nu?
+
+GraphicsDriverOutdatedWarning = Dina drivrutiner för grafik verkar vara föråldrade. Vi rekommenderar att du uppdatera drivrutinerna för optimal prestanda. Uppdatera nu?
+
+GraphicsDriverUpdatedMessage = Dina grafikdrivrutiner har uppdaterats. Du måste starta om datorn för att ändringarna ska börja gälla. Vill du starta om datorn nu?
+
+;*********************************************************************************************
+; Agent strings
+;*********************************************************************************************
+
+NetworkAvailableIconText = BlueStacks ombud online
+
+NetworkUnavailableIconText = BlueStacks ombud
+
+BalloonTitle = BlueStacks
+
+OKButtonText = OK
+
+CancelButtonText = Avbryt
+
+InstallSuccess = har installerats
+
+UninstallSuccess = har avinstallerats
+
+UninstallFailed = Det gick inte att avinstallera
+
+UninstallingWait = Avinstallera App ...
+
+CloudConnectTitle = BlueStacks MolnAnslutning
+
+CloudConnectedMsg = Ansluten
+
+CloudDisconnectedMsg = Inte ansluten
+
+InsufficientStorageMessage = Den interna SD-kortet i den fria versionen av BlueStacks App Player som du använder är fullt. Du är välkommen att avinstallera ett eller flera appar för att fria upp utrymme.
+
+
+
+;*********************************************************************************************
+; ApkInstaller strings
+;*********************************************************************************************
+
+InstallFail = Installation failed
+
+
+UserWaitText = Installing APK...
+
+;*********************************************************************************************
+; LogCollector Strings
+;*********************************************************************************************
+
+NC_ONLY_FORM_TEXT = Notification Center støtteverktøyet
+
+FORM_TEXT = App Player Support Tool
+
+BUTTON_TEXT = Send
+
+EMAIL_LABEL = E-postadresse
+
+ZENDESK_ID_TEXT = Zendesk Id (valgfritt)
+
+DESCRIPTION_LABEL = problem Beskrivelse
+
+STATUS_INITIAL = starter Collector
+
+STATUS_COLLECTING_PRODUCT = Samle Produktinformasjon
+
+STATUS_COLLECTING_HOST = Samle vertsinformasjon
+
+STATUS_COLLECTING_GUEST = Samle Android Informasjon
+
+STATUS_ARCHIVING = Opprette Support Arkiv
+
+STATUS_SENDING = Sende Problem Rapporter
+
+APP_NAME = Oppgi App Name
+
+FINISH_CAPT = Support Tool Komplett
+
+FINISH_TEXT = Ditt problem Rapporten er sendt. Vi vil komme tilbake til deg snart.
+
+PROMPT_TEXT = Kunne ikke sende Problem Report. En fil som heter BlueStacks-Support.zip har blitt opprettet på skrivebordet. Send en e-post på dette bildet sammen med en kort beskrivelse av problemet ditt til support@bluestacks.com.
+
+DESC_MISSING_TEXT = Skriv inn en beskrivelse av problemet ditt.
+
+ZENDESK_INVALID_ID_TEXT = Skriv inn en gyldig Zendesk ID
+
+SELECT_CATEGORY_TEXT = Vennligst velg et problem kategori.
+
+EMAIL_MISSING_TEXT = Ugyldig e-post. Skriv inn en gyldig e-postadresse.
+
+RPC_FORM_TEXT = Feilsøke RPC Error
+
+WORK_DONE_TEXT = Alle gjort, hvis problemet vedvarer så kan du rapportere et problem
+
+RPC_PROGRESS_TEXT = Vennligst vent, vi prøver å fikse problemet
+
+TROUBLESHOOTER_TEXT = Feilsøke og prøve å fikse problemet mitt automatisk
+
+LOGCOLLECTOR_RUNNING_TEXT = Rapporter Problem allerede kjører
+
+;*********************************************************************************************
+; Please do not translate strings on the left of ":"
+; for eg, LOGCOLLECTOR_PROBLEMS = category:分类, Bluestacks stuck at initializing:BlueStacks在初始化的时候卡住, Bluestacks crash:BlueStacks崩溃, System restart/crash:系统重启/ 崩溃, App not working:应用无法运行, Other:其它
+;*********************************************************************************************
+
+LOGCOLLECTOR_PROBLEMS = Category:Kategori, Bluestacks stuck at initializing:BlueStacks fast på initialisering, Bluestacks crash:BlueStacks krasj, System restart/crash:Omstart av systemet / krasj, App not working:App fungerer ikke, Other:Annet
+
+Category = Kategori
+
+APP_MISSING_TEXT = Oppgi App Name
+
+ZIP_NAME = BlueStacks-Support.zip
+
+;*********************************************************************************************
+; Restart Utility Strings
+;*********************************************************************************************
+
+RESTART_UTILITY_TITLE_TEXT = BlueStacks Restart Utility
+RESTART_UTILITY_USAGE_TEXT = Usage
+RESTART_UTILITY_RESTARTING_TEXT = Restarting BlueStacks
+RESTART_UTILITY_CANNOT_STOP_TEXT = Cannot Stop BlueStacks
+RESTART_UTILITY_CANNOT_START_TEXT = Cannot Start BlueStacks
+RESTART_UTILITY_EXIT_TEXT = Exit
+RESTART_UTILITY_UNHANDLED_EXCEPTION_TEXT = Caught unhandled exception. Please check the log for details.
+APKINSTALLER_ALREADY_RUNNING = An app is already being installed. Please wait while it finishes installing.
+
+;*********************************************************************************************
+; Updater Utility Strings
+;*********************************************************************************************
+
+UPDATER_UTILITY_NO_UPDATE_TITLE = BlueStacks Updater
+UPDATER_UTILITY_NO_UPDATE_TEXT = No new updates available
+UPDATER_UTILITY_ASK_TO_INSTALL_TITLE = Update Available
+UPDATER_UTILITY_ASK_TO_INSTALL_TEXT = Would you like to update to the latest version of BlueStacks?
+UPDATER_UTILITY_ASK_TO_INSTALL_NOW = Install Now
+UPDATER_UTILITY_ASK_TO_INSTALL_REMIND_LATER = Remind Me Later
+UpdateSuccess = has been updated 
+
+;*********************************************************************************************
+; Tooltips
+;*********************************************************************************************
+
+GuidanceTooltip = Kontroll- eller tastaturavbildinger for dette spillet
+
+SettingsTooltip = Innstillinger
+
+MinimizeTooltip = Minimer til oppgavelinje
+
+ToggleScreenTooltip = Vippeskjerm
+
+CloseTooltip = Lukk
+
+HelpTooltip = Hjelp
+
+BackTooltip = Gå tilbake
+
+;*********************************************************************************************
+; Close popup
+;*********************************************************************************************
+
+ClosePopupText = Vil du fortsatt motta varsler fra våre apper?
+
+YesText = Ja
+
+NoText = Nei
+
+CancelText = Avbryt
+
+RememberChoiceText = Husk valget
+
+;*********************************************************************************************
+; Settings menu
+;*********************************************************************************************
+
+ReportProblemText = Rapporter problem
+
+RestartAndroidText = Start Android Plugin på nytt
+
+CheckForUpdatesText = Se etter oppdateringer
+
+SettingsText = Innstillinger
+
+LanguageAndInputSettingsText = Språk og inndata
+
+MyAccountText = Min konto
+
+LocationText = Velg sted
+
+;*********************************************************************************************
+; Wait Message Strings
+;*********************************************************************************************
+
+Wait_Message_String_Comma_Seprated = Vennligst vent ...,starter opp ...,laster data ... ,et øyeblikk takk ...
+
+
+;*********************************************************************************************
+; Control bar
+;*********************************************************************************************
+
+ToolBarChangeAppSize = Endre appstørrelse
+
+ToolBarShake = Rist
+
+ToolBarCamera = Ta et skjermbilde
+
+ToolBarInstallApk = Installer apk
+
+ToolBarCopyFromWindows = Kopier filer fra Windows
+
+ToolBarCopy = Kopier
+
+ToolBarPaste = Lim inn
+
+ToolBarVolume = Volum
+
+ToolBarHelp = Hjelp
+
+Android = Android
+
+Welcome = Velkommen
+
+Finish = Fullfør
+
+StartBlueStacks = Start BlueStacks
+
+InstallLocationError = Datastedet er ikke tilgjengelig. Vennligst velg et annet sted
+
+SelectTheme = Velg tema
+
+;*********************************************************************************************
+; Updater Progress
+;*********************************************************************************************
+
+UpdateInstallingText = Installerer ...
+
+UpdateSuccessText = Oppdateringen av BlueStacks var vellykket
+
+UpdateErrorText = Feil under oppdatering. Prøv på nytt senere
+
+UpdateMessageBoxTitleText = Oppdatering av BlueStacks
+
+UpdateDownloadedText = Lastet ned ...
+
+UpdateProgressTitleText = BlueStacks-oppdatering
+
+UpdateDownloadPreparingText = Forbereder nedlasting ...
+
+UpdateAvailableText = Oppdatering er tilgjengelig. Vil du installere nå?
+

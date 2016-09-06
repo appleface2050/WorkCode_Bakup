@@ -1,0 +1,172 @@
+<% for(var n=0; n<dataresult.result.game_data.length; n++){  
+	if(dataresult.result.game_data[n].platform_name==platform_name){
+%>
+  <div class="gdtitlebox">
+    <dl class="gdtitle_l">
+      <dt><div class="shade"></div> <img src="" class="icon_url">
+	  <%
+	  	 icon_url=dataresult.result.game_data[n].icon_url ;
+	  %>
+	  </dt>
+      <dd>
+        <div class="app_name"><%= dataresult.result.game_data[n].game_name %></div>
+        <div class="app_star"> 
+		<% 	var array_picture = [{0:'stars_0'},{0.5:'stars_1'},{1:'stars_2'},{1.5:'stars_3'},{2:'stars_4'}];
+			var score=dataresult.result.game_data[n].level;
+			if(score==null||score==""||score=="null"){
+				score=0;
+			}
+			var star_array=[];
+			var star_pic='';
+			for(var i=0;  i<5; i++){
+				if(score>2){
+					star_array.push(2);
+					score-=2;
+				}else{
+					star_array.push(score);
+					score=0;
+				}
+			}
+			$.each(star_array,function(){
+				if (this <= 0)
+				{
+					star_pic = array_picture[0][0];							
+				}
+				else if (this <= 0.5)
+				{
+					star_pic = array_picture[1][0.5];
+				}
+				else if (this < 1.5)
+				{
+					star_pic = array_picture[2][1];
+				}
+				else if (this < 2)
+				{
+					star_pic = array_picture[3][1.5];
+				}
+				else if (this >= 2)
+				{
+					star_pic = array_picture[4][2];
+				}
+			%>	
+				<img src='../../static/images/appcenter/<%= star_pic %>.png'>
+				
+			<% });%>
+		
+		</div>
+        <div class="app_type">
+		
+		<%	$.each(dataresult.result.game_data[n].type,function(){ %>
+		<a ><span><%= this %></span></a>
+		<% }) %>
+		
+		</div>
+        <div class="app_down"><span><%= dataresult.result.game_data[n].download_count %></span>+次下载</div>
+        <div  class="app_update">
+			更新：<span><%= dataresult.result.game_data[n].modify_date %></span>
+			<% if( dataresult.result.game_data[n].version==""|| dataresult.result.game_data[n].version==null|| dataresult.result.game_data[n].version=="None"|| dataresult.result.game_data[n].version=="none"){}else{%>
+			版本：<span><%= dataresult.result.game_data[n].version %></span>
+			<% } %>
+			大小：<span><%= dataresult.result.game_data[n].size %></span>
+		</div>
+        <div class="app_qudao"><span class="qd_name">渠道选择：</span>
+          <div class="qdbox">
+            <ul class="qd_check"></ul>
+          </div>
+        </div>
+      </dd>
+    </dl>
+    <div class="gdtitle_r">
+	<%  
+		if(dataresult.result.game_data[n].icon_url==null||dataresult.result.game_data[n].icon_url==""||dataresult.result.game_data[n].icon_url=="None"){
+			var arr_down=['unknown',dataresult.result.game_data[n].game_name,dataresult.result.game_data[n].download_url];
+		}else{
+			var arr_down=[dataresult.result.game_data[n].icon_url,dataresult.result.game_data[n].game_name,dataresult.result.game_data[n].download_url];
+		}
+	%>
+      <button type="submit" class="questionBtn questionSubmit gdtitle_btn" onclick="browser2Client('installapp','<%=arr_down %>','<%=dataresult.result.game_data[n].package_name %>');_hmt.push(['_trackEvent', '游戏详情_一键安装_<%=dataresult.result.game_data[n].game_name %>','click'])" ><b>一键安装</b></button>
+      <div class="erweima" onclick="_hmt.push(['_trackEvent', '游戏详情_安装到手机_<%=dataresult.result.game_data[n].game_name %>','click'])">安装到手机</div>
+      <div class="erweima_xf"><div ><img src="<%= dataresult.result.game_data[n].downloadqrcode_url %>" ></div></div>
+    </div>
+   <div class="clear"></div>
+    <div class="gdetailtit"> <a class="yj" id="xq">详情</a> <a class="wt" id="pl">评论</a> </div>
+    <div class="erweima_pop"><a class="close_popewm"></a>
+      <p class="p1">扫描二维码，安装应用到手机中</p>
+      <div class="erweima_big" ><img src="<%= dataresult.result.game_data[n].downloadqrcode_url %>" ></div>
+      <p class="p2">建议在wi-fi环境下扫描下载</p>
+    </div>
+  </div>
+  <div class="appdetail_box detailtab0" id="detailtab0" >
+    <div id="detailtab0_container" >
+      <div id="detailtab0_shower"  class="itemM">
+        <div class="detailloop" id="detailloop">
+        <div class="arrow_left4  "></div>
+        <div class="arrow_right4   "></div>
+		<% 
+			if(dataresult.result.game_data[n].screenshots==null){ 
+				dataresult.result.game_data[n].screenshots=[];
+			}
+			for(var i=0; i<dataresult.result.game_data[n].screenshots.length; i++) { 
+				if(dataresult.result.game_data[n].screenshots[i]){
+					screenshot_html+="<li><img src='"+dataresult.result.game_data[n].screenshots[i]+"'></li>"
+				}
+			}
+		%>
+		<ul id="detailloop_con">
+		</ul>
+        </div>
+        <div class="xiaobian_tit">小编点评</div>
+        <div class="xiaobian_con"><%= dataresult.result.game_data[n].instruction  %></div>
+        <div class="xiaobian_tit">内容提要</div>
+        <div class="xiaobian_con"><%= dataresult.result.game_data[n].description %></div>
+      </div>
+    </div>
+    <div id="detailtab0_scroller" class="info_scroller5">
+      <div id="detailtab0_scroll_up" class="info_scroll_up"></div>
+      <div id="detailtab0_scroll_bar" class="info_scroll_bar5"></div>
+      <div id="detailtab0_scroll_down" class="info_scroll_down"></div>
+    </div>
+  </div>
+  <div class="appdetail_box hide detailtab1" id="detailtab1">
+    <div id="detailtab1_container" >
+      <div id="detailtab1_shower"  class="itemM">
+        <div class="pincon">
+            <p class="xiaobian_tit text_center">撰写评论</p>
+            <div class="detail_starbox">
+              <ul class="detail_star " >
+                <li data-starval="2" ></li>
+                <li data-starval="4" ></li>
+                <li data-starval="6" ></li>
+                <li data-starval="8" ></li>
+                <li data-starval="10" ></li>
+              </ul>
+            </div>
+			<input type="hidden"  name="level" vaule="0"  id="level">
+			<input type="hidden"  name="guid"  id="guid" value="">
+			<input type="hidden"  name="app_center_id"  id="app_center_id" value="">
+            <p class="xiaobian_con text_center">点击形星来评分</p>
+            <input type="text" placeholder="请输入标题（必填，限20字）" maxlength="20" class="detail_bt" id="detail_biaoti" name="title" >
+            <textarea maxlength="100" placeholder="请留下评论（选填，限100字）" class="detail_plnr" id="detail_miaoshu" name="content"></textarea>
+            <button type="submit" class="detail_tj"   onClick="checkForm2();_hmt.push(['_trackEvent', '游戏详情_提交评论_<%=dataresult.result.game_data[n].game_name %>','click'])" ><b>提交</b></button>
+            <div class="input_hint input_hint2 check_kong2" id="check_kong2"></div>
+        </div>
+		<div class="pincon2">
+		<% for (var m=0; m<dataresult.result.comments.length; m++){ %>
+			<div class="xiaobian_tit"><%= dataresult.result.comments[m].title %></div>
+			<div class="xiaobian_con"><span>匿名</span>——<span><%= dataresult.result.comments[m].uptime %></span></div>
+			<div class="xiaobian_con"><%= dataresult.result.comments[m].content %></div>
+        <% } %>
+      </div>
+	  </div>
+    </div>
+    <div id="detailtab1_scroller" class="info_scroller6">
+      <div id="detailtab1_scroll_up" class="info_scroll_up"></div>
+      <div id="detailtab1_scroll_bar" class="info_scroll_bar5"></div>
+      <div id="detailtab1_scroll_down" class="info_scroll_down"></div>
+    </div>
+  </div>
+  <div class="bottom_show"></div>
+ <%}
+ 
+ } %>
+

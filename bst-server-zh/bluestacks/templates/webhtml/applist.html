@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="target-densitydpi=320,width=720,user-scalable=no" name="viewport">
+<title>排行榜</title>
+<link href="../../static/css/layout.css" type="text/css"  rel="stylesheet"/>
+<script src="../../static/js/jquery-1.11.3.min.js"></script> 
+<script src="../../static/js/jscroll.js"></script> 
+<script src="../../static/js/common.js"></script> 
+<script src="../../static/js/cj.js"></script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a8a8b90e1fe67ff9a45ef9f1fe0047c4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+
+<body  style="overflow:hidden" oncontextmenu="return false;" onselectstart="return false">
+<div class="wrap ">
+  <div class="appcenter_tab "> <a href="app_center_html" class="appcenter">首页</a> <a href="app_center_recommend_html">推荐</a> <a href="app_center_applist_html" class="on">排行榜</a> <!--<a href="#" class="">分类</a> --><a href="app_center_topic_all_html">专题</a> </div>
+  <div class="applist_title ">
+    <div class="app_bangdanbox">
+      <div class="app_bangdan"> 热门榜</div>
+    </div>
+    <div class="app_bangdanbox">
+      <div class="app_bangdan"> 畅销榜</div>
+    </div>
+    <div class="app_bangdanbox">
+      <div class="app_bangdan"> 应用榜</div>
+    </div>
+  </div>
+  <div  id="applist">
+    <div id="applist_container" >
+      <div id="applist_shower"  class="itemM flexbox">
+      
+        <div class="applistcon app_listbox app_listbox2" id="applistcon_hot"></div>
+        <div class="applistcon app_listbox app_listbox2" id="applistcon_well"></div>
+        <div class="applistcon app_listbox app_listbox2" id="applistcon_app"></div>
+      </div>
+    </div>
+    <div id="applist_scroller" class="info_scroller4 applist_scroll">
+      <div id="applist_scroll_up" class="info_scroll_up"></div>
+      <div id="applist_scroll_bar" class="info_scroll_bar4 applist_scroll_bar"></div>
+      <div id="applist_scroll_down" class="info_scroll_down"></div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+listInit();
+
+
+</script>
+</body>
+</html>

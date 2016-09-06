@@ -1,0 +1,14 @@
+*.dev.yaml
+.project
+.pydevproject
+*.pyc
+vik_deploy.py
+deploy.bat
+hs_deploy.py
+.venv
+.sass-cache
+test_my_*
+.DS_Store
+.idea/
+*~
+*.synctime

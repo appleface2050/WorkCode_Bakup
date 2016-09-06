@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>数据统计</title>
+
+</head>
+<script src="../static/js/jquery.min.js"></script>
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<style>
+html,body{ height: 100%; width: 100%;  position: relative;}
+.top{ width:100%; height:70px; border-top:1px solid #000000;border-left:1px solid #000;border-right:1px solid #000}
+.main{ width:100%;border:1px solid #000000;   width:100%;position: absolute; top: 71px}
+.left{ float:left; height:950px; width:12%; border-right:1px solid #000000
+}
+.left a{ display:block; text-decoration:none; width: 100%; heigth:30px; line-height: 30px;margin-bottom: 1px }
+.right{ float:right;height:950px; width:87%}
+iframe{ border:none}
+
+/*
+.color1{background: #f5f5dc}
+.color2{background: #f0f8ff}
+.color3{background: #f6f6f6;}
+.color4{background: #ddf6ea;}*/
+
+.color_nav{background: #f9f9f9
+}
+
+.app_detail_info{ display: none}
+#app_info{ cursor: pointer}
+
+.os_detail_info{ display: none}
+#user_computer_info{ cursor: pointer}
+
+.text{ text-indent: 2em}
+
+.f_r{float: right;
+    margin-right: 20px
+}
+</style>
+<body>
+
+<div class="top"><p><img src="../static/img/logo.png"></p>
+    <p><a href="/sign_out" class="f_r">sign out</a></p>
+
+    {% if user.is_authenticated %}<p class="f_r">welcome back: <strong>{{ user.username }}</strong></p>{% endif %}
+ </div>
+
+{#<nav class="navbar navbar-inverse" role="navigation">#}
+{#   <div class="navbar-header">#}
+{#      <a class="navbar-brand" href="#">BlueStacks CN Data Statistics</a>#}
+{#   </div>#}
+{#   <div>#}
+{#      <ul class="nav navbar-nav">#}
+{#         <li class="active"><a href="#">iOS</a></li>#}
+{#         <li><a href="#">SVN</a></li>#}
+{#         <li class="dropdown">#}
+{#            <a href="#" class="dropdown-toggle" data-toggle="dropdown">#}
+{#               Java <b class="caret"></b>#}
+{#            </a>#}
+{#            <ul class="dropdown-menu">#}
+{#               <li><a href="#">jmeter</a></li>#}
+{#               <li><a href="#">EJB</a></li>#}
+{#               <li><a href="#">Jasper Report</a></li>#}
+{#               <li class="divider"></li>#}
+{#               <li><a href="#">分离的链接</a></li>#}
+{#               <li class="divider"></li>#}
+{#               <li><a href="#">另一个分离的链接</a></li>#}
+{#            </ul>#}
+{#         </li>#}
+{#      </ul>#}
+{#   </div>#}
+{#</nav>#}
+{#</div>#}
+<div class="main">
+  <div class="left">
+{#      <a href="emulator" target="right" class=" color1">客户端</a>#}
+{#      <a href="engine" target="right" class=" color2">引擎</a>#}
+{#      <a href="app_page1" target="right" class=" color1">应用1</a>#}
+{#      <a href="app_page2" target="right" class=" color1">应用2</a>#}
+{#      <a  target="right" class=" color3" id="user_computer_info">用户系统信息 </a>#}
+{#      <div class="detail_info">#}
+{#          <a href="user_computer_info_os" target="right" class=" color3 text">操作系统</a>#}
+{#          <a href="user_computer_info_memory" target="right" class=" color3 text">内存</a>#}
+{#          <a href="user_computer_info_cpu" target="right" class=" color3 text">CPU</a>#}
+{#      </div>#}
+{#      <a href="appcenter" target="right" class=" color2">应用中心</a>#}
+<ul class="nav nav-pills nav-stacked">
+   <li><a href="emulator" target="right" class=" color_nav">客户端</a></li>
+   <li><a href="engine" target="right" class=" ">引擎</a></li>
+   <li><a target="right" class=" color_nav" id="app_info">应用 </a></li>
+    <div class="app_detail_info">
+       <li><a href="app_total" target="right" class=" color3 text">全部应用</a></li>
+       <li><a href="app_page1" target="right" class=" color3 text">应用1</a></li>
+       <li><a href="app_page2" target="right" class=" color3 text">应用2</a></li>
+       <li><a href="app_local_50" target="right" class=" color3 text">本地安装top50</a></li>
+    </div>
+   <li><a target="right" class=" color_nav" id="user_computer_info">用户系统信息 </a></li>
+    <div class="os_detail_info">
+       <li><a href="user_computer_info_os" target="right" class=" color3 text">操作系统</a></li>
+       <li><a href="user_computer_info_memory" target="right" class=" color3 text">内存</a></li>
+       <li><a href="user_computer_info_cpu" target="right" class=" color3 text">CPU</a></li>
+     </div>
+    <li><a href="apk_install_error" target="right" class="">apk安装错误</a></li>
+    <li><a href="uninstall_reason" target="right" class="">卸载原因</a></li>
+    <li><a href="uninstall_reason2" target="right" class="">卸载原因2</a></li>
+{#   <li><a href="appcenter" target="right" class="">应用中心</a></li>#}
+</ul>
+  </div>
+  <div class="right">
+  <iframe  width=100% height=100% name="right" src="emulator"></iframe>
+  </div>
+</div>
+<script>
+   $("#user_computer_info").click(function () {
+       if($(".os_detail_info").is(":hidden")){
+          $(".os_detail_info").show()
+       }else{
+          $(".os_detail_info").hide()
+       }
+   })
+
+   $("#app_info").click(function () {
+       if($(".app_detail_info").is(":hidden")){
+          $(".app_detail_info").show()
+       }else{
+          $(".app_detail_info").hide()
+       }
+   })
+</script>
+</body>
+</html>

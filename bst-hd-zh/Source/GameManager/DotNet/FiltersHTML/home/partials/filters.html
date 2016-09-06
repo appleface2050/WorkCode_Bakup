@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="../../filters/home/styles/filters.css">
+<div class="container">
+    <!--Header Start-->
+    <div ng-include='"../../filters/home/partials/header.html"'></div>
+    <!--Header End-->
+    <div class="row">
+        <div class="parent-container">
+            <div class="left-container">
+                <!--Select Filter section-->
+                <div class="filters" ng-show="state=='select_filter'">
+                    <div id="themes" class="theme-filters">
+                        <h1 label="Filters" class="i18n filter-txt"></h1>
+                        <div ng-repeat="theme in themes">
+                            <div ng-if="theme.dir_name!='common'" ng-hide="theme.delete" ng-click="select_theme(theme)"
+                                 ng-class="{active : activeTheme.dir_name === theme.dir_name}"
+                                 class="theme-container" id="theme_{{$index}}">
+                                <div class="main_image-container">
+                                    <img class="theme-image"
+                                         ng-src='../../filters/theme/{{package}}/{{theme.dir_name}}/assets/poster.png'>
+
+                                    <div class="theme-image-overlay"></div>
+                                </div>
+                                <span class="theme-title">{{theme.display_name}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Select Filter-->
+                <!--Personalize Section-->
+                <div ng-include='"../../filters/home/partials/personalize.html"' ng-if="state=='personalize'"></div>
+                <!--End Personalize Section-->
+            </div>
+            <div class="right-container">
+		<div style="width:550px;height:315px;"></div>
+                <!--Footer-->
+                <div ng-include='"../../filters/home/partials/footer.html"'></div>
+                <!--End Footer-->
+            </div>
+        </div>
+    </div>
+</div>

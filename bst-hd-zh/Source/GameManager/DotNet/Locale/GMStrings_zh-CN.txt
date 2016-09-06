@@ -1,0 +1,91 @@
+﻿;*********************************************************************************************
+; Tooltips
+;*********************************************************************************************
+
+GuidanceTooltip = 此游戏的控制器或键盘映射
+
+SettingsTooltip = 设置
+
+MinimizeTooltip = 最小化到任务栏
+
+ToggleScreenTooltip = 切换屏幕
+
+CloseTooltip = 关闭
+
+HelpTooltip = 帮助
+
+BackTooltip = 返回
+
+;*********************************************************************************************
+; Close popup
+;*********************************************************************************************
+
+ClosePopupText = 您是否希望继续，从您的应用接收通知？
+
+YesText = 是
+
+NoText = 否
+
+CancelText = 取消
+
+;*********************************************************************************************
+; Settings menu
+;*********************************************************************************************
+
+ReportProblemText = 报告问题
+
+RestartAndroidText = 重新启动Android插件
+
+CheckForUpdatesText = 检查更新
+
+SettingsText = 设置
+
+LanguageAndInputSettingsText = 语言和输入法
+
+MyAccountText = 我的账户
+
+ThemesText = 主题
+
+HelpText = 帮助
+
+LocationText = 设置位置
+
+;*********************************************************************************************
+; Wait Message Strings
+;*********************************************************************************************
+
+Wait_Message_String_Comma_Seprated=请稍后...,入门...,加载数据......,请稍等......
+
+;*********************************************************************************************
+; Control bar
+;*********************************************************************************************
+
+ToolBarChangeAppSize = 调整屏幕方向
+
+ToolBarShake = 摇一摇
+
+ToolBarCamera = 截图
+
+ToolBarInstallApk = 安装Apk
+
+ToolBarCopyFromWindows = 从Windows拷贝文件
+
+ToolBarCopy = 复制
+
+ToolBarPaste = 粘贴
+
+ToolBarVolume = 音量
+
+ToolBarHelp = 帮助
+
+InstallerFinish = 完成
+
+StartBlueStacks = 启动BlueStacks
+
+Android = 安卓模拟器
+
+Welcome = 欢迎
+
+RememberChoiceText = 记住我的选择
+
+

@@ -1,0 +1,210 @@
+﻿;*********************************************************************************************
+; Agent Sys tray context menu
+;*********************************************************************************************
+
+RestoreFactorySettings = Restore Dock Settings
+
+RestartBlueStacks = Herstart
+
+QuitBlueStacks = Afsluiten  
+ 
+UploadDebugLogs = Rapporteer probleem
+
+FreeDuringBeta = Gratis gedurende Beta periode
+;*********************************************************************************************
+; Frontend buttons tool tip
+;*********************************************************************************************
+
+BackButtonToolTip = Terug
+
+MenuButtonToolTip = Laat menu zien
+
+HomeButtonToolTip = Home
+
+SettingsButtonToolTip = Instellingen
+
+
+;*********************************************************************************************
+; Frontend Info/Error messages
+;*********************************************************************************************
+
+LoadingMessage = Laden...
+
+;### {0} expands to 'App Name' currently being loaded. For eg: "Loading Pulse..."
+
+LoadingAppMessage = Laden {0}
+
+CanNotStart = Kan BlueStacks niet opstarten. Neem contact op met support@BlueStacks.com.
+
+;*********************************************************************************************
+; Agent strings
+;*********************************************************************************************
+
+BalloonTitle = BlueStacks
+
+OKButtonText = OK
+
+CancelButtonText = Stoppen
+
+InstallSuccess = is geïnstalleerd
+
+UninstallSuccess = is verwijderd
+
+UninstallFailed = Verwijderen mislukt App verwijderen...
+
+UninstallingWait = Uninstalling App...
+
+CloudConnectTitle = BlueStacks CloudConnect
+
+CloudConnectedMsg = Verbonden
+
+CloudDisconnectedMsg = Niet verbonden
+
+InsufficientStorageMessage = De interne geheugenkaart in de gratis versie van BlueStacks is vol. Verwijder een of meerdere applicaties om ruimte vrij te maken
+
+;*********************************************************************************************
+; ApkInstaller strings
+;*********************************************************************************************
+
+InstallFail = Installatie mislukt
+
+UserWaitText = APK installeren...
+
+
+
+;*********************************************************************************************
+; Restart Utility Strings
+;*********************************************************************************************
+
+RESTART_UTILITY_TITLE_TEXT = BlueStacks Restart Utility
+RESTART_UTILITY_USAGE_TEXT = Usage
+RESTART_UTILITY_RESTARTING_TEXT = Restarting BlueStacks
+RESTART_UTILITY_CANNOT_STOP_TEXT = Cannot Stop BlueStacks
+RESTART_UTILITY_CANNOT_START_TEXT = Cannot Start BlueStacks
+RESTART_UTILITY_EXIT_TEXT = Exit
+RESTART_UTILITY_UNHANDLED_EXCEPTION_TEXT = Caught unhandled exception. Please check the log for details.
+APKINSTALLER_ALREADY_RUNNING = An app is already being installed. Please wait while it finishes installing.
+
+;*********************************************************************************************
+; Updater Utility Strings
+;*********************************************************************************************
+
+UPDATER_UTILITY_NO_UPDATE_TITLE = BlueStacks Updater
+UPDATER_UTILITY_NO_UPDATE_TEXT = No new updates available
+UPDATER_UTILITY_ASK_TO_INSTALL_TITLE = Update Available
+UPDATER_UTILITY_ASK_TO_INSTALL_TEXT = Would you like to update to the latest version of BlueStacks?
+UPDATER_UTILITY_ASK_TO_INSTALL_NOW = Install Now
+UPDATER_UTILITY_ASK_TO_INSTALL_REMIND_LATER = Remind Me Later
+UpdateSuccess = has been updated 
+
+;*********************************************************************************************
+; Tooltips
+;*********************************************************************************************
+
+GuidanceTooltip = Gebruik van controller en toetsenbord voor deze game
+
+SettingsTooltip = Instellingen
+
+MinimizeTooltip = Minimaliseren naar taakbalk
+
+ToggleScreenTooltip = Scherm aan/uit
+
+CloseTooltip = Sluiten
+
+HelpTooltip = Help
+
+BackTooltip = Terug
+
+;*********************************************************************************************
+; Close popup
+;*********************************************************************************************
+
+ClosePopupText = Wil je meldingen van je apps blijven ontvangen?
+
+YesText = Ja
+
+NoText = Nee
+
+CancelText = Annuleren
+
+RememberChoiceText = Mijn keuze onthouden
+
+;*********************************************************************************************
+; Settings menu
+;*********************************************************************************************
+
+ReportProblemText = Probleem melden
+
+RestartAndroidText = Android-plug-in opnieuw opstarten
+
+CheckForUpdatesText = Controleren op updates
+
+SettingsText = Instellingen
+
+LanguageAndInputSettingsText = Taal en invoer
+
+MyAccountText = Mijn account
+
+LocationText = Locatie instellen
+
+;*********************************************************************************************
+; Wait Message Strings
+;*********************************************************************************************
+
+Wait_Message_String_Comma_Seprated = Even geduld....,Aan de slag...,Gegevens laden....,Een ogenblik geduld...
+
+
+;*********************************************************************************************
+; Control bar
+;*********************************************************************************************
+
+ToolBarChangeAppSize = Grootte van app wijzigen
+
+ToolBarShake = Schudden
+
+ToolBarCamera = Schermopname maken
+
+ToolBarInstallApk = apk installeren
+
+ToolBarCopyFromWindows = Bestanden kopiëren van Windows
+
+ToolBarCopy = Kopiëren
+
+ToolBarPaste = Plakken
+
+ToolBarVolume = Volume
+
+ToolBarHelp = Help
+
+Android = Android
+
+Welcome = Welkom
+
+Finish = Voltooien
+
+StartBlueStacks = BlueStacks starten
+
+InstallLocationError = Locatie van gegevens is niet toegankelijk. Selecteer een andere locatie.
+
+SelectTheme = Thema selecteren
+
+;*********************************************************************************************
+; Updater Progress
+;*********************************************************************************************
+
+UpdateInstallingText = Installeren...
+
+UpdateSuccessText = BlueStacks is bijgewerkt
+
+UpdateErrorText = Fout tijdens update Probeer het later opnieuw
+
+UpdateMessageBoxTitleText = BlueStacks-update
+
+UpdateDownloadedText = Gedownload...
+
+UpdateProgressTitleText = BlueStacks-updater
+
+UpdateDownloadPreparingText = Voorbereiden op download...
+
+UpdateAvailableText = Update is beschikbaar. Wilt u dit nu installeren?
+

@@ -1,0 +1,9 @@
+Z:\osx\code\hd\Contrib\CustomTabControl\bin\Debug\JacksonSoft.CustomTabControl.dll
+Z:\osx\code\hd\Contrib\CustomTabControl\bin\Debug\JacksonSoft.CustomTabControl.pdb
+Z:\osx\code\hd\Contrib\CustomTabControl\obj\x86\Debug\JacksonSoft.CustomTabControl.dll
+Z:\osx\code\hd\Contrib\CustomTabControl\obj\x86\Debug\JacksonSoft.CustomTabControl.pdb
+G:\code\hd\Contrib\CustomTabControl\bin\Debug\JacksonSoft.CustomTabControl.dll
+G:\code\hd\Contrib\CustomTabControl\bin\Debug\JacksonSoft.CustomTabControl.pdb
+G:\code\hd\Contrib\CustomTabControl\obj\x86\Debug\JacksonSoft.CustomTabControl.dll
+G:\code\hd\Contrib\CustomTabControl\obj\x86\Debug\JacksonSoft.CustomTabControl.pdb
+G:\code\hd\Contrib\CustomTabControl\obj\x86\Debug\CustomTabControl.csprojResolveAssemblyReference.cache

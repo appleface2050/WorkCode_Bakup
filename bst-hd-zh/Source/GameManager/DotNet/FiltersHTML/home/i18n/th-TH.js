@@ -1,0 +1,27 @@
+var th_TH = {
+    "Edit_Filter": "แก้ไขฟิลเตอร์",
+    "Filters": "แชร์",
+    "Add_Filters_to_Your_Stream": "ใส่ฟิลเตอร์ในสตรีมของคุณ!",
+    "Filters_make_your_stream_look_amazing": "ฟิลเตอร์ทำให้สตรีมของคุณดูน่าทึ่ง!",
+    "Try_Filters_in_Clash_Royale_now": "ลองใช้ฟิลเตอร์ใน Clash Royale",
+    "Filters_is_currently_available":"ขณะนี้เปิดให้ใช้ฟิลเตอร์เฉพาะกับ Pokemon Go และ Clash Royale เท่านั้น แต่เรากำลัง",
+    "Filters_livens_up_your_stream": "ฟิลเตอร์ทำให้สตรีมของคุณมีชีวิตชีวามากขึ้น ด้วยแบคกราวด้านหลังที่สามารถเคลื่อนไหวได้อย่างน่าทึ่ง ทำให้หน้าต่างแชทของคุณมี overlay และอีกมากมาย",
+    "Editing…": "กำลังแก้ไข...",
+    "Select_a_Filter": "เลือกฟิลเตอร์",
+    "personalize": "ตั้งค่าตามต้องการ",
+    "Personalize_your_Filter": "ปรับฟิลเตอร์ตามความต้องการของคุณ",
+    "Restore_to_Default": "กลับสู่การตั้งค่าอัตโนมัติ",
+    "back": "กลับ",
+    "done": "เสร็จสิ้น",
+    "Webcam": "เว็บแคม",
+    "Chat": "แชท",
+    "animate": "ทำให้เคลื่อนไหว",
+    "Connect": "เชื่อมต่อ",
+    "filters": "ฟิลเตอร์",
+    "cancel": "ยกเลิก",
+    "Filter_Added": "ใส่ฟิลเตอร์แล้ว!",
+    "Animations_take_your_stream":"อนิเมชั่นจะทำให้การสตรีมของคุณดูเหนือชั้นขึ้นไปอีก แต่ก็กินทรัพยากรมากเช่นกัน",
+    "Try_disabling_them":"หากคุณพบปัญหาเรื่องทำงานช้า ลองปิดการใช้งานดู",
+    "or_pokemon_go_now":"หรือ Pokemon Go ดูสิ!"
+};
+

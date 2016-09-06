@@ -1,0 +1,225 @@
+﻿;*********************************************************************************************
+; Agent Sys tray context menu
+;*********************************************************************************************
+
+RestoreFactorySettings = Obnovi postavke prikljuèivanja
+
+RestartBlueStacks = Pokreni ponovno
+
+QuitBlueStacks = Prekid
+
+UploadDebugLogs = Izvijesti o problemu
+
+FreeDuringBeta = Besplatno u beta verziji
+
+;*********************************************************************************************
+; Frontend buttons tool tip
+;*********************************************************************************************
+
+BackButtonToolTip = Vrati se
+
+MenuButtonToolTip = Pokaži izbornik
+
+HomeButtonToolTip = Poèetna
+
+SettingsButtonToolTip = Postavke
+
+ShareButtonToolTip = Podijeli fotografiju
+
+
+;*********************************************************************************************
+; Frontend buttons tool tip
+;*********************************************************************************************
+
+ResizeMessageBoxCaption = Promijeni velièinu reproduktora programa BlueStacks
+
+ResizeMessageBoxText = Napomena: u ovoj beta-1 verziji, da biste promijenili aplikaciju morate je zatvoriti. Molimo vas da ponovno pokrenete aplikaciju nakon promjene velièine. Hvala!
+
+
+;*********************************************************************************************
+; Frontend Info/Error messages
+;*********************************************************************************************
+
+LoadingMessage = Uèitavanje...
+
+;### {0} širi se u 'Naziv aplikacije' koja se trenutno uèitava. Npr: "Uèitavanje otkucaja..."
+
+LoadingAppMessage = Uèitavanje {0}...
+
+CanNotStart = Ne mogu pokrenuti BlueStacks. Molimo vas da se javite na adresu support@bluestacks.com
+
+;*********************************************************************************************
+; Agent strings
+;*********************************************************************************************
+
+NetworkAvailableIconText = BlueStacks Agent je na internetu
+
+NetworkUnavailableIconText = BlueStacks Agent
+
+BalloonTitle = BlueStacks
+
+OKButtonText = OK
+
+CancelButtonText = Poništi
+
+InstallSuccess = je instaliran
+
+UninstallSuccess = je bio deinstaliran
+
+UninstallFailed = Neuspjela deinstalacija
+
+UninstallingWait = Deinstaliranje apl...
+
+CloudConnectTitle = BlueStacks povezivanje u oblak
+
+CloudConnectedMsg = Spojen
+
+CloudDisconnectedMsg = Odvojen
+
+InsufficientStorageMessage = Unutarnja SD kartica u besplatnoj verziji aplikacije BlueStacks App Player koju koristite je puna. Slobodno deinstalirajte jednu ili više aplikacija da biste oslobodili prostor.
+
+
+;*********************************************************************************************
+; ApkInstaller strings
+;*********************************************************************************************
+
+InstallFail = Instalacija nije uspjela
+
+UserWaitText = Instaliram APK...
+
+;*********************************************************************************************
+; Restart Utility Strings
+;*********************************************************************************************
+
+RESTART_UTILITY_TITLE_TEXT = BlueStacks Restart Utility
+RESTART_UTILITY_USAGE_TEXT = Usage
+RESTART_UTILITY_RESTARTING_TEXT = Restarting BlueStacks
+RESTART_UTILITY_CANNOT_STOP_TEXT = Cannot Stop BlueStacks
+RESTART_UTILITY_CANNOT_START_TEXT = Cannot Start BlueStacks
+RESTART_UTILITY_EXIT_TEXT = Exit
+RESTART_UTILITY_UNHANDLED_EXCEPTION_TEXT = Caught unhandled exception. Please check the log for details.
+APKINSTALLER_ALREADY_RUNNING = An app is already being installed. Please wait while it finishes installing.
+
+;*********************************************************************************************
+; Updater Utility Strings
+;*********************************************************************************************
+
+UPDATER_UTILITY_NO_UPDATE_TITLE = BlueStacks Updater
+UPDATER_UTILITY_NO_UPDATE_TEXT = No new updates available
+UPDATER_UTILITY_ASK_TO_INSTALL_TITLE = Update Available
+UPDATER_UTILITY_ASK_TO_INSTALL_TEXT = Would you like to update to the latest version of BlueStacks?
+UPDATER_UTILITY_ASK_TO_INSTALL_NOW = Install Now
+UPDATER_UTILITY_ASK_TO_INSTALL_REMIND_LATER = Remind Me Later
+UpdateSuccess = has been updated 
+
+
+;*********************************************************************************************
+; Tooltips
+;*********************************************************************************************
+
+GuidanceTooltip = Kontroler i mapiranja tipkovnice za ovu igru
+
+SettingsTooltip = Postavke
+
+MinimizeTooltip = Minimiziraj na programsku traku
+
+ToggleScreenTooltip = Uključi/isključi zaslon
+
+CloseTooltip = Zatvori
+
+HelpTooltip = Pomoć
+
+BackTooltip = Natrag
+
+;*********************************************************************************************
+; Close popup
+;*********************************************************************************************
+
+ClosePopupText = Želite li nastaviti primati obavijesti iz aplikacija?
+
+YesText = Da
+
+NoText = Ne
+
+CancelText = Odustani
+
+RememberChoiceText = Zapamti moj izbor
+
+;*********************************************************************************************
+; Settings menu
+;*********************************************************************************************
+
+ReportProblemText = Prijavi problem
+
+RestartAndroidText = Ponovno pokreni dodatak za Android
+
+CheckForUpdatesText = Provjeri ažuriranja
+
+SettingsText = Postavke
+
+LanguageAndInputSettingsText = Jezik i unos
+
+MyAccountText = Moj račun
+
+LocationText = Postavi mjesto
+
+;*********************************************************************************************
+; Wait Message Strings
+;*********************************************************************************************
+
+Wait_Message_String_Comma_Seprated = Pričekajte...,Početak rada...,Učitavanje podataka...,Još samo trenutak...
+
+
+;*********************************************************************************************
+; Control bar
+;*********************************************************************************************
+
+ToolBarChangeAppSize = Promjena veličine aplikacije
+
+ToolBarShake = Zatresi
+
+ToolBarCamera = Snimi zaslon
+
+ToolBarInstallApk = Instaliraj apk
+
+ToolBarCopyFromWindows = Kopiraj datoteke iz sustava Windows
+
+ToolBarCopy = Kopiraj
+
+ToolBarPaste = Zalijepi
+
+ToolBarVolume = Glasnoća
+
+ToolBarHelp = Pomoć
+
+Android = Android
+
+Welcome = Dobro došli
+
+Finish = Završetak
+
+StartBlueStacks = Pokreni BlueStacks
+
+InstallLocationError = Mjesto s podacima nije dostupno. Odaberite drugo mjesto
+
+SelectTheme = Odabir teme
+
+;*********************************************************************************************
+; Updater Progress
+;*********************************************************************************************
+
+UpdateInstallingText = Instalacija...
+
+UpdateSuccessText = BlueStacks je uspješno ažuriran
+
+UpdateErrorText = Pogreška tijekom ažuriranja. Pokušajte ponovno kasnije
+
+UpdateMessageBoxTitleText = Ažuriranje za BlueStacks
+
+UpdateDownloadedText = Preuzeto...
+
+UpdateProgressTitleText = Alat za ažuriranje za BlueStacks
+
+UpdateDownloadPreparingText = Priprema za preuzimanje...
+
+UpdateAvailableText = Ažuriranje je dostupno. Želite li odmah instalirati?

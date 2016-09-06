@@ -1,0 +1,27 @@
+var id_ID = {
+    "Edit_Filter": "Sunting Filter",
+    "Filters": "Filter",
+    "Add_Filters_to_Your_Stream": "Tambah Filter ke Aliran Anda!",
+    "Filters_make_your_stream_look_amazing": "Filter membuat aliran Anda tampak hebat!",
+    "Try_Filters_in_Clash_Royale_now": "Cobalah Filter di Clash Royale",
+    "Filters_is_currently_available":"Saat ini Filter hanya tersedia untuk Pokemon Go dan Clash Royale, tetapi kami sedang berusaha secepat mungkin mengerjakan Filter untuk lebih banyak permainan :)",
+    "Filters_livens_up_your_stream": "Filter menghidupkan aliran Anda, dengan animasi latar belakang yang mengagumkan, lapisan obrolan yang unik, dan lebih banyak lagi.",
+    "Editing…": "Menyunting...",
+    "Select_a_Filter": "Pilih Filter",
+    "personalize": "PERSONALISASI",
+    "Personalize_your_Filter": "Personalisasi Filter Anda",
+    "Restore_to_Default": "Kembalikan ke Standar",
+    "back": "KEMBALI",
+    "done": "SELESAI",
+    "Webcam": "Webcam",
+    "Chat": "obrolan",
+    "animate": "Animasikan",
+    "Connect": "Sambungkan",
+    "filters": "FILTER",
+    "cancel": "BATAL",
+    "Filter_Added": "Filter ditambahkan!",
+    "Animations_take_your_stream":"Animasi akan membawa aliranmu ke tingkat berikutnya, tapi juga bisa menjadi sumber yang intensif.",
+    "Try_disabling_them":"Non aktifkan jika Anda rasakan memperlambat kinerja.",
+    "or_pokemon_go_now":"Atau Pokemon Go Sekarang!"
+};
+

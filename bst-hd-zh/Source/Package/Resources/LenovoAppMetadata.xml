@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetadataInfo xmlns:xsi="http://www.LenovoAlpha.com/2012/XMLSchema-instance" xmlns:xsd="http://www.LenovoAlpha.com/2012/XMLSchema">
+<AppID>ea14475e-c305-49d5-9047-623d87dc74c7</AppID>
+<AppType>Others</AppType>
+<Internationalization>
+ <Language key="en-US">
+	<AppName>Android Apps</AppName>
+	<Description>Enjoy the world of Android apps and games directly on your Windows PC. You can browse from a selection of popular Android apps and run the apps on your PC, fast and full screen. You can also search and download apps, or sync apps and games from your phone and tablet over to your Windows PC.</Description>
+ </Language>
+ <Language key="zh-CN">
+	<AppName>Android应用程序</AppName>
+	<Description>您可以直接在您的Windows PC的Android应用程序和游戏的世界。您可以在您的电脑，速度快，全屏浏览的选择时下流行的Android应用程序和运行的应用程序。您还可以搜索和下载应用程序，或从您的手机和平板电脑的同步应用程序和游戏到您的Windows PC。</Description>
+ </Language>
+</Internationalization>
+<ReservedField></ReservedField>
+</MetadataInfo>

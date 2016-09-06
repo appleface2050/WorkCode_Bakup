@@ -1,0 +1,92 @@
+<html>
+<script src="../../static/jquery.min.js"></script>
+
+
+
+<body>
+
+<form action="/bs/captcha_test" method="post">
+  {% csrf_token %}
+  <p>First name: <input type="text" name="email" /></p>
+  <p>Last name: <input type="text" name="content" /></p>
+  <p><label for="id_captcha">验证码（必填）：</label> {{form.captcha}}</p>
+<!-- <a class='next_captcha'>换个图</a> -->
+  <input type="submit" value="Submit" />
+</form>
+
+<p>请单击确认按钮，输入会发送到服务器上名为 "form_action.asp" 的页面。</p>
+<script>
+
+
+$.ajaxSetup({
+  data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+});
+
+
+$('.js-captcha-refresh').click(function(){
+    $form = $(this).parents('form');
+
+    $.getJSON($(this).data('/captcha'), {}, function(json) {
+        // This should update your captcha image src and captcha hidden input
+    });
+
+    return false;
+});
+
+
+// 刷新验证码
+
+(function(){
+    $(".next_captcha").click(function(){
+    $.getJSON("/bs/refresh_captcha", function(json) {
+        // This should update your captcha image src and captcha hidden input
+        // debugger;
+        var status = json['status'];
+        var new_cptch_key = json['new_cptch_key'];
+        var new_cptch_image = json['new_cptch_image'];
+        id_captcha_0 = $("#id_reg_captcha_0");
+        img = $(".captcha");
+        id_captcha_0.attr("value", new_cptch_key);
+        img.attr("src", new_cptch_image);
+    });
+
+});
+})()
+
+
+$(function(){
+
+    $('.captcha').css({
+        'cursor': 'pointer'
+    })
+
+    $('.captcha').click(function(){
+        console.log('click');
+         $.getJSON("/captcha/refresh/",
+                  function(result){
+             $('.captcha').attr('src', result['image_url']);
+             $('#id_captcha_0').val(result['key'])
+          });
+});
+
+
+    $('#id_captcha_1').blur(function(){  // #id_captcha_1为输入框的id，当该输入框失去焦点是触发函数
+        json_data={
+            'response':$('#id_captcha_1').val(),  // 获取输入框和隐藏字段id_captcha_0的数值
+            'hashkey':$('#id_captcha_0').val()
+        }
+        $.getJSON('/bs/ajax_val', json_data, function(data){ //ajax发送
+            $('#captcha_status').remove()
+            if(data['status']){ //status返回1为验证码正确， status返回0为验证码错误， 在输入框的后面写入提示信息
+                $('#id_captcha_1').after('<span id="captcha_status" style="color:blue">*验证码正确</span>')
+            }else{
+                 $('#id_captcha_1').after('<span id="captcha_status" style="color:red">*验证码错误</span>')
+            }
+        });
+    });
+})
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,770 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/RobotoLight.ttf);
+}
+
+.col-sm-6 {
+  padding-right: 0px !important;
+}
+.md-select-menu-container {
+z-index: 3000 !important;
+}
+.form-group {
+  margin-bottom:0px;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+.input-lg {
+    padding: 5px 10px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.form-control {
+ height: 35px !important;
+}
+
+.modal-header {
+  background: #fafafa;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px; 
+  border:1px solid #f1f1f1 !important;
+}
+
+.has-feedback {
+  position: relative !important;
+
+}
+
+.carousel-inner .item {
+  text-align: center;
+}
+
+.carousel-inner .item p {
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+.carousel-inner .item md-input-container {
+  width: 70%;
+  margin: 20px auto;
+  margin-bottom:0px; 
+}
+
+.input-lg+.form-control-feedback {
+    width: 35px;
+    height: 35px;
+    color: darkgray;
+    top:50%;
+    margin-top:-17px;
+    right:2px;
+}
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section-header {
+  background: #fafafa;
+  padding: 15px;
+  height: 55px;
+  border-bottom:1px solid #f1f1f1;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.search-hint {
+  font-family: Roboto;
+  font-size: 1.1em;
+  color: #d1e3ec;
+  margin: 10px auto;
+  display: inline-block;
+  min-height: 13px;
+}
+
+
+.links-container {
+  text-align: center;
+}
+
+.separator-span {
+  font-size: 8px;
+  color: #a8a8a8;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.links-container a{
+  float: none !important;
+}
+
+.search-results-container {
+  margin-top:10px;
+  position:absolute;
+  width:100%; 
+  background: #fff; 
+  border:1px solid #dbe2e8; 
+  z-index:6000; 
+  border-radius: 6px;
+  text-align:center;
+}
+
+.search-results {
+  overflow-y:auto;
+  overflow-x:hidden;
+  min-height:100%;
+  margin: 10px; 
+  max-height:400px;
+}
+
+.search-loader {
+  width:50px;
+  height:50px;
+  margin:20px;
+}
+
+
+
+.section-header h3 {
+  margin: 0px;
+  font-size: 1.2em;
+}
+
+.list-container {
+  margin: 15px;
+  height: 200px;
+  overflow-y: auto;
+}
+
+.modal_button_container {
+  width:80%;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+  margin: 0px auto;
+}
+
+.modal-header-bg {
+  background: #fafafa;
+}
+
+.modal-icon {
+  width:70px;
+  height:70px;
+  margin: 20px; 
+}
+
+.center-align {
+  text-align: center !important;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  margin-top: 20px;
+  padding-top:10px; 
+  padding-bottom: 10px; 
+  border-top: 1px solid #d1e3ec;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+body {
+  margin-top: 10px;
+  background: none;
+}
+
+.full {
+  background: url(../images/background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header_button {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5291c0+0,3980b7+100 */
+
+  border-radius: 3px;  
+  background-size: cover;
+  text-decoration: none !important;
+  font-size:15px;
+  outline: none !important;
+  letter-spacing: 1px;
+  font-weight:bold;
+  font-family: Roboto;
+  display: inline; 
+}
+
+.header_button:visited {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5291c0+0,3980b7+100 */
+
+  border-radius: 3px;  
+  background-size: cover;
+  text-decoration: none !important;
+  outline: none !important;
+  font-size:15px;
+  letter-spacing: 1px;
+  font-weight:bold;
+  font-family: Roboto;
+  display: inline; 
+}
+
+.header_button:hover {
+  border-radius: 3px;
+  background-size: cover;
+  text-decoration: underline !important;
+  outline: none !important;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  font-size:15px;
+  font-weight:bold;
+  transition:opacity 0.7s linear;
+  font-family: Roboto;
+  display: inline;
+}
+
+.navbar {
+  padding-top:0px; 
+  margin-bottom: 0px;
+}
+
+.searchbar_container {
+  position: relative;
+}
+
+.header_container {
+  margin-top: 30px; 
+}
+
+.search_bar {
+  border-radius: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px; 
+  font-size: 14px;
+  margin-top:10px;
+}
+
+.bottom_space {
+  margin-bottom:20px;
+}
+
+.left_space {
+  margin-left: 5px;
+}
+
+.right_space {
+  margin-right: 5px;
+}
+
+.no_space {
+  padding-left:0;
+  padding-right:0;
+}
+
+.align_center {
+  text-align: center;
+}
+
+h2 {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.page_content {
+  margin-top: 0px;
+}
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.section-popular-articles {
+  margin-left:22px;
+}
+
+.section-getting-started {
+  margin-right: 22px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  font-family: Roboto;
+}
+
+.loader-box {
+  text-align: center;
+  position: relative;
+}
+.loader-box img {
+  margin-top: 15%;
+  position: relative;
+  vertical-align: middle;
+}
+
+p.info-label {
+  font-family: Roboto;
+  font-size: 20px;
+  color: #50000000 !important;
+  margin-top: 10px;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 960px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 0px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+
+  ul{
+    padding-left: 0;
+  }
+
+  ul.article-list {
+    text-align: left;
+    list-style-type: none;
+    display: inline;
+    list-style-position: outside;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .section-tree {
+    overflow: hidden;
+    padding: 0 !important;
+    margin-top: 20px;
+    min-height: 300px;
+    
+  }
+
+  .section-tree .section {
+    background: #ffffff;
+    float: left !important;
+    border: 1px solid #e7e8e8;
+    border-radius: 15px;
+    width: 47% !important;
+    height: 40% !important;
+    text-align: center;
+    webkit-box-shadow: 0px 1px 10px -3px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 1px 10px -3px rgba(0,0,0,0.35);
+    box-shadow: 0px 1px 10px -3px rgba(0,0,0,0.35);
+  }
+
+  li {
+    text-align: left;
+    list-style-type: none;
+    line-height: 16px;
+    margin-bottom: 11px;
+    list-style-position: outside;
+  }
+
+  .section {
+    text-align:center;
+  }
+
+  .section a {
+    color: #3376A4;
+    text-align: left;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  }
+
+  .section a:hover {
+    color: #3376A4;
+    text-decoration: underline;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  }
+
+  h3 {
+    text-align: left;
+    font-family: Roboto;
+    color: rgb(85,85,85);
+    font-weight: bold;
+  }
+
+  p.info-label {
+    font-family: Roboto;
+    font-size: 20px;
+    color: #767778 !important;
+    margin-top: 10px;
+  }
+
+  .section a.article-count {
+    font-size: 12px;
+    color: #3376A4;
+    margin:0px auto;
+    text-align: center;
+  }
+
+  .search_bar {
+    font-family:Roboto;
+    padding-right:0px !important;
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 10px;
+  }
+
+  .search-item {
+    font-family: Roboto;
+  }
+
+  .navbar a {
+    text-decoration: none !important;
+  }
+
+  .navbar a:hover {
+    text-decoration: none;
+  }
+
+  .navbar a:active {
+    text-decoration: none;
+  }
+
+  .navbar a:visited {
+    text-decoration: none;
+  }
+
+
+}
+
+@media screen and (min-width: 960px) and (max-width: 991px) {
+  .section-tree .section {
+    width:46% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    font-family: Roboto;
+  }
+
+  .loader-box {
+    text-align: center;
+    position: relative;
+  }
+  .loader-box img {
+    margin-top: 15%;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  p.info-label {
+    font-family: Roboto;
+    font-size: 20px;
+    color: #50000000 !important;
+    margin-top: 10px;
+  }
+
+  .container {
+    max-width: 960px;
+    min-width: 530px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 0px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+
+  ul{
+    padding-left: 0;
+  }
+
+  ul.article-list {
+    text-align: left;
+    list-style-type: none;
+    display: inline;
+    list-style-position: outside;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .section-tree {
+    overflow: hidden;
+    padding: 0 !important;
+    margin-top: 20px;
+    min-height: 300px;
+    
+  }
+
+  .section-tree .section {
+    background: #ffffff;
+    float: left !important;
+    border: 1px solid #e7e8e8;
+    border-radius: 15px;
+    width: 46% !important;
+    height: 40% !important;
+    text-align: center;
+    webkit-box-shadow: 0px 1px 10px -3px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 1px 10px -3px rgba(0,0,0,0.35);
+    box-shadow: 0px 1px 10px -3px rgba(0,0,0,0.35);
+  }
+
+  li {
+    text-align: left;
+    list-style-type: none;
+    line-height: 14px;
+    margin-bottom: 11px;
+    list-style-position: outside;
+  }
+
+  .section {
+    text-align:center;
+  }
+
+  .section a {
+    color: #3376A4;
+    text-align: left;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  }
+
+  .section a:hover {
+    color: #3376A4;
+    text-decoration: underline;
+    font-size: 13px;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;;
+  }
+
+  h3 {
+    text-align: left;
+    font-family: Roboto;
+    color: rgb(85,85,85);
+    font-weight: bold;
+  }
+
+  .section-header h3 {
+    font-size: 1em;
+  }
+
+  p.info-label {
+    font-family: Roboto;
+    font-size: 20px;
+    color: #767778 !important;
+    margin-top: 10px;
+  }
+
+  .section a.article-count {
+    font-size: 11px;
+    color: #3376A4;
+    margin:0px auto;
+    text-align: center;
+  }
+
+  .searchbar_container {
+    
+  }
+
+  .form-control {
+    padding-right: 0px !important;
+  }
+
+  .search_bar {
+    font-family: Roboto;
+    padding-right: 0px;
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 10px;
+  }
+
+  .search-item {
+    font-family: Roboto;
+  }
+
+  .navbar a {
+    text-decoration: none !important;
+  }
+
+  .navbar a:hover {
+    text-decoration: none;
+  }
+
+  .navbar a:active {
+    text-decoration: none;
+  }
+
+  .navbar a:visited {
+    text-decoration: none;
+  }
+
+  h2{
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 570px) {
+  .section-header h3 {
+    font-size: 1.1em;
+  }
+
+  h2{
+    font-size: 13px;
+  }
+
+  .section-header {
+    height: 45px;
+  }
+
+  .section-popular-articles {
+    margin-left:15px;
+  }
+
+  .section-getting-started {
+    margin-right: 20px;
+  }
+
+  .section {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .section-tree {
+    text-align: center;
+  }
+
+  h2{
+    font-size: 0.8em;
+  }
+
+
+  .section-header {
+    height: 45px;
+  }
+
+  .section-popular-articles {
+    margin-left:18px;
+  }
+
+  .section-getting-started {
+    margin-right: 20px;
+  }
+
+  .section {
+    width:45%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .section-tree {
+    text-align: center;
+  }
+
+  .section-header {
+    height: 45px;
+  }
+
+  .section-popular-articles {
+    margin-left:23px;
+  }
+
+  .section-getting-started {
+    margin-right: 30px;
+  }
+
+  .section {
+    width:45%;
+  }
+}
+
+@media screen and (min-width: 990px) {
+h2{
+  font-size:1.1em;
+}
+}
+
+

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluestacksGameManager", "BluestacksGameManager\BluestacksGameManager.csproj", "{7DF4CB82-85DA-488F-AA2F-6FCFCE18B6D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HD-Frontend", "..\..\..\..\Frontend\VsSoln\HD-Frontend\HD-Frontend.csproj", "{8E3C642D-FB72-4D42-98A9-FFAAA27A551B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DF4CB82-85DA-488F-AA2F-6FCFCE18B6D5}.Debug|x86.ActiveCfg = Debug|x86
+		{7DF4CB82-85DA-488F-AA2F-6FCFCE18B6D5}.Debug|x86.Build.0 = Debug|x86
+		{7DF4CB82-85DA-488F-AA2F-6FCFCE18B6D5}.Release|x86.ActiveCfg = Release|x86
+		{7DF4CB82-85DA-488F-AA2F-6FCFCE18B6D5}.Release|x86.Build.0 = Release|x86
+		{8E3C642D-FB72-4D42-98A9-FFAAA27A551B}.Debug|x86.ActiveCfg = Debug|x86
+		{8E3C642D-FB72-4D42-98A9-FFAAA27A551B}.Debug|x86.Build.0 = Debug|x86
+		{8E3C642D-FB72-4D42-98A9-FFAAA27A551B}.Release|x86.ActiveCfg = Release|x86
+		{8E3C642D-FB72-4D42-98A9-FFAAA27A551B}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

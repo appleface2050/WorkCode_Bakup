@@ -1,0 +1,86 @@
+;*********************************************************************************************
+; Tooltips
+;*********************************************************************************************
+
+GuidanceTooltip = Controller or keyboard mappings for this game
+
+SettingsTooltip = Settings
+
+MinimizeTooltip = Minimize to taskbar
+
+ToggleScreenTooltip = Toggle screen
+
+CloseTooltip = Close
+
+HelpTooltip = Help
+
+BackTooltip = Go back
+
+;*********************************************************************************************
+; Close popup
+;*********************************************************************************************
+
+ClosePopupText = Would you like to continue to receive notifications from your apps?
+
+YesText = Yes
+
+NoText = No
+
+CancelText = Cancel
+
+RememberChoiceText = Remember my choice
+
+;*********************************************************************************************
+; Settings menu
+;*********************************************************************************************
+
+ReportProblemText = Report Problem
+
+RestartAndroidText = Restart Android Plugin
+
+CheckForUpdatesText = Check for Updates
+
+SettingsText = Settings
+
+LanguageAndInputSettingsText = Language and Input
+
+MyAccountText = My Account
+
+ThemesText = Themes
+
+HelpText = Help
+
+LocationText = Set Location
+
+;*********************************************************************************************
+; Wait Message Strings
+;*********************************************************************************************
+
+Wait_Message_String_Comma_Seprated = Please Wait...,Getting Started...,Loading Data...,One moment please...
+
+
+;*********************************************************************************************
+; Control bar
+;*********************************************************************************************
+
+ToolBarChangeAppSize = Change app size
+
+ToolBarShake = Shake
+
+ToolBarCamera = Take screenshot
+
+ToolBarInstallApk = Install apk
+
+ToolBarCopyFromWindows = Copy files from Windows
+
+ToolBarCopy = Copy
+
+ToolBarPaste = Paste
+
+ToolBarVolume = Volume
+
+ToolBarHelp = Help
+
+Welcome = Welcome
+
+Android = Android

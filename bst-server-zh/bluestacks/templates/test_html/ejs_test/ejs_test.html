@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript" src="../../../static/js/ejs_production.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<script>
+data = {title:'Cleaning Supplies',
+		supplies:['mop', 'broom', 'duster']};
+html = new EJS({url: '../../../static/ejs/cleaning.ejs'}).render(data);
+document.write(html);
+</script>
+</head>
+<body>
+
+</body>
+</html>

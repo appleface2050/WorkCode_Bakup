@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'Roboto-Light';
+    font-weight: 300;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    font-weight: 500;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    font-weight: 700;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Supercell-Magic';
+    src: url('./assets/Supercell-magic-webfont.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.base-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background-image{
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
+}
+
+.left-container {
+    float: left;
+    width: 34.5vw;
+    height: 100vh;
+}
+
+.right-container {
+    float: right;
+    height: 100vh;
+    text-align: right;
+    width: 34.5vw;
+}
+
+.left-image, .right-image {
+    width: 100%;
+    height: 100%;
+}
+
+.streamer-info{
+    margin: 0 auto;
+    padding-right: 0vh;
+    padding-top: 6vh;
+    text-align: center;
+    width: 21vw;
+}
+.streamer-name {
+    color: #ffffff;
+    display: inline-block;
+    font-family: "Supercell-Magic";
+    font-size: 0.9vw;
+    left: 9.4vw;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    top: 7.4vh;
+    white-space: nowrap;
+    max-width: 13vw;
+    width: auto ;
+}
+
+#twitch-logo {
+    display: inline-block;
+    height: 4vh;
+    top: 1vh;
+    position: relative;
+    width: 2vw;
+
+}
+
+.ribbon{
+    background-image: url("./assets/ribbon.png");
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-size: 36vw auto;
+    height: 19vh;
+    margin-left: -1vw;
+    min-width: 24vw;
+    position: relative;
+    top: 31vh;
+}
+
+div#chat {
+    height: 100vh;
+    padding-left: 1.5vw;
+    width: 30vw !important;
+    /*overflow-y: scroll;*/
+    /*overflow-x: hidden;*/
+    overflow: auto;
+}
+
+.vertical-handle {
+    width: 6px;            /* How wide is the scrollbar handle? */
+    background-color: transparent; /* What color should the handle be? */
+}
+
+div#chat .chat-line {
+    background:rgba(255,255,255,0.80);
+    box-shadow: 0px 5px 10px 0px rgba(0, 140, 92, 0.50), 0px 5px 10px 0px rgba(0, 0, 0, 0.50);
+    border-radius:2px;
+    margin-top: 4.5vh;
+    margin-bottom: 2vh;
+    width: 50vh;
+    font-weight: 500;
+    text-align: left;
+    position: relative;
+    padding: 2vh;
+    height: auto;
+    min-height: 9.4vh;
+}
+
+div#chat .emoticon {
+    height: 3vh;
+    width: 1.5vw;
+}
+
+div#chat .chat-line .chat-name {
+    font-size: 1vw;
+    color:#67726f !important;
+    width: 100%;
+    display: block;
+    font-family: 'Supercell-Magic';
+    letter-spacing:0px;
+    text-align:left;
+}
+
+div#chat .chat-line .chat-message{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-right: 1vw;
+    display: block;
+    font-family: 'Supercell-Magic';
+    font-size: 0.8vw;
+    color: #3b3f3e !important;
+    word-wrap: break-word;
+}
+
+/*broadcaster related css start*/
+.chat-badge-broadcaster{
+    position: absolute;
+    bottom: -3vh;
+    height: 7vh;
+    width: 4.4vw;
+    background: url("./assets/chat_badge.png");
+    background-repeat: no-repeat;
+    right: -1vh;
+    background-size: 7.6vh;
+}
+
+.vjs-control-bar{
+    display: none;
+}
+
+div#chat .chat-line.broadcaster {
+    background: #1e947c;
+    box-shadow: 0px 5px 10px 0px rgba(0, 140, 92, 0.50), 0px 5px 10px 0px rgba(0, 0, 0, 0.50);
+    border-radius: 2px;
+    margin-top: 4.5vh;
+    margin-bottom: 2vh;
+    width: 50vh;
+    font-weight: 500;
+    text-align: left;
+    position: relative;
+    padding: 2vh;
+    height: auto;
+    min-height: 9.4vh;
+}
+.chat-line.chat-hosting-yes{
+    display: none;
+}
+div#chat .chat-line.broadcaster .chat-name {
+    font-size: 1vw;
+    color:#90ff89 !important;
+    width: 100%;
+    display: block;
+    font-family: 'Supercell-Magic';
+    letter-spacing:0px;
+    text-align:left;
+}
+
+div#chat .chat-line.broadcaster .chat-message{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-right: 1vw;
+    display: block;
+    font-family: 'Supercell-Magic';
+    font-size: 0.8vw;
+    color: #fff !important;
+}
+
+/*broadcaster related css end*/

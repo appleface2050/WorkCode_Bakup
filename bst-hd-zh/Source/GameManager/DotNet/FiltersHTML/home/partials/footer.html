@@ -1,0 +1,6 @@
+<div class="footer_btn">
+    <button label="done" ng-click="filter_done_Clicked()"  class="i18n cancel-container"></button>
+    <button label="personalize" ng-show="activeTheme && state=='select_filter'" class="i18n personalize_text" ng-click="ShowPersonalize_section()">PERSONALIZE</button>
+    <button label="back" ng-show="activeTheme && state=='personalize'" class="i18n back personalize_text" ng-click="change_state('select_filter')"></button>
+</div>
+

@@ -1,0 +1,27 @@
+<!-- Navigation -->
+<nav class="navbar" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row" style="width:98.5%;margin-top:10px;">
+
+            <!-- Logo and Language Selector -->
+            
+                <div class="row">
+                    <div class="col-md-8 col-xs-8">
+                        <img class="logo" src="images/logo.png"/>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <div class="navbar-header pull-right">
+                            <div class="dropdown pull-left">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">{{language.name}}<span class="caret"></span></a>
+                                <ul class="dropdown-menu" style="right: 0; left: auto;top:25px;">
+                                    <li ng-repeat="(key,value) in langOptions"><a href="" ng-click="setLocale(value.locale,value.name,value.client_locale)">{{value.native_name}}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Logo and Language Selector End -->
+        </div>
+</nav>

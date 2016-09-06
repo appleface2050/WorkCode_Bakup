@@ -1,0 +1,154 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="target-densitydpi=320,width=720,user-scalable=no" name="viewport">
+<title>意见反馈</title>
+<link href="../../static/css/layout.css" type="text/css"  rel="stylesheet"/>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a8a8b90e1fe67ff9a45ef9f1fe0047c4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+
+<body  style="overflow:hidden" oncontextmenu="return false;" onselectstart="return false">
+<div class="wrap">
+  <div class="feedTtile "> <a class="yj" id="yj">意见反馈</a> <a class="wt" id="wt" href="#id4">问题解答</a> </div>
+  <div class="mainCon  " id="feed0">
+    <div class="questionCategory" id="questionCategory">
+      <h2 class="colorWhite">请选择所遇到的问题（可多选）</h2>
+      <div class="qwrap "> <a class="qBox" id="type1" data-des="初始化卡住"  >初始化卡住</a> <a class="qBox" id="type2" data-des="应用闪退">应用闪退</a> <a class="qBox" id="type3" data-des="屏幕花屏或黑屏" >屏幕花屏或黑屏</a> </div>
+    </div>
+    <div class="questionDescription"> 
+      
+      <!--{#       {% csrf_token %}#}-->
+      
+      <div class="descriptionwrap">
+        <textarea placeholder="请描述您所遇到的问题以及当时的使用场景，谢谢！" id="feedbackTextarea" name="content" maxlength="500" ></textarea>
+      </div>
+      <div class="contact "> 请留下您的联系方式 <span>邮箱：
+        <input type="text" class="questionEmail" id="questionEmail" name="email" maxlength="50">
+        </span>
+        <input type="hidden" id="submit_type" name="type" value="">
+        <input type="hidden" id="csrf_token" name="csrf_token" value={{ csrf_token }}>
+        <button type="submit" class="questionBtn questionSubmit" onClick="checkForm()"><b>提交</b></button>
+        <div class="input_hint " id="check_kong"></div>
+      </div>
+      <div class="contact2 ">联系我们：<a class="questionBtn serviceBtn " onClick="browser2Client('launch_custom_service','','')"><b class="qqsevice">在线客服</b></a> <a class="questionBtn serviceBtn"   onClick="browser2Client('launch_support_group','','')"><b>QQ群</b></a></div>
+    </div>
+  </div>
+  <div class="mainCon  hide" id="feed1">
+    <div class="faqwrap">
+      <div id="tabFaq">
+        <div id="tabFaq_container" class="faqBox">
+          <div id="tabFaq_shower"  class="itemM">
+          	<a class="faqF " name="id4" id="id4"><span class="dot"></span> <span class="q_detail">支付宝支付问题处理方案？</span></a>
+            <p class="faqA">
+            	由于近期支付宝升级支付安全系统，导致蓝叠安卓模拟器内的游戏无法正常支付。给各位用户带来的不便敬请谅解。遇到此类问题的用户可以通过以下两种方式进行支付宝支付行为。<br>
+            	<img src="../../static/images/feedback/11.jpg">
+                一、	支付宝APP端登陆支付<br>
+当游戏内用支付宝支付出现无法支付情况时，用户可以打开手机内的支付宝客户端，点击左上角账单，就可以看到您在蓝叠安卓模拟器内的游戏支付额度信息，然后根据支付流程完成支付，游戏内将会同步完成支付信息。<br>
+				<img src="../../static/images/feedback/22.jpg">
+                二、	支付宝网页端登陆支付<br>
+如果遇到无法通过支付宝APP端支付的用户，也可以通过网页端开打并登陆支付宝，在交易记录内可以看到游戏支付的信息，根据支付流程完成支付即可。<br>
+                <img src="../../static/images/feedback/33.jpg">
+            </p>
+            <a class="faqF" name="id1" id="id1" ><span class="dot"></span> <span class="q_detail">初始化卡住？</span></a>
+            <p class="faqA">建议您检查是否开了360的核晶防护，或者是否有杀毒软件拦截了BlueStacks的服务，也可以尝试重新安装模拟器。</p>
+            <a class="faqF" name="id2" id="id2"><span class="dot"></span> <span class="q_detail">应用闪退？</span></a>
+            <p class="faqA">建议您提供应用的下载地址，我们会尽快帮您确认。</p>
+            <a class="faqF" name="id3" id="id3"><span class="dot"></span> <span class="q_detail">屏幕花屏或黑屏？</span></a>
+            <p class="faqA">建议您用驱动人生或者到显卡的官网更新显卡驱动，然后重启电脑。</p>
+             
+            <!--<a class="faqF " name="id4" id="id4"><span class="dot"></span> <span class="q_detail">蓝叠安卓模拟器Bluestacks如何传图片？</span></a>
+            <p class="faqA">大家在用模拟器用微信的时候，经常遇到图片怎么发送，又或者是bs里的文件怎么弄到电脑上的问题， 这里小编将给大家讲解<br/>
+              首先，这里推荐一款叫R.E.管理器的应用，安装R.E.管理器后<br/>
+              然后打开， 来到sdcard/windows目录，我们可以看到以下的文件夹<br/>
+              这里sdcard/windows/Pictures == 电脑中的我的图片<br/>
+              看，这两个是互通的（注意：如果bs里删除了，电脑里也会删除，所以操作请额外小心）<br/>
+              在sdcard/windows里的不同目录相当电脑的不同位置<br/>
+              Documents==我的文档<br/>
+              InputMapper是存放脚本文件， 请不要删除<br/>
+              Pictures==我的图片<br/>
+              这里微信无法用R.E.管理器选择图片的， 需要先把图片传到模拟器里，然后用R.E.管理器把图片转移到sdcard/DCIM文件夹，然后重启下模拟器就能在微信里的图库找到~</p>
+            <a class="faqF " name="id5" id="id5"><span class="dot"></span> <span class="q_detail">蓝叠安卓模拟器Bluestacks横屏与竖屏的问题?</span></a>
+            <p class="faqA">大家在用模拟器的时候，经常遇到窗口会自适应， 变成和手机一样的大小， 但是如果我们想用宽的，这里可以这么改<br/>
+              这边拿QQ做例子<br/>
+              现在是竖屏状态。 文字小有点看不清，以下介绍怎么改成大屏使用<br/>
+              首先，我们到首页，找到“所有应用”的按钮：<br/>
+              在里面找到 “設定”<br/>
+              点击“改變應用程式大小”<br/>
+              找到你要改的应用 ，选择“平板模式”，再点击“完成”<br/>
+              这时候直接进QQ就可以了（不用重登）~ 咱们来看看效果怎么样， 感觉是不是超爽~</p>
+            <a class="faqF " name="id6" id="id6"><span class="dot"></span> <span class="q_detail">蓝叠安卓模拟器Bluestacks游戏黑屏或无法运行?</span></a>
+            <p class="faqA">蓝叠安卓模拟器（Bluestacks）是一个可以让Android应用程序能运行在window系统上的软件，可以调用PC的显卡，采取目前最先进的技术，能使很多热门的游戏（天天酷跑，天天飞车等）在电脑上玩，拥有屏幕更大，不浪费手机电池，不烫手等等等优势。<br/>
+              如果软件运行正常，但是应用无法运行（黑屏，或者闪退），这里会讲解下如何解决<br/>
+              首先是黑屏有声音，比如玩扩散性百万亚瑟王（简称MA），这游戏自从在出了广告后，就经常这样，解决方法也是比较简单， 打开游戏的时候，鼠标移动到广告关闭的位置，一直点，就可以正常进入游戏。<br/>
+              个别应用黑屏，特别是微信黑屏，可以尝试下在设置-应用程序管理-找到应用，改成平板模式，然后在重新打开下看看<br/>
+              接着是游戏黑屏闪退，如果是打开游戏才会这样， 请确认下其他游戏是否正常， 如果都是这样的话，可能是您电脑的显卡驱动没安装好， 如果只有这款游戏不行，可能是这游戏兼容问题，可以将游戏名字和游戏的下载地址提供给我们的客服人员，让客服人员收集提供给技术解决哦<br/>
+              最后是游戏不兼容，有些游戏出于一些比较难堪的状态，不得不禁止玩家在模拟器运行，关于这点我们是遗憾的，目前也无法解决。<br/>
+              如果还是解决不了， 可以尝试联系我们的客服同学，QQ：3033957406</p>
+            <a class="faqF " name="id7" id="id7"><span class="dot"></span> <span class="q_detail">BlueStacks 蓝叠安卓模拟器黑屏闪退无限启动的解决方法?</span></a>
+            <p class="faqA">蓝叠模拟器（英文名BlueStacks）是一个可以在Windows操作系统上运行Android应用程序的软件。<br/>
+              蓝叠模拟器可以调用Windows电脑上的显卡、使用处理器和内存并采用最先进的技术，能让很多热门的游戏（如部落冲突、天天跑酷）和应用程序（如微信、陌陌）等在电脑上使用。<br/>
+              如果您安装了蓝叠模拟器出现闪退、黑屏或者是无限重启等问题，您可以尝试通过以下方法来解决。<br/>
+              蓝叠安卓模拟器（Bluestacks）是一个可以让Android应用程序能运行在window系统上的软件，可以调用PC的显卡，采取目前最先进的技术，能使很多热门的游戏（天天酷跑，天天飞车等）在电脑上玩，拥有屏幕更大，不浪费手机电池，不烫手等等等优势。<br/>
+              如果你的bluestacks，出现黑屏，闪退，或者无限启动的问题，请尝试以下方法：<br/>
+              1、如果你是Windows XP请确认是否已经安装.NET Framework 2.0；<br/>
+              2、确认电脑的显卡驱动程序是否安装完成；<br/>
+              3、确认系统颜色是否已经设置为32位色；<br/>
+              4、确认安全软件是否存在拦截蓝叠模拟器的相关服务；<br/>
+              如果仍然无法解决问题那么请您联系我们的客服同学进行咨询，QQ：3033957406 。</p>-->
+          </div>
+        </div>
+        <div id="tabFaq_scroller" class="info_scroller2">
+          <div id="tabFaq_scroll_up" class="info_scroll_up"></div>
+          <div id="tabFaq_scroll_bar" class="info_scroll_bar2"></div>
+          <div id="tabFaq_scroll_down" class="info_scroll_down"></div>
+        </div>
+      </div>
+    </div>
+    <div class="fanhui">返回</div>
+  </div>
+</div>
+<!-- 弹窗-->
+
+<div class="floatFAQ hide" id="floatFAQ">
+  <p class="floatFAQTitle">以下FAQ可能解答了您的问题</p>
+  <div id="pop">
+  
+    <div class="floatBox" id="pop_container">
+      <div id="pop_shower" class="itemM"> 
+        <!--<a data-id=""><span></span>0黑屏或花屏怎么办？</a> --> 
+        
+      </div>
+    </div>
+    <div id="pop_scroller" class="info_scroller hide">
+      <div id="pop_scroll_up" class="info_scroll_up"></div>
+      <div id="pop_scroll_bar" class="info_scroll_bar"></div>
+      <div id="pop_scroll_down" class="info_scroll_down"></div>
+    </div>
+  </div>
+</div>
+<script src="../../static/js/jquery-1.11.3.min.js"></script> 
+<script src="../../static/js/jQuery.md5.js"></script> 
+<script src="../../static/js/jscroll.js"></script> 
+<script src="../../static/js/common.js"></script> 
+<script src="../../static/js/cj.js"></script> 
+<script type="text/javascript">
+var faqscroll=new scrolls('tabFaq');
+var	 popscroll=new scrolls('pop');
+window.onresize = function (){
+		clearTimeout(timer_loop);
+		var timer_loop = setTimeout(function() {
+		faqscroll.resize_scroll();
+	}, 10);
+}
+</script>
+</body>
+</html>

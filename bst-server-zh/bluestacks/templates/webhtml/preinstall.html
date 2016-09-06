@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="target-densitydpi=320,width=720,user-scalable=no" name="viewport">
+<title>应用中心</title>
+<link href="../../static/css/layout.css" type="text/css"  rel="stylesheet"/>
+</head>
+<script src="../../static/js/jquery-1.11.3.min.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a8a8b90e1fe67ff9a45ef9f1fe0047c4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<body class="installbody">
+<div class="wrapinstall ">
+  <p>初次安装模拟器，建议您安装以下热门应用</p>
+  <div class="installicon">
+  </div>
+  <div class="clear"></div>
+  <a class="installbtn">一键安装</a>
+</div>
+<script>
+
+var center_url="/bs/get_rec_install_app?cheat=qq";
+var arr_download=[];
+var index;
+$.get(center_url,function(data,status){ 
+	$.each(data.result.apps,function(i,item1){
+		var _html1="";
+		var _html2=[];
+		_html1+="<dl ><dt><div class='installshade' data-array='"+[item1['icon_url'],item1['game_name'],item1['download_url'],item1['package_name']]+"'></div><img src='"+item1['icon_url']+"'></dt><dd>"+item1['game_name']+"</dd>"
+		$(".installicon").append(_html1);
+		if(item1['package_name']==""||item1['package_name']=="none"||item1['package_name']=="None"||item1['package_name']==null){
+			_html2=[item1['icon_url'],item1['game_name'],item1['download_url'],"unknow"];
+		}else{
+			_html2=[item1['icon_url'],item1['game_name'],item1['download_url'],item1['package_name']];
+		}
+		arr_download.push(_html2);
+	})
+	//console.log(arr_download);
+	$(".installicon dt .installshade").click(function(){
+		if($(this).hasClass("installshade_nocheck")){
+			$(this).removeClass("installshade_nocheck");
+			var arr1=[];
+			var arr2=$(this).attr("data-array").split(",");
+			for(var k=0;k<4;k++){
+				arr1.push(arr2[k]);
+				}
+			arr_download.push(arr1);
+			
+		}else{
+			$(this).addClass("installshade_nocheck");
+			for (var j = 0; j < arr_download.length; j++) {
+				 if (arr_download[j] == $(this).attr("data-array"))
+				 index=j;
+			}  
+			arr_download.splice(index,1);
+		}
+		//console.log(arr_download);
+	})
+	
+	
+})
+
+$(".installbtn").click(function(){
+	browser2Client('preinstallapp',arr_download,"unknow");
+})
+</script>
+
+</body>
+</html>

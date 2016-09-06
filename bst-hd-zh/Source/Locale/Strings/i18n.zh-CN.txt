@@ -1,0 +1,757 @@
+﻿;*********************************************************************************************
+; Resolution Settings
+;*********************************************************************************************
+GroupResolutionTitle = 分辨率设置
+GroupBossKeyTitle = 老板键设置
+
+LandscapeMode960  = 横屏   960 x 720
+LandscapeMode1280 = 横屏  1280 x 960
+LandscapeMode1440 = 横屏  1440 x 900
+PortraitMode720 = 竖屏  720 x 960
+PortraitMode960 = 竖屏  960 x 1280
+PortraitMode900 = 竖屏  900 x 1440
+
+CustomizeResolutionSetting = 自定义设置
+CustomizeResolutionSettingPrompt = （宽度 x 高度）
+
+BossKeyLableName = 自定义老板键
+BossKeyInputPrompt = *请使用键盘输入自定义键
+
+CustomerServiceQQ = 客服QQ：3033957406
+CustomerServiceQQGroup = 官方2群：399011190
+
+ResolutionSettingsBtnOK = 应用
+ResolutionSettingsBtnCancel = 取消
+
+PromptSetBosskey = 请重新设置自定义老板键！
+CustomizeResolutionNotNULL = 自定义分辨率设置不能为空！
+WidthOrHightNotRight = 自定义分辨率可能导致无法启动，请重新输入
+ResoutionCauseDeformation = 您设置的分辨率可能会导致应用变形，是否确认?
+RebootAfterChangeResolution = 您修改了分辨率，是否重启BlueStacks?
+RestartNowBtn = 立即重启
+RestartLaterBtn = 稍后重启
+
+BosskeyRegisterFailed = 热键已被其他程序占用，请重新设置。
+;*********************************************************************************************
+; Agent Sys tray context menu
+;*********************************************************************************************
+
+RestoreFactorySettings = 还原Dock设置
+
+RestartBlueStacks = 重新启动
+
+QuitBlueStacks = 退出
+
+StopBlueStacks = 停止
+
+RotatePortraitApps = 旋转纵向应用
+RotatePortraitAppsAutomatic = 自动
+RotatePortraitAppsEnabled = 已启用
+RotatePortraitAppsDisabled = 已禁用
+
+UploadDebugLogs = 报告问题
+
+FreeDuringBeta = 试用版期间免费
+
+SMSSetupMenu = 短信同步设置
+
+ShowNotificationsMenu = 显示通知
+
+PauseSync = 暂停同步
+
+ResumeSync = 恢复同步
+
+CheckForUpdates = 检查是否有更新
+DownloadingUpdates = 正在下载更新
+InstallUpdates = 安装更新
+
+Apps = 应用
+App = 应用
+Installed = 已安装
+DiskUsageUnavailable = 磁盘使用情况不可用
+Of = 的
+DiskUsed = 磁盘已使用
+
+;*********************************************************************************************
+; Frontend buttons tool tip
+;*********************************************************************************************
+
+BackButtonToolTip = 返回
+
+MenuButtonToolTip = 显示菜单
+
+HomeButtonToolTip = 主页
+
+SettingsButtonToolTip = 设置
+
+ShareButtonToolTip = 分享快照
+
+FullScreenButtonToolTip = 切换全屏
+
+CloseButtonToolTip = 关闭
+
+;*********************************************************************************************
+; Frontend buttons tool tip
+;*********************************************************************************************
+
+ResizeMessageBoxCaption = 调整BlueStacks应用播放器大小
+
+ResizeMessageBoxText = 注意：在此beta-1版中，如需调整应用大小，我们必须将其关闭。请在调整大小后重新启动应用。谢谢！
+
+
+;*********************************************************************************************
+; Frontend Info/Error messages
+;*********************************************************************************************
+
+LoadingMessage = 载入中……
+
+Initializing = 初始化
+InitializingGame = 正在初始化游戏
+
+DownloadingGameData = 正在下载游戏数据
+
+CanNotStart = 无法启动BlueStacks。请联系support@bluestacks.com
+
+FullScreenToastText = 已为您全屏显示。按F11键退出全屏。
+
+SnapshotErrorToastText = 没有安装快照共享应用
+
+GraphicsDriverOutdatedError = 你的显卡驱动程序似乎已过期。BlueStacks需要更新了的驱动程序来运行。现在更新吗？
+
+GraphicsDriverOutdatedWarning = 你的显卡驱动程序似乎已过期。我们建议你更新驱动程序来获得最佳性能。现在更新吗？
+
+GraphicsDriverUpdatedMessage = 你的显卡驱动程序已更新。你必须重新启动计算机来使更改生效。\n\n你想要立即重新启动计算机吗？
+
+;*********************************************************************************************
+; Agent strings
+;*********************************************************************************************
+
+NetworkAvailableIconText = BlueStacks代理在线
+
+NetworkUnavailableIconText = BlueStacks代理
+
+BalloonTitle = BlueStacks
+
+OKButtonText = 确定
+
+CancelButtonText = 取消
+
+InstallSuccess = 已安装
+
+UninstallSuccess = 已卸载
+
+UninstallFailed = 无法卸载
+
+UninstallingWait = 正在卸载应用...
+
+CloudConnectTitle = BlueStacks云连接
+
+CloudConnectedMsg = 已连接
+
+CloudDisconnectedMsg = 已断开
+
+InsufficientStorageMessage = 你正在使用的免费版BlueStacks应用播放器的内置SD卡已满。欢迎你卸载一个或多个应用来腾出空间。
+
+
+;*********************************************************************************************
+; ApkInstaller strings
+;*********************************************************************************************
+
+InstallFail = 安装失败
+
+UserWaitText = 正在安装APK ...
+
+;*********************************************************************************************
+; LogCollector Strings
+;*********************************************************************************************
+
+NC_ONLY_FORM_TEXT = 通知中心支持工具
+
+FORM_TEXT = 应用播放器支持工具
+
+BUTTON_TEXT = 发送
+
+EMAIL_LABEL = 电子邮件地址
+
+ZENDESK_ID_TEXT = Zendesk Id (可选)
+
+DESCRIPTION_LABEL = 问题描述
+
+STATUS_INITIAL = 正在启动收集器
+
+STATUS_COLLECTING_PRODUCT = 正在收集产品信息
+
+STATUS_COLLECTING_HOST = 正在收集主机信息
+
+STATUS_COLLECTING_GUEST = 正在收集安卓信息
+
+STATUS_ARCHIVING = 正在创建支持存档
+
+STATUS_SENDING = 正在发送问题报告
+
+APP_NAME = 输入应用名称
+
+FINISH_CAPT = 支持工具完成
+
+FINISH_TEXT = 你的问题报告已发送。我们很快会给你回复。
+
+PROMPT_TEXT = 无法发送问题报告。已经在你的桌面上创建了一个名为BlueStacks-Support.zip的文件。请把这个文件和对你的问题的简要说明通过电子邮件发送到support@bluestacks.com。
+
+DESC_MISSING_TEXT = 请输入对你的问题的描述。
+
+ZENDESK_INVALID_ID_TEXT = 请输入有效的zendesk ID
+
+SELECT_CATEGORY_TEXT = 请选择问题类别。
+
+EMAIL_MISSING_TEXT = 电子邮件无效。请输入一个有效的电子邮件地址。
+
+RPC_FORM_TEXT = 解决RPC错误
+
+STUCK_AT_INITIALIZING_FORM_TEXT = 排错停留在初始化
+
+WORK_DONE_TEXT = 全部完成，如果问题仍然存在，那么请报告问题
+
+PROGRESS_TEXT = 请稍候，我们正在试着解决这个问题
+
+TROUBLESHOOTER_TEXT = 排错并尝试自动解决我的问题
+
+LOGCOLLECTOR_RUNNING_TEXT = 问题报告已经运行
+
+;*********************************************************************************************
+; Please do not translate strings on the left of ":"
+; for eg, LOGCOLLECTOR_PROBLEMS = 分类:åˆ†ç±», BlueStacks 在初始化的时候卡住:BlueStacksåœ¨åˆå§‹åŒ–çš„æ—¶å€™å¡ä½, BlueStacks 崩溃:BlueStackså´©æºƒ, 系统重启/崩溃:ç³»ç»Ÿé‡å¯/ å´©æºƒ, 应用无法运行:åº”ç”¨æ— æ³•è¿è¡Œ, 其它:å…¶å®ƒ
+;*********************************************************************************************
+
+LOGCOLLECTOR_PROBLEMS = Category:分类, Bluestacks stuck at initializing:BlueStacks在初始化的时候卡住, Bluestacks crash:BlueStacks崩溃, System restart/crash:系统重启/崩溃, App not working:应用无法运行, Other:其它
+
+Category = 分类
+
+APP_MISSING_TEXT = 输入应用名称
+
+ZIP_NAME = BlueStacks-Support.zip
+
+;*********************************************************************************************
+; Restart Utility Strings
+;*********************************************************************************************
+
+RESTART_UTILITY_TITLE_TEXT = BlueStacks重启实用工具
+RESTART_UTILITY_USAGE_TEXT = 使用量
+RESTART_UTILITY_RESTARTING_TEXT = 正在重新启动BlueStacks
+RESTART_UTILITY_CANNOT_STOP_TEXT = 无法停止BlueStacks
+RESTART_UTILITY_CANNOT_START_TEXT = 无法启动BlueStacks
+RESTART_UTILITY_EXIT_TEXT = 退出
+RESTART_UTILITY_UNHANDLED_EXCEPTION_TEXT = 抓住了未处理的异常情况。请检查日志来了解详细信息。
+APKINSTALLER_ALREADY_RUNNING = 一个应用已经在安装之中。请等待它完成安装。
+
+;*********************************************************************************************
+; Updater Utility Strings
+;*********************************************************************************************
+
+UPDATER_UTILITY_NO_UPDATE_TITLE = BlueStacks更新器
+UPDATER_UTILITY_NO_UPDATE_TEXT = 没有新的更新。
+UPDATER_UTILITY_ASK_TO_INSTALL_TITLE = 有更新可用。
+UPDATER_UTILITY_ASK_TO_INSTALL_TEXT = 你想更新到BlueStacks的最新版本吗？
+UPDATER_UTILITY_ASK_TO_INSTALL_NOW = 现在安装
+UPDATER_UTILITY_ASK_TO_INSTALL_REMIND_LATER = 稍后提醒我
+UpdateSuccess = 已更新
+
+;*********************************************************************************************
+; Tooltips
+;*********************************************************************************************
+
+GuidanceTooltip = 此游戏的控制器或键盘映射
+
+SettingsTooltip = 设置
+
+MinimizeTooltip = 最小化到任务栏
+
+ToggleScreenTooltip = 切换屏幕
+
+CloseTooltip = 关闭
+
+HelpTooltip = 帮助
+
+BackTooltip = 返回
+
+;*********************************************************************************************
+; Close popup
+;*********************************************************************************************
+
+ClosePopupText = 您是否愿意继续接收来自应用的通知？
+
+YesText = 是
+
+NoText = 否
+
+CancelText = 取消
+
+RememberChoiceText = 记住我的选择
+
+;*********************************************************************************************
+; Settings menu
+;*********************************************************************************************
+
+ReportProblemText = 报告问题
+
+RestartAndroidText = 重启 Android 插件
+
+CheckForUpdatesText = 检查更新
+
+SettingsText = 设置
+
+AndroidSetingsText = 模拟器设置
+
+LanguageAndInputSettingsText = 语言和输入
+
+MyAccountText = 我的帐户
+
+LocationText = 设置位置
+
+;*********************************************************************************************
+; Wait Message Strings
+;*********************************************************************************************
+
+Wait_Message_String_Comma_Seprated = 请稍等...,开始使用...,正在加载数据...,请稍等片刻...
+
+
+;*********************************************************************************************
+; Control bar
+;*********************************************************************************************
+
+ToolBarChangeAppSize = 更改应用大小
+
+ToolBarShake = 抖动
+
+ToolBarCamera = 屏幕截图
+
+ToolBarInstallApk = 安装 apk
+
+ToolBarCopyFromWindows = 从 Windows 复制文件
+
+ToolBarCopy = 复制
+
+ToolBarPaste = 粘贴
+
+ToolBarVolume = 音量
+
+ToolBarHelp = 帮助
+
+Android = 蓝叠模拟器
+
+Welcome = 欢迎
+
+Finish = 完成
+
+StartBlueStacks = 启动 BlueStacks
+
+InstallLocationError = 数据位置不可访问。请选择其他位置
+
+SelectTheme = 选择主题
+
+;*********************************************************************************************
+; Updater Progress
+;*********************************************************************************************
+
+UpdateInstallingText = 正在安装...
+
+UpdateSuccessText = BlueStacks 更新成功
+
+UpdateErrorText = 更新期间出错。请稍后重试
+
+UpdateMessageBoxTitleText = BlueStacks 更新
+
+UpdateDownloadedText = 已下载...
+
+UpdateProgressTitleText = BlueStacks 更新程序
+
+UpdateDownloadPreparingText = 正在准备下载...
+
+UpdateAvailableText = 有可用的更新。是否要立即安装？
+
+CopyFiles = 正在复制文件
+
+InstallCompleted = 安装完成
+
+PreserveUserData = 保留用户数据
+
+RestoreAndroidUserData = 正在恢复Andr​​oid用户数据
+
+CreateAppShortcuts = 正在创建应用的快捷方式
+
+SetupAndroidLibrary = 正在安装Android库
+
+RemoveAndroidLibrary = 正在删除Android库
+
+WaitServiceStart = 等待服务启动
+
+CleanFilesAndReg = 清理文件和注册表设置
+
+InstallService = 正在安装服务
+
+InstallUpdaterService = 正在安装BlueStacks更新服务
+
+StartService = 正在启动服务
+
+UninstallService = 正在卸载服务
+
+CreateFSFiles = 正在建立FS文件
+
+StartRollback = 开始回滚
+
+InstallComponents = 正在安装组件...
+
+InstallRuntime = 正在安装运行时。还剩下几秒钟...
+
+ErrorOccured = 哎呀...发生一些错误。再次重试...
+
+Downloading = 正在下载
+
+Installing = 正在安装
+
+Installer = 安装程序
+
+BlueStacks = BlueStacks
+
+Progress = ...
+
+BlueStacksInstaller = BlueStacks安装程序
+
+VerifyDependence = 正在验证依赖性...
+
+DownloadingBlueStacks = 正在下载BlueStacks ...
+
+StartInstall = 正在开始安装...
+
+DownloadAppRuntime = 正在下载应用运行时...
+
+DownloadAVG = 正在下载AVG反病毒软件...
+
+InstallBlueStacks = 正在安装BlueStacks ...
+
+LaunchAVG = 从我的应用菜单启动AVG AntiVirus专业版。了解更多
+
+RecommendAVG = BlueStacks推荐使用AVG工具栏来改进你的上网保护。
+
+BlueStacksDownMan = BlueStacks下载管理器
+
+ContinueStatement = 点击继续，即表明我接受许可协议中的条款。
+
+Continue = 继续
+
+Next = 下一步
+
+Browse = 浏览
+
+Install = 安装
+
+Back = 返回
+
+Exit = 退出
+
+RunsBest = BlueStacks在启用以下功能时运行得最好
+
+AppStore = 应用商店访问
+
+AppNotify = 应用通信
+
+BlueStacksAVG = BlueStacks App Player现在将AVG Antivirus PRO for Android包括在内。
+
+DataFolderLocation = 选择BlueStacks数据位置
+
+AVGDescription = AVG的工具栏将保护你免受恶意网站侵扰，使用AVG Do Not Track保护你的隐私安全，让你能够使用AVG Secure Search进行安全的搜索。\n安装AVG工具栏，将AVG Secure Search设为你的主页、刚打开的选项卡和默认搜索提供商。
+
+AVGLicenceStatement = \n通过点击 \"安装\"将其应用到Chrome、Firefox和Internet Explorer，即表明你同意了AVG最终用户许可协议和隐私政策
+
+DownloadRuntimeData = 正在下载运行时数据...
+
+InstallingProduct = 正在安装 {0} ...
+
+DownloadingProduct = 正在下载 {0} ...
+
+InstallingProgress = 正在安装...
+
+InstallCompletedPending = 即将完成。还剩下几秒钟...
+
+InstallProgressBar = 安装进度：{0}...
+
+DirectoryNotFound = {0}不存在
+
+NotEnoughSpace = 没有足够的空间！选择其他驱动器
+
+NotEnoughPermissions = 你没有安装在此目录的必要权限。
+
+InstallationInterrupted = BlueStacks安装被中断。请再次双击BlueStacks安装程序来完成安装。
+
+InstallationFailed = BlueStacks安装失败
+
+ContactInstallationFailed = BlueStacks安装失败。请联系support@bluestacks.com
+
+FailedToInstall = 安装BlueStacks失败。
+
+DownloadInProgress = BlueStacks App Player下载正在进行中。请等待它完成。
+
+InstallInProgress = BlueStacks的安装正在进行中。
+
+ErrorWhileInstallingFile = 糟糕...在安装时发生一些错误 {0}。\n请尝试重新安装。
+
+ProductInstallationFailed = {0}安装失败
+
+ApkInstallFailed = 安装apk失败。错误： {0}
+
+WelcomeToBlueStacks = 欢迎使用 BlueStacks
+
+InstallingBlueStacks = 正在安装 BlueStacks
+
+Step1InstallingRuntime = 步骤 1/4：正在安装运行时。剩余时间：
+
+Step2PreparingForFirstTimeUse = 步骤 2/4：正在准备首次使用。剩余时间：
+
+Step3AlmostDone = 步骤 3/4：即将完成，正在结束。剩余时间：
+
+Step4VerifyingInstallation = 步骤 4/4：正在验证安装。剩余时间：
+
+Step4Installing = 步骤 4/4： 正在安装 ...
+
+BlueStacksApkHandlerTitle = BlueStacks apk处理程序
+
+CommonAppTitleText  = BlueStacks 应用播放器
+
+SnapShotShareString = 通过BlueStacks 应用播放器分享（www.bluestacks.com）
+
+AppTitle = BlueStacks 应用播放器
+
+General = 通用
+
+Themes = 主题
+
+Preferences = 偏好
+
+Text = 文本
+
+Tab = 标签
+
+LeftSideBar = 左侧边栏
+
+SettingsMenu = 设置菜单
+
+TabBar = 标签栏
+
+Border = 边框
+
+Style = 风格
+
+InactiveTabBottom = 非活动标签底部
+
+InactiveTabTop =非活动标签顶部
+
+SelectedTabBottom = 选择标签底部
+
+SelectedTabTop = 选择标签顶部
+
+SelectedTabText = 选择标签文本
+
+MouseOverTabText = 鼠标悬停标签文本
+
+InactiveTabText = 非活动标签文本
+
+BottomGradient = 底部渐变
+
+TopGradient = 顶部渐变
+
+MouseOverColor = 鼠标悬停颜色
+
+ForeGroundColor = 前景颜色
+
+BackGroundColor = 背景颜色
+
+TabTopColorMouseOver = 标签顶部鼠标悬停
+
+TabBottomColorMouseOver =标签底部鼠标悬停
+
+InnerBorder = 内边框
+
+TabBorder = 标签边框
+
+ToolBarBorder = 左侧边栏边框
+
+GameManagerBorder = 应用播放器边框
+
+Apply = 应用
+
+NewTheme = 新主题
+
+AppRestartConfirmMsg = 应用将被重启。您想要继续吗？
+
+EnterTheme = 请输入主题名称
+
+ThemeAlreadyExists = 该主题已存在
+
+Confirm = 确定操作
+
+ControlBar = 控制栏
+
+LableConfigureGamePad = 使用 GamePad
+
+LabelSideBar = 显示侧边栏
+
+LabelWindowSize = 视窗大小
+
+LabelRestartNote = 激活设定需要重启应用。
+
+LabelStayAwake = 保持开启状态
+
+LabelLanguage = 语言
+
+LabelAutoStart = 视窗启动时自动开启
+
+GroupBoxBluestacksPreferences = BlueStacks 偏好
+
+XPNotSupported = 该功能无法在 Windows XP 上使用！
+
+ToolBarGoLive = 进入直播
+
+EndStreaming = 结束流媒体播放
+
+KeepStreaming = 保持流媒体播放
+
+CloseMessagePrompt = 关闭此窗口将会结束您的流媒体播放。\n您想要结束么？
+
+CloseWhileStreamingTooltip = 停止流媒体播放
+
+VMX_IN_USE =  抱歉，BlueStacks (beta-1) 不能在正在运行其它虚拟机的电脑上运行.你可以卸载虚拟机，重启电脑，然后重新运行BlueStacks. 或者等BlueStacks后续版本来兼容这种情况。
+
+HYPERV_ENABLED = 抱歉，BlueStacks(beta-1)不能在正在运行其它虚拟软件(VMWare/VirtualBox/Hyper-V)的电脑上运行.安装即将终止！
+
+SYSTEM_UPGRADED_ERROR = 你的系统似乎已升级。请点击 OK 进行配置并运行 BlueStacks App Player.
+
+Settings = 设置
+
+Location = 位置
+
+ConfirmMsgOnThemeChange = 未应用主题！是否要继续但不保存更改？
+
+UpdateSuccessAndLaunchText = BlueStacks 已成功更新！\n是否要立即运行 BlueStacks？
+
+ToolBarWatchVideos = 观看视频
+
+LabelHideTopBar = 在全屏时隐藏选项卡
+
+VMX_IN_USE = 很遗憾，BlueStacks (beta-1) 无法在使用虚拟机 (VM) 的 PC 上运行。您可以卸载 VM，然后重新启动并运行 BlueStacks；或者等待将来适应此条件的 BlueStacks 版本。
+
+HYPERV_ENABLED = 很遗憾，BlueStacks (beta-1) 无法在有其他活动的虚拟化软件 (VMWare/VirtualBox/Hyper-V) 的 PC 上运行。现在安装将中止。
+
+SYSTEM_UPGRADED_ERROR = 您的系统似乎已升级。请单击“确定”以配置并运行 BlueStacks App Player。
+
+DRIVER_UPDATE_MESSAGE = BlueStacks 无法继续安装，因为您的显卡要求更新驱动程序。\n\n请单击“了解更多”以便按有关如何更新驱动程序的说明操作。
+
+ToolBarLiveStreaming = 流媒体直播
+
+TryAgainText = 重试
+
+LabelForceKill = 在关闭选项卡时强制终止 App
+
+LabelShowExitMenu = 在关闭应用程序之前警告我
+
+ANDROID_DATA_BACKUP_FAILED = 啊哦 - 尝试保存您的数据时出现问题。是否仍要继续？
+
+UNINSTALLATION_CONFIRMATION = 是否确定要卸载 BlueStacks App Player？
+
+PRESERVE_BSDATA_ON_UNINSTALL = 是否要保留您的所有 App 和数据？\n注：这可能要在您的系统上占用一些空间，具体取决于当前具有的 App 数据量
+
+UNINSTALLATION_FORM_MSG = 正在卸载 BlueStacks App Player，请稍候。\n请在 www.bluestacks.com 上告诉我们如何改进该应用程序
+
+PRE_INSTALL_CHECKS = BlueStacks 安装前检查
+
+COPY_BLUESTACKS_FILES_FOLDERS = 复制 BlueStacks 文件和文件夹
+
+CREATE_BLUESTACKS_REGISTRY = 创建 BlueStacks 注册表
+
+CREATE_BLUESTACKS_SERVICES = 安装 BlueStacks 驱动程序和服务
+
+RESTORE_BLUESTACKS_BACKUP = 恢复 BlueStacks 备份数据
+
+CREATE_SHORTCUTS = 创建 BlueStacks 快捷方式
+
+ROLLBACK_DELETE_SERVICE = 安装失败，正在回滚、删除服务
+
+ROLLBACK_DELETE_FILES_FOLDERS = 安装失败，正在回滚、删除文件和文件夹
+
+WINXP64_UNSUPPORTED = 不支持的 OS。BlueStacks 不支持 Windows XP X64
+
+InstallFailed = 安装失败
+
+INSTALL_FAILED_MESSAGE = 安装失败。\n请重新启动您的计算机，然后重试。\n请通过电子邮件将日志文件发送至 support@bluestacks.com\n 日志文件位于
+
+STOPPING_BLUESTACKS = 退出 BlueStacks
+
+BACKINGUP_BLUESTACKS_DATA = 备份 BlueStacks 数据
+
+REMOVING_BLUESTACKS_SERVICES = 移除 BlueStacks 服务
+
+REMOVING_BLUESTACKS_FOLDERS = 删除 BlueStacks 文件
+
+Settings = 设置
+
+Location = 位置
+
+WINXPSP3_REQUIRED = 不支持的 OS。BlueStacks 要求 Windows XP SP3
+
+WINVISTASP2_REQUIRED = 不支持的 OS。BlueStacks 要求 Windows Vista SP2 或更高版本
+
+INSUFFICIENT_DISKSPACE = 可用磁盘空间不足。BlueStacks 要求
+
+INSUFFICIENT_PHYSICALMEMORY = BlueStacks 至少需要 2 GB 物理内存
+
+DX_UNSUPPORTED = 您的显卡/驱动程序不支持当前版本的 BlueStacks
+
+REGISTRY_EDITING_DISABLED = BlueStacks 安装时需要注册表编辑权限
+
+DOTNET2_SP2REQUIRED = 计算机未安装 .Net 2 SP 2 或更高版本
+
+DOTNET35_FULLREQUIRED = 计算机未安装 .Net 3.5 或更高版本
+
+CREATE_BACKUP = 创建产品备份
+
+ROLLBACK_CREATE_BACKUP_FAILED = 创建备份失败，正在回滚
+
+UPGRADE_FAILED = 升级失败
+
+UPGRADE_FAILED_MESSAGE = 请重新启动您的计算机，然后重试。\n此外，请通过电子邮件将日志文件发送至 support@bluestacks.com，日志文件位于\n
+
+ROLLBACK_FAILED_MESSAGE = 无法回滚升级。请重新启动您的计算机，然后重试。\n此外，请通过电子邮件将日志文件发送至 support@bluestacks.com，日志文件位于\n
+
+UpdateProgressTitleText = BlueStacks 更新程序
+
+UpdateAvailableText = 有可用更新。是否要立即安装？
+
+ForcedUpdateAvailableText = 有可用强制更新。是否要立即安装？
+
+InstallationCorruptTitle = 模拟器文件损坏
+
+InstallationCorruptMessage = 模拟器文件已损坏，请卸载并重新安装模拟器。
+
+;*********************************************************************************************
+;Filter Download UI Text
+;*********************************************************************************************
+
+FILTER_UPDATE_TITLE = BlueStacks过滤器更新程序
+
+INITIALIZING_TEXT = 正在初始化下载工具...
+
+DOWNLOADING_TEXT = 正在下载{0}/{1}  ...
+
+DOWNLOADED_TEXT = 下载已完成...
+
+APPLYING_TEXT = 正在应用主题...
+
+APPLY_BUTTON_TEXT = 应用
+
+LATER_BUTTON_TEXT = 以后
+
+DOWNLOAD_ERROR_TEXT = 糟糕！ 发生了一些错误。 过滤器将在下次启动时更新
+
+STOP_STREAMING_REQUIRED = 此更新将需要停止串流
+
+OBS_ERROR_TEXT = 糟糕！ 有一个错误。 您想重试吗？
+
+OBS_ALREADY_RUNNING = 另一个OBS实例已在运行！ 请关闭第一个以开启直播。

@@ -1,0 +1,282 @@
+@font-face {
+    font-family: 'Roboto-Light';
+    font-weight: 300;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    font-weight: 500;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    font-weight: 700;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Supercell-Magic';
+    src: url('./assets/Supercell-magic-webfont.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.chat-line-parent{
+    position: relative;
+    min-height: 9.4vh;
+    margin-bottom: 2vh;
+    width: 31vw;
+    margin-top: 5.5vh;
+}
+.arrowdiv {
+    position: absolute;
+    top: -2vh;
+    transform: skew(15deg);
+    left: -4.3vmin;
+    width: 32vw;
+    -webkit-animation: animatearrow 1s; /* Safari 4+ */
+    -moz-animation: animatearrow 1s; /* Fx 5+ */
+    -o-animation: animatearrow 1s; /* Opera 12+ */
+    animation: animatearrow 1s; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes animatearrow {
+    0% {
+        transform: rotate(30deg);
+        transform: skew(-90deg) translate3d(300px, -40px, 0);
+    }
+    100% {
+        transform: rotate(-5deg);
+        transform: skew(12deg) translate3d(0px, 0px, 0);
+    }
+}
+
+@-o-keyframes animatearrow {
+    0% {
+        transform: rotate(30deg);
+        transform: skew(-90deg) translate3d(300px, -40px, 0);
+    }
+    100% {
+        transform: rotate(-5deg);
+        transform: skew(12deg) translate3d(0px, 0px, 0);
+    }
+}
+
+@keyframes animatearrow {
+    0% {
+        transform: rotate(30deg);
+        transform: skew(-90deg) translate3d(300px, -40px, 0);
+    }
+    100% {
+        transform: rotate(-5deg);
+        transform: skew(12deg) translate3d(0px, 0px, 0);
+    }
+}
+
+@-moz-keyframes animatearrow {
+    0% {
+        transform: rotate(30deg);
+        transform: skew(-90deg) translate3d(300px, -40px, 0);
+    }
+    100% {
+        transform: rotate(-5deg);
+        transform: skew(12deg) translate3d(0px, 0px, 0);
+    }
+}
+.chat-line{
+    display: none;
+}
+.base-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background-image{
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
+}
+
+.left-container {
+    float: left;
+    width: 34.5vw;
+    height: 100vh;
+}
+
+.right-container {
+    float: right;
+    height: 100vh;
+    /*text-align: right;*/
+    width: 34.5vw;
+}
+
+.left-image, .right-image {
+    width: 100%;
+    height: 100%;
+}
+
+.streamer-info{
+    bottom: 2vh;
+    left: 2vw;
+    width: 30vw;
+    position: absolute;
+    text-align: center;
+}
+
+#crown{
+    position: relative;
+    top: 2vh;
+}
+
+.streamer-name {
+    /*bottom: 45vh;*/
+    color: #ffffff;
+    display: inline-block;
+    /*float: left;*/
+    font-family: "Supercell-Magic";
+    font-size: 1.7vw;
+    padding-bottom: 2.5vh;
+    /*left: 4vw;*/
+    overflow: hidden;
+    width: 19vw;
+    /*position: absolute;*/
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /*width: 28vw;*/
+    text-shadow:0px 4px 5px rgba(0,0,0,0.50);
+}
+
+#webcam-placeholder {
+    bottom: 10vh;
+    display: inline-block;
+    float: left;
+    height: 40vh;
+    left: 1vw;
+    position: absolute;
+    width: 32vw;
+}
+
+.chat-text{
+    color: #fff;
+    display: block;
+    font-family: "Supercell-Magic";
+    font-size: 2.5vw;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    top: 2.5vh;
+}
+.btv-logo{
+    bottom: 0;
+    position: absolute;
+    right: 10vw;
+    width: 15vw;
+}
+div#chat {
+    height: 80vh;
+    padding-left: 3.5vw;
+    width: 31vw !important;
+    /*overflow-y: scroll;*/
+    /*overflow-x: hidden;*/
+    overflow: auto;
+    margin-top: 3vh;
+    padding-top: 2vh;
+}
+
+.vertical-handle {
+    width: 6px;            /* How wide is the scrollbar handle? */
+    background-color: transparent; /* What color should the handle be? */
+}
+
+div#chat .chat-line {
+    background:rgba(255,255,255,0.80);
+    border-radius: 6px;
+    width: 45vh;
+    font-weight: 500;
+    text-align: left;
+    position: relative;
+    /*padding: 2vh;*/
+    height: auto;
+    min-height: 9.4vh;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.67);
+}
+
+div#chat .chat-line.broadcaster{
+    opacity:0.89;
+    background:#d3e9ff;
+    border-radius:12px;
+}
+
+div#chat .emoticon {
+    height: 3vh;
+    width: 1.5vw;
+}
+
+div#chat .chat-line .chat-name {
+    font-size: 1vw;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    /*color:#67726f !important;*/
+    width: 100%;
+    display: block;
+    font-family: 'Supercell-Magic';
+    letter-spacing:0px;
+    text-align:left;
+    padding-top: 2vh;
+    padding-left: 2vw;
+}
+
+div#chat .chat-line .chat-message{
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    margin: 1vh 1vw 1vh 1.3vh;
+    display: block;
+    font-family: 'Supercell-Magic';
+    font-size: 0.8vw;
+    color: #3b3f3e !important;
+    padding-bottom: 2vh;
+    padding-left: 2.4vw;
+    word-wrap: break-word;
+}
+
+div#chat .chat-line.broadcaster .chat-message{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-right: 1vw;
+    display: block;
+    font-family: 'Supercell-Magic';
+    font-size: 0.8vw;
+    color: #000 !important;
+}
+
+.vjs-control-bar{
+    display: none;
+}
+
+.chat-line.chat-hosting-yes{
+    display: none;
+}

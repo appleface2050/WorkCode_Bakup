@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Roboto-Light';
+    font-weight: 300;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    font-weight: 500;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    font-weight: 700;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Bold.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.base-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
+}
+
+.left-container {
+    float: left;
+    width: 34.5vw;
+    height: 100vh;
+}
+
+.right-container {
+    float: right;
+    height: 100vh;
+    text-align: right;
+    width: 34.5vw;
+}
+
+.left-image, .right-image {
+    width: 100%;
+    height: 100%;
+}

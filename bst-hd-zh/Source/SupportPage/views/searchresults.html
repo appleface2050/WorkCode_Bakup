@@ -1,0 +1,15 @@
+<div class="animated fadeInDown search-results-container" ng-if="searchQuery.length > 0">
+	
+	<!-- Search Loader -->
+	<img src="images/ellipsis.gif" ng-if="isSearching" class="search-loader" />
+	
+	<!-- No results found message -->
+	<p ng-if="searchResultsEmpty" class="search-hint i18n" label="no_results_found">{{locValues.no_results_found}}</p>
+	
+	<!-- Search results list container -->
+	<ul class="search-results" ng-if="!isSearching && searchResults.length > 0">
+		<li class="search-item" ng-repeat="x in searchResults">
+			<a href="{{x.html_url}}" ng-click="linkClicked(x.title,searchQuery)">{{x.title}}</a>
+		</li>
+	</ul>
+</div>

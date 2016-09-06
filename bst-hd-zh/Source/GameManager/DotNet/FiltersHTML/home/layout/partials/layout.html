@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="./styles/layout.css">
+<div class="container">
+    <!--Header Start-->
+    <div ng-include='"./partials/header.html"'></div>
+    <!--Header End-->
+    <div class="row">
+        <div class="parent-container">
+            <div class="left-container">
+                <div id="layouts" ng-if="mode=='landscape'" class="filters">
+                    <h1 label="layout" class="i18n filter-txt"></h1>
+                    <div ng-click="select_mode('landscape_1')" ng-class="{active : activeMode === 'landscape_1'}" class="theme-container">
+                        <div class="main_image-container">
+                            <img class="theme-image" ng-src='./images/layout_landscape_thumbnail1.png'>
+                            <div class="theme-image-overlay"></div>
+                        </div>
+                    </div>
+                    <div ng-click="select_mode('landscape_2')" ng-class="{active : activeMode === 'landscape_2'}" class="theme-container">
+                        <div class="main_image-container">
+                            <img class="theme-image" ng-src='./images/layout_landscape_thumbnail2.png'>
+                            <div class="theme-image-overlay"></div>
+                        </div>
+                    </div>
+                    <div ng-click="select_mode('landscape_3')" ng-class="{active : activeMode === 'landscape_3'}" class="theme-container">
+                        <div class="main_image-container">
+                            <img class="theme-image" ng-src='./images/layout_landscape_thumbnail3.png'>
+                            <div class="theme-image-overlay"></div>
+                        </div>
+                    </div>
+                    <div ng-click="select_mode('landscape_4')" ng-class="{active : activeMode === 'landscape_4'}" class="theme-container">
+                        <div class="main_image-container">
+                            <img class="theme-image" ng-src='./images/layout_webcamonly_thumbnail.png'>
+                            <div class="theme-image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="layouts" ng-if="mode=='portrait'" class="filters">
+                    <h1 label="layout" class="i18n filter-txt"></h1>
+                    <div ng-click="select_mode('portrait_1')" ng-class="{active : activeMode === 'portrait_1'}" class="theme-container">
+                        <div class="main_image-container">
+                            <img class="theme-image" ng-src='./images/layout_portrait_thumbnail1.png'>
+                            <div class="theme-image-overlay"></div>
+                        </div>
+                    </div>
+                    <div ng-click="select_mode('portrait_2')" ng-class="{active : activeMode === 'portrait_2'}" class="theme-container">
+                        <div class="main_image-container">
+                            <img class="theme-image" ng-src='./images/layout_portrait_thumbnail2.png'>
+                            <div class="theme-image-overlay"></div>
+                        </div>
+                    </div>
+                    <div ng-click="select_mode('portrait_3')" ng-class="{active : activeMode === 'portrait_3'}" class="theme-container">
+                        <div class="main_image-container">
+                            <img class="theme-image" ng-src='./images/layout_portrait_thumbnail3.png'>
+                            <div class="theme-image-overlay"></div>
+                        </div>
+                    </div>
+                    <div ng-click="select_mode('portrait_4')"ng-class="{active : activeMode === 'portrait_4'}" class="theme-container">
+                        <div class="main_image-container">
+                            <img class="theme-image" ng-src='./images/layout_webcamonly_thumbnail.png'>
+                            <div class="theme-image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+		        <div style="width:313px;height:333px;"></div>
+                <!--Footer-->
+                <div ng-include='"../../home/layout/partials/footer.html"'></div>
+                <!--End Footer-->
+            </div>
+        </div>
+    </div>
+</div>

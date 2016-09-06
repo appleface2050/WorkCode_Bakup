@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="utf-8" http-equiv="encoding">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script type="text/javascript" src="../common/jquery.min.js"></script>
+    <script type="text/javascript" src="../common/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../common/enscroll.min.js"></script>
+</head>
+<body class="base-container">
+<div class="background-container" style="position: absolute; z-index: -1; top: 0px; left: 0px; border: 0px none; padding: 0px;">
+    <img class="background-image" src="./assets/Pika_Pika_Background.jpg">
+</div>
+<div class="main-container">
+    <div class="left-container">
+        <div id="video-tag" class="ribbon">
+            <img id="webcam-placeholder" class="webcam-placeholder" src="assets/webcam_frame.png"/>
+            <div class="streamer-info">
+                <span id="streamerName" class="streamer-name"></span>
+            </div>
+        </div>
+    </div>
+    <div class="chat right-container">
+        <span class="chat-text">CHAT</span>
+        <div id="chat" class="scrollbox chat-container">
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../common/gmApi.js"></script>
+<script type="text/javascript" src="../common/tmi.js"></script>
+<script type="text/javascript" src="./main.js"></script>
+<script>
+    $(function () {
+        $('.scrollbox').enscroll();
+    });
+</script>
+</body>
+</html>
+

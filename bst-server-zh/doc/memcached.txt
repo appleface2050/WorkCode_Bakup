@@ -1,0 +1,10 @@
+memcached key含义
+"app_detail_data@%s" % str(platform_game_ids)    多个platform_game_ids对应的游戏库的游戏详情
+"plateform_game_ids@%s" % str(id)   游戏库id对应的多个原始库id
+"comments@%s" % str(id) 某个游戏的评论
+app_center_board    榜单数据
+app_center_home 首页数据
+app_center_recommend    推荐页面数据
+"app_center_game_data@%s" % str(i["app_center_game_id"])    应用中心游戏数据
+"topic_game_data@%s" % str(topic_id)    某topic下包含哪些游戏
+"topic_data@%s" % str(topic_id) topic_id和topic对应关系

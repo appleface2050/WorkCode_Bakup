@@ -1,0 +1,77 @@
+﻿
+       <div class="ztlistbox"><img src="<%= dataresult.result.topic.big_image_url %>"></div>
+               <div class="app_conTitle"><a class="app_titleText" ><%= dataresult.result.topic.topic_name %></a></div>
+			 
+			   <div class="app_conbox   appztlist" >
+				<div class="appgamedlbox">
+				<% 
+				$("title").html(dataresult.result.topic.topic_name+"_蓝叠应用中心_BlueStacks蓝叠_国内最具成长力的应用下载平台");
+				$("meta[name='keywords']").attr("content",dataresult.result.topic.topic_name+"_蓝叠应用中心_BlueStacks蓝叠_国内最具成长力的应用下载平台,bluestacks蓝叠,bluestacks,蓝叠,蓝叠模拟器,蓝叠安卓模拟器,BlueStacks蓝叠安卓模拟器,安卓模拟器,模拟器,安卓模拟器电脑版,电脑安卓模拟器,安卓模拟器下载,bluestacks安卓模拟器,蓝叠安卓模拟器官网,bs模拟器,安卓模拟器bluestacks");
+				for(var j=0;j<dataresult.result.topic_game.length; j++){ %>
+				  <dl>
+				  	<dt>
+						<a target='_blank'  href="app_detail_html?id=<%= dataresult.result.topic_game[j].id %>" onclick="_hmt.push(['_trackEvent', '专题_<%=dataresult.result.topic.topic_name  %>_<%=j+1 %>','click'])"><div class='mask_white '></div></a>
+						<a class='az_btn'  href="<%=dataresult.result.topic_game[j].quick_download_download_url%>"   onclick="_hmt.push(['_trackEvent', '专题_<%=dataresult.result.topic.topic_name  %>_<%=j+1 %>_一键下载','click'])">一键下载</a>
+					    <img src=" <%= dataresult.result.topic_game[j].icon_url %> ">
+					</dt>
+					<a target='_blank'   href="app_detail_html?id=<%= dataresult.result.topic_game[j].id %>" onclick="_hmt.push(['_trackEvent', '专题_<%=dataresult.result.topic.topic_name  %>_<%=j+1 %>','click'])">
+						<dd class="app_name"><%= dataresult.result.topic_game[j].title %></dd>
+					</a>
+						<dd class="app_star"> 
+						<% 	var array_picture = [{0:'stars_0'},{0.5:'stars_1'},{1:'stars_2'},{1.5:'stars_3'},{2:'stars_4'}];
+							var score=dataresult.result.topic_game[j].level;
+							//alert(score);
+							var star_array=[];
+							var star_pic='';
+							for(var i=0;  i<5; i++){
+								if(score>2){
+									star_array.push(2);
+									score-=2;
+								}else{
+									star_array.push(score);
+									score=0;
+								}
+							}
+							$.each(star_array,function(){
+								if (this <= 0)
+								{
+									star_pic = array_picture[0][0];							
+								}
+								else if (this <= 0.5)
+								{
+									star_pic = array_picture[1][0.5];
+								}
+								else if (this < 1.5)
+								{
+									star_pic = array_picture[2][1];
+								}
+								else if (this < 2)
+								{
+									star_pic = array_picture[3][1.5];
+								}
+								else if (this >= 2)
+								{
+									star_pic = array_picture[4][2];
+								}
+							%>	
+								<img src='../../static/images/browser_appcenter/<%= star_pic %>.png'>
+								
+							<% });%>
+						
+						</dd>
+						<dd class="app_type">
+						<%	
+						if(dataresult.result.topic_game[j].type!="" && dataresult.result.topic_game[j].type instanceof Array){
+							$.each(dataresult.result.topic_game[j].type,function(){ %>
+								<a href='app_center_tag_html?tag=<%= this %>'><span><%= this %></span></a>
+						<% })
+						} %>
+						</dd>
+						<dd class="app_down"><span><%= dataresult.result.topic_game[j].download_count %></span>+次下载</dd>
+						
+					
+					
+				  </dl>
+				 <% } %>
+				 </div></div>
+				 

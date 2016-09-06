@@ -1,0 +1,227 @@
+﻿;*********************************************************************************************
+; Kontextov ponuka Agent Sys  
+;*********************************************************************************************
+
+RestoreFactorySettings = Obnovenie nastaven
+
+RestartBlueStacks = Retart
+
+QuitBlueStacks = Ukoni
+
+UploadDebugLogs = Nahlsi problm
+
+FreeDuringBeta = Zadarmo poas beta
+
+;*********************************************************************************************
+; Tip nstrojov tlaidiel rozhrania
+;*********************************************************************************************
+
+BackButtonToolTip = Sp
+
+MenuButtonToolTip = Zobrazi ponuku
+
+HomeButtonToolTip = Domov
+
+SettingsButtonToolTip = Nastavenia
+
+ShareButtonToolTip = Zobrazi snmky
+
+
+;*********************************************************************************************
+; Tip nstrojov tlaidiel rozhrania
+;*********************************************************************************************
+
+ResizeMessageBoxCaption = Zmena vekosti aplikcie prehrvaa BlueStacks  
+
+ResizeMessageBoxText = Poznmka: v tejto verzii beta-verzia 1 je potrebn na zmenu vekosti aplikcie ju ukoni. Po zmene vekosti aplikciu retartujte. akujeme!
+
+
+;*********************************************************************************************
+; Informcie rozhrania / Chybov sprvy
+;*********************************************************************************************
+
+LoadingMessage = Natavanie...
+
+;### {0} rozrenie na'App Name' sa momentlne natava. Napr.: "Natavanie pulzu..."
+
+LoadingAppMessage = Natavanie {0}...
+
+CanNotStart = Nie je mon spusti BlueStacks. Kontaktujte support@bluestacks.com
+
+;*********************************************************************************************
+; Reazce zstupcu
+;*********************************************************************************************
+
+NetworkAvailableIconText = Zstupca BlueStacks On-line
+
+NetworkUnavailableIconText = Zstupca BlueStacks 
+
+BalloonTitle = BlueStacks
+
+OKButtonText = OK
+
+CancelButtonText = Zrui
+
+InstallSuccess = naintalovan
+
+UninstallSuccess = odintalovan
+
+UninstallFailed = Nepodarilo sa odintalova
+
+UninstallingWait = Odintalovanie aplikcie...
+
+CloudConnectTitle = Pripojenie Cloud BlueStacks  
+
+CloudConnectedMsg = Pripojen
+
+CloudDisconnectedMsg = Odpojen
+
+InsufficientStorageMessage = Intern karta SD v bezplatnej verzii porgramu aplikcie prehrvaa BlueStacks, ktor pouvate, je pln. Odintalujte jednu alebo viac aplikci na uvonenie priestoru.
+
+
+;*********************************************************************************************
+; Reazce ApkInstaller
+;*********************************************************************************************
+
+InstallFail = Intalcia zlyhala
+
+UserWaitText = Intalcia APK...
+
+
+;*********************************************************************************************
+; Restart Utility Strings
+;*********************************************************************************************
+
+RESTART_UTILITY_TITLE_TEXT = BlueStacks Restart Utility
+RESTART_UTILITY_USAGE_TEXT = Usage
+RESTART_UTILITY_RESTARTING_TEXT = Restarting BlueStacks
+RESTART_UTILITY_CANNOT_STOP_TEXT = Cannot Stop BlueStacks
+RESTART_UTILITY_CANNOT_START_TEXT = Cannot Start BlueStacks
+RESTART_UTILITY_EXIT_TEXT = Exit
+RESTART_UTILITY_UNHANDLED_EXCEPTION_TEXT = Caught unhandled exception. Please check the log for details.
+APKINSTALLER_ALREADY_RUNNING = An app is already being installed. Please wait while it finishes installing.
+
+;*********************************************************************************************
+; Updater Utility Strings
+;*********************************************************************************************
+
+UPDATER_UTILITY_NO_UPDATE_TITLE = BlueStacks Updater
+UPDATER_UTILITY_NO_UPDATE_TEXT = No new updates available
+UPDATER_UTILITY_ASK_TO_INSTALL_TITLE = Update Available
+UPDATER_UTILITY_ASK_TO_INSTALL_TEXT = Would you like to update to the latest version of BlueStacks?
+UPDATER_UTILITY_ASK_TO_INSTALL_NOW = Install Now
+UPDATER_UTILITY_ASK_TO_INSTALL_REMIND_LATER = Remind Me Later
+UpdateSuccess = has been updated 
+
+
+;*********************************************************************************************
+; Tooltips
+;*********************************************************************************************
+
+GuidanceTooltip = Priradenia ovládača alebo klávesnice pre túto hru
+
+SettingsTooltip = Nastavenia
+
+MinimizeTooltip = Minimalizovať na panel úloh
+
+ToggleScreenTooltip = Prepnúť obrazovku
+
+CloseTooltip = Zavrieť
+
+HelpTooltip = Pomocník
+
+BackTooltip = Prejsť späť
+
+;*********************************************************************************************
+; Close popup
+;*********************************************************************************************
+
+ClosePopupText = Chcete aj naďalej dostávať oznámenia zo svojich aplikácií?
+
+YesText = Áno
+
+NoText = Nie
+
+CancelText = Zrušiť
+
+RememberChoiceText = Zapamätať si výber
+
+;*********************************************************************************************
+; Settings menu
+;*********************************************************************************************
+
+ReportProblemText = Nahlásiť problém
+
+RestartAndroidText = Reštartovať androidový doplnok
+
+CheckForUpdatesText = Vyhľadať aktualizácie
+
+SettingsText = Nastavenia
+
+LanguageAndInputSettingsText = Jazyk a vstup
+
+MyAccountText = Moje konto
+
+LocationText = Nastaviť umiestnenie
+
+;*********************************************************************************************
+; Wait Message Strings
+;*********************************************************************************************
+
+Wait_Message_String_Comma_Seprated = Počkajte, prosím...,Začíname...,Načítavajú sa údaje...,Ešte chvíľu strpenia...
+
+
+;*********************************************************************************************
+; Control bar
+;*********************************************************************************************
+
+ToolBarChangeAppSize = Zmeniť veľkosť aplikácie
+
+ToolBarShake = Potriasť
+
+ToolBarCamera = Vytvoriť snímku obrazovky
+
+ToolBarInstallApk = Nainštalovať aplikáciu
+
+ToolBarCopyFromWindows = Kopírovať súbory z Windowsu
+
+ToolBarCopy = Kopírovať
+
+ToolBarPaste = Prilepiť
+
+ToolBarVolume = Hlasitosť
+
+ToolBarHelp = Pomocník
+
+Android = Android
+
+Welcome = Vitajte
+
+Finish = Dokončiť
+
+StartBlueStacks = Spustiť BlueStacks
+
+InstallLocationError = Umiestnenie údajov nie je dostupné. Vyberte iné umiestnenie
+
+SelectTheme = Vybrať motív
+
+;*********************************************************************************************
+; Updater Progress
+;*********************************************************************************************
+
+UpdateInstallingText = Inštaluje sa...
+
+UpdateSuccessText = Softvér BlueStacks sa úspešne aktualizoval
+
+UpdateErrorText = Chyba pri aktualizácii. Skúste to znova neskôr
+
+UpdateMessageBoxTitleText = Aktualizácia pre BlueStacks
+
+UpdateDownloadedText = Stiahnuté...
+
+UpdateProgressTitleText = Nástroj na aktualizáciu softvéru BlueStacks
+
+UpdateDownloadPreparingText = Pripravuje sa sťahovanie...
+
+UpdateAvailableText = K dispozícii je aktualizácia. Chcete ju nainštalovať teraz?
+

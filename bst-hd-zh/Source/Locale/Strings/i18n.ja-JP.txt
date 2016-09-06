@@ -1,0 +1,534 @@
+﻿;*********************************************************************************************
+; Agent Sys tray context menu
+;*********************************************************************************************
+
+RestoreFactorySettings = ドック設定の復元
+
+RestartBlueStacks = 再起動
+
+QuitBlueStacks = 終了
+
+StopBlueStacks = 停止
+
+RotatePortraitApps = アプリを縦向きに回転
+RotatePortraitAppsAutomatic = 自動
+RotatePortraitAppsEnabled = 有効
+RotatePortraitAppsDisabled = 無効
+
+UploadDebugLogs = 問題を報告する
+
+FreeDuringBeta = ベータ版の間は無料です
+
+SMSSetupMenu = SMS同期設定
+
+ShowNotificationsMenu = 通知を表示
+
+PauseSync = 同期の一時停止
+
+ResumeSync = 同期を再開
+
+CheckForUpdates = アップデートの確認
+DownloadingUpdates = アップデートのダウンロード
+InstallUpdates = アップデートをインストール
+
+Apps = アプリ
+App = アプリ
+Installed = インストール済
+DiskUsageUnavailable = ディスク使用量がわかりません
+Of = の
+DiskUsed = 使用ディスク
+
+;*********************************************************************************************
+; Frontend buttons tool tip
+;*********************************************************************************************
+
+BackButtonToolTip = 戻る
+
+MenuButtonToolTip = メニューを表示
+
+HomeButtonToolTip = ホーム
+
+SettingsButtonToolTip = 設定
+
+ShareButtonToolTip = スナップショットを共有
+
+FullScreenButtonToolTip = 全画面表示に切り替え
+
+CloseButtonToolTip = 閉じる
+
+;*********************************************************************************************
+; Frontend buttons tool tip
+;*********************************************************************************************
+
+ResizeMessageBoxCaption = BlueStacks App Playerのサイズを変更します
+
+ResizeMessageBoxText = 注: このベータ1バージョンでは、サイズの変更をするために一度アプリを閉じる必要があります。サイズの変更後、アプリを再起動してください。よろしくお願いいたします！
+
+
+;*********************************************************************************************
+; Frontend Info/Error messages
+;*********************************************************************************************
+
+LoadingMessage = 読み込み中...
+
+Initializing = 初期化
+InitializingGame = ゲームを初期化
+
+DownloadingGameData = ゲームデータのダウンロード
+
+CanNotStart = BlueStacksを起動できません。support@bluestacks.comにお問い合わせください
+
+FullScreenToastText = 全画面表示を使用しています。全画面表示を終了するには、[F11]を押してください。
+
+SnapshotErrorToastText = スナップショット共有アプリケーションがインストールされていません
+
+GraphicsDriverOutdatedError = お使いのグラフィックスドライバのバージョンが古いようです。BlueStacks を実行するには、ドライバの更新が必要です。今すぐ更新しますか？
+
+GraphicsDriverOutdatedWarning = お使いのグラフィックスドライバのバージョンが古いようです。最適なパフォーマンスのため、ドライバの更新をお勧めします。今すぐ更新しますか？
+
+GraphicsDriverUpdatedMessage = グラフィックスドライバが更新されました。これらの変更を有効にするには、お使いのコンピュータを再起動する必要があります。\n\n今すぐコンピュータを再起動しますか？
+
+;*********************************************************************************************
+; Agent strings
+;*********************************************************************************************
+
+NetworkAvailableIconText = BlueStacksエージェントオンライン
+
+NetworkUnavailableIconText = BlueStacksエージェント
+
+BalloonTitle = BlueStacks
+
+OKButtonText = OK
+
+CancelButtonText = キャンセル
+
+InstallSuccess = はインストールされました
+
+UninstallSuccess = はアンインストールされました
+
+UninstallFailed = アンインストールに失敗しました
+
+UninstallingWait = アプリをアンインストール中...
+
+CloudConnectTitle = BlueStacks CloudConnect
+
+CloudConnectedMsg = 接続
+
+CloudDisconnectedMsg = 接続切断
+
+InsufficientStorageMessage = 使用している無償版のBlueStacks App Playerの内蔵SDカードがいっぱいです。1つまたは複数のアプリをアンインストールして、空き容量を増やすことをお勧めします。
+
+
+;*********************************************************************************************
+; ApkInstaller strings
+;*********************************************************************************************
+
+InstallFail = インストールが失敗しました
+
+UserWaitText = APKをインストール中...
+
+;*********************************************************************************************
+; LogCollector Strings
+;*********************************************************************************************
+
+NC_ONLY_FORM_TEXT = 通知センター支援ツール
+
+FORM_TEXT = App Player支援ツール
+
+BUTTON_TEXT = 送信
+
+EMAIL_LABEL = 電子メール アドレス
+
+ZENDESK_ID_TEXT = Zendesk ID（オプション）
+
+DESCRIPTION_LABEL = 問題の説明
+
+STATUS_INITIAL = コレクターを開始
+
+STATUS_COLLECTING_PRODUCT = 製品情報の収集
+
+STATUS_COLLECTING_HOST = ホスト情報の収集
+
+STATUS_COLLECTING_GUEST = Android情報の収集
+
+STATUS_ARCHIVING = サポートアーカイブの作成
+
+STATUS_SENDING = 問題レポートの送信
+
+APP_NAME = アプリ名を入力
+
+FINISH_CAPT = 支援ツールの完了
+
+FINISH_TEXT = 問題レポートが送信されました。こちらからできるだけ早くご連絡いたします。
+
+PROMPT_TEXT = 問題レポートを送信できませんでした。BlueStacks-Support.zipという名前のファイルがデスクトップに作成されました。このファイルを添付して、問題の簡単な説明をsupport@bluestacks.comまで電子メールでお送りください。
+
+DESC_MISSING_TEXT = 問題の説明を入力してください。
+
+ZENDESK_INVALID_ID_TEXT = 有効なZendesk IDを入力してください
+
+SELECT_CATEGORY_TEXT = 問題の分類を選択してください。
+
+EMAIL_MISSING_TEXT = 無効な電子メールアドレス。有効なメールアドレスを入力してください。
+
+RPC_FORM_TEXT = RPCエラーを解決して下さい
+
+STUCK_AT_INITIALIZING_FORM_TEXT = 初期化中のフリーズを解決してください
+
+WORK_DONE_TEXT = すべて終了しました。問題が引き続き起こる場合には、問題を報告してください。
+
+PROGRESS_TEXT = 問題の修正中です。少々お待ち下さい。
+
+TROUBLESHOOTER_TEXT = 問題を自動的に解決して修正してください
+
+LOGCOLLECTOR_RUNNING_TEXT = 問題の報告はすでに実行されています
+
+;*********************************************************************************************
+; Please do not translate strings on the left of ":"
+; for eg, LOGCOLLECTOR_PROBLEMS = カテゴリ：åˆ†ç±», BlueStacks が初期化中に停止しました：BlueStacksåœ¨åˆå§‹åŒ–çš„æ—¶å€™å¡ä½, BlueStacks のクラッシュ：BlueStackså´©æºƒ, システム再起動/クラッシュ：ç³»ç»Ÿé‡å¯/ å´©æºƒ, アプリが動作していません：åº”ç”¨æ— æ³•è¿è¡Œ, その他：å…¶å®ƒ
+;*********************************************************************************************
+
+LOGCOLLECTOR_PROBLEMS = Category:カテゴリー, Bluestacks stuck at initializing:初期化中にBlueStacksがフリーズ, Bluestacks crash:BlueStacks がクラッシュ, System restart/crash:システム再起動/クラッシュ, App not working:アプリが作動していません, Other:その他
+
+Category = カテゴリー
+
+APP_MISSING_TEXT = アプリ名を入力
+
+ZIP_NAME = BlueStacks-Support.zip
+
+;*********************************************************************************************
+; Restart Utility Strings
+;*********************************************************************************************
+
+RESTART_UTILITY_TITLE_TEXT = BlueStacks 再起動ユーティリティ
+RESTART_UTILITY_USAGE_TEXT = 使用法
+RESTART_UTILITY_RESTARTING_TEXT = BlueStacks を再起動しています
+RESTART_UTILITY_CANNOT_STOP_TEXT = BlueStacks を停止できません
+RESTART_UTILITY_CANNOT_START_TEXT = BlueStacks を起動できません
+RESTART_UTILITY_EXIT_TEXT = 終了
+RESTART_UTILITY_UNHANDLED_EXCEPTION_TEXT = ハンドルされない例外をキャッチしました。詳細はログを確認してください。
+APKINSTALLER_ALREADY_RUNNING = アプリはインストール中です。インストールが終了するまでお待ちください。
+
+;*********************************************************************************************
+; Updater Utility Strings
+;*********************************************************************************************
+
+UPDATER_UTILITY_NO_UPDATE_TITLE = BlueStacks アップデーター
+UPDATER_UTILITY_NO_UPDATE_TEXT = 新しい更新はありません。
+UPDATER_UTILITY_ASK_TO_INSTALL_TITLE = 利用可能なアップデート
+UPDATER_UTILITY_ASK_TO_INSTALL_TEXT = 最新版の BlueStacks にアップデートしますか？
+UPDATER_UTILITY_ASK_TO_INSTALL_NOW = 今すぐインストール
+UPDATER_UTILITY_ASK_TO_INSTALL_REMIND_LATER = 後で通知する
+UpdateSuccess = has been updated 
+
+;*********************************************************************************************
+; Tooltips
+;*********************************************************************************************
+
+GuidanceTooltip = このゲームのコントローラーまたはキーボードのマッピング
+
+SettingsTooltip = 設定
+
+MinimizeTooltip = タスクバーに最小化
+
+ToggleScreenTooltip = 画面を切り替え
+
+CloseTooltip = 閉じる
+
+HelpTooltip = ヘルプ
+
+BackTooltip = 戻る
+
+;*********************************************************************************************
+; Close popup
+;*********************************************************************************************
+
+ClosePopupText = 今後もアプリからの通知を受け取りますか？
+
+YesText = はい
+
+NoText = いいえ
+
+CancelText = キャンセル
+
+RememberChoiceText = 選択内容を保存
+
+;*********************************************************************************************
+; Settings menu
+;*********************************************************************************************
+
+ReportProblemText = 問題を報告
+
+RestartAndroidText = Androidプラグインを再起動
+
+CheckForUpdatesText = アップデートを確認
+
+SettingsText = 設定
+
+LanguageAndInputSettingsText = 言語と入力
+
+MyAccountText = マイアカウント
+
+LocationText = 現在地を設定
+
+;*********************************************************************************************
+; Wait Message Strings
+;*********************************************************************************************
+
+Wait_Message_String_Comma_Seprated = お待ちください...,開始しています...,データをロードしています...,少々お待ちください...
+
+
+;*********************************************************************************************
+; Control bar
+;*********************************************************************************************
+
+ToolBarChangeAppSize = アプリサイズを変更
+
+ToolBarShake = シェイク
+
+ToolBarCamera = スクリーンショットを取得
+
+ToolBarInstallApk = apkをインストール
+
+ToolBarCopyFromWindows = Windowsからファイルをコピー
+
+ToolBarCopy = コピー
+
+ToolBarPaste = 貼り付け
+
+ToolBarVolume = ボリューム
+
+ToolBarHelp = ヘルプ
+
+Android = Android
+
+Welcome = ようこそ
+
+Finish = 終了
+
+StartBlueStacks = BlueStacksを起動
+
+InstallLocationError = データの場所にアクセスできません。別の場所を選択してください
+
+SelectTheme = テーマを選択
+
+;*********************************************************************************************
+; Updater Progress
+;*********************************************************************************************
+
+UpdateInstallingText = インストールしています...
+
+UpdateSuccessText = BlueStacksは正しく更新されました
+
+UpdateErrorText = 更新中にエラーが発生しました。後でもう一度お試しください
+
+UpdateMessageBoxTitleText = BlueStacksの更新
+
+UpdateDownloadedText = ダウンロード済み...
+
+UpdateProgressTitleText = BlueStacksアップデーター
+
+UpdateDownloadPreparingText = ダウンロードの準備をしています...
+
+UpdateAvailableText = アップデートが利用できます。今すぐインストールしますか？
+
+CopyFiles = ファイルをコピー中
+
+InstallCompleted = インストール完了
+
+PreserveUserData = ユーザデータを保存する
+
+RestoreAndroidUserData = Androidユーザーデータの復元
+
+CreateAppShortcuts = アプリのショートカットを作成する
+
+SetupAndroidLibrary = Androidライブラリのセットアップ
+
+RemoveAndroidLibrary = Androidライブラリの削除
+
+WaitServiceStart = サービスが開始するのを待機中
+
+CleanFilesAndReg = ファイルとレジストリ設定のクリア中
+
+InstallService = サービスのインストール
+
+InstallUpdaterService = BlueStacks Updater Service をインストール
+
+StartService = サービスの開始
+
+UninstallService = サービスのアンインストール
+
+CreateFSFiles = FSファイルの作成
+
+StartRollback = ロールバックの開始
+
+InstallComponents = コンポーネントをインストール中...
+
+InstallRuntime = ランタイムをインストール残り数秒...
+
+ErrorOccured = 何らかのエラーが発生しました。再試行中...
+
+Downloading = ダウンロード中
+
+Installing = インストール中
+
+Installer = インストーラー
+
+BlueStacks = BlueStacks
+
+Progress = ...
+
+BlueStacksInstaller = BlueStacksインストーラ
+
+VerifyDependence = 依存関係を確認しています...
+
+DownloadingBlueStacks = BlueStacksをダウンロード中...
+
+StartInstall = インストールの開始...
+
+DownloadAppRuntime = アプリのランタイムをダウンロード中...
+
+DownloadAVG = AVGアンチウイルスをダウンロード中...
+
+InstallBlueStacks = BlueStacksをインストールしています...
+
+LaunchAVG = マイアプリメニューからAVGアンチウイルスProを起動します。詳細はこちら
+
+RecommendAVG = BlueStacksはインターネットでのセキュリティを向上するため、AVGツールバーを推奨しています。
+
+BlueStacksDownMan = BlueStacks ダウンロードマネージャ
+
+ContinueStatement = [継続] をクリックして、使用許諾契約の条項に同意します。
+
+Continue = 継続
+
+Next = 次へ
+
+Browse = 閲覧
+
+Install = インストール
+
+Back = 戻る
+
+Exit = 終了
+
+RunsBest = BlueStacksは、以下を有効にすると最高の状態で動作します
+
+AppStore = App store へのアクセス
+
+AppNotify = アプリケーション通信
+
+BlueStacksAVG = BlueStacks App Playerには、今AndroidのためのAVGアンチウイルスProが含まれています。
+
+DataFolderLocation = BlueStacksデータの場所を選択します
+
+AVGDescription = AVGツールバーは、悪意あるWebサイトからユーザーを保護し、AVG Do Not Track機能によりプライバシーを守り、AVG Secure Searchを使って安全に検索できます。\nAVGツールバーをインストールして、AVG Secure Searchをホームページ、新規タブ、デフォルトの検索プロバイダーに設定してください。
+
+AVGLicenceStatement = Chrome、FirefoxおよびInternet Explorer で利用できます\n \"[インストール]\" をクリックして、AVGエンドユーザライセンス契約およびプライバシーポリシーに同意してください。
+
+DownloadRuntimeData = ランタイムデータをダウンロード中...
+
+InstallingProduct =  {0} をインストールしています...
+
+DownloadingProduct =  {0} をダウンロードしています...
+
+InstallingProgress = インストール中...
+
+InstallCompletedPending = ほぼ完了。残り数秒...
+
+InstallProgressBar = インストールの進行状況:{0}...
+
+DirectoryNotFound = {0}がありません
+
+NotEnoughSpace = 十分な空きスペースがありません！他のドライブを選択してください
+
+NotEnoughPermissions = このディレクトリにインストールするために必要な権限がありません。
+
+InstallationInterrupted = BlueStacksのインストールが中断されました。インストールを完了するために、再度BlueStacksのインストーラをダブルクリックしてください。
+
+InstallationFailed = BlueStacksのインストールに失敗しました
+
+ContactInstallationFailed = BlueStacksのインストールに失敗しました。support@bluestacks.comにお問い合わせください
+
+FailedToInstall = BlueStacksのインストールに失敗しました。
+
+DownloadInProgress = BlueStacks App Playerダウンロードが進行中です。完了するまでお待ちください。
+
+InstallInProgress = BlueStacksのインストールが進行中です。
+
+ErrorWhileInstallingFile = おっと... {0}のインストール中にエラーが発生しました。\n再インストールしてください。
+
+ProductInstallationFailed = {0} インストールが失敗しました
+
+ApkInstallFailed = APKのインストールに失敗しました。エラー: {0}
+
+WelcomeToBlueStacks = BlueStacks へようこそ
+
+InstallingBlueStacks = BlueStacks をインストールしています
+
+Step1InstallingRuntime = ステップ 1/4: ランタイムをインストールしています。残り時間:
+
+Step2PreparingForFirstTimeUse = ステップ 2/4: 初めて使用するための準備をしています。残り時間:
+
+Step3AlmostDone = ステップ 3/4: 終了しています。残り時間:
+
+Step4VerifyingInstallation = ステップ 4/4: インストールを確認しています。残り時間:
+
+Step4Installing = ステップ 4/4: インストール中 ...
+
+
+BlueStacksApkHandlerTitle = ブルースタックス Apkハンドラー
+CommonAppTitleText  = ブルースタックス アプリプレーヤー
+SnapShotShareString = ブルースタックス アプリプレーヤーを介して共有 (www.bluestacks.com)
+AppTitle = ブルースタックス アプリプレーヤー
+General = 一般
+Themes = テーマ
+Preferences = お好み
+Text = テキスト
+Tab = タブ
+LeftSideBar = 左サイドバー
+SettingsMenu = 設定メニュー
+TabBar = タブバー
+Border = 境界
+Style = スタイル
+InactiveTabBottom = 非アクティブタブ下部
+InactiveTabTop = 非アクティブタブ上部
+SelectedTabBottom = 選択されたタブ下部
+SelectedTabTop = 選択されたタブ上部
+SelectedTabText = 選択されたタブ テキスト
+MouseOverTabText = マウスオーバータブテキスト
+InactiveTabText = 非アクティブタブ テキスト
+BottomGradient = 最下等級
+TopGradient = 最高等級
+MouseOverColor = マウスオーバーの色
+ForeGroundColor = 前面の色
+BackGroundColor = 背景の色
+TabTopColorMouseOver = タブ上部マウスオーバー
+TabBottomColorMouseOver = タブ下部マウスオーバー
+InnerBorder = 内側の境界
+TabBorder = タブ境界
+ToolBarBorder = 左サイドバー境界
+GameManagerBorder = アプリプレーヤー境界
+Apply = 適用
+NewTheme = 新しいテーマ
+AppRestartConfirmMsg = アプリケーションが再開されます。続けますか？
+EnterTheme = テーマ名を入力してください
+ThemeAlreadyExists = 既に存在するテーマです
+Confirm = 操作を確認 
+ControlBar = コントロールバー
+LabelForceKill = タブクローズ時にフォース停止
+LableConfigureGamePad = ゲームパッドを有効化
+LabelSideBar = サイドバーを表示
+LabelWindowSize = ウィンドウサイズ
+LabelRestartNote = 設定にはアプリケーションの再起動が必要です。
+LabelStayAwake = 起動維持
+LabelLanguage = 言語
+LabelAutoStart = ウィンドウズ起動時に自動スタート
+LabelShowExitMenu = 終了メニュー表示
+GroupBoxBluestacksPreferences = ブルースタックス お好み設定
+XPNotSupported = この機能はウィンドウズXPではサポートされていません！
+ToolBarGoLive = ゴーライブ
+EndStreaming = ストリーミング終了
+KeepStreaming = ストリーミング継続
+CloseMessagePrompt = このウィンドウを閉じるとストリーミングが終了します。¥nストリーミングを終了されますか？
+CloseWhileStreamingTooltip = ストリーミング停止

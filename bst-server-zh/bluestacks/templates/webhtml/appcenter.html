@@ -1,0 +1,154 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="target-densitydpi=320,width=720,user-scalable=no" name="viewport">
+<title>应用中心</title>
+<link href="../../static/css/layout.css" type="text/css"  rel="stylesheet"/>
+</head>
+<script src="../../static/js/jquery-1.11.3.min.js"></script>
+<script src="../../static/js/jQuery.md5.js"></script>
+<script src="../../static/js/jscroll.js"></script>
+<script src="../../static/js/picloop.js"></script>
+<script src="../../static/js/cj.js"></script>
+<script src="../../static/js/common.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a8a8b90e1fe67ff9a45ef9f1fe0047c4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<body  style="overflow:hidden" oncontextmenu="return false;" onselectstart="return false">
+<div class="wrap ">
+  <div class="appcenter_tab "> <a href="app_center_html" class="appcenter on">首页</a> <a  href="app_center_recommend_html" >推荐</a> <a href="app_center_applist_html">排行榜</a> <!--<a href="#" class="">分类</a> --><a href="app_center_topic_all_html">专题</a> {% if display %} <a class="yufa">{{ ENVIRONMENT_cn }}</a><a class="yufa">{{ ip }}</a><a class="yufa">{{ MC }}</a> {% endif %}</div>
+  <div class="appmain_box" id="appmain">
+    <div id="appmain_container" >
+      <div id="appmain_shower"  class="itemM">
+        <div class="appmain_sec1 ">
+          <div class="appmain_sec1_left ">
+            <div class="app_kv" id="app_kv"> <span id="app_kv_left" class="app_kv_scrumb1"></span> <span id="app_kv_mid" class="app_kv_scrumb2"></span> <span id="app_kv_right" class="app_kv_scrumb3"></span>
+              <div class="prevbg"></div>
+              <div class="nextbg"></div>
+              <pre class="prev"></pre>
+              <pre class="next"></pre>
+              <ul class="app_kvshower" id="app_kvshower">
+              </ul>
+            </div>
+            <div class="app_con" id="app_new">
+              <div class="app_conTitle"><a class="app_titleText"  href="/bs/app_recommend_html?flag=latest_game">新品游戏</a><a class="app_more more" href="/bs/app_recommend_html?flag=latest_game"><b></b><b></b><b></b></a></div>
+              <div class="app_conbox " id="xp_carousel">
+                <div class="arrow_left arrow "></div>
+                <div class="arrow_right  arrow "></div>
+                <div class="app_dlbox xp_carousel_con" id="xp_carousel_con"> </div>
+              </div>
+            </div>
+            <div class="app_con" id="app_best">
+              <div class="app_conTitle"><a class="app_titleText" href="/bs/app_recommend_html?flag=selected_game">精品游戏</a><a class="app_more more" href="/bs/app_recommend_html?flag=selected_game"><b></b><b></b><b></b></a><span class="hidden_word">ENVIRONMENT:{{ ENVIRONMENT }}@{{ ip }}@{{ MC }}</span></div>
+              <div class="app_conbox  swiper-container" id="jp_carousel">
+                <div class="arrow_left  arrow " ></div>
+                <div class="arrow_right  arrow "></div>
+                <div class="app_dlbox jp_carousel_con swiper-wrapper" id="jp_carousel_con">
+              </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="appmain_sec1_right">
+            <div class="app_bangdan"> <a  class="on" data-list="hot_list">热门榜</a> <a data-list="sell_well_list" >畅销榜</a> <a data-list="app_list" >应用榜</a> </div>
+            <div class="app_listbox" id="app_listbox"> </div>
+            <a class="list_more more" href="app_center_applist_html"><b></b><b></b><b></b></a> </div>
+        </div>
+        <div class="appmain_sec2">
+          <div class="app_conTitle"><a class="app_titleText"  href="app_center_topic_all_html">活动专题</a><a class="app_more more" href="app_center_topic_all_html"><b></b><b></b><b></b></a></div>
+          <div class="app_conbox2 "id="hd_carousel"><a class="arrow_left arrow_left3 arrow "></a><a class="arrow_right arrow_right3 arrow "></a>
+            <div class="app_divbox2 "id="hd_carousel_con"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="appmain_scroller" class="info_scroller3">
+      <div id="appmain_scroll_up" class="info_scroll_up"></div>
+      <div id="appmain_scroll_bar" class="info_scroll_bar3"></div>
+      <div id="appmain_scroll_down" class="info_scroll_down"></div>
+    </div>
+  </div>
+</div>
+<div class="popbox " id="w-fbox">
+  <div class="pop">
+     <!--<div class="popbgpic"><img src="../../static/images/pop/tt2xm_pop.jpg"></div>
+  	 <a class="popclose"><img src="../../static/images/pop/del_nor_02.png"></a>
+	 <a  href="javascript:;" class="popdown" appname="天堂2血盟" gametruck="天堂2血盟_弹窗" apppckname="com.snailgame.lineage.uc" apppckurl="http://ugame.uc.cn/game/downloadGame?pack.cooperateModelId=44654&pack.id=9068966" ><img src="../../static/images/pop/nor_03.png"></a>-->
+ </div>
+</div>
+<script type="text/javascript">
+homeInit();
+var appmainscroll=new scrolls('appmain');
+function showPop(){
+	$(".popbox").show();
+}
+
+var center_url="/bs/pop_window?cheat=qq";
+var _html="";
+var index;
+$.get(center_url,function(data,status){ 
+	_html+="<div class='popbgpic'><img src='"+data.result.pop.big_image_url+"'></div>";
+    _html+="<a class='popclose' style='top:"+data.result.pop.exit_button_margin_top/192+"rem;right:"+data.result.pop.exit_button_margin_right/192+"rem;width:"+data.result.pop.exit_button_width/192+"rem;height:"+data.result.pop.exit_button_height/192+"rem'><img src='"+data.result.pop.exit_button_icon_url+"'></a>";
+	if(data.result.pop.button1_icon_url!=""&&data.result.pop.button1_type=="normal"){
+		_html+="<a class='popdown' appname='"+data.result.pop.button1_app_name+"' gametruck='弹窗_"+data.result.pop.button1_app_name+"' apppckname='"+data.result.pop.button1_package_name+"' apppckurl='"+data.result.pop.button1_download_url+"' style='top:"+data.result.pop.button1_margin_top/192+"rem;left:"+data.result.pop.button1_margin_left/192+"rem;width:"+data.result.pop.button1_width/192+"rem;height:"+data.result.pop.button1_height/192+"rem'><img src='"+data.result.pop.button1_icon_url+"'></a>";
+	}else if(data.result.pop.button1_icon_url!=""&&data.result.pop.button1_type=="redirect"){
+		_html+="<a class='popout' onClick='browser2Client(\"openurl\",\""+data.result.pop.button1_redirect_url+"\",\"\")' style='top:"+data.result.pop.button1_margin_top/192+"rem;left:"+data.result.pop.button1_margin_left/192+"rem;width:"+data.result.pop.button1_width/192+"rem;height:"+data.result.pop.button1_height/192+"rem'><img src='"+data.result.pop.button1_icon_url+"'  ></a>";
+	}
+	
+	if(data.result.pop.button2_icon_url!=""&&data.result.pop.button2_type=="normal"){
+		_html+="<a class='popdown1' appname='"+data.result.pop.button2_app_name+"' gametruck='弹窗_"+data.result.pop.button2_app_name+"' apppckname='"+data.result.pop.button2_package_name+"' apppckurl='"+data.result.pop.button2_download_url+"' style='top:"+data.result.pop.button2_margin_top/192+"rem;left:"+data.result.pop.button2_margin_left/192+"rem;width:"+data.result.pop.button2_width/192+"rem;height:"+data.result.pop.button2_height/192+"rem'><img src='"+data.result.pop.button2_icon_url+"'></a>";
+		
+	}else if(data.result.pop.button2_icon_url!=""&&data.result.pop.button2_type=="redirect"){
+		_html+="<a class='popout' onClick='browser2Client(\"openurl\",\""+data.result.pop.button2_redirect_url+"\",\"\")' style='top:"+data.result.pop.button2_margin_top/192+"rem;left:"+data.result.pop.button2_margin_left/192+"rem;width:"+data.result.pop.button2_width/192+"rem;height:"+data.result.pop.button2_height/192+"rem'><img src='"+data.result.pop.button2_icon_url+"'  ></a>";
+	}
+	
+	if(data.result.pop.button3_icon_url!=""&&data.result.pop.button3_type=="normal"){
+		_html+="<a class='popdown2' appname='"+data.result.pop.button3_app_name+"' gametruck='弹窗_"+data.result.pop.button3_app_name+"' apppckname='"+data.result.pop.button3_package_name+"' apppckurl='"+data.result.pop.button3_download_url+"' style='top:"+data.result.pop.button3_margin_top/192+"rem;left:"+data.result.pop.button3_margin_left/192+"rem;width:"+data.result.pop.button3_width/192+"rem;height:"+data.result.pop.button3_height/192+"rem'><img src='"+data.result.pop.button3_icon_url+"'></a>";
+	}else if(data.result.pop.button3_icon_url!=""&&data.result.pop.button3_type=="redirect"){
+		_html+="<a class='popout' onClick='browser2Client(\"openurl\",\""+data.result.pop.button3_redirect_url+"\",\"\")'  style='top:"+data.result.pop.button3_margin_top/192+"rem;left:"+data.result.pop.button3_margin_left/192+"rem;width:"+data.result.pop.button3_width/192+"rem;height:"+data.result.pop.button3_height/192+"rem'><img src='"+data.result.pop.button3_icon_url+"'></a>";
+	}
+	$(".pop").hide();
+	$(".pop").append(_html);
+	var num = $(".pop").find("img").length;
+	$(".pop").find("img").load(function() {
+		num--;
+		if (num <= 0) {
+			$(".pop").show();
+		}
+	})
+	
+	
+	
+	
+	var window_h=$(window).height();
+	$("#w-fbox").height(window_h);
+	$(".popdown,.popdown1,.popdown2").click(function () {
+		var appname = $(this).attr("appname");
+		var apppckname = $(this).attr("apppckname");
+		var apppckurl = $(this).attr("apppckurl");
+		var arr_downs=['http://bst-appcenter.oss-cn-beijing.aliyuncs.com/images/pop_icon.jpg',appname,apppckurl]
+		browser2Client('installapp',arr_downs,apppckname);
+		_hmt.push(['_trackEvent', '首页弹窗_' + appname, 'click']);
+	});
+	
+	$(".popclose").click(function(){
+		$("#w-fbox").hide();
+	})
+	
+	$(window).resize(function(){
+		window_h=$(window).height();
+		$("#w-fbox").height(window_h);
+	});
+})
+
+
+</script>
+</body>
+</html>

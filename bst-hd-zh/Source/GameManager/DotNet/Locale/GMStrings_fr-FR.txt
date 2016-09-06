@@ -1,0 +1,72 @@
+;*********************************************************************************************
+; Tooltips
+;*********************************************************************************************
+
+GuidanceTooltip = Mappages du contrôleur ou du clavier pour ce jeu
+
+SettingsTooltip = Paramètres
+
+MinimizeTooltip = Réduire à la barre des tâches
+
+ToggleScreenTooltip = Activer/désactiver l'écran
+
+CloseTooltip = Fermer
+
+HelpTooltip = Aide
+
+BackTooltip = Retour en arrière
+
+;*********************************************************************************************
+; Close popup
+;*********************************************************************************************
+
+ClosePopupText = Souhaitez-vous continuer à recevoir des notifications de vos applications?
+
+YesText = Oui
+
+NoText = Non
+
+CancelText = Annuler
+
+;*********************************************************************************************
+; Settings menu
+;*********************************************************************************************
+
+ReportProblemText = Signaler un problème
+
+RestartAndroidText = Redémarrer le plug-in android
+
+CheckForUpdatesText = Vérifier les mises à jour
+
+SettingsText = Paramètres
+
+LanguageAndInputSettingsText = Langue et mode de saisie
+
+MyAccountText = Mon Compte
+
+ThemesText = Thèmes
+
+HelpText = Aide
+
+LocationText = Emplacement
+;*********************************************************************************************
+; Control bar
+;*********************************************************************************************
+
+ToolBarChangeAppSize = Changer la taille de l'application
+
+ToolBarShake = Agiter
+
+ToolBarCamera = Capture d'écran
+
+ToolBarInstallApk = Installer apk
+
+ToolBarCopyFromWindows = Copier les fichiers à partir de Windows
+
+ToolBarCopy = Copie
+
+ToolBarPaste = Pâte
+
+ToolBarVolume = Volume
+
+ToolBarHelp = Aide

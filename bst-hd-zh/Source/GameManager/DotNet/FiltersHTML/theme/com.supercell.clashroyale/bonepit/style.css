@@ -1,0 +1,506 @@
+@font-face {
+    font-family: 'Roboto-Light';
+    font-weight: 300;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    font-weight: 500;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    font-weight: 700;
+    src: url('http://cdn.bluestacks.com/public/btv/resources/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Supercell-Magic';
+    src: url('./assets/Supercell-magic-webfont.ttf');
+}
+
+@font-face {
+    font-family: 'ProximaNova-Semibold';
+    src: url('./assets/ProximaNova-Semibold.otf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.base-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.background-image{
+    height: 100vh;
+    width: 100vw;
+}
+.main-container {
+    height: 100%;
+    width: 100%;
+}
+
+.left-container {
+    float: left;
+    width: 34.5vw;
+    height: 100vh;
+}
+
+
+.left-container .follower-wrapper{
+    /*background-image:url("./assets/NewSkeleton_noID.gif");*/
+    width: 100%;
+    height:calc(100% - 40vh);
+    font-family: "Supercell-Magic";
+    font-size: 1.5vw;
+    display:inline-block;
+    color: #6C83FA;
+    letter-spacing: 0px;
+    text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+    line-height: 49.5px;
+}
+.left-container .follower-name img{
+    width: 90%;
+    height: 60vh;
+
+}
+.left-container .follower-wrapper .follower-name{
+    display: inline-block;
+    position: relative;
+    width: 34vw;
+}
+.left-container .follower-name p{
+    top: 17vh;
+    display: inline-block;
+    float: left;
+    font-family: "Supercell-Magic";
+    font-size: 4vmin;
+    line-height: 5vmin;
+    /*right: 3vmin;*/
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position:absolute;
+    left:3vw;
+    /*right:0;*/
+    margin-left:auto;
+    margin-right:auto
+    /*width: 32vw;*/
+
+}
+.left-container .follower-name h5{
+    /* New Follower: */
+    font-family: Supercell-Magic;
+    font-size: 2vw;
+    color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    right: 0;
+    letter-spacing: 0px;
+    line-height: 2.5vw;
+    text-align: center;
+    text-shadow: 1px 3px 2px rgba(0,0,0,0.95);
+}
+
+/**
+ * The "shine" element
+ */
+
+.left-container .follower-name p i {
+    /*   positioning */
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    /*   gradient   */
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(1%, rgba(255, 255, 255, 0.03)), color-stop(30%, rgba(255, 255, 255, 0.85)), color-stop(50%, rgba(255, 255, 255, 0.85)), color-stop(70%, rgba(255, 255, 255, 0.85)), color-stop(71%, rgba(255, 255, 255, 0.85)), color-stop(100%, rgba(255, 255, 255, 0)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+    /* IE6-9 */
+    width: 15%;
+    line-height: 5vmin;
+    height: 100%;
+    transform: skew(-80deg, 0deg);
+    -webkit-transform: skew(-10deg, 0deg);
+    -moz-transform: skew(-10deg, 0deg);
+    -ms-transform: skew(-10deg, 0deg);
+    -o-transform: skew(-10deg, 0deg);
+    /*  animating it  */
+    animation: move 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    -webkit-animation: move 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+    -moz-transform: skew(-50deg, 0deg);
+    -moz-animation: move 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-delay: 1s;
+    -ms-transform: skew(-10deg, 0deg);
+    -ms-animation: move 2s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-delay: 1s;
+    -o-transform: skew(-10deg, 0deg);
+    -o-animation: move 2s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-delay: 1s;
+}
+
+/*  */
+@keyframes move {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.8;
+    }
+    48% {
+        opacity: 0.9;
+    }
+    80% {
+        opacity: 0.9;
+    }
+    100% {
+        left: 82%;
+    }
+}
+@-webkit-keyframes move {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.0;
+    }
+    48% {
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 0.0;
+    }
+    100% {
+        left: 82%;
+    }
+}
+@-moz-keyframes move {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.8;
+    }
+    48% {
+        opacity: 0.9;
+    }
+    80% {
+        opacity: 0.9;
+    }
+    100% {
+        left: 88%;
+    }
+}
+@-ms-keyframes move {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.0;
+    }
+    48% {
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 0.0;
+    }
+    100% {
+        left: 82%;
+    }
+}
+@-o-keyframes move {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.0;
+    }
+    48% {
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 0.0;
+    }
+    100% {
+        left: 82%;
+    }
+}
+
+
+/*Shake Animation*/
+@-moz-keyframes shake {
+    0%, 100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0)
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0)
+    }
+}
+@keyframes shake {
+    0%, 100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0)
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0)
+    }
+}
+
+/* add this class */
+.animated {
+    -webkit-animation-duration:3s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    moz-iteration-count: infinite;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.shake {
+    -webkit-animation-name: shake;
+    animation-name: shake
+}
+
+
+.right-container {
+    float: right;
+    height: 100vh;
+    text-align: right;
+    width: 34.5vw;
+}
+
+.left-image, .right-image {
+    width: 100%;
+    height: 100%;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgba(227, 227, 227, 0.94);
+    position: absolute;
+    right: -1.1vw;
+}
+
+.arrow-left {
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgba(56, 56, 56, 0.8);
+    border-top: 15px solid transparent;
+    height: 0;
+    left: -1.1vw;
+    position: absolute;
+    width: 0;
+}
+
+.streamer-name {
+    bottom: 45vh;
+    color: #ffffff;
+    display: inline-block;
+    float: left;
+    font-family: "Supercell-Magic";
+    font-size: 1.5vw;
+    left: 1vw;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 32vw;
+}
+
+
+
+#webcam-placeholder {
+    bottom: 4vh;
+    display: inline-block;
+    float: left;
+    height: 40vh;
+    left: 1vw;
+    position: absolute;
+    width: 32vw;
+}
+
+.chat-text{
+    color: #fff;
+    display: block;
+    font-family: "Supercell-Magic";
+    font-size: 2.5vw;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    top: 2.5vh;
+}
+.btv-logo{
+    bottom: 0;
+    position: absolute;
+    right: 10vw;
+    width: 15vw;
+}
+div#chat {
+    height: 80vh;
+    padding-left: 3.5vw;
+    width: 30vw !important;
+    /*overflow-y: scroll;*/
+    /*overflow-x: hidden;*/
+    overflow: auto;
+    margin-top: 3vh;
+    padding-top: 2vh;
+}
+
+.vertical-handle {
+    width: 6px;            /* How wide is the scrollbar handle? */
+    background-color: transparent; /* What color should the handle be? */
+}
+
+div#chat .chat-line {
+    display: none;
+}
+
+div#chat .dummy-chat.chat-line  {
+    display: block;
+}
+
+div#chat .chat-line {
+    background:rgba(56,56,56,0.78);
+    border-radius: 6px;
+    margin-top: 2.5vh;
+    margin-bottom: 2vh;
+    width: 40vh;
+    font-weight: 500;
+    text-align: left;
+    position: relative;
+    padding: 2vh;
+    height: auto;
+    min-height: 9.4vh;
+    box-shadow:0px 2px 3px 0px rgba(0,0,0,0.67);
+}
+
+div#chat .chat-line.broadcaster{
+    background:rgba(227,227,227,0.94);
+    box-shadow:0px 2px 4px 0px rgba(0,0,0,0.50);
+    right: -5vh;
+    width: 40vh ;
+}
+
+div#chat .emoticon {
+    height: 3vh;
+    width: 1.5vw;
+}
+
+div#chat .chat-line .chat-name {
+    font-size: 1vw;
+    color:#ffdb85 !important;
+    text-shadow:0px 2px 1px #000000;
+    width: 100%;
+    display: block;
+    font-family: 'Supercell-Magic';
+    letter-spacing:0px;
+    text-align:left;
+}
+
+div#chat .chat-line.broadcaster .chat-name {
+    font-size: 1vw;
+    color:#fff !important;
+    text-shadow:0px 2px 1px #000000;
+    width: 100%;
+    display: block;
+    font-family: 'Supercell-Magic';
+    letter-spacing:0px;
+    text-align:left;
+}
+
+div#chat .chat-line .chat-message{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-right: 1vw;
+    display: block;
+    font-family: 'ProximaNova-Semibold';
+    font-size: 1.2vw;
+    color: #fff !important;
+    word-wrap: break-word;
+}
+
+div#chat .chat-line.broadcaster .chat-message{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-right: 1vw;
+    display: block;
+    font-family: 'ProximaNova-Semibold';
+    font-size: 1.2vw;
+    color: #000 !important;
+}
+
+.vjs-control-bar{
+    display: none;
+}
+
+.chat-line.chat-hosting-yes{
+    display: none;
+}
