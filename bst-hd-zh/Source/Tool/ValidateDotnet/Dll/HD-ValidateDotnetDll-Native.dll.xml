@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<config>
-  <url>
-    <repairTool>http://download.microsoft.com/download/2/B/D/2BDE5459-2225-48B8-830C-AE19CAF038F1/NetFxRepairTool.exe</repairTool>
-    <net4>http://go.microsoft.com/fwlink/?linkid=247962</net4>
-    <net2Sp2x64>http://go.microsoft.com/fwlink/?LinkId=259767</net2Sp2x64>
-    <net2Sp2x86>http://go.microsoft.com/fwlink/?LinkId=259766</net2Sp2x86>
-  </url>
-</config>

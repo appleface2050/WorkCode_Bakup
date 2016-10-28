@@ -1,8 +1,0 @@
-LIBRARY ScreenCapture.dll
-EXPORTS
-    BeginVideoCapture    @1
-    CaptureVideoFrame    @2
-    EnumerateAndSaveAudioCaptureDevices    @3
-    EnumerateAndSaveWindows    @4
-    ReSizeWindow    @5
-    StopVideoCapture    @6

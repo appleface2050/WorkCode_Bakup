@@ -1,9 +1,0 @@
-@ECHO OFF
-set VERSION_MAJOR=1
-set VERSION_MINOR=1
-set VERSION_PATCH=10
-set VERSION_BUILD=173
-set VERSION_STRING=%VERSION_MAJOR%.%VERSION_MINOR%.%VERSION_PATCH%.%VERSION_BUILD%
-
-ECHO "*** change oem if building for gamemanager ***"
-set OEM=BlueStacks
